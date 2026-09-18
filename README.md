@@ -47,13 +47,14 @@ Most folders are chronological eras with clean, sequential bookends (e.g.
 cross-cutting narratives that legitimately span several eras at once, telling one continuous story
 regardless of which era-folder's timeframe it crosses — `american-west/` (Lewis and Clark through the
 closing of the frontier) is the clearest example, overlapping in time with everything from
-`jacksonian-westward-expansion/` through `gilded-progressive/`. `world-war-ii/` is a second example, but of
-a different shape: rather than overlapping a fixed time range, it's scoped by relevance to a single event,
-so it can reach back into whatever decade a lesson needs (Weimar Germany, Japanese imperialism, the
-Depression) as long as the lesson is actually about explaining that event. This overlap is expected, not a
-flaw in the taxonomy; where it creates a real placement question, the relevant folders' READMEs name a
-default and a tiebreaker (see `american-west/`'s note on the Texas folders, `american-civil-war/`'s note
-on `american-texas/`, or `world-war-ii/`'s note on `roaring-20s-great-depression/`).
+`jacksonian-westward-expansion/` through `gilded-progressive/`. `world-war-ii/` and `industrial-revolution/` are further examples, but of a different shape: rather than
+overlapping a fixed time range, they're scoped by relevance to a single event or phenomenon, so a lesson
+can reach back into whatever decade it needs (Weimar Germany, Japanese imperialism, the Depression; or
+Britain's textile mills spreading to America) as long as the lesson is actually about explaining that
+event or phenomenon. This overlap is expected, not a flaw in the taxonomy; where it creates a real
+placement question, the relevant folders' READMEs name a default and a tiebreaker (see `american-west/`'s
+note on the Texas folders, `american-civil-war/`'s note on `american-texas/`, `world-war-ii/`'s note on
+`roaring-20s-great-depression/`, or `industrial-revolution/`'s note on `gilded-progressive/`).
 
 ## Topic folders
 
@@ -74,5 +75,6 @@ on `american-texas/`, or `world-war-ii/`'s note on `roaring-20s-great-depression
 - `gilded-progressive/`
 - `roaring-20s-great-depression/`
 - `world-war-ii/`
+- `industrial-revolution/`
 
 Each is a placeholder for now (a short README describing its scope). None contain real lesson content yet.
