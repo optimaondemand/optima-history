@@ -44,7 +44,7 @@ boundary language as something to refine over time rather than a rule to satisfy
 - `spanish-republic-texas/`
 - `american-texas/`
 - `american-colonial-period/`
-- `american-revolutionary-period/`
+- `american-revolution-founding/`
 - `american-west/`
 - `archaic-classical-greece/`
 - `roman-founding-republic/`
