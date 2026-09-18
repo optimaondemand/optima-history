@@ -33,7 +33,7 @@ indefinitely. That audit is not built yet — this repo currently holds only the
 
 ## Topic folders
 
-- `texas-history/`
+- `spanish-republic-texas/`
 - `archaic-classical-greece/`
 - `roman-founding-republic/`
 - `roman-empire/`
