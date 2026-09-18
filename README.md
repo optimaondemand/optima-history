@@ -38,6 +38,7 @@ indefinitely. That audit is not built yet — this repo currently holds only the
 - `roman-founding-republic/`
 - `roman-empire/`
 - `hellenistic-world/`
+- `persian-near-east/`
 - `age-of-exploration/`
 - `american-civil-war/`
 
