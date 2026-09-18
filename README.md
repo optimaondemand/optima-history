@@ -55,6 +55,6 @@ boundary language as something to refine over time rather than a rule to satisfy
 - `persian-near-east/`
 - `age-of-exploration/`
 - `american-civil-war/`
-- `gilded-age/`
+- `gilded-progressive/`
 
 Each is a placeholder for now (a short README describing its scope). None contain real lesson content yet.
