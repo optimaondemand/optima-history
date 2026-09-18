@@ -31,6 +31,14 @@ satisfy (e.g. Florida B.E.S.T., Texas TEKS, Mississippi standards), re-audited o
 current idea is annually, each time a state's standards are revised) rather than hand-maintained
 indefinitely. That audit is not built yet — this repo currently holds only the folder structure.
 
+## Folder boundaries are guidance, not rules
+
+Each topic folder's README describes its scope and, where two folders could plausibly hold the same
+lesson, names a default and a tiebreaker (see `american-civil-war/` and `american-texas/` for an example).
+These are meant to alert a writer to the best-fit home and keep placement consistent, not to be inviolable.
+Real content will surface edge cases the current wording doesn't anticipate — use judgment, and treat the
+boundary language as something to refine over time rather than a rule to satisfy exactly.
+
 ## Topic folders
 
 - `spanish-republic-texas/`
