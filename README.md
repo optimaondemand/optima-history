@@ -34,10 +34,11 @@ indefinitely. That audit is not built yet — this repo currently holds only the
 ## Topic folders
 
 - `texas-history/`
-- `ancient-greece/`
+- `archaic-classical-greece/`
 - `roman-republic/`
 - `roman-empire/`
 - `hellenistic-world/`
 - `age-of-exploration/`
+- `american-civil-war/`
 
 Each is a placeholder for now (a short README describing its scope). None contain real lesson content yet.
