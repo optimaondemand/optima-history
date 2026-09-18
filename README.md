@@ -69,5 +69,6 @@ and a tiebreaker (see `american-west/`'s note on the Texas folders, or `american
 - `age-of-exploration/`
 - `american-civil-war/`
 - `gilded-progressive/`
+- `roaring-20s-great-depression/`
 
 Each is a placeholder for now (a short README describing its scope). None contain real lesson content yet.
