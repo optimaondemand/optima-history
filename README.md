@@ -33,12 +33,8 @@ indefinitely. That audit is not built yet — this repo currently holds only the
 
 ## Topic folders
 
-- `greco-roman/`
-- `early-middle-ages/`
-- `crusades/`
-- `age-of-exploration/`
 - `texas-history/`
-- `american-revolution-and-founding/`
-- `civil-war-era/`
+- `ancient-greece/`
+- `ancient-rome/`
 
 Each is a placeholder for now (a short README describing its scope). None contain real lesson content yet.
