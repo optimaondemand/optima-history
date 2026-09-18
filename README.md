@@ -39,6 +39,19 @@ These are meant to alert a writer to the best-fit home and keep placement consis
 Real content will surface edge cases the current wording doesn't anticipate — use judgment, and treat the
 boundary language as something to refine over time rather than a rule to satisfy exactly.
 
+## Two kinds of folder: chronological eras and cross-cutting narratives
+
+Most folders are chronological eras with clean, sequential bookends (e.g.
+`american-colonial-period/` → `american-revolution-founding/` → `american-early-republic/` →
+`jacksonian-westward-expansion/` → `american-civil-war/` → `gilded-progressive/`). A few are
+cross-cutting narratives that legitimately span several eras at once, telling one continuous story
+regardless of which era-folder's timeframe it crosses — `american-west/` (Lewis and Clark through the
+closing of the frontier) is the clearest example, overlapping in time with everything from
+`jacksonian-westward-expansion/` through `gilded-progressive/`. This overlap is expected, not a flaw in
+the taxonomy; where it creates a real placement question, the relevant folders' READMEs name a default
+and a tiebreaker (see `american-west/`'s note on the Texas folders, or `american-civil-war/`'s note on
+`american-texas/`).
+
 ## Topic folders
 
 - `spanish-republic-texas/`
