@@ -36,5 +36,7 @@ indefinitely. That audit is not built yet — this repo currently holds only the
 - `texas-history/`
 - `ancient-greece/`
 - `ancient-rome/`
+- `hellenistic-world/`
+- `age-of-exploration/`
 
 Each is a placeholder for now (a short README describing its scope). None contain real lesson content yet.

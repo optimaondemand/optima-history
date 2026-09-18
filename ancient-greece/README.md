@@ -1,7 +1,7 @@
 # Ancient Greece
 
 Content on Greek political forms (the poleis, Athenian democracy, Spartan oligarchy), major figures and
-events (the Persian Wars, the Peloponnesian War, Alexander and the Hellenistic world), and Greece's place
-at the head of the Western philosophical and political tradition. Split out from the earlier combined
-"greco-roman" folder since each is substantial enough to stand as its own topic. Currently empty — no
-lesson content ported yet.
+events (the Persian Wars, the Peloponnesian War, and Alexander's conquests), and Greece's place at the head
+of the Western philosophical and political tradition. Split out from the earlier combined "greco-roman"
+folder since each is substantial enough to stand as its own topic. The successor kingdoms and culture after
+Alexander belong in `hellenistic-world/`, not here. Currently empty — no lesson content ported yet.
