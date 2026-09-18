@@ -35,7 +35,8 @@ indefinitely. That audit is not built yet — this repo currently holds only the
 
 - `texas-history/`
 - `ancient-greece/`
-- `ancient-rome/`
+- `roman-republic/`
+- `roman-empire/`
 - `hellenistic-world/`
 - `age-of-exploration/`
 
