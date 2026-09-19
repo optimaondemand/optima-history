@@ -17,6 +17,16 @@ once, organized by what it's actually about. Which state standards a lesson sati
 assembles — using an editor tool, in the same spirit as `optima-ela-encyclopedia`'s editor — by pulling
 whichever topic lessons satisfy that course's standards, in whatever order that course's pacing needs.
 
+## Writing philosophy: narrative first, standards downstream
+
+Each topic folder should be intelligible as its own historical narrative — a good telling of the story of
+the American West, or World War II, or Archaic and Classical Greece — written on its own terms as good
+history. Standards and courses are downstream consumers of that narrative, not its author: a course
+assembles the lessons it needs (per its own standards, pacing, and its teacher's preferences) from
+whatever narrative folders already exist, but which standards a lesson happens to satisfy must never be
+what shapes how that narrative gets written or what it includes. Write the history first; let courses draw
+from it after.
+
 ## Design goal: avoid 1:1 folder-to-course mapping
 
 A deliberate goal of this taxonomy is that few, if any, topic folders map cleanly onto a single existing
