@@ -17,6 +17,16 @@ once, organized by what it's actually about. Which state standards a lesson sati
 assembles — using an editor tool, in the same spirit as `optima-ela-encyclopedia`'s editor — by pulling
 whichever topic lessons satisfy that course's standards, in whatever order that course's pacing needs.
 
+## Design goal: avoid 1:1 folder-to-course mapping
+
+A deliberate goal of this taxonomy is that few, if any, topic folders map cleanly onto a single existing
+course. If a folder happened to hold exactly one course's lessons and nothing else, sorting that course's
+existing content into this repo would just be a rename — no real reuse would be happening, and the whole
+point of the repo would be undermined. Folders that cut across course boundaries (the cross-cutting
+narrative folders like `american-west/`, `world-war-ii/`, and `industrial-revolution/`, but also
+chronological folders sized so that no single state course owns one exactly) are preferred for this
+reason, even when a narrower, course-shaped folder would be simpler to name and scope.
+
 ## Status
 
 **Early / experimental.** The topic folders below are a first pass, seeded from lessons already discussed
