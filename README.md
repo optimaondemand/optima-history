@@ -27,6 +27,14 @@ whatever narrative folders already exist, but which standards a lesson happens t
 what shapes how that narrative gets written or what it includes. Write the history first; let courses draw
 from it after.
 
+A folder's bookends follow from this: what makes a boundary firm is the beginning and resolution of the
+narrative itself, not a calendar year or a map line. A date or a region is often a reasonable proxy for
+where a story starts or ends, but it's the proxy, not the reason — when a folder's stated dates and its
+actual narrative arc pull apart, the narrative wins. This is also why a boundary can be firm in one folder
+(`archaic-classical-greece/` ending at Chaeronea, because that's where the polis's story actually resolves)
+and fuzzy in another (`american-west/`'s ~1890 close of the frontier, because that story's resolution is
+genuinely gradual) without either being wrong.
+
 ## Design goal: avoid 1:1 folder-to-course mapping
 
 A deliberate goal of this taxonomy is that few, if any, topic folders map cleanly onto a single existing
