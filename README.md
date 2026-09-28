@@ -96,6 +96,7 @@ note on the Texas folders, `american-civil-war/`'s note on `american-texas/`, `w
 - `archaic-classical-greece/`
 - `roman-founding-republic/`
 - `roman-empire/`
+- `early-middle-ages/`
 - `hellenistic-world/`
 - `persian-near-east/`
 - `age-of-exploration/`
