@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Walker's Creek, Second by Second</title>
+<style>
+    body { margin: 0; padding: 18px; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #F4F6FA; }
+    .widget-wrap { max-width: 800px; margin: 0 auto; }
+    .widget-title { font-size: 20px; color: #0E1C42; margin-bottom: 4px; }
+    .widget-sub { font-size: 15px; color: #555; margin-bottom: 18px; line-height: 1.5; }
+
+    .time-label { text-align: center; font-size: 17px; color: #0E1C42; margin-bottom: 4px; }
+    .time-sub { text-align: center; font-size: 13px; color: #888; margin-bottom: 14px; }
+    input[type="range"] { width: 100%; margin: 8px 0 20px 0; accent-color: #C7922C; }
+
+    .guns { display: flex; gap: 14px; margin-bottom: 16px; }
+    .gun-card { flex: 1; background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 14px 16px; text-align: center; }
+    .gun-name { font-size: 14px; color: #0E1C42; margin-bottom: 10px; }
+    .gun-shots { font-size: 34px; color: #C7922C; line-height: 1; margin-bottom: 6px; }
+    .gun-sub { font-size: 12px; color: #777; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-note { font-size: 16px; color: #0E1C42; line-height: 1.6; min-height: 70px; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 8px 16px; font-size: 13px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="widget-wrap">
+    <div class="widget-title">Walker's Creek, Second by Second</div>
+    <div class="widget-sub">Slide through the seconds of a mounted encounter. Watch how many shots each weapon can actually fire before the rider closes the distance.</div>
+
+    <div class="time-label" id="timeLabel">0 seconds into the encounter</div>
+    <div class="time-sub">A mounted charge covers ground fast; there is no time to dismount and reload.</div>
+    <input type="range" id="timeSlider" min="0" max="30" step="1" value="0" />
+
+    <div class="guns">
+        <div class="gun-card">
+            <div class="gun-name">Single-Shot Pistol</div>
+            <div class="gun-shots" id="pistolShots">0</div>
+            <div class="gun-sub">shots fired so far</div>
+        </div>
+        <div class="gun-card">
+            <div class="gun-name">Colt Paterson Revolver</div>
+            <div class="gun-shots" id="revolverShots">0</div>
+            <div class="gun-sub">shots fired so far</div>
+        </div>
+    </div>
+
+    <div class="optima-widget">
+        <div class="widget-kicker">&#9889; WHAT'S HAPPENING AT THIS MOMENT</div>
+        <div class="widget-note" id="timeNote"></div>
+        <button class="widget-reset" id="timeReset">Reset to 0 seconds</button>
+    </div>
+</div>
+
+<script>
+(function () {
+  var slider = document.getElementById('timeSlider');
+  var timeLabel = document.getElementById('timeLabel');
+  var pistolShots = document.getElementById('pistolShots');
+  var revolverShots = document.getElementById('revolverShots');
+  var timeNote = document.getElementById('timeNote');
+
+  function render(sec) {
+    timeLabel.textContent = sec + ' seconds into the encounter';
+
+    // Single-shot pistol: one shot at t=0, then needs ~20-25 sec to reload (effectively no second shot in this window on horseback)
+    var pShots = sec >= 0 ? 1 : 0;
+    if (sec === 0) pShots = 0; // shot fires the instant the rider closes; before that, holstered
+    pistolShots.textContent = (sec > 0) ? 1 : 0;
+
+    // Colt Paterson: 5 shots, roughly one every 2 seconds once drawn and firing
+    var rShots = Math.min(5, Math.floor(sec / 2));
+    revolverShots.textContent = rShots;
+
+    if (sec === 0) {
+      timeNote.textContent = "The rider is still closing. Neither weapon has fired yet.";
+    } else if (sec <= 6) {
+      timeNote.textContent = "The pistol has fired its one shot and is now empty. It takes roughly 20 to 25 seconds to reload from horseback, time this encounter simply does not allow. The revolver, meanwhile, is already on its second or third shot.";
+    } else if (sec <= 10) {
+      timeNote.textContent = "The revolver keeps firing, roughly one shot every couple of seconds, while the single-shot pistol sits empty and useless until the rider can find time to reload it, if he ever gets that time at all.";
+    } else {
+      timeNote.textContent = "By now the revolver has emptied all five shots, more sustained fire from horseback than any single-shot weapon could ever produce in the same window. This is exactly the gap Jack Hays and his fifteen Rangers exploited at Walker's Creek in 1844.";
+    }
+  }
+
+  slider.addEventListener('input', function () {
+    render(parseInt(slider.value, 10));
+  });
+
+  document.getElementById('timeReset').addEventListener('click', function () {
+    slider.value = 0;
+    render(0);
+  });
+
+  render(0);
+})();
+</script>
+</body>
+</html>

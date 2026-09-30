@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Three Hundred Years, Counted</title>
+<style>
+    body { margin: 0; padding: 18px; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #F4F6FA; }
+    .widget-wrap { max-width: 760px; margin: 0 auto; }
+    .widget-title { font-size: 20px; color: #0E1C42; margin-bottom: 4px; }
+    .widget-sub { font-size: 15px; color: #555; margin-bottom: 18px; line-height: 1.5; }
+
+    .optima-widget.ow-slider { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 20px 24px; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 16px; line-height: 1.55; }
+
+    input[type=range] { width: 100%; margin: 6px 0 18px 0; }
+
+    .readout { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; text-align: center; margin-bottom: 14px; }
+    .readout-year { font-size: 15px; color: #6b7a99; margin-bottom: 6px; }
+    .readout-count { font-size: 42px; color: #0E1C42; line-height: 1.1; margin-bottom: 6px; }
+    .readout-label { font-size: 14px; color: #555; }
+
+    .towns-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .town-chip { font-size: 13px; padding: 6px 12px; border-radius: 20px; background: #EEF1F8; color: #9aa5bb; transition: all 0.2s; }
+    .town-chip.founded { background: #0E1C42; color: #fff; }
+
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 8px 16px; font-size: 13px; cursor: pointer; font-family: inherit; margin-top: 14px; display: block; margin-left: auto; margin-right: auto; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="widget-wrap">
+    <div class="widget-title">Three Hundred Years, Counted</div>
+    <div class="widget-sub">Drag the slider across three centuries of Spanish claims to Texas. Watch how slowly the population, and the town count, actually moves.</div>
+
+    <div class="optima-widget ow-slider">
+        <div class="widget-kicker">&#9889; TRY IT &middot; DRAG THROUGH TIME</div>
+        <div class="widget-question">Move the slider from 1519 to 1821 and watch what changes, and what doesn't.</div>
+
+        <input type="range" min="1519" max="1821" value="1519" step="1" id="yearSlider" />
+
+        <div class="readout">
+            <div class="readout-year" id="yearOut">Year: 1519</div>
+            <div class="readout-count" id="popOut">0</div>
+            <div class="readout-label">estimated non-Indian residents of Spanish Texas</div>
+        </div>
+
+        <div class="towns-row">
+            <div class="town-chip" id="townBexar">San Antonio de B&eacute;xar (1718)</div>
+            <div class="town-chip" id="townBahia">La Bah&iacute;a (1721)</div>
+            <div class="town-chip" id="townNac">Nacogdoches (1779)</div>
+        </div>
+
+        <button class="widget-reset" id="sliderReset">Reset</button>
+    </div>
+</div>
+
+<script>
+(function () {
+  var slider = document.getElementById('yearSlider');
+  var yearOut = document.getElementById('yearOut');
+  var popOut = document.getElementById('popOut');
+  var towns = {
+    1718: document.getElementById('townBexar'),
+    1721: document.getElementById('townBahia'),
+    1779: document.getElementById('townNac')
+  };
+
+  // Rough, deliberately slow-climbing population curve for the three-centuries effect.
+  function estimatePopulation(year) {
+    if (year < 1690) return 0;
+    if (year < 1718) return Math.round((year - 1690) * 2); // a handful of missionaries and soldiers
+    if (year < 1731) return Math.round(56 + (year - 1718) * 15);
+    if (year < 1779) return Math.round(500 + (year - 1731) * 20);
+    if (year < 1810) return Math.round(1460 + (year - 1779) * 40);
+    return Math.round(2700 + (year - 1810) * 25);
+  }
+
+  function render() {
+    var year = parseInt(slider.value, 10);
+    yearOut.textContent = 'Year: ' + year;
+    var pop = estimatePopulation(year);
+    popOut.textContent = pop.toLocaleString();
+    Object.keys(towns).forEach(function (foundYear) {
+      towns[foundYear].classList.toggle('founded', year >= parseInt(foundYear, 10));
+    });
+  }
+
+  slider.addEventListener('input', render);
+  document.getElementById('sliderReset').addEventListener('click', function () {
+    slider.value = 1519;
+    render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

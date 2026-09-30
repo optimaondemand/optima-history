@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sort the Traits: Three Colonial Models</title>
+<style>
+    body { margin: 0; padding: 18px; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #F4F6FA; }
+    .widget-wrap { max-width: 760px; margin: 0 auto; }
+    .widget-title { font-size: 20px; color: #0E1C42; margin-bottom: 4px; }
+    .widget-sub { font-size: 15px; color: #555; margin-bottom: 16px; line-height: 1.5; }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 8px 16px; font-size: 13px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .score-line { font-size: 14px; color: #0E1C42; margin-top: 10px; }
+    .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; font-size: 13px; color: #1a2340; }
+    .legend span { display: inline-flex; align-items: center; gap: 6px; }
+    .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="widget-wrap">
+    <div class="widget-title">Sort the Traits: Spanish, French, or English?</div>
+    <div class="widget-sub">Each sentence below describes one trait of a colonial model. Tap the empire it belongs to. You will get feedback right away, and you can try again as many times as you want.</div>
+
+    <div class="legend">
+        <span><i style="background:#0E1C42;"></i> Spanish &mdash; conquer, convert, incorporate</span>
+        <span><i style="background:#C7922C;"></i> French &mdash; trade, ally, intermarry</span>
+        <span><i style="background:#2196D0;"></i> English &mdash; transplant, hold apart, displace</span>
+    </div>
+
+    <div class="optima-widget ow-select" id="sorter">
+        <div class="widget-kicker">&#9889; TRY IT &middot; CLASSIFY THE TRAIT</div>
+        <div class="widget-question">Which empire's colonial model does each trait describe?</div>
+
+        <div class="widget-row" data-correct="0" data-fb="Right. Spain's model depended on conquering an existing population and putting it to work &mdash; that only works where a large, settled population already exists to conquer." data-hint="Think about which model needed a large existing population to take over, rather than settlers of its own.">
+            <div class="widget-row-prompt">1. Conquer the existing population by force.</div>
+            <div class="widget-options">
+                <button data-choice="0">Spanish</button>
+                <button data-choice="1">French</button>
+                <button data-choice="2">English</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="2" data-fb="Right. France kept its numbers small on purpose and built relationships with Native nations instead of taking over their land or labor." data-hint="Think about which model sent very few settlers and relied on trade and alliance instead of conquest.">
+            <div class="widget-row-prompt">2. Trade goods rather than seize land.</div>
+            <div class="widget-options">
+                <button data-choice="0">English</button>
+                <button data-choice="1">Spanish</button>
+                <button data-choice="2">French</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="1" data-fb="Right. The English model moved whole families and communities across the ocean to live there permanently, which the other two models did not attempt." data-hint="Which model was built around permanent settler communities, not soldiers or traders?">
+            <div class="widget-row-prompt">3. Bring entire families and communities across the ocean to settle permanently.</div>
+            <div class="widget-options">
+                <button data-choice="0">French</button>
+                <button data-choice="1">English</button>
+                <button data-choice="2">Spanish</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="1" data-fb="Right. Converting the existing population to Christianity was a central goal of the Spanish model, carried out through missions." data-hint="Which model built missions and treated conversion as one of its main goals?">
+            <div class="widget-row-prompt">4. Convert the existing population to a new religion as a central goal.</div>
+            <div class="widget-options">
+                <button data-choice="0">French</button>
+                <button data-choice="1">Spanish</button>
+                <button data-choice="2">English</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="0" data-fb="Right. French traders often formed alliances with Native nations and married into them, building relationships instead of taking territory outright." data-hint="Which model depended on friendly relationships, not conquest or replacement?">
+            <div class="widget-row-prompt">5. Form alliances and marry into Native communities.</div>
+            <div class="widget-options">
+                <button data-choice="0">French</button>
+                <button data-choice="1">English</button>
+                <button data-choice="2">Spanish</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="2" data-fb="Right. English settlements generally kept themselves separate from Native communities rather than blending with them." data-hint="Which model tended to keep its settlements apart rather than blend in?">
+            <div class="widget-row-prompt">6. Hold settlements apart from Native communities rather than blend with them.</div>
+            <div class="widget-options">
+                <button data-choice="0">Spanish</button>
+                <button data-choice="1">French</button>
+                <button data-choice="2">English</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="1" data-fb="Right. Under encomienda, the existing population itself was the prize &mdash; a source of labor and tribute for the Spanish crown." data-hint="Which model treated the people already living there as the main resource it wanted?">
+            <div class="widget-row-prompt">7. Treat the existing population as a source of labor and tribute.</div>
+            <div class="widget-options">
+                <button data-choice="0">English</button>
+                <button data-choice="1">Spanish</button>
+                <button data-choice="2">French</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="2" data-fb="Right. France claimed an enormous territory but sent comparatively few settlers to live in it &mdash; the fur trade did not require large numbers." data-hint="Which model claimed huge territory without needing many settlers to run it?">
+            <div class="widget-row-prompt">8. Send relatively few settlers compared to the size of the territory claimed.</div>
+            <div class="widget-options">
+                <button data-choice="0">Spanish</button>
+                <button data-choice="1">English</button>
+                <button data-choice="2">French</button>
+            </div>
+        </div>
+
+        <div class="widget-row" data-correct="0" data-fb="Right. Rather than incorporating Native peoples into the colony, the English model tended to push them off the land it claimed." data-hint="Which model pushed people off the land instead of putting them to work on it?">
+            <div class="widget-row-prompt">9. Displace Native peoples from the land rather than incorporate them.</div>
+            <div class="widget-options">
+                <button data-choice="0">English</button>
+                <button data-choice="1">French</button>
+                <button data-choice="2">Spanish</button>
+            </div>
+        </div>
+
+        <button class="widget-reset">Reset</button>
+    </div>
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (row.dataset.fb || 'Right.') : (row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+</body>
+</html>

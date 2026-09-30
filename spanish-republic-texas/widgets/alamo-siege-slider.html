@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thirteen Days at the Alamo</title>
+<style>
+    body { margin: 0; padding: 18px; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #F4F6FA; }
+    .widget-wrap { max-width: 800px; margin: 0 auto; }
+    .widget-title { font-size: 20px; color: #0E1C42; margin-bottom: 4px; }
+    .widget-sub { font-size: 15px; color: #555; margin-bottom: 18px; line-height: 1.5; }
+
+    .day-label { text-align: center; font-size: 16px; color: #0E1C42; margin-bottom: 4px; }
+    .day-date { text-align: center; font-size: 13px; color: #888; margin-bottom: 16px; }
+
+    input[type="range"] { width: 100%; margin: 8px 0 20px 0; accent-color: #C7922C; }
+
+    .counts { display: flex; gap: 14px; margin-bottom: 16px; }
+    .count-card { flex: 1; border-radius: 8px; padding: 14px 16px; text-align: center; }
+    .count-card.texian { background: #E8F6FB; border: 1px solid #C5DCE5; border-top: 4px solid #2196D0; }
+    .count-card.mexican { background: #FDECEC; border: 1px solid #EBC9C9; border-top: 4px solid #C0392B; }
+    .count-label { font-size: 12px; color: #6b7a99; margin-bottom: 6px; }
+    .count-number { font-size: 34px; color: #0E1C42; line-height: 1; margin-bottom: 4px; }
+    .count-sub { font-size: 12px; color: #777; }
+
+    .bars { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+    .bar-row { display: flex; align-items: center; gap: 10px; }
+    .bar-track { flex: 1; height: 20px; background: #EEF1F8; border-radius: 10px; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 10px; transition: width 0.35s ease; }
+    .bar-fill.texian { background: #2196D0; }
+    .bar-fill.mexican { background: #C0392B; }
+    .bar-tag { width: 90px; font-size: 12px; color: #0E1C42; text-align: right; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-note { font-size: 16px; color: #0E1C42; line-height: 1.6; min-height: 60px; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 8px 16px; font-size: 13px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="widget-wrap">
+    <div class="widget-title">Thirteen Days at the Alamo</div>
+    <div class="widget-sub">Drag the slider through the siege. Watch what happens to both forces while the garrison waits for help that never comes in time.</div>
+
+    <div class="day-label" id="dayLabel">Day 1 of the siege</div>
+    <div class="day-date" id="dayDate">February 23, 1836</div>
+
+    <input type="range" id="daySlider" min="0" max="5" step="1" value="0" />
+
+    <div class="counts">
+        <div class="count-card texian">
+            <div class="count-label">TEXIAN DEFENDERS</div>
+            <div class="count-number" id="texCount">150</div>
+            <div class="count-sub">inside the walls</div>
+        </div>
+        <div class="count-card mexican">
+            <div class="count-label">MEXICAN FORCES</div>
+            <div class="count-number" id="mexCount">1,500</div>
+            <div class="count-sub">surrounding the fort</div>
+        </div>
+    </div>
+
+    <div class="bars">
+        <div class="bar-row">
+            <div class="bar-tag">Texian</div>
+            <div class="bar-track"><div class="bar-fill texian" id="texBar" style="width: 6%;"></div></div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-tag">Mexican</div>
+            <div class="bar-track"><div class="bar-fill mexican" id="mexBar" style="width: 62%;"></div></div>
+        </div>
+    </div>
+
+    <div class="optima-widget">
+        <div class="widget-kicker">&#9889; WHAT HAPPENED THIS DAY</div>
+        <div class="widget-note" id="dayNote">Santa Anna's army arrives outside B&eacute;xar and surrounds the Alamo. Travis and Bowie share command of roughly 150 defenders inside a compound built to hold a mission, not an army.</div>
+        <button class="widget-reset" id="dayReset">Reset to Day 1</button>
+    </div>
+</div>
+
+<script>
+(function () {
+  var days = [
+    { label: "Day 1 of the siege", date: "February 23, 1836", tex: 150, mex: 1500, texPct: 6, mexPct: 62,
+      note: "Santa Anna's army arrives outside Béxar and surrounds the Alamo. Travis and Bowie share command of roughly 150 defenders inside a compound built to hold a mission, not an army." },
+    { label: "Day 2 of the siege", date: "February 24, 1836", tex: 150, mex: 1500, texPct: 6, mexPct: 62,
+      note: "Travis writes his letter “To the People of Texas & All Americans in the World,” asking for reinforcements “with all dispatch.” The bombardment has already lasted 24 hours." },
+    { label: "Day 4 of the siege", date: "February 26, 1836", tex: 150, mex: 1800, texPct: 6, mexPct: 74,
+      note: "More Mexican reinforcements arrive. The bombardment continues daily. No relief force from the Texian side has arrived, and none is close." },
+    { label: "Day 7 of the siege", date: "March 1, 1836", tex: 182, mex: 2000, texPct: 8, mexPct: 82,
+      note: "About 32 men of the Gonzales Ranging Company slip through the Mexican lines at night to reinforce the garrison, the only reinforcements the Alamo ever receives." },
+    { label: "Day 9 of the siege", date: "March 3, 1836", tex: 189, mex: 2400, texPct: 8, mexPct: 100,
+      note: "The last of Santa Anna's reinforcements arrive, and the noose is now as tight as it will get. Travis sends his final letters, still asking for help." },
+    { label: "Day 12 of the siege", date: "March 6, 1836", tex: 189, mex: 2400, texPct: 8, mexPct: 100,
+      note: "Before dawn, Mexican forces storm the walls from several directions at once. By full daylight, the fort has fallen and the defenders are dead." }
+  ];
+
+  var slider = document.getElementById('daySlider');
+  var dayLabel = document.getElementById('dayLabel');
+  var dayDate = document.getElementById('dayDate');
+  var texCount = document.getElementById('texCount');
+  var mexCount = document.getElementById('mexCount');
+  var texBar = document.getElementById('texBar');
+  var mexBar = document.getElementById('mexBar');
+  var dayNote = document.getElementById('dayNote');
+
+  function render(i) {
+    var d = days[i];
+    dayLabel.textContent = d.label;
+    dayDate.textContent = d.date;
+    texCount.textContent = d.tex.toLocaleString();
+    mexCount.textContent = d.mex.toLocaleString();
+    texBar.style.width = d.texPct + '%';
+    mexBar.style.width = d.mexPct + '%';
+    dayNote.textContent = d.note;
+  }
+
+  slider.addEventListener('input', function () {
+    render(parseInt(slider.value, 10));
+  });
+
+  document.getElementById('dayReset').addEventListener('click', function () {
+    slider.value = 0;
+    render(0);
+  });
+
+  render(0);
+})();
+</script>
+</body>
+</html>

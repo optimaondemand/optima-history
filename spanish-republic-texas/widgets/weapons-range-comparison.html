@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reload Time Decides the Fight</title>
+<style>
+    body { margin: 0; padding: 18px; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #F4F6FA; }
+    .widget-wrap { max-width: 800px; margin: 0 auto; }
+    .widget-title { font-size: 20px; color: #0E1C42; margin-bottom: 4px; }
+    .widget-sub { font-size: 15px; color: #555; margin-bottom: 18px; line-height: 1.5; }
+
+    .range-label { text-align: center; font-size: 17px; color: #0E1C42; margin-bottom: 4px; }
+    .range-sub { text-align: center; font-size: 13px; color: #888; margin-bottom: 14px; }
+    input[type="range"] { width: 100%; margin: 8px 0 20px 0; accent-color: #C7922C; }
+
+    .weapons { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+    .weapon-card { flex: 1; min-width: 140px; background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 12px 14px; transition: border-color 0.2s, box-shadow 0.2s; }
+    .weapon-card.active { border-color: #C7922C; box-shadow: 0 0 0 2px rgba(199,146,44,0.25); }
+    .weapon-name { font-size: 14px; color: #0E1C42; margin-bottom: 8px; }
+    .weapon-stat { font-size: 12px; color: #666; margin-bottom: 3px; }
+    .weapon-stat strong { color: #0E1C42; }
+    .range-track { height: 8px; background: #EEF1F8; border-radius: 4px; margin: 6px 0; overflow: hidden; }
+    .range-fill { height: 100%; border-radius: 4px; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-note { font-size: 16px; color: #0E1C42; line-height: 1.6; min-height: 70px; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 8px 16px; font-size: 13px; cursor: pointer; font-family: inherit; margin-top: 10px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="widget-wrap">
+    <div class="widget-title">Reload Time Decides the Fight</div>
+    <div class="widget-sub">Slide to set the distance between the two sides, then read which weapon actually has the advantage at that range.</div>
+
+    <div class="range-label" id="rangeLabel">75 yards apart</div>
+    <div class="range-sub">0 yards (hand to hand) &mdash; 250 yards (long range)</div>
+    <input type="range" id="rangeSlider" min="0" max="250" step="5" value="75" />
+
+    <div class="weapons">
+        <div class="weapon-card" id="cardRifle">
+            <div class="weapon-name">Kentucky Rifle</div>
+            <div class="weapon-stat">Effective range: <strong>up to 200+ yds</strong></div>
+            <div class="range-track"><div class="range-fill" style="width: 90%; background: #2196D0;"></div></div>
+            <div class="weapon-stat">Reload time: <strong>about 60 seconds</strong></div>
+            <div class="weapon-stat">Bayonet: <strong>none</strong></div>
+        </div>
+        <div class="weapon-card" id="cardMusket">
+            <div class="weapon-name">Mexican Musket</div>
+            <div class="weapon-stat">Effective range: <strong>about 50&ndash;75 yds</strong></div>
+            <div class="range-track"><div class="range-fill" style="width: 30%; background: #C7922C;"></div></div>
+            <div class="weapon-stat">Reload time: <strong>about 15&ndash;20 seconds</strong></div>
+            <div class="weapon-stat">Bayonet: <strong>fixed</strong></div>
+        </div>
+        <div class="weapon-card" id="cardLance">
+            <div class="weapon-name">Cavalry Lance</div>
+            <div class="weapon-stat">Effective range: <strong>close, on horseback</strong></div>
+            <div class="range-track"><div class="range-fill" style="width: 10%; background: #C0392B;"></div></div>
+            <div class="weapon-stat">Reload time: <strong>never needs one</strong></div>
+            <div class="weapon-stat">Bayonet: <strong>n/a</strong></div>
+        </div>
+    </div>
+
+    <div class="optima-widget">
+        <div class="widget-kicker">&#9889; WHO HAS THE ADVANTAGE AT THIS DISTANCE?</div>
+        <div class="widget-note" id="rangeNote"></div>
+        <button class="widget-reset" id="rangeReset">Reset to 75 yards</button>
+    </div>
+</div>
+
+<script>
+(function () {
+  var slider = document.getElementById('rangeSlider');
+  var rangeLabel = document.getElementById('rangeLabel');
+  var rangeNote = document.getElementById('rangeNote');
+  var cardRifle = document.getElementById('cardRifle');
+  var cardMusket = document.getElementById('cardMusket');
+  var cardLance = document.getElementById('cardLance');
+
+  function render(yards) {
+    rangeLabel.textContent = yards + ' yards apart';
+    cardRifle.classList.remove('active');
+    cardMusket.classList.remove('active');
+    cardLance.classList.remove('active');
+
+    if (yards <= 20) {
+      cardLance.classList.add('active');
+      cardMusket.classList.add('active');
+      rangeNote.textContent = "Point-blank. The lance and the musket's bayonet both work here; a rifleman caught this close has no time left to reload before contact.";
+    } else if (yards <= 90) {
+      cardMusket.classList.add('active');
+      rangeNote.textContent = "Musket range. Several Mexican soldiers can fire, reload in 15 to 20 seconds, and fire again faster than a single rifleman can manage even one more shot.";
+    } else if (yards <= 200) {
+      cardRifle.classList.add('active');
+      rangeNote.textContent = "Rifle range, if the rifleman has cover and time. A hidden marksman can pick off targets no musket can reach, but a full minute to reload means he must stay under cover between shots.";
+    } else {
+      cardRifle.classList.add('active');
+      rangeNote.textContent = "Beyond effective musket range entirely. Here the rifle dominates outright, provided the rifleman is dug in behind cover with nothing closing the distance on him.";
+    }
+  }
+
+  slider.addEventListener('input', function () {
+    render(parseInt(slider.value, 10));
+  });
+
+  document.getElementById('rangeReset').addEventListener('click', function () {
+    slider.value = 75;
+    render(75);
+  });
+
+  render(75);
+})();
+</script>
+</body>
+</html>
