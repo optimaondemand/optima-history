@@ -57,7 +57,7 @@ either — see the discussion this repo grew out of before assuming any field na
 The plan is for each lesson to carry frontmatter recording which state standards it could reasonably
 satisfy (e.g. Florida B.E.S.T., Texas TEKS, Mississippi standards), re-audited on a recurring basis (the
 current idea is annually, each time a state's standards are revised) rather than hand-maintained
-indefinitely. That audit is not built yet — this repo currently holds only the folder structure.
+indefinitely. That audit is not built yet — this repo currently holds the folder structure and the lessons copied in so far (see the end of this file), with no standards metadata yet.
 
 ## Folder boundaries are guidance, not rules
 
@@ -105,5 +105,15 @@ note on the Texas folders, `american-civil-war/`'s note on `american-texas/`, `w
 - `roaring-20s-great-depression/`
 - `world-war-ii/`
 - `industrial-revolution/`
+- `high-middle-ages/`
+- `ancient-egypt/`
+- `ancient-mesopotamia/`
+- `ancient-levant/`
+- `ancient-anatolia/`
+- `ancient-harappan-indus-valley/`
+- `predynastic-shang-china/`
+- `bronze-dark-age-greece/`
 
-Each is a placeholder for now (a short README describing its scope). None contain real lesson content yet.
+Each folder has a short README describing its scope. A folder that holds only its README has no lessons yet.
+
+Lessons so far have been copied unchanged from the Texas History (`texas-history-tx`) and World History (`06MJWorldHistory`) course repos, which keep their originals; nothing is moved out of a course repo. Filenames are prefixed with the source course and position (for example `texas-history-q1-w05-lesson-1.html` or `world-history-w16-lesson-1.html`) so that lessons from different courses never collide in one topic folder.

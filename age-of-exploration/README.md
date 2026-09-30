@@ -5,4 +5,4 @@ not limited to any one European nation. The Americas and first contact with Nati
 does Captain Cook's voyages into the Pacific and Australia, or any other European power's exploration of
 any other region. Includes the entradas that precede actual Spanish settlement of Texas — Cortes, Cabeza de
 Vaca, and Coronado — since those belong here rather than in `spanish-republic-texas/`, which begins later,
-with the presidios and missions. Currently empty — no lesson content ported yet.
+with the presidios and missions.
