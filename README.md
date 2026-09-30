@@ -116,4 +116,4 @@ note on the Texas folders, `american-civil-war/`'s note on `american-texas/`, `w
 
 Each folder has a short README describing its scope. A folder that holds only its README has no lessons yet.
 
-Lessons so far have been copied unchanged from the Texas History (`texas-history-tx`) and World History (`06MJWorldHistory`) course repos, which keep their originals; nothing is moved out of a course repo. Filenames are prefixed with the source course and position (for example `texas-history-q1-w05-lesson-1.html` or `world-history-w16-lesson-1.html`) so that lessons from different courses never collide in one topic folder.
+Lessons so far were copied from the Texas History and World History course repos, which keep their originals untouched, and then renamed for this library. Each file is named for the lesson itself (a slug of its title) and never for a course or a place in a course sequence, for example `ancient-egypt/the-old-kingdom-pyramids-labor-and-wisdom.html`. That name is the lesson's address for any future course that embeds it, so treat it as permanent once a course uses it; the lesson's title can change without renaming the file.
