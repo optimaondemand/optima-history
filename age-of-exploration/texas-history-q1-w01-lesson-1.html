@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Grade 7 Texas History &mdash; Lesson 1.1</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">GRADE 7 TEXAS HISTORY</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #666;">The Spanish, French, and English in America</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.1</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Question Every Empire Faced</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">The Spanish, French, and English in America</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Question Every Empire Faced</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <!-- Module Map -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128202; MODULE MAP &middot; WHERE YOU ARE IN THE SEMESTER</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 14px 0;">This semester asks one question and spends eighteen weeks answering it: <strong>who was going to own this place?</strong> Spain, France, and England each arrived in North America with a different answer to a problem every one of them faced &mdash; what do you do about the people already living there? Quarter 1 (Weeks 1&ndash;9) follows the Spanish answer, the first one tried and the one held onto longest. You are starting at the very beginning, before any of the three powers has set foot in Texas.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <div style="flex: 1; min-width: 90px; background: #0E1C42; color: #fff; border-radius: 6px; padding: 8px 10px; text-align: center;">
+                <div style="font-size: 11px; color: #55c8e8;">WEEK 1</div>
+                <div style="font-size: 12px; margin-top: 2px;">Spain, France, England</div>
+            </div>
+            <div style="flex: 1; min-width: 90px; background: #EEF1F8; border-radius: 6px; padding: 8px 10px; text-align: center;">
+                <div style="font-size: 11px; color: #6b7a99;">WEEK 2</div>
+                <div style="font-size: 12px; color: #0e1c42; margin-top: 2px;">Cort&eacute;s, 1519</div>
+            </div>
+            <div style="flex: 1; min-width: 90px; background: #EEF1F8; border-radius: 6px; padding: 8px 10px; text-align: center;">
+                <div style="font-size: 11px; color: #6b7a99;">WEEK 3</div>
+                <div style="font-size: 12px; color: #0e1c42; margin-top: 2px;">Cabeza de Vaca</div>
+            </div>
+            <div style="flex: 1; min-width: 90px; background: #EEF1F8; border-radius: 6px; padding: 8px 10px; text-align: center;">
+                <div style="font-size: 11px; color: #6b7a99;">&hellip;</div>
+                <div style="font-size: 12px; color: #0e1c42; margin-top: 2px;">Weeks 4&ndash;8</div>
+            </div>
+            <div style="flex: 1; min-width: 90px; background: #EEF1F8; border-radius: 6px; padding: 8px 10px; text-align: center;">
+                <div style="font-size: 11px; color: #6b7a99;">WEEK 9</div>
+                <div style="font-size: 12px; color: #0e1c42; margin-top: 2px;">Q1 Capstone</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Glossary of Subject Vocabulary -->
+    <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #1B6A94; margin-bottom: 10px;">&#128161; GLOSSARY OF SUBJECT VOCABULARY</div>
+        <div style="font-size: 15px; color: #0E1C42; margin-bottom: 10px;">A couple of words in today's lesson are worth reviewing before you read.</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-bottom: 6px;"><strong>empire</strong> <span style="color: #666; font-style: italic;">(EM-pyre)</span> &mdash; a group of many lands and peoples ruled by one government or ruler.</div>
+        <div style="font-size: 16px; color: #1a2340; line-height: 1.6;"><strong>trade route</strong> <span style="color: #666; font-style: italic;">(trayd root)</span> &mdash; a path that traders travel again and again to carry goods between distant places.</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What happens when a European ship shows up somewhere the sailors did not expect anyone to be?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">In 1492, one voyage answered an old question and raised a brand-new one. For centuries, European traders had wanted a better way to reach Asia's silk, spices, and gold. In 1492, Christopher Columbus thought he had found it. What he had actually found was something nobody in Europe had planned for &mdash; and three different empires were about to spend the next several centuries figuring out what to do about it.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why European nations were searching for a new route to Asia in the late 1400s.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe what Columbus believed he had reached in 1492.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify the problem European planners had not accounted for: the Americas were already full of people.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> preview how Spain, France, and England began forming three different answers to that problem.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Just this page and a notebook or blank document for jotting down your first prediction. No outside reading today &mdash; you will meet this week's primary source in the separate primary source assignment.</div>
+        </div>
+    </div>
+
+    <!-- PART 1 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHY EUROPE WENT LOOKING</div>
+
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Before you read on: if you sailed west across an ocean nobody in your country had ever crossed, what would you expect to find on the other side? (No wrong answer &mdash; just check in with yourself.)</div>
+            <div class="widget-options">
+                <button data-response="That is close to what most European sailors in 1492 expected too &mdash; a known place, reached by an unfamiliar route. Keep that expectation in mind as you read what Columbus actually found.">&#127760; A known place, just from a new direction</button>
+                <button data-response="Some people at the time worried about exactly this. Keep that uncertainty in mind as you read on.">&#10067; Something completely unknown</button>
+                <button data-response="Fair guess &mdash; and it is close to how this story actually turns out, just not in the way you might think.">&#127958;&#65039; Nothing at all, just open ocean</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A blocked road to Asia</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By the late 1400s, European merchants had wanted goods from Asia for a long time: silk, spices, and gold traveled west along overland <strong style="border-bottom: 1.5px dotted #C7922C; cursor: help;" title="A path that traders travel again and again to carry goods between distant places.">trade routes</strong> that passed through the Ottoman <strong style="border-bottom: 1.5px dotted #C7922C; cursor: help;" title="A group of many lands and peoples ruled by one government or ruler.">empire</strong>. When the Ottomans took control of the eastern Mediterranean, those routes became harder and more expensive to use. European traders needed another way to reach Asia, and Portugal had already started looking for one by sailing south and east around Africa.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Spain wanted a route of its own. In 1492, an Italian sailor named Christopher Columbus convinced the Spanish crown to fund a different plan: instead of sailing around Africa, he would sail west, straight across the ocean, to reach Asia from the other side.</p>
+    </div>
+
+    <!-- PART 2 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE COMPLICATION NOBODY HAD PLANNED FOR</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 0 0 8px 0;">What Columbus believed he found</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In October 1492, Columbus's ships reached land. Columbus was certain he had done exactly what he set out to do: reach the edge of Asia. He called the people he met "Indians," believing he was somewhere near the Indies. He was wrong about where he was &mdash; but the mistake mattered less, at first, than what he reported home: land, and a route to it.</p>
+
+        <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Columbus never admitted he had reached a place unknown to Europe. Even after several voyages, he insisted he was near Asia. That single wrong assumption is part of why the word "Indies," and later "Indians," stuck to a hemisphere it never actually described.</div>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The problem no plan accounted for</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Here is what none of the European planning had accounted for: the Americas were not empty, and they were not Asia. They were home to millions of people, organized into societies as different from one another as Spain was from France. Every European power that showed up after Columbus had to answer a question nobody in Lisbon or Madrid had needed to ask before: <strong style="font-style: normal;">what do you do about the people who are already here?</strong></p>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Lesson 1.2: Three Models, Side by Side</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Meet the three different answers Spain, France, and England gave to this same question.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source Report: Columbus's 1493 Letter</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read Columbus's own account of what he found and answer two short questions about it.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Hold onto this question all semester: what do you do about the people already there? Spain, France, and England will each give a different answer, and this course spends eighteen weeks testing which answer actually held onto Texas.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; GRADE 7 TEXAS HISTORY &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.1 &middot; The Question Every Empire Faced</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
