@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>World History &mdash; Lesson 1.2</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
+    .glossary-box, .map-card, .figure-card, .people-card, .city-card, .tech-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .glossary-box ul { margin: 8px 0 0 0; padding-left: 20px; }
+    .glossary-box li { margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .map-card img, .figure-card img, .people-card img, .city-card img, .tech-card img { max-width: 100%; height: auto; border-radius: 6px; display: block; margin: 10px 0; }
+    .callout-label { font-size: 11px; color: #c7922c; letter-spacing: 0.4px; margin-bottom: 10px; }
+    .img-credit { font-size: 11px; color: #8a94ab; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">WORLD HISTORY</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #666;">The Neolithic Revolution</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.2 &middot; Wednesday</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Digging Up the Neolithic: Jericho and &Ccedil;atalh&ouml;y&uuml;k</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Farming Begins Across the Ancient World</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     OPTIMA READ-ALOUD PLAYER — drop-in snippet for GitHub-hosted lesson pages
+     ═══════════════════════════════════════════════════════════════════════
+
+     WHAT IT DOES
+       Adds a "Listen" player that reads the page aloud using the browser's
+       built-in Web Speech API (no accounts, no API keys, works offline once
+       the page is loaded). The paragraph currently being read is highlighted
+       in pale gold and scrolled into view. Works inside a Canvas iframe.
+
+     WHERE TO PASTE
+       Into any GitHub-hosted Optima lesson page (the full-HTML-document kind,
+       NOT Canvas RCE pages — the RCE strips <script>). Paste this whole block
+       just inside the body wrapper, right BEFORE the first content card.
+
+     OPTIONS
+       • Add  data-ra-skip  to any element the reader should NOT read
+         (e.g. the local preview banner, decorative text, answer keys).
+       • Add  data-readaloud-root  to one container to limit reading to it.
+         Default scope: the .canvas-frame wrapper, else <body>.
+
+     NOTES
+       • The player never reads itself, <button> labels, or hidden elements
+         (so unrevealed widget feedback stays unread until shown).
+       • If the browser has no speech voices, the player disables itself
+         with a friendly message instead of breaking the page.
+-->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Digging Up the Neolithic: Jericho and &Ccedil;atalh&ouml;y&uuml;k</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div class="glossary-box">
+        <div class="callout-label">&#128214; GLOSSARY OF SUBJECT VOCABULARY</div>
+        <div style="font-size: 14px; color: #1a2340;">There are some vocabulary words in this lesson worth reviewing.</div>
+        <ul>
+            <li><span class="gloss" tabindex="0">archaeology<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'archaeology')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">ar-kee-OL-uh-jee</span>the careful study of the things people left behind: buildings, tools, seeds, bones, and trash.</span></span></li>
+            <li><span class="gloss" tabindex="0">excavation<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'excavation')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">ek-skuh-VAY-shun</span>a slow, careful dig, done layer by layer, that records exactly where and how deep every object was found.</span></span></li>
+            <li><span class="gloss" tabindex="0">tell<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'tell')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">rhymes with "bell"</span>a mound formed when people build, abandon, and rebuild on the same spot for thousands of years, so the site grows upward like a layered cake.</span></span></li>
+        </ul>
+        <div style="font-size: 12px; color: #8a94ab; margin-top: 10px; font-style: italic;">Continuing from Lesson 1, this is the last lesson where these terms are called out: BC/AD, century, decade, domestication, millennium, Neolithic Revolution, sedentism, Six Essential Elements of Geography, surplus.</div>
+    </div>
+
+    <div class="map-card">
+        <div class="callout-label">&#128506;&#65039; MAIN MAP &middot; THE FERTILE CRESCENT</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Fertile_Crescent_map.png" alt="Map of the Fertile Crescent, a curved band of land from the eastern Mediterranean through Mesopotamia" />
+        <div class="img-credit">Map: NormanEinstein, CC BY-SA 3.0 / GFDL, via Wikimedia Commons.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">This is the same regional map from Lesson 1. It shows the curved band of hill country where farming first began, stretching from the eastern Mediterranean coast, through what is now Turkey, and down into the river valleys of Mesopotamia. <span class="gloss" tabindex="0">Jericho<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Jericho')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">juh-RY-koh</span>an ancient settlement near the Jordan River, in the region called the Levant. It holds one of the oldest known stone walls and towers in the world.</span></span> and <span class="gloss" tabindex="0">&Ccedil;atalh&ouml;y&uuml;k<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Chah tal hoo yook')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">CHAH-tal-hoo-yook</span>an ancient farming town on the Anatolian plateau, in what is now central Turkey, famous for its rooftop entrances and painted walls.</span></span>, today's two sites, both sit inside this wider region, but this map is too broad-scale to mark either one by name. See the Cities callouts below for a closer look at each site.</p>
+        <div style="margin-top: 12px; font-size: 13px; color: #444;"><strong>Geographical Glossary:</strong> <span class="gloss" tabindex="0">Fertile Crescent<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Fertile Crescent')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">FUR-tile KRESS-ent</span>a curved strip of hill country in the Middle East. Wild wheat, barley, sheep, and goats all lived here close together, which made it a good place for farming to begin.</span></span></div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">How do we know what happened before anyone wrote anything down?</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Lesson 1 described farming spreading across the Fertile Crescent thousands of years before anyone invented writing. No one alive today watched any of it happen, and no ancient author left behind a diary of the Neolithic Revolution. So how do historians know it happened at all? The answer comes from patient digging, not old books. Two real excavations, one at Jericho and one at &Ccedil;atalh&ouml;y&uuml;k, show exactly how archaeologists turn buried dirt, stone, and bone into real historical knowledge.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how archaeologists use careful excavation, not guesswork, to learn about places with no written records.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe what Kathleen Kenyon found at Jericho and why its wall and tower surprised historians.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe what James Mellaart found at &Ccedil;atalh&ouml;y&uuml;k and how its layout differed from an ordinary town.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the difference between a primary source about a dig itself and a secondary account of the people who once lived at that site.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This week's Primary Source 2 page, James Mellaart's excavation report on &Ccedil;atalh&ouml;y&uuml;k, and Reading Quiz 2.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">How do we know any of what Lesson 1 described? No one alive today watched wild wheat slowly become farmed wheat. The answer is <span class="gloss" tabindex="0">archaeology<span class="gloss-tip"><span class="gloss-pron">ar-kee-OL-uh-jee</span>the careful study of the things people leave behind: buildings, tools, seeds, bones, and trash.</span></span>, the careful study of the things people leave behind: buildings, tools, seeds, bones, and trash. Archaeologists do not simply dig for treasure. They perform an <span class="gloss" tabindex="0">excavation<span class="gloss-tip"><span class="gloss-pron">ek-skuh-VAY-shun</span>a slow, careful dig, done layer by layer, that records exactly where and how deep every object was found.</span></span>, a slow, careful dig done layer by layer. They record exactly where every object was found, and how deep, because the depth of a layer usually tells you its age compared to the layers above and below it. When people build, abandon, and rebuild on the same spot for thousands of years, the site grows upward into a mound called a <span class="gloss" tabindex="0">tell<span class="gloss-tip"><span class="gloss-pron">rhymes with "bell"</span>a mound formed when people build, abandon, and rebuild on the same spot for thousands of years, so the site grows upward like a layered cake.</span></span>. Travel across the Middle East today and you will see dozens of these grassy or dusty hills. Each one is a stack of ancient towns, waiting to be read like the pages of a book, with the oldest page on the bottom.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; JERICHO: WALLS BEFORE POTTERY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">One of the greatest tells anywhere sits at Jericho, near the Jordan River in the region called the Levant. In the early 1950s, the British archaeologist <strong>Kathleen Kenyon</strong> dug deep into Jericho's mound. She found something startling: a massive stone tower, more than eight meters tall, attached to a thick stone wall. The wall and tower date to roughly 8000 BC. This makes Jericho one of the oldest walled settlements ever found, built before people had even invented pottery.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Why build a monument like this so early? This was before writing, before the wheel, before fired clay pots. Kenyon herself argued over the answer. A wall to keep out raiders is the obvious guess. But some archaeologists think the wall might have held back flash floods or mudslides instead. Others think the tower had some special role in Jericho's rituals, a role we do not fully grasp today. This is worth sitting with honestly. Sometimes the physical evidence is clear, but the human reason behind it is not. That gap, between what we can prove and what we can only guess, is part of what makes history a subject built on careful reasoning. It is not simple fact-finding.</p>
+    </div>
+
+    <div class="city-card">
+        <div class="callout-label">&#127961;&#65039; CITIES &middot; JERICHO</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Jericho_Neolitic_Tower_P1190749.JPG" alt="The excavated Neolithic stone tower at Jericho, Tell es-Sultan" />
+        <div class="img-credit">Photo: CC BY-SA 3.0, via Wikimedia Commons.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">Picture a walled settlement of simple mudbrick and stone houses clustered around a single massive stone tower built into the settlement's thick outer wall. No streets ran in straight lines. Paths wound between houses built close together, with fields of wheat and barley just outside the wall, watered by a nearby freshwater spring.</p>
+    </div>
+
+    <div class="figure-card">
+        <div class="callout-label">&#128100; HISTORICAL FIGURE &middot; KATHLEEN KENYON</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Kathleen_Kenyon.jpg" alt="Portrait photograph of archaeologist Kathleen Kenyon" style="max-width: 220px;" />
+        <div class="img-credit">Photo: courtesy UCL Institute of Archaeology, CC BY 4.0, via Wikimedia Commons.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;"><span class="gloss" tabindex="0"><strong>Kathleen Kenyon</strong><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Kathleen Kenyon')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">KATH-leen KEN-yun</span>British archaeologist who led the excavation of Jericho.</span></span> was a British archaeologist who led the major excavation of Jericho in the early 1950s. Her careful, layer-by-layer digging techniques helped set the standard for how archaeologists still excavate sites today. Her discovery of Jericho's ancient tower and wall reshaped what historians understood about how early humans first settled into permanent life.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; &Ccedil;ATALH&Ouml;Y&Uuml;K: A TOWN WITHOUT STREETS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">About a thousand years later, several hundred kilometers north, a very new kind of Neolithic town grew up at &Ccedil;atalh&ouml;y&uuml;k, in what is now central Turkey. The British archaeologist <strong>James Mellaart</strong> began digging there in the 1960s. He found a town with no streets at all. Its mudbrick houses were built wall to wall, packed together like a honeycomb. Residents did not enter their homes through a front door. Instead, they climbed down a ladder through a hole in the roof, walking across the rooftops of the whole town to get from house to house.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Inside many homes, Mellaart's team found painted walls showing hunting scenes. They also found startling <strong>bucrania</strong>, the horned skulls of wild cattle, set into walls and platforms. Archaeologists still argue over exactly what these skulls meant to the people who placed them there, though most agree they held some ritual or family meaning.</p>
+    </div>
+
+    <div class="city-card">
+        <div class="callout-label">&#127961;&#65039; CITIES &middot; &Ccedil;ATALH&Ouml;Y&Uuml;K</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Bull%27s_head%2C_shrine%2C_%C3%87atalh%C3%B6y%C3%BCk%2C_6000-5500_BC%2C_MACA%2C_99001.jpg" alt="Reconstructed bull's-head shrine wall from a house at Catalhoyuk" />
+        <div class="img-credit">Photo: Zde, CC BY-SA 4.0, via Wikimedia Commons.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">Imagine a town with no streets or doors at ground level at all. Flat-roofed mudbrick houses packed together wall to wall, so closely that people walked across the rooftops to get anywhere, climbing down ladders through roof holes into rooms with wall paintings and the horned skulls of wild cattle.</p>
+    </div>
+
+    <div class="figure-card">
+        <div class="callout-label">&#128100; HISTORICAL FIGURE &middot; JAMES MELLAART</div>
+        <p style="font-size: 13px; color: #8a94ab; font-style: italic; margin: 0 0 8px 0;">No verified public-domain or openly-licensed solo portrait of Mellaart could be confirmed for this page; a photo is omitted here rather than risking an uncleared image.</p>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 0;"><span class="gloss" tabindex="0"><strong>James Mellaart</strong><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'James Mellaart')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">JAYMZ MEL-art</span>British archaeologist who began digging at &Ccedil;atalh&ouml;y&uuml;k in 1961.</span></span> was a British archaeologist who began digging at &Ccedil;atalh&ouml;y&uuml;k in 1961. His work turned up one of the best-kept Neolithic towns ever found, including its painted walls and cattle-skull shrines. Mellaart's finds remain central to how historians picture daily life in an early farming town.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; WHAT A REPORT CAN AND CANNOT TELL YOU</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Here is an important idea for how you will read sources in this course. Kenyon's and Mellaart's excavation reports are <strong>primary sources</strong>, but only about the dig itself. What Kenyon wrote is a firsthand, eyewitness account of what her team actually found in the ground at Jericho in the 1950s. That much is primary evidence, the direct word of someone who was there. But neither Kenyon nor Mellaart lived during the Neolithic period they were digging up. Their reports are <strong>secondary evidence</strong> about the Neolithic itself. They are careful, expert readings of physical clues, not eyewitness memories of Neolithic life. All year, ask yourself this question about any source you read: is this person a firsthand witness to the event I actually care about? Or is this person an expert explaining evidence about it long after the fact?</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Jericho sits at roughly 31.9 degrees north latitude and 35.4 degrees east longitude, near the Jordan River valley. &Ccedil;atalh&ouml;y&uuml;k sits much farther north and slightly west, at roughly 37.7 degrees north latitude and 32.8 degrees east longitude, on the Anatolian plateau. Take a moment with a world map or atlas and plot both points. Notice how far apart they are, and yet how similar their basic story is. In two separate corners of the Fertile Crescent's wider neighborhood, small bands of people chose to settle down for good, within about a thousand years of each other, without ever meeting. That is not just luck, and it is not the work of two clever people acting alone. It is what happens when a deeper shift, the slow domestication of plants and animals from Lesson 1, finally reaches a tipping point.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 2</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short quiz on today's lesson, in Canvas. Then, Primary Source 2 and the Primary Source Exercise on Thursday.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128170; KEEP THIS IN MIND</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Jericho's wall and &Ccedil;atalh&ouml;y&uuml;k's rooftop streets look nothing alike, but both mark the same turning point: people who had committed to staying in one place for good, building something meant to outlast a single lifetime. That commitment, sedentism, is the quiet foundation this course will keep returning to, every time a new city, kingdom, or empire appears.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 14px 24px; margin-bottom: 4px; text-align: center;">
+        Continue to this module's wrap-up: the Module Reflection &rarr;
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; WORLD HISTORY &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2 &middot; Digging Up the Neolithic: Jericho and &Ccedil;atalh&ouml;y&uuml;k</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
+(function () {
+  document.addEventListener('click', function (e) {
+    var gloss = e.target.closest('.gloss');
+    if (gloss && !e.target.closest('.gloss-audio')) {
+      document.querySelectorAll('.gloss.gloss-open').forEach(function (g) { if (g !== gloss) g.classList.remove('gloss-open'); });
+      gloss.classList.toggle('gloss-open');
+    } else if (!e.target.closest('.gloss-tip')) {
+      document.querySelectorAll('.gloss.gloss-open').forEach(function (g) { g.classList.remove('gloss-open'); });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

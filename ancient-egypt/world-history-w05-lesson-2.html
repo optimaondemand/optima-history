@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>World History &mdash; Lesson 5.2</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
+    .glossary-box, .map-card, .figure-card, .people-card, .city-card, .tech-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .glossary-box ul { margin: 8px 0 0 0; padding-left: 20px; }
+    .glossary-box li { margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .map-card img, .figure-card img, .people-card img, .city-card img, .tech-card img { max-width: 100%; height: auto; border-radius: 6px; display: block; margin: 10px 0; }
+    .callout-label { font-size: 11px; color: #c7922c; letter-spacing: 0.4px; margin-bottom: 10px; }
+    .img-credit { font-size: 11px; color: #8a94ab; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">WORLD HISTORY</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 5</div>
+        <div style="font-size: 12px; color: #666;">The Gift of the Nile</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 5.2 &middot; Wednesday</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Old Kingdom: Pyramids, Labor, and Wisdom</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Predynastic Egypt and the Old Kingdom</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     OPTIMA READ-ALOUD PLAYER — drop-in snippet for GitHub-hosted lesson pages
+     ═══════════════════════════════════════════════════════════════════════
+
+     WHAT IT DOES
+       Adds a "Listen" player that reads the page aloud using the browser's
+       built-in Web Speech API (no accounts, no API keys, works offline once
+       the page is loaded). The paragraph currently being read is highlighted
+       in pale gold and scrolled into view. Works inside a Canvas iframe.
+
+     WHERE TO PASTE
+       Into any GitHub-hosted Optima lesson page (the full-HTML-document kind,
+       NOT Canvas RCE pages — the RCE strips <script>). Paste this whole block
+       just inside the body wrapper, right BEFORE the first content card.
+
+     OPTIONS
+       • Add  data-ra-skip  to any element the reader should NOT read
+         (e.g. the local preview banner, decorative text, answer keys).
+       • Add  data-readaloud-root  to one container to limit reading to it.
+         Default scope: the .canvas-frame wrapper, else <body>.
+
+     NOTES
+       • The player never reads itself, <button> labels, or hidden elements
+         (so unrevealed widget feedback stays unread until shown).
+       • If the browser has no speech voices, the player disables itself
+         with a friendly message instead of breaking the page.
+-->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Old Kingdom: Pyramids, Labor, and Wisdom</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div class="glossary-box">
+        <div class="callout-label">&#128214; GLOSSARY OF SUBJECT VOCABULARY</div>
+        <div style="font-size: 14px; color: #1a2340;">There are some vocabulary words in this lesson worth reviewing. Tap or hover any highlighted word in the text for a quick reminder, or use the list below.</div>
+        <ul>
+            <li><span class="gloss" tabindex="0">Old Kingdom<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Old Kingdom')">&#128266;</button><span class="gloss-tip">the period of Egyptian history, about 2686 to 2181 BC, when strong pharaohs ruled a unified Egypt and built its greatest pyramids.</span></span></li>
+            <li><span class="gloss" tabindex="0">vizier<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'vizier')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">vih-ZEER</span>a pharaoh's top official, in charge of running the day-to-day business of government.</span></span></li>
+        </ul>
+        <div style="font-size: 13px; color: #6b7a99; margin-top: 10px; font-style: italic;">Continuing from Monday, this is the last lesson where these terms are called out: divine kingship, hieroglyphics, inundation, pharaoh.</div>
+    </div>
+
+    <div class="map-card">
+        <div class="callout-label">&#128506;&#65039; SECONDARY MAP &middot; PYRAMID SITES OF THE OLD KINGDOM</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Ancient_Egypt_map-en.svg" alt="Map of Lower Egypt showing Giza, Saqqara, and Dahshur, the three main pyramid fields near Memphis" />
+        <div class="img-credit">Map: Jeff Dahl, CC BY-SA 3.0, via Wikimedia Commons.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">This is the same map from Lesson 1, zoomed to Lower Egypt. It marks <span class="gloss" tabindex="0">Giza<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Giza')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">GHEE-zuh</span>the best-known of the three main pyramid fields built along the Nile near Memphis during the Old Kingdom.</span></span>, the best-known of the three main pyramid fields built along the Nile near Memphis during the Old Kingdom, alongside <span class="gloss" tabindex="0">Saqqara<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Saqqara')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">suh-KAR-uh</span>an Old Kingdom pyramid field near Memphis, home to Egypt's earliest step pyramid.</span></span> and <span class="gloss" tabindex="0">Dahshur<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Dahshur')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">DAH-shoor</span>an Old Kingdom pyramid field near Memphis, home to the Bent Pyramid and the Red Pyramid.</span></span>.</p>
+        <div style="margin-top: 12px; font-size: 13px; color: #444;"><strong>Geographical Glossary:</strong> <span class="gloss" tabindex="0">Giza<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Giza')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">GHEE-zuh</span>the best-known of the three main pyramid fields built along the Nile near Memphis during the Old Kingdom.</span></span> &middot; <span class="gloss" tabindex="0">Saqqara<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Saqqara')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">suh-KAR-uh</span>an Old Kingdom pyramid field near Memphis, home to Egypt's earliest step pyramid.</span></span> &middot; <span class="gloss" tabindex="0">Dahshur<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Dahshur')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">DAH-shoor</span>an Old Kingdom pyramid field near Memphis, home to the Bent Pyramid and the Red Pyramid.</span></span></div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What did it really take to build the Great Pyramid, and who built it?</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Roughly five centuries after Narmer joined Egypt, the Old Kingdom's pharaohs turned their new power into the boldest building projects the ancient world had yet tried. This lesson looks at what building the Great Pyramid actually took, and at who really built it, since the popular picture of whip-driven slaves does not match the evidence. It also turns to a very different kind of Egyptian text: not a king's boast, but real advice for living well.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how and by whom the Great Pyramid of Giza was actually built.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what evidence corrects the popular myth of pyramid-building as mass slavery.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the kind of advice Ptahhotep gives, and how it differs from a royal monument's message.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how Egypt's pharaoh could be both a living god and a man expected to practice ordinary virtue.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This week's Primary Source 2 page, the Instructions of Ptahhotep, and Reading Quiz 2.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Roughly five centuries after Narmer joined Egypt, it entered a time historians call the <span class="gloss" tabindex="0">Old Kingdom<span class="gloss-tip">the period of Egyptian history, about 2686 to 2181 BC, when strong pharaohs ruled a unified Egypt and built its greatest pyramids.</span></span> (about 2686 to 2181 BC). This was an age of strong, centered pharaoh rule. It was also the age of the boldest building projects the ancient world had yet tried. This lesson looks at the Old Kingdom's most famous monument. It also looks at what building that monument really took, and at a very different kind of Egyptian text: not a king's boast, but real advice for living well.</p>
+    </div>
+
+    <div style="background: #FFF7E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 18px 0;">
+        <div class="callout-label">&#127760; FOREIGN LANGUAGE VOCABULARY</div>
+        <div style="font-size: 15px; color: #1a2340; line-height: 1.6;">New this lesson: <span class="gloss" tabindex="0"><strong>Khufu</strong><button class="gloss-audio" onclick="speakGloss(event,'Khufu')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">KOO-foo</span>the pharaoh under whom the Great Pyramid of Giza was built, ruling roughly 2589 to 2566 BC.</span></span> and <span class="gloss" tabindex="0"><strong>Ptahhotep</strong><button class="gloss-audio" onclick="speakGloss(event,'Ptahhotep')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">tah-HOH-tep</span>a vizier whose collected wise sayings, the Instructions of Ptahhotep, are among the oldest surviving wisdom writing in the world.</span></span>. Continuing from Monday, this is the last lesson where cosmic order and justice, ma'at, is called out.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; THE GREAT PYRAMID</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Around 2560 BC, under the pharaoh <span class="gloss" tabindex="0">Khufu<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Khufu')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">KOO-foo</span>the pharaoh under whom the Great Pyramid of Giza was built, ruling roughly 2589 to 2566 BC.</span></span>, workers finished the <strong>Great Pyramid of Giza</strong>. It first rose about 481 feet high. It was built from more than two million blocks of limestone and granite. Some granite blocks, hauled from quarries at Aswan far to the south, weighed as much as 80 tons each. The Greek historian Herodotus later claimed the pyramid took twenty years to build, though modern experts still debate the exact number.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">For a long time, popular stories pictured this as the work of huge crowds of enslaved workers driven by the whip. Evidence dug up from workers' villages near the pyramids tells a new story. Diggers found bakeries, breweries, and animal bones nearby. These finds show that pyramid workers ate a solid diet that included beer and meat. They lived in planned camps, not scattered huts. The workforce seems to have included skilled full-time builders. Alongside them worked changing crews of Egyptian farmers. These farmers were likely called up for a set season each year. This was likely during the months of the <span class="gloss" tabindex="0">inundation<span class="gloss-tip"><span class="gloss-pron">in-un-DAY-shun</span>the yearly flood of the Nile River, which covered nearby farmland with rich, dark soil.</span></span>, when Nile floodwaters left the fields underwater anyway. Some work crews even carved their own team names into the stone blocks they moved. Names like "Friends of Khufu" turn up on blocks today, a small, human trace of pride left behind by common laborers.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">None of this means the work was easy or freely chosen the way a modern job is. But it was organized, paid, state labor. It was not simple mass slavery, and that popular mistake is worth correcting plainly rather than letting it stand. In 1954, workers clearing rubble near the pyramid found a complete wooden boat, taken apart and sealed inside a pit. It had likely been built for Khufu's own journey through the afterlife. Once put back together, the boat stretched more than 140 feet long, its ancient cedar planks still sound enough to fit together again.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Building the pyramid took great skill and precision. Its sides line up with true north within a tiny fraction of a degree. Khufu's engineers had no compass or telescope. They used only careful eyesight, surveying tools, and star sightings to reach that precision. Ramps, levers, and copper tools, not any wheeled machine, moved and shaped the stone. Whatever else can be argued about the Old Kingdom, one thing stands out. Its power to organize labor, supplies, and exact engineering skill on this scale, kept up across decades of rule, was real. Nothing else on Earth matched it at the time.</p>
+    </div>
+
+    <div class="figure-card">
+        <div class="callout-label">&#128100; HISTORICAL FIGURE &middot; KHUFU</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Ivory_statuette_of_Khufu_from_Abydos%2C_2551-2528_BCE%3B_Egyptian_Museum%2C_Cairo_%281%29.jpg" alt="A small ivory statuette of the pharaoh Khufu, the only confirmed image of him that survives" />
+        <div class="img-credit">Photo: Prof. Mortel, CC BY 2.0, via Wikimedia Commons.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;"><span class="gloss" tabindex="0">Khufu<span class="gloss-tip"><span class="gloss-pron">KOO-foo</span>the pharaoh under whom the Great Pyramid of Giza was built, ruling roughly 2589 to 2566 BC.</span></span> ruled Egypt around 2589 to 2566 BC. He is remembered today almost entirely for one achievement: ordering the building of the Great Pyramid of Giza, the largest pyramid ever built and one of the most massive structures in human history. Ironically, this small ivory statuette, only a few inches tall, is the only confirmed image of him that survives.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; PTAHHOTEP'S ADVICE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not every Old Kingdom text is a royal monument. The <strong>Instructions of Ptahhotep</strong>, one of the oldest surviving wisdom texts anywhere in the world, is written as advice from an aging <span class="gloss" tabindex="0">vizier<span class="gloss-tip"><span class="gloss-pron">vih-ZEER</span>a pharaoh's top official, in charge of running the day-to-day business of government.</span></span> to his son and successor. The full text survives today mainly through a later copy called the Prisse Papyrus. Historians are not fully sure just when <span class="gloss" tabindex="0">Ptahhotep<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Ptahhotep')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">tah-HOH-tep</span>a vizier whose collected wise sayings, the Instructions of Ptahhotep, are among the oldest surviving wisdom writing in the world.</span></span> lived. The text names him as vizier to a king called Djedkare Isesi, which would place him late in the Old Kingdom, well over a century after Khufu. Egyptian tradition later said Ptahhotep lived to the legendary age of 110 years, a symbol of the wisdom his advice claimed to offer.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Rather than boasting of conquest or divine favor, Ptahhotep's advice is about everyday virtue. It covers how to listen well. It covers how a powerful man should treat those below him without pride. It covers how to control one's temper, and how to remember that wisdom can come from anyone, no matter their rank. This week's primary source lets you read some of that advice firsthand, written down long ago in <span class="gloss" tabindex="0">hieroglyphics<span class="gloss-tip"><span class="gloss-pron">hy-ruh-GLIF-iks</span>Egypt's early writing system, made of small pictures that stood for sounds, words, or ideas.</span></span> on papyrus. Notice how different this text feels from a pharaoh's grand monument. Where Narmer's Palette and a pyramid's huge size show power outward, Ptahhotep's instructions look inward. They point at the private, personal virtues, courtesy, self-control, and patience, that Egyptian culture expected even from its most powerful men.</p>
+    </div>
+
+    <div class="figure-card">
+        <div class="callout-label">&#128100; HISTORICAL FIGURE &middot; PTAHHOTEP</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Ancient_Egypt_Papyrus_Scroll_of_the_Dead_%2828748821475%29.jpg" alt="An ancient Egyptian papyrus scroll covered in hieroglyphic writing" />
+        <div class="img-credit">Photo: Gary Todd, CC0, via Wikimedia Commons. (A papyrus scroll, the same kind of material that preserved Ptahhotep's Instructions.)</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;"><span class="gloss" tabindex="0">Ptahhotep<span class="gloss-tip"><span class="gloss-pron">tah-HOH-tep</span>a vizier whose collected wise sayings, the Instructions of Ptahhotep, are among the oldest surviving wisdom writing in the world.</span></span> served as vizier, a pharaoh's top official, during the Old Kingdom. He is remembered today for a collection of wise sayings on courtesy, self-control, and good leadership, among the oldest surviving wisdom writing anywhere in the world.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; DIVINE KINGSHIP, HELD IN TENSION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Taken together, this week's two lessons present a pharaoh who was two things at once. On one hand, he was treated as a living god in charge of keeping <strong>ma'at</strong> across the entire universe. On the other hand, his own officials wrote guidance on ordinary human virtues like patience and self-control. These do not have to be opposites. A king understood to stand for cosmic order might be expected, just because of that role, to model the same personal order and self-government at every level. That standard would run from the pharaoh's own household down to the humblest farmer's.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Compare this again to Mesopotamia. Hammurabi backed his rule with a promise of justice enforced through law. Egypt's Old Kingdom pharaoh backed his rule with a claimed link to the divine itself. This lesson suggests that claim was backed up by a call for personal virtue, not law alone. Keep watching for how this claim to divine kingship holds up, or comes under strain, as Egypt's story continues in the weeks ahead.</p>
+    </div>
+
+    <div class="tech-card">
+        <div class="callout-label">&#9881;&#65039; TECHNOLOGY SPOTLIGHT &middot; DIVINE KINGSHIP</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Khafre_statue.jpg" alt="A statue of the Old Kingdom pharaoh Khafre, wearing the royal nemes headdress and protected by the falcon god Horus" />
+        <div class="img-credit">Photo: Jon Bodsworth, copyrighted free use, via Wikimedia Commons.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">Egyptian kingship claimed something Mesopotamian kingship never quite claimed for itself. A Sumerian or Akkadian king ruled with the gods' favor, chosen and backed by them, but still a man set apart from the gods themselves. Egypt's pharaoh, from the very start of the unified kingdom, was treated as an actual living god on earth, an image of the falcon god Horus, responsible for keeping ma'at, the truth and balance holding the whole universe together. This is a truly different idea of kingship, one this course will keep comparing against Mesopotamia's model as both civilizations' stories continue.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 2</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short quiz on today's lesson, in Canvas. Then, Primary Source 2 and the Primary Source Exercise on Thursday.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128170; KEEP THIS IN MIND</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The Old Kingdom shows Egypt's pharaoh from two directions at once: a living god who could organize a workforce and an engineering feat unmatched anywhere on Earth, and a man whose own vizier still wrote that patience and courtesy mattered. Keep watching whether that divine claim holds steady as Egypt's story continues.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 14px 24px; margin-bottom: 4px; text-align: center;">
+        Continue to this module's wrap-up: the Module Reflection &rarr;
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; WORLD HISTORY &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2 &middot; The Old Kingdom: Pyramids, Labor, and Wisdom</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
+(function () {
+  document.addEventListener('click', function (e) {
+    var gloss = e.target.closest('.gloss');
+    if (gloss && !e.target.closest('.gloss-audio')) {
+      document.querySelectorAll('.gloss.gloss-open').forEach(function (g) { if (g !== gloss) g.classList.remove('gloss-open'); });
+      gloss.classList.toggle('gloss-open');
+    } else if (!e.target.closest('.gloss-tip')) {
+      document.querySelectorAll('.gloss.gloss-open').forEach(function (g) { g.classList.remove('gloss-open'); });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

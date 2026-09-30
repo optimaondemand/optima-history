@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>World History &mdash; Lesson 15.2</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
+    .glossary-box, .map-card, .figure-card, .people-card, .city-card, .tech-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .glossary-box ul { margin: 8px 0 0 0; padding-left: 20px; }
+    .glossary-box li { margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .map-card img, .figure-card img, .people-card img, .city-card img, .tech-card img { max-width: 100%; height: auto; border-radius: 6px; display: block; margin: 10px 0; }
+    .callout-label { font-size: 11px; color: #c7922c; letter-spacing: 0.4px; margin-bottom: 10px; }
+    .img-credit { font-size: 11px; color: #8a94ab; margin-top: 4px; }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">WORLD HISTORY</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q2 &middot; Module 15</div>
+        <div style="font-size: 12px; color: #666;">Phoenicia in the Mediterranean</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 15.2 &middot; Wednesday</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Two Foundling Cities</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Phoenicia in the Mediterranean: Carthage Faces Rome</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     OPTIMA READ-ALOUD PLAYER — drop-in snippet for GitHub-hosted lesson pages
+     ═══════════════════════════════════════════════════════════════════════
+
+     WHAT IT DOES
+       Adds a "Listen" player that reads the page aloud using the browser's
+       built-in Web Speech API (no accounts, no API keys, works offline once
+       the page is loaded). The paragraph currently being read is highlighted
+       in pale gold and scrolled into view. Works inside a Canvas iframe.
+
+     WHERE TO PASTE
+       Into any GitHub-hosted Optima lesson page (the full-HTML-document kind,
+       NOT Canvas RCE pages — the RCE strips <script>). Paste this whole block
+       just inside the body wrapper, right BEFORE the first content card.
+
+     OPTIONS
+       • Add  data-ra-skip  to any element the reader should NOT read
+         (e.g. the local preview banner, decorative text, answer keys).
+       • Add  data-readaloud-root  to one container to limit reading to it.
+         Default scope: the .canvas-frame wrapper, else <body>.
+
+     NOTES
+       • The player never reads itself, <button> labels, or hidden elements
+         (so unrevealed widget feedback stays unread until shown).
+       • If the browser has no speech voices, the player disables itself
+         with a friendly message instead of breaking the page.
+-->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Two Foundling Cities</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div class="glossary-box">
+        <div class="callout-label">&#128214; GLOSSARY OF SUBJECT VOCABULARY</div>
+        <div style="font-size: 14px; color: #1a2340;">There are some vocabulary words in this lesson worth reviewing. Tap or hover any highlighted word in the text for a quick reminder, or use the list below.</div>
+        <ul>
+            <li><span class="gloss" tabindex="0">anachronism<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'anachronism, uh-NAK-ruh-niz-um')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">uh-NAK-ruh-niz-um</span>a detail placed in the wrong time period, out of its real historical order.</span></span></li>
+            <li><span class="gloss" tabindex="0">fratricide<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'fratricide, FRAT-rih-syde')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">FRAT-rih-syde</span>the killing of one's own brother or sister.</span></span></li>
+        </ul>
+    </div>
+
+    <div style="background: #F4EFE3; border: 1px solid #E0D3AD; border-left: 5px solid #8A6416; border-radius: 8px; padding: 14px 18px; margin-bottom: 20px;">
+        <div class="callout-label" style="color: #8A6416;">&#127760; FOREIGN LANGUAGE VOCABULARY</div>
+        <div style="font-size: 14px; color: #1a2340; line-height: 1.6;">
+            <p style="margin: 0 0 8px 0;"><span class="gloss" tabindex="0"><strong>Dido</strong><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Dido, DY-doh')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">DY-doh</span>a Tyrian princess said to have fled Phoenicia and founded Carthage around 814 BC.</span></span></p>
+            <p style="margin: 0 0 8px 0;"><span class="gloss" tabindex="0"><strong>Romulus</strong><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Romulus, ROM-yoo-lus')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">ROM-yoo-lus</span>twin brother, with Remus, whose legend credits them with founding Rome in 753 BC.</span></span> (ROM-yoo-lus) and <span class="gloss" tabindex="0"><strong>Remus</strong><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Remus, REE-mus')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">REE-mus</span>twin brother, with Romulus, whose legend credits them with founding Rome in 753 BC.</span></span></p>
+            <p style="margin: 0;"><span class="gloss" tabindex="0"><em><strong>Magna Graecia</strong></em><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Magna Graecia, MAG-nuh GREE-shuh')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">MAG-nuh GREE-shuh</span>&quot;Greater Greece,&quot; the Greek trading colonies of southern Italy and Sicily.</span></span></p>
+        </div>
+    </div>
+
+    <div class="map-card">
+        <div class="callout-label">&#128506;&#65039; SECONDARY MAP &middot; ITALY AND THE CENTRAL MEDITERRANEAN</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Etruscan_civilization_italian_map.png" alt="Map of Iron Age Italy showing Etruscan cities, Rome, and Greek colonies of Magna Graecia" />
+        <div class="img-credit">Map: User:MM, via Wikimedia Commons, CC BY-SA 3.0.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">This map shows early Italy, including Rome on the <strong>Tiber River</strong>, the Etruscan cities to its north, and the Greek trading colonies of southern Italy and Sicily known as <span class="gloss" tabindex="0"><em>Magna Graecia</em><span class="gloss-tip"><span class="gloss-pron">MAG-nuh GREE-shuh</span>&quot;Greater Greece,&quot; the Greek trading colonies of southern Italy and Sicily.</span></span>.</p>
+        <div style="margin-top: 12px; font-size: 13px; color: #444;">
+            <strong>Geographical Glossary:</strong>
+            <span class="gloss" tabindex="0">Tiber River<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Tiber, TY-bur')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">TY-bur</span>the river in central Italy on whose banks Rome was traditionally founded.</span></span> &middot;
+            <span class="gloss" tabindex="0">Palatine Hill<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Palatine, PAL-uh-tyne')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">PAL-uh-tyne</span>one of Rome's seven hills, where tradition says the she-wolf found and nursed Romulus and Remus.</span></span>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What do two rival cities look like before either one knows the other exists?</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Somewhere in the eighth century BC, by the old count ancient people themselves used, two cities were founded on opposite shores of the central Mediterranean. Neither city was much to look at yet. Neither founder had any idea the other city even existed. Neither knew what it would someday become. Centuries later, their own people would fight three long wars over which of them would survive at all. This week's two Primary Sources tell each city's own legendary story of how it began.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> retell the legend of Dido founding Carthage, and explain why Virgil's version is not history.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> retell Livy's account of Romulus and Remus, including the founding and the fratricide.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> compare Rome's founding legend to Sargon's basket story and explain why the pattern recurs.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why neither city's founders could have known what Rome and Carthage would become.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This week's Primary Source 2 page, the Legendary Founding of Rome, and Reading Quiz 2.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; DIDO AND THE NEW CITY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This week's first Primary Source concerns <strong>Carthage</strong>, the greatest of the Phoenician colonies Lesson 1 introduced. It was planted on the North African coast, not far from modern Tunis. Its own name, in Phoenician, meant simply "New City." The oldest surviving version of its founding story comes from a later writer named Justin. In it, a Tyrian princess named <span class="gloss" tabindex="0">Dido<span class="gloss-tip"><span class="gloss-pron">DY-doh</span>a Tyrian princess said to have fled Phoenicia and founded Carthage around 814 BC.</span></span>, sometimes called Elissa, fled her home city. Her own brother, King Pygmalion of Tyre, had killed her husband for his wealth. Dido sailed west with a band of loyal followers. She struck a shrewd, tricky deal with the local Berber ruler over how much land her new settlement could claim. Through that deal, she founded Carthage on the North African shore. Old tradition dates this founding to 814 BC.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Centuries later, the Roman poet Virgil told a very different version of Dido's story. His epic, the <em>Aeneid</em>, was written under the emperor Augustus. In Virgil's telling, Dido falls in love with the Trojan hero Aeneas, blown ashore at Carthage while fleeing the fall of Troy. She kills herself in despair when he sails on toward Italy to found the line that will one day become Rome. This version is fine writing, but it cannot be real history, and this course should say so plainly. The Trojan War, whatever its real kernel, belongs to an age centuries before 814 BC. That is the very Bronze Age this course studied collapsing back in Week 9. Virgil knew this well. He was not making a mistake. He was writing centuries after Rome and Carthage had already fought their real wars. He used this <span class="gloss" tabindex="0">anachronism<span class="gloss-tip"><span class="gloss-pron">uh-NAK-ruh-niz-um</span>a detail placed in the wrong time period, out of its real historical order.</span></span>, a detail placed in the wrong time on purpose, to suggest that Rome's later hate for Carthage was somehow set into both cities' fates from the very start. It is a poet's point, not a historian's claim, and that gap matters.</p>
+    </div>
+
+    <div class="figure-card">
+        <div class="callout-label">&#128100; HISTORICAL FIGURE &middot; DIDO</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Turner_Dido_Building_Carthage.jpg" alt="Dido Building Carthage, painting by J.M.W. Turner, 1815" />
+        <div class="img-credit">Painting: J.M.W. Turner, 1815, via Wikimedia Commons, public domain.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;"><span class="gloss" tabindex="0">Dido<span class="gloss-tip"><span class="gloss-pron">DY-doh</span>a Tyrian princess said to have fled Phoenicia and founded Carthage around 814 BC.</span></span> (DY-doh), also called Elissa, is remembered as the Tyrian princess who fled Phoenicia after her brother murdered her husband, and founded Carthage on the North African coast around 814 BC. This 1815 painting by J.M.W. Turner imagines the rising city under construction.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; ROMULUS, REMUS, AND A CITY BUILT ON A KILLING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This week's second Primary Source turns to Rome's own founding legend, kept most fully by the Roman historian Livy. According to Livy, twin brothers named <span class="gloss" tabindex="0">Romulus<span class="gloss-tip"><span class="gloss-pron">ROM-yoo-lus</span>twin brother, with Remus, whose legend credits them with founding Rome in 753 BC.</span></span> and <span class="gloss" tabindex="0">Remus<span class="gloss-tip"><span class="gloss-pron">REE-mus</span>twin brother, with Romulus, whose legend credits them with founding Rome in 753 BC.</span></span> were born to Rhea Silvia. Her uncle <strong>Amulius</strong> had seized the throne of the nearby city of Alba Longa from her father, <strong>Numitor</strong>. Amulius forced Rhea Silvia into a role meant to leave her childless, so she could never bear a rival to his throne. Fearing the twins anyway as future rivals, Amulius ordered them drowned in the <span class="gloss" tabindex="0">Tiber River<span class="gloss-tip"><span class="gloss-pron">TY-bur</span>the river in central Italy on whose banks Rome was traditionally founded.</span></span>. The basket carrying them instead washed ashore near the <span class="gloss" tabindex="0">Palatine Hill<span class="gloss-tip"><span class="gloss-pron">PAL-uh-tyne</span>one of Rome's seven hills, where tradition says the she-wolf found and nursed Romulus and Remus.</span></span>. There, tradition says, a she-wolf nursed the boys. A shepherd named Faustulus later found the twins and raised them as his own sons.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Notice how closely this echoes a story this course already knows well. An infant is set adrift on a river. He is saved against every chance. He is meant for far more than his own humble rescuers could have guessed. That is almost exactly the shape of Sargon's basket story from Week 3. This does not prove that one story copied the other. It shows instead that this kind of story, a low, uncertain start hiding a great future, appealed to ancient people again and again, in far-apart cultures with no contact at all.</p>
+
+        <div class="optima-widget">
+            <div class="widget-kicker">&#127919; TRY IT: ROME'S FOUNDING CAST</div>
+            <div class="widget-question">Match each name to who they are in Livy's account.</div>
+            <div class="widget-row" data-correct="numitor">
+                <div class="widget-row-prompt">The rightful ruler of Alba Longa, overthrown by his own brother, later restored to his throne by his grandsons.</div>
+                <div class="widget-options">
+                    <button data-choice="faustulus">Faustulus</button>
+                    <button data-choice="numitor">Numitor</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="amulius">
+                <div class="widget-row-prompt">Seized the throne of Alba Longa from his own brother and ordered the infant twins drowned.</div>
+                <div class="widget-options">
+                    <button data-choice="amulius">Amulius</button>
+                    <button data-choice="rhea">Rhea Silvia</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">Grown to manhood, Romulus and Remus restored their grandfather Numitor to his throne. They then set out to found a city of their own, near where they had washed ashore. Rome itself rose in a part of Italy already shared with other peoples. Etruscan cities lay just to the north, and their customs shaped early Rome deeply. Greek trading colonies lay further south, in Sicily and along Italy's coast. The Greeks themselves called this whole southern cluster <span class="gloss" tabindex="0"><em>Magna Graecia</em><span class="gloss-tip"><span class="gloss-pron">MAG-nuh GREE-shuh</span>&quot;Greater Greece,&quot; the Greek trading colonies of southern Italy and Sicily.</span></span>, "Greater Greece." Livy's account of the twins does not end happily, though. The brothers argued bitterly over exactly where their new city's sacred boundary line, the <strong>pomerium</strong>, should run. Remus mocked his brother by leaping over the low wall Romulus had begun to mark out. In Livy's telling, Romulus killed his own twin brother on the spot for it. He said the same fate awaited anyone else who dared cross Rome's border uninvited. Tradition dates this founding, and this <span class="gloss" tabindex="0">fratricide<span class="gloss-tip"><span class="gloss-pron">FRAT-rih-syde</span>the killing of one's own brother or sister.</span></span>, to 753 BC. Rome, in other words, begins its own story with a killing its own writers never tried to hide.</p>
+    </div>
+
+    <div class="figure-card">
+        <div class="callout-label">&#128100; HISTORICAL FIGURE &middot; ROMULUS AND REMUS</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Capitoline_she-wolf_Musei_Capitolini_MC1181.jpg" alt="The Capitoline Wolf bronze sculpture, showing the she-wolf nursing infant Romulus and Remus" />
+        <div class="img-credit">Sculpture: Capitoline Museums, Rome, via Wikimedia Commons, public domain.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;"><span class="gloss" tabindex="0">Romulus<span class="gloss-tip"><span class="gloss-pron">ROM-yoo-lus</span>twin brother, with Remus, whose legend credits them with founding Rome in 753 BC.</span></span> and <span class="gloss" tabindex="0">Remus<span class="gloss-tip"><span class="gloss-pron">REE-mus</span>twin brother, with Romulus, whose legend credits them with founding Rome in 753 BC.</span></span> were twin brothers whose legend credits them with founding Rome in 753 BC. Left to drown as infants and saved by a she-wolf, Romulus went on to kill his own brother in a quarrel over the new city's boundary. This bronze sculpture, the Capitoline Wolf, is one of Rome's most famous images of the story.</p>
+    </div>
+
+    <div class="city-card">
+        <div class="callout-label">&#127961;&#65039; CITIES &middot; CARTHAGE AND ROME</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Carthage_Harbour_-_panoramio.jpg" alt="The harbor at ancient Carthage, Tunisia" />
+        <div class="img-credit">Photo: via Wikimedia Commons, CC BY 3.0.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;"><strong>Carthage</strong>, on the North African coast, and <strong>Rome</strong>, on the Tiber River in central Italy, were both founded as small, precarious settlements in the eighth century BC. Neither city's founders could have guessed the two would one day fight for control of the whole Mediterranean.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; CLOSING</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Set side by side, these two founding stories share a striking pattern: exile, hardship, and a small, uncertain settlement built by people fleeing worse trouble elsewhere. Neither Dido's followers nor Romulus's shepherds could have imagined that their two cities would someday stand as the Mediterranean's two greatest rival powers. That struggle would not begin in earnest for another five and a half centuries, and it lies well beyond where this course leaves off. In other words, this course leaves both cities here, at their small and shaky start, long before either one becomes a name the whole Mediterranean world would fear or admire. What belongs here is the beginning: two foundling cities, born the same rough century, each certain only of its own small patch of shore.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 2</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short quiz on today's lesson, in Canvas. Then, the Primary Source Exercise on Thursday.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128170; KEEP THIS IN MIND</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Two foundling cities, born the same rough century, each certain only of its own small patch of shore. Neither Dido's followers nor Romulus's shepherds could have imagined the two would someday fight for the whole Mediterranean, a struggle that lies well beyond where this course leaves off.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 14px 24px; margin-bottom: 4px; text-align: center;">
+        Continue to this module's wrap-up: the Module Reflection &rarr;
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; WORLD HISTORY &middot; Quarter 2 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2 &middot; Two Foundling Cities</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var sBtn = e.target.closest('.widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? 'Right. That matches the section above.' : 'Not quite. Reread the section above.';
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var gloss = e.target.closest('.gloss');
+    if (gloss && !e.target.closest('.gloss-audio')) {
+      document.querySelectorAll('.gloss.gloss-open').forEach(function (g) { if (g !== gloss) g.classList.remove('gloss-open'); });
+      gloss.classList.toggle('gloss-open');
+    } else if (!e.target.closest('.gloss-tip')) {
+      document.querySelectorAll('.gloss.gloss-open').forEach(function (g) { g.classList.remove('gloss-open'); });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

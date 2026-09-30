@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>World History &mdash; Lesson 9.1</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
+    .glossary-box, .map-card, .figure-card, .people-card, .city-card, .tech-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .glossary-box ul { margin: 8px 0 0 0; padding-left: 20px; }
+    .glossary-box li { margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .map-card img, .figure-card img, .people-card img, .city-card img, .tech-card img { max-width: 100%; height: auto; border-radius: 6px; display: block; margin: 10px 0; }
+    .callout-label { font-size: 11px; color: #c7922c; letter-spacing: 0.4px; margin-bottom: 10px; }
+    .img-credit { font-size: 11px; color: #8a94ab; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">WORLD HISTORY</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 9</div>
+        <div style="font-size: 12px; color: #666;">The Bronze Age Collapse</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 9.1 &middot; Monday</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Sea Peoples and a World in Crisis</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">Ancient Near East in Crisis</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     OPTIMA READ-ALOUD PLAYER — drop-in snippet for GitHub-hosted lesson pages
+     ═══════════════════════════════════════════════════════════════════════
+
+     WHAT IT DOES
+       Adds a "Listen" player that reads the page aloud using the browser's
+       built-in Web Speech API (no accounts, no API keys, works offline once
+       the page is loaded). The paragraph currently being read is highlighted
+       in pale gold and scrolled into view. Works inside a Canvas iframe.
+
+     WHERE TO PASTE
+       Into any GitHub-hosted Optima lesson page (the full-HTML-document kind,
+       NOT Canvas RCE pages — the RCE strips <script>). Paste this whole block
+       just inside the body wrapper, right BEFORE the first content card.
+
+     OPTIONS
+       • Add  data-ra-skip  to any element the reader should NOT read
+         (e.g. the local preview banner, decorative text, answer keys).
+       • Add  data-readaloud-root  to one container to limit reading to it.
+         Default scope: the .canvas-frame wrapper, else <body>.
+
+     NOTES
+       • The player never reads itself, <button> labels, or hidden elements
+         (so unrevealed widget feedback stays unread until shown).
+       • If the browser has no speech voices, the player disables itself
+         with a friendly message instead of breaking the page.
+-->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Sea Peoples and a World in Crisis</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+        <div style="font-size: 13px; margin-top: 10px;">&#8592; Start here: this module's Check-In</div>
+    </div>
+
+    <div class="glossary-box">
+        <div class="callout-label">&#128214; GLOSSARY OF SUBJECT VOCABULARY</div>
+        <div style="font-size: 14px; color: #1a2340;">There are some vocabulary words in this lesson worth reviewing. Tap or hover any highlighted word in the text for a quick reminder, or use the list below.</div>
+        <ul>
+            <li><span class="gloss" tabindex="0">Bronze Age Collapse<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Bronze Age Collapse')">&#128266;</button><span class="gloss-tip">the sudden, poorly understood breakdown of many great powers across the eastern Mediterranean and Near East, roughly 1200 to 1150 BC.</span></span></li>
+            <li><span class="gloss" tabindex="0">Sea Peoples<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Sea Peoples')">&#128266;</button><span class="gloss-tip">a shifting coalition of seaborne raiders and migrants, named by modern scholars, blamed for attacks on Egypt and other powers during the Bronze Age Collapse.</span></span></li>
+            <li><span class="gloss" tabindex="0">systems collapse<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'systems collapse')">&#128266;</button><span class="gloss-tip">a breakdown in which several linked problems (drought, war, broken trade routes) combine and make each other worse, rather than one single cause bringing down a whole civilization.</span></span></li>
+        </ul>
+    </div>
+
+    <div class="map-card">
+        <div class="callout-label">&#128506;&#65039; MAIN MAP &middot; THE EASTERN MEDITERRANEAN IN CRISIS</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Bronze-age-collapse.svg" alt="Map of the eastern Mediterranean and Near East showing sites destroyed or disrupted during the Bronze Age Collapse, roughly 1200 to 1150 BC" />
+        <div class="img-credit">Map: via Wikimedia Commons, CC BY-SA 4.0.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">This map traces likely Sea Peoples' raiding routes across the eastern Mediterranean, marking <strong>Medinet Habu</strong> in Egypt and the region of <strong>Canaan</strong> along the coast of the Levant.</p>
+        <div style="margin-top: 12px; font-size: 13px; color: #444;">
+            <strong>Geographical Glossary:</strong>
+            <span class="gloss" tabindex="0">Medinet Habu<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Medinet Habu')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">meh-dee-net HAH-boo</span>a temple complex in Egypt where Ramesses III recorded his victory over the Sea Peoples.</span></span> &middot;
+            <span class="gloss" tabindex="0">Canaan<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Canaan')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">KAY-nun</span>the region along the eastern Mediterranean coast, roughly modern Israel, the Palestinian territories, and Lebanon.</span></span>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What could bring down almost every great power at once, in just a few decades?</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">For eight weeks, this course has followed civilizations rising, growing, and fighting across the ancient Near East and beyond. This week, nearly all of it comes apart at once. Between roughly 1200 and 1150 BC, the Hittite Empire collapses, Mycenaean Greece is devastated, and Egypt barely survives an assault by a shifting coalition modern historians call the Sea Peoples. Historians still do not agree on a single cause, and this lesson will not pretend the question is fully settled.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe who the Sea Peoples were and why their exact origins remain debated.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain systems collapse: how several combined pressures, not one single cause, can bring down a civilization.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how Ramesses III repelled the Sea Peoples, and at what lasting cost to Egypt.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why a good historian resists inventing a tidy explanation the evidence does not support.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This week's Primary Source 1 page, Ramesses III's Medinet Habu Inscription, and Reading Quiz 1.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">For eight weeks, this course has followed civilizations rising, growing, and fighting across the ancient Near East and beyond: Sumer, Akkad, Babylon, Egypt, the Indus Valley, Shang China, the Hittites, and the palace worlds of Crete and Mycenae. This week, nearly all of it comes apart at once, and no single city or kingdom this course has studied is left fully untouched by what follows. Between roughly 1200 and 1150 BC, in the span of just a few decades, the eastern Mediterranean world went through one of the most dramatic collapses in recorded history. Historians still do not agree on just why, and this lesson will not pretend the question is fully settled.</p>
+    </div>
+
+    <div style="background: #FFF7E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 18px 0;">
+        <div class="callout-label">&#127760; FOREIGN LANGUAGE VOCABULARY</div>
+        <div style="font-size: 15px; color: #1a2340; line-height: 1.6;"><span class="gloss" tabindex="0"><strong>Ramesses III</strong><button class="gloss-audio" onclick="speakGloss(event,'Ramesses the Third')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">RAM-uh-seez</span>pharaoh of Egypt from about 1186 to 1155 BC, who repelled a major Sea Peoples assault.</span></span> and <span class="gloss" tabindex="0"><strong>Merneptah</strong><button class="gloss-audio" onclick="speakGloss(event,'Merneptah')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">MER-nep-tah</span>pharaoh of Egypt from about 1213 to 1203 BC, whose victory stele contains the earliest known mention of "Israel."</span></span> both appear later in this lesson.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; WHO WERE THE SEA PEOPLES?</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Egyptian records from this period describe repeated attacks by a shifting group of seaborne raiders and migrants. Modern historians call them the <span class="gloss" tabindex="0">Sea Peoples<span class="gloss-tip">a shifting coalition of seaborne raiders and migrants, named by modern scholars, blamed for attacks on Egypt and other powers during the Bronze Age Collapse.</span></span>. This is a label invented by nineteenth-century scholars, not a name these groups used for themselves. Egyptian writings name several distinct peoples within this coalition. Egyptian scribes called them the Peleset, Sherden, Shekelesh, Denyen, and Weshesh. The Peleset most of all are widely thought to be the ancestors of the Philistines, a people this course will meet again in Week 13. Their exact origins are still debated among historians today. They may have come from the Aegean, Anatolia, the central Mediterranean, or several places at once. What is not in doubt is the timing. These attacks grow sharply worse in these very same years. This is exactly when the Hittite Empire, Mycenaean Greece, and Kassite Babylon all collapse or suffer heavy damage.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Around 1208 BC, shortly before this wider crisis, the pharaoh <span class="gloss" tabindex="0">Merneptah<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Merneptah')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">MER-nep-tah</span>pharaoh of Egypt from about 1213 to 1203 BC, whose victory stele contains the earliest known mention of "Israel."</span></span> had already fought off a coalition of enemies. It included Libyan raiders and groups later linked to the Sea Peoples. He marked his win on a stele. That stele happens to hold the earliest known mention anywhere of a people called "Israel," living in <span class="gloss" tabindex="0">Canaan<span class="gloss-tip"><span class="gloss-pron">KAY-nun</span>the region along the eastern Mediterranean coast, roughly modern Israel, the Palestinian territories, and Lebanon.</span></span>. This course will return to that detail directly in Week 13. But the more serious crisis was still to come. This week's Primary Source, the Medinet Habu inscription of <span class="gloss" tabindex="0">Ramesses III<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Ramesses the Third')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">RAM-uh-seez</span>pharaoh of Egypt from about 1186 to 1155 BC, who repelled a major Sea Peoples assault.</span></span>, describes a much larger Sea Peoples attack reaching Egypt's own borders roughly a generation later, one Egypt survived, but at lasting cost.</p>
+    </div>
+
+    <div class="figure-card">
+        <div class="callout-label">&#128100; HISTORICAL FIGURE &middot; MERNEPTAH</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Merneptah_Steli_%28cropped%29.jpg" alt="The Merneptah Stele, an ancient Egyptian victory inscription containing the earliest known mention of Israel" />
+        <div class="img-credit">Photo: via Wikimedia Commons, CC BY-SA 4.0.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;"><span class="gloss" tabindex="0">Merneptah<span class="gloss-tip"><span class="gloss-pron">MER-nep-tah</span>pharaoh of Egypt from about 1213 to 1203 BC, whose victory stele contains the earliest known mention of "Israel."</span></span> ruled Egypt from about 1213 to 1203 BC. His victory stele, celebrating a win over Libyan raiders, contains the earliest known writing anywhere naming "Israel."</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; A CASE STUDY IN HISTORIOGRAPHY</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is a moment where being honest about the evidence matters more than telling a tidy story. It would be tempting to tell this story as one clean tale: one cause, one villain, one clear turning point. The evidence will not support that kind of story. Historians have proposed drought and long-lasting famine, weakening royal treasuries and pushing groups to migrate and raid. Others point to political failure at home, revolts, and breakdowns in the complex trade networks that bronze production itself depended on. Bronze needs tin, and tin had to travel huge distances to reach Bronze Age workshops. Fragile palace economies depended on steady tribute and trade flowing in all the time. They may have been quick to fall apart once any one link in that chain snapped. Still others describe a kind of <span class="gloss" tabindex="0">systems collapse<span class="gloss-tip">a breakdown in which several linked problems (drought, war, broken trade routes) combine and make each other worse, rather than one single cause bringing down a whole civilization.</span></span>, in which several of these pressures combine and feed each other. In this picture, no single cause alone would have been enough to bring down so much at once. Several causes together, though, proved too much to stop. The honest, current answer from scholars is that several of these factors were likely working together. Just how they combined is still not fully understood, and it may never be settled with full confidence.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This is one of the clearest examples anywhere in the ancient world of how messy real historical change can be. There is no march toward sure progress here, no plan unfolding as it should. Great powers, the Hittite Empire above all, simply stop existing within a matter of decades. Others, Egypt and Mesopotamia among them, survive, deeply wounded. They never become quite the same civilizations they were before. At the trading city of Ugarit in Syria, archaeologists found a letter from the king's own officials still baking in a kiln, a plea for ships and help that was never sent in time before the city burned. History does not owe anyone a tidy explanation. A good historian resists making one up where the evidence will not support it.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; EGYPT, WOUNDED BUT ALIVE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ramesses III's forces did succeed in beating back the Sea Peoples assault, in a major land and sea battle the Medinet Habu inscription describes and celebrates in vivid detail. Egyptian carvings show ships locked in close combat, archers on both riverbanks, and captured Sea Peoples warriors bound and paraded before the pharaoh. One likely Egyptian tactic was to draw enemy ships into the narrow, shallow channels of the Nile Delta itself. There, the enemy ships had little room to turn or flee. Rows of Egyptian archers on the banks could then fire down on them at close range.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">But victory came at a real cost. Egypt's New Kingdom survived the crisis, but its money, land, and standing abroad never fully came back. The following century sees Egyptian power steadily fading, a story Week 10 will pick up directly. Next lesson turns to a very different kind of source from this same crisis: not a proud royal inscription, but a set of ordinary office records from a palace that did not survive.</p>
+    </div>
+
+    <div class="figure-card">
+        <div class="callout-label">&#128100; HISTORICAL FIGURE &middot; RAMESSES III</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Thebes%2C_Medinet_Habu%2C_Egypt%2C_Temple_of_Ramesses_III%2C_Reliefs.jpg" alt="Relief carvings at the temple of Ramesses III at Medinet Habu" />
+        <div class="img-credit">Photo: via Wikimedia Commons, CC BY 4.0.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;"><span class="gloss" tabindex="0">Ramesses III<span class="gloss-tip"><span class="gloss-pron">RAM-uh-seez</span>pharaoh of Egypt from about 1186 to 1155 BC, who repelled a major Sea Peoples assault.</span></span> ruled Egypt from about 1186 to 1155 BC. He repelled a major Sea Peoples invasion in his eighth year as pharaoh, though the cost of that fight left Egypt permanently weaker.</p>
+    </div>
+
+    <div class="people-card">
+        <div class="callout-label">&#128101; PEOPLES &middot; THE SEA PEOPLES</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Battle_of_the_%28Nile%29_Delta_-_Ramesses_III_vs_Sea_Peoples_-_Peleset_in_battle.png" alt="Egyptian relief carving showing Sea Peoples warriors, including the feather-headdressed Peleset, in battle" />
+        <div class="img-credit">Photo: via Wikimedia Commons, CC0.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">Egyptian carvings show Sea Peoples warriors wearing tall feathered or spiked headdresses, kilts, and round shields, arriving with entire families and ox-carts loaded with belongings, a picture of migration as much as invasion.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#9876;&#65039; BATTLE &middot; EGYPT AGAINST THE SEA PEOPLES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Fought around 1175 BC near Egypt's Nile Delta borders, this combined land and naval battle is unusual for having a naval fight recorded in such visual detail. Egyptian archers on shore and aboard ships trapped the invaders' vessels, a rare surviving picture of Bronze Age naval combat.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 1</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short quiz on today's lesson, in Canvas.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128170; KEEP THIS IN MIND</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Egypt survived the Sea Peoples, but wounded, and its power never fully returned. Keep that cost in mind as Lesson 2 turns from a proud royal victory inscription to a very different kind of source: the last, unfinished office records of a palace that did not survive at all.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; WORLD HISTORY &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1 &middot; The Sea Peoples and a World in Crisis</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
+(function () {
+  document.addEventListener('click', function (e) {
+    var gloss = e.target.closest('.gloss');
+    if (gloss && !e.target.closest('.gloss-audio')) {
+      document.querySelectorAll('.gloss.gloss-open').forEach(function (g) { if (g !== gloss) g.classList.remove('gloss-open'); });
+      gloss.classList.toggle('gloss-open');
+    } else if (!e.target.closest('.gloss-tip')) {
+      document.querySelectorAll('.gloss.gloss-open').forEach(function (g) { g.classList.remove('gloss-open'); });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

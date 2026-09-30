@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>World History &mdash; Lesson 7.1</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
+    .glossary-box, .map-card, .figure-card, .people-card, .city-card, .tech-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .glossary-box ul { margin: 8px 0 0 0; padding-left: 20px; }
+    .glossary-box li { margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .map-card img, .figure-card img, .people-card img, .city-card img, .tech-card img { max-width: 100%; height: auto; border-radius: 6px; display: block; margin: 10px 0; }
+    .callout-label { font-size: 11px; color: #c7922c; letter-spacing: 0.4px; margin-bottom: 10px; }
+    .img-credit { font-size: 11px; color: #8a94ab; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">WORLD HISTORY</div>
+</div>
+
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 7</div>
+        <div style="font-size: 12px; color: #666;">Beyond Mesopotamia and Egypt</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 7.1 &middot; Monday</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Cities Without Kings: The Mystery of the Indus Valley</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">The Indus Valley and Shang China</div>
+    </div>
+</div>
+
+<div style="padding: 24px 34px;">
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     OPTIMA READ-ALOUD PLAYER — drop-in snippet for GitHub-hosted lesson pages
+     ═══════════════════════════════════════════════════════════════════════
+
+     WHAT IT DOES
+       Adds a "Listen" player that reads the page aloud using the browser's
+       built-in Web Speech API (no accounts, no API keys, works offline once
+       the page is loaded). The paragraph currently being read is highlighted
+       in pale gold and scrolled into view. Works inside a Canvas iframe.
+
+     WHERE TO PASTE
+       Into any GitHub-hosted Optima lesson page (the full-HTML-document kind,
+       NOT Canvas RCE pages — the RCE strips <script>). Paste this whole block
+       just inside the body wrapper, right BEFORE the first content card.
+
+     OPTIONS
+       • Add  data-ra-skip  to any element the reader should NOT read
+         (e.g. the local preview banner, decorative text, answer keys).
+       • Add  data-readaloud-root  to one container to limit reading to it.
+         Default scope: the .canvas-frame wrapper, else <body>.
+
+     NOTES
+       • The player never reads itself, <button> labels, or hidden elements
+         (so unrevealed widget feedback stays unread until shown).
+       • If the browser has no speech voices, the player disables itself
+         with a friendly message instead of breaking the page.
+-->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }] — one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }] — one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ═══ END OPTIMA READ-ALOUD PLAYER ═══ -->
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Cities Without Kings: The Mystery of the Indus Valley</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+        <div style="font-size: 13px; margin-top: 10px;">&#8592; Start here: this module's Check-In</div>
+    </div>
+
+    <div class="glossary-box">
+        <div class="callout-label">&#128214; GLOSSARY OF SUBJECT VOCABULARY</div>
+        <div style="font-size: 14px; color: #1a2340;">There are some vocabulary words in this lesson worth reviewing. Tap or hover any highlighted word in the text for a quick reminder, or use the list below.</div>
+        <ul>
+            <li><span class="gloss" tabindex="0">Harappan<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Harappan')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">huh-RAP-in</span>belonging to the Indus Valley civilization, named after one of its two largest cities, Harappa.</span></span></li>
+            <li><span class="gloss" tabindex="0">Indus script<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Indus script')">&#128266;</button><span class="gloss-tip">the still-undeciphered writing system found on small carved seals and pottery across the Indus Valley civilization.</span></span></li>
+            <li><span class="gloss" tabindex="0">standardized weights<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'standardized weights')">&#128266;</button><span class="gloss-tip">a matched set of weights, built to the same sizes everywhere, used to measure goods fairly across a wide territory.</span></span></li>
+        </ul>
+    </div>
+
+    <div class="map-card">
+        <div class="callout-label">&#128506;&#65039; MAIN MAP &middot; THE INDUS VALLEY CIVILIZATION</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Indus_Valley_Civilization%2C_Mature_Phase_%282600-1900_BCE%29.png" alt="Map of the Indus Valley civilization at its Mature Harappan height, showing the Indus River and major sites" />
+        <div class="img-credit">Map: via Wikimedia Commons, CC BY-SA 3.0.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">This map traces the <strong>Indus River</strong> and marks the cities of <strong>Mohenjo-daro</strong>, <strong>Harappa</strong>, <strong>Lothal</strong>, and <strong>Mehrgarh</strong>.</p>
+        <div style="margin-top: 12px; font-size: 13px; color: #444;">
+            <strong>Geographical Glossary:</strong>
+            <span class="gloss" tabindex="0">Indus River<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Indus River')">&#128266;</button><span class="gloss-tip">a long river flowing through modern Pakistan, along whose banks the Indus Valley civilization grew.</span></span> &middot;
+            <span class="gloss" tabindex="0">Mohenjo-daro<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Mohenjo-daro')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">moh-HEN-joh-DAR-oh</span>one of the two largest Indus cities, known for its careful street planning and covered drains.</span></span> &middot;
+            <span class="gloss" tabindex="0">Harappa<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Harappa')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">huh-RAP-uh</span>the other of the two largest Indus cities, which gave the whole civilization its name.</span></span> &middot;
+            <span class="gloss" tabindex="0">Lothal<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Lothal')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">LOH-tuhl</span>an Indus port city with what may be one of the world's earliest tidal dockyards.</span></span> &middot;
+            <span class="gloss" tabindex="0">Mehrgarh<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Mehrgarh')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">MER-gar</span>an early farming site in the hills near the Indus plain, where wheat, barley, and cattle were first tamed in this region.</span></span>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Can a real civilization run its cities without a king at all?</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">This week steps outside the Near East for the only time in this course, looking briefly at two civilizations growing up far away with little or no contact with Mesopotamia and Egypt. This lesson meets the Indus Valley civilization: a river valley people with planned cities, standardized weights, and long-distance trade, but no palace, no royal tomb, and no writing that names a single king. That absence is a genuine, unsolved puzzle, not a gap this lesson will pretend to fill in.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how the Indus Valley civilization grew from early farming into the Mature Harappan cities.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the city planning, drains, and standardized weights found at Mohenjo-daro and Harappa.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why historians cannot yet say who ruled Indus Valley cities, or how.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why an honest historian says "we do not know" rather than inventing a confident answer.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This week's Primary Source 1 page, John Marshall's 1924 excavation report on Mohenjo-daro, Reading Quiz 1, and this week's required VR Activity, in Canvas.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">This week steps outside the Near East for the only time. It looks briefly at two civilizations growing up farther away. One is the Indus Valley, in what is now Pakistan and northwest India. The other is Shang China, along the Yellow River far to the east. Neither will get the full, ongoing study this course has given Sumer and Egypt. Both belong to units of their own, which you will study in more depth later in this course. But both deserve a real look now. They are true river valley civilizations in their own right. They are also a chance to compare civilizations that grew up in very different ways, each with little or no contact with Mesopotamia and Egypt.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; A CIVILIZATION BUILT ON A RIVER, LIKE THE OTHERS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Farming reached the region around the <span class="gloss" tabindex="0">Indus River<span class="gloss-tip">a long river flowing through modern Pakistan, along whose banks the Indus Valley civilization grew.</span></span> on its own. Wheat, barley, and a local kind of cattle called the zebu were tamed by around 7000 BC. This happened at sites like <span class="gloss" tabindex="0">Mehrgarh<span class="gloss-tip"><span class="gloss-pron">MER-gar</span>an early farming site in the hills near the Indus plain, where wheat, barley, and cattle were first tamed in this region.</span></span>, in the hill country near the river plain. Over the next centuries, this early farming culture grew into a full urban civilization. It reached its height in what historians call the <strong>Mature Harappan</strong> period, roughly 2600 to 1900 BC. This period is named for <span class="gloss" tabindex="0">Harappa<span class="gloss-tip"><span class="gloss-pron">huh-RAP-uh</span>the other of the two largest Indus cities, which gave the whole civilization its name.</span></span>, one of its two greatest cities. The other was <span class="gloss" tabindex="0">Mohenjo-daro<span class="gloss-tip"><span class="gloss-pron">moh-HEN-joh-DAR-oh</span>one of the two largest Indus cities, known for its careful street planning and covered drains.</span></span>. In 1924, the British archaeologist Sir John Marshall told the world about this whole lost civilization for the first time. This week's Primary Source draws on Marshall's own dig report. It describes what his team found at Mohenjo-daro. Long before Marshall's find, British railway engineers in the 1850s had already dug up ancient bricks at Harappa. Not knowing what they had found, the engineers crushed thousands of these bricks to use as gravel under new railway tracks, wrecking part of the very civilization Marshall would later announce to the world.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; REMARKABLY PLANNED CITIES</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">What Marshall's digs turned up was startling. Cities were laid out on a precise grid of straight streets. Builders used bricks cut to standard sizes across the whole civilization's land, an area larger than either Mesopotamia or Egypt at the time. Traders also used a shared system of <span class="gloss" tabindex="0">standardized weights<span class="gloss-tip">a matched set of weights, built to the same sizes everywhere, used to measure goods fairly across a wide territory.</span></span>. These were small cube-shaped stones, cut to matching sizes. A trader could use them to measure goods fairly, no matter where in the civilization they traveled. Mohenjo-daro's houses linked to covered brick drains running beneath the streets. Many houses even had private wells and what appear to be early bathing rooms. This level of city planning and clean water would not be matched again in much of the world for centuries.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">At the port city of <span class="gloss" tabindex="0">Lothal<span class="gloss-tip"><span class="gloss-pron">LOH-tuhl</span>an Indus port city with what may be one of the world's earliest tidal dockyards.</span></span>, archaeologists found what may be one of the earliest tidal dockyards built anywhere. This is proof of long-distance sea trade. Indus goods reached as far as Mesopotamia itself, where Sumerian texts speak of a trading partner called "Meluhha," widely thought to be the Indus civilization. Carved stone seals from Indus cities often show animals such as bulls, elephants, and a one-horned creature some call a "unicorn" figure. What these images meant to the people who made them is still unclear.</p>
+    </div>
+
+    <div class="people-card">
+        <div class="callout-label">&#128101; PEOPLES &middot; THE HARAPPANS</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Dancing_Girl_of_Mohenjo-daro.jpg" alt="A small bronze figurine known as the Dancing Girl of Mohenjo-daro, wearing stacked bangles" />
+        <div class="img-credit">Photo: via Wikimedia Commons, CC BY-SA 3.0.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;">Small clay figurines and carved seals give the best clues to how the Harappans looked and dressed: draped cloth garments, elaborate hairstyles, and layered bead and shell jewelry. This famous small bronze figure, nicknamed the "Dancing Girl," shows bangles worn stacked up one arm, a style some in the region still wear today.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; A GENUINE, UNRESOLVED PUZZLE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Here is where the Indus Valley becomes truly strange. It is stranger than every other civilization this course has studied so far. Despite years of careful digging, archaeologists have never found a royal palace anywhere in Indus territory. They have never found a grand temple or a huge royal tomb either. No writing naming a king, a dynasty, or even a single ruler has ever turned up. The <span class="gloss" tabindex="0">Indus script<span class="gloss-tip">the still-undeciphered writing system found on small carved seals and pottery across the Indus Valley civilization.</span></span> itself, found on small carved seals and pottery, remains undeciphered to this day. About four hundred distinct symbols have been found so far, usually written from right to left, but the language hidden behind them is still unknown. Scholars still argue over whether it even records a full spoken language. It might instead be something closer to a system of symbols and marks. Very little proof of warfare has turned up either: no walls built against other Indus cities, and no stockpiled weapons.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This lesson will not pretend to solve what expert archaeologists themselves have not solved. Some historians suggest Indus cities were ruled by some kind of shared body, a council of merchants or priests, rather than a single king. Others suspect proof of kingship simply has not survived, or has not yet been found. Still others wonder if Indus society worked by rules quite different from the kingdoms and empires this course has studied, with no clean match among its Bronze Age neighbors. The honest answer, at this point in the story, is that nobody knows for sure. A good historian says so plainly, rather than making up a confident answer the evidence does not support. This mature phase of Indus civilization also faded out around 1900 BC. Many experts link this decline to a shifting river system. A once-major river likely dried up over time and left some cities without the water they needed. Even here, though, scholars have not settled on one single cause.</p>
+    </div>
+
+    <div class="city-card">
+        <div class="callout-label">&#127961;&#65039; CITIES &middot; MOHENJO-DARO</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Great_Bath%2C_Mohenjo-daro_20160806_JYN-02.jpg" alt="The ruins of the Great Bath at Mohenjo-daro, a large waterproofed pool structure" />
+        <div class="img-credit">Photo: via Wikimedia Commons, CC BY-SA 4.0.</div>
+        <p style="font-size: 15px; color: #1a2340; line-height: 1.6; margin: 8px 0 0 0;"><span class="gloss" tabindex="0">Mohenjo-daro<span class="gloss-tip"><span class="gloss-pron">moh-HEN-joh-DAR-oh</span>one of the two largest Indus cities, known for its careful street planning and covered drains.</span></span> was built on a precise grid, with wide main streets and narrower side lanes. Its most famous structure, the Great Bath shown here, was a large, carefully waterproofed pool, likely used for ritual bathing rather than everyday washing.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128218; WHY THE PUZZLE MATTERS</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This is worth taking seriously as its own kind of lesson. It would be easy to assume every ancient civilization must have looked something like Sumer or Egypt: a king, a temple, a monumental tomb. The Indus Valley shows that civilization does not always need the same political shape everywhere it shows up. Cities, planned streets and drains, workers with special skills, and long-distance trade can all exist without a king at their head. Keep this open question in mind as next lesson turns to Shang China, a river valley civilization that, unlike the Indus, left plenty of written proof naming its kings by name.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 1</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short quiz on today's lesson, in Canvas.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div class="callout-label">&#128170; KEEP THIS IN MIND</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Civilization does not have to look like Sumer or Egypt to be real. Planned streets, drains, fair weights, and long-distance trade all existed at Mohenjo-daro without any proof of a king at the top. Hold that open question as Lesson 2 turns to Shang China, a river valley civilization that left behind exactly the kind of written proof of kingship the Indus Valley did not.</p>
+    </div>
+
+</div>
+
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; WORLD HISTORY &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1 &middot; Cities Without Kings: The Mystery of the Indus Valley</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
+(function () {
+  document.addEventListener('click', function (e) {
+    var gloss = e.target.closest('.gloss');
+    if (gloss && !e.target.closest('.gloss-audio')) {
+      document.querySelectorAll('.gloss.gloss-open').forEach(function (g) { if (g !== gloss) g.classList.remove('gloss-open'); });
+      gloss.classList.toggle('gloss-open');
+    } else if (!e.target.closest('.gloss-tip')) {
+      document.querySelectorAll('.gloss.gloss-open').forEach(function (g) { g.classList.remove('gloss-open'); });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
