@@ -10,9 +10,13 @@ booms.
 
 Overlaps with the Texas folders where the same subject matter could be told as regional Western history or
 as Texas's own experience of it. A lesson on the Plains Indian Wars, cattle trails, or the frontier's
-closing generally defaults here; a lesson with a genuinely Texas-specific focus (the Texas Rangers, the
-Comanche frontier as Texas experienced it) belongs in `spanish-republic-texas/` or `american-texas/`
-instead, by the same kind of tiebreaker used between `american-civil-war/` and `american-texas/`. As with
-every folder here, this boundary is guidance, not a rule.
+closing generally defaults here; a lesson with a genuinely Texas-specific focus belongs in
+`spanish-republic-texas/` or `texas-annexation-reconstruction/` instead, by the same kind of tiebreaker
+used between `american-civil-war/` and `texas-annexation-reconstruction/`.
+
+**Comanche placement:** it goes by who the Comanche are mainly dealing with. A lesson in which the Texas
+Rangers are the main party dealing with the Comanche belongs in a Texas-specific folder. A lesson in which
+the U.S. Army is the Comanche's main antagonist belongs here. As with every folder here, this boundary is
+guidance, not a rule.
 
 Currently empty — no lesson content ported yet.

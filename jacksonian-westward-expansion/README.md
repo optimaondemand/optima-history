@@ -8,7 +8,7 @@ this folder's bookend.
 Overlaps with `american-west/` (regional Western settlement and Indian Wars) and the Texas folders
 (Annexation as one cause of the war). A lesson on the Mexican-American War itself or the national Manifest
 Destiny debate belongs here; Texas-specific content stays in `spanish-republic-texas/` or
-`american-texas/`; broader Western settlement or Indian Wars content stays in `american-west/`. As with
+`texas-annexation-reconstruction/`; broader Western settlement or Indian Wars content stays in `american-west/`. As with
 every folder here, this boundary is guidance, not a rule.
 
 Currently empty — no lesson content ported yet.

@@ -1,8 +1,11 @@
-# American Texas
+# Texas: Annexation and Reconstruction
 
-Texas as a state of the Union: from statehood (1845) forward — secession and Texas in the Civil War,
-Reconstruction, and Texas history since. Picks up exactly where `spanish-republic-texas/` leaves off, which
-ends at Annexation; the entry into the Union itself is the boundary.
+Texas as a state of the Union, from annexation in 1845 through 1876. The period covers the two times
+Texas became a state: first its entry into the Union, then its return after secession and the Civil War.
+Includes secession, Texas in the Civil War, and Reconstruction. Picks up exactly where
+`spanish-republic-texas/` leaves off, which ends at Annexation; the entry into the Union itself is the
+boundary. The frontier ranching and cattle era in Texas belongs here, but the great cattle drives, such as
+the Chisholm Trail, belong in `american-west/`. Texas history after 1876 is not covered here.
 
 **Civil War placement tiebreaker:** a lesson that could plausibly sit in either this folder or
 `american-civil-war/` (e.g. John Bell Hood, Texas regiments in the Army of Northern Virginia) goes by

@@ -62,7 +62,7 @@ indefinitely. That audit is not built yet — this repo currently holds the fold
 ## Folder boundaries are guidance, not rules
 
 Each topic folder's README describes its scope and, where two folders could plausibly hold the same
-lesson, names a default and a tiebreaker (see `american-civil-war/` and `american-texas/` for an example).
+lesson, names a default and a tiebreaker (see `american-civil-war/` and `texas-annexation-reconstruction/` for an example).
 These are meant to alert a writer to the best-fit home and keep placement consistent, not to be inviolable.
 Real content will surface edge cases the current wording doesn't anticipate — use judgment, and treat the
 boundary language as something to refine over time rather than a rule to satisfy exactly.
@@ -81,7 +81,7 @@ can reach back into whatever decade it needs (Weimar Germany, Japanese imperiali
 Britain's textile mills spreading to America) as long as the lesson is actually about explaining that
 event or phenomenon. This overlap is expected, not a flaw in the taxonomy; where it creates a real
 placement question, the relevant folders' READMEs name a default and a tiebreaker (see `american-west/`'s
-note on the Texas folders, `american-civil-war/`'s note on `american-texas/`, `world-war-ii/`'s note on
+note on the Texas folders, `american-civil-war/`'s note on `texas-annexation-reconstruction/`, `world-war-ii/`'s note on
 `roaring-20s-great-depression/`, or `industrial-revolution/`'s note on `gilded-progressive/`).
 
 ## Topic folders and contents
@@ -281,7 +281,7 @@ Scope and boundaries: [spanish-republic-texas/README](spanish-republic-texas/REA
 - [industrial-revolution](industrial-revolution/README.md) — c. 1760s onward
 - [american-early-republic](american-early-republic/README.md) — 1789 to the War of 1812
 - [jacksonian-westward-expansion](jacksonian-westward-expansion/README.md) — after 1815 to the Mexican-American War
-- [american-texas](american-texas/README.md) — statehood (1845) forward
+- [texas-annexation-reconstruction](texas-annexation-reconstruction/README.md) — annexation (1845) through 1876
 - [american-west](american-west/README.md) — 1804 to c. 1890
 - [american-civil-war](american-civil-war/README.md) — sectionalism to the end of Reconstruction (1877)
 - [gilded-progressive](gilded-progressive/README.md) — 1877 to U.S. entry into World War I
