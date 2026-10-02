@@ -269,11 +269,15 @@ Scope and boundaries: [spanish-republic-texas/README](spanish-republic-texas/REA
 </details>
 
 <details>
-<summary><b>Not yet populated</b> — 33 folders with a scope note and no lessons</summary>
+<summary><b>Not yet populated</b> — 40 folders with a scope note and no lessons</summary>
 
+- [america-cold-war-era](america-cold-war-era/README.md)
+- [america-long-1990s](america-long-1990s/README.md)
+- [america-post911-gwot-populism](america-post911-gwot-populism/README.md)
 - [american-civil-war](american-civil-war/README.md)
 - [american-colonial-period](american-colonial-period/README.md)
 - [american-early-republic](american-early-republic/README.md)
+- [american-empire](american-empire/README.md)
 - [american-revolution-founding](american-revolution-founding/README.md)
 - [american-west](american-west/README.md)
 - [antebellum-south](antebellum-south/README.md)
@@ -292,15 +296,18 @@ Scope and boundaries: [spanish-republic-texas/README](spanish-republic-texas/REA
 - [mexican-revolutionary-consolidation](mexican-revolutionary-consolidation/README.md)
 - [mexico-liberal-revolution-porfiriato](mexico-liberal-revolution-porfiriato/README.md)
 - [new-spain-hapsburg-bourbon](new-spain-hapsburg-bourbon/README.md)
+- [ottoman-period-north-africa](ottoman-period-north-africa/README.md)
 - [pre-columbian-america](pre-columbian-america/README.md)
 - [reformation-confessional-europe](reformation-confessional-europe/README.md)
 - [renaissance](renaissance/README.md)
 - [roaring-20s-great-depression](roaring-20s-great-depression/README.md)
 - [roman-empire](roman-empire/README.md)
 - [roman-founding-republic](roman-founding-republic/README.md)
+- [technological-revolution](technological-revolution/README.md)
 - [texas-1876-1941](texas-1876-1941/README.md)
 - [texas-annexation-reconstruction](texas-annexation-reconstruction/README.md)
 - [texas-wwii-postwar](texas-wwii-postwar/README.md)
+- [trans-saharan-slave-trade](trans-saharan-slave-trade/README.md)
 - [triangle-trade-slavery](triangle-trade-slavery/README.md)
 - [world-war-i](world-war-i/README.md)
 - [world-war-ii](world-war-ii/README.md)
