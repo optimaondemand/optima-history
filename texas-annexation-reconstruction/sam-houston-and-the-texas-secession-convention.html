@@ -41,30 +41,6 @@
 <style>
     body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
     .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
-    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
-    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
-    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
-    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
-    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
-    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
-    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
-    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
-    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
-    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
-    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
-    .widget-feedback.show { display: block; }
-    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
-    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
-    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
-    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
-    .widget-reset:hover { background: #FDF3E3; }
-    .ow-scale .widget-options { justify-content: space-between; }
-    .ow-scale .widget-options button { flex: 1; text-align: center; }
-    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
-    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
-    .ow-flip.flipped .ow-flip-front { display: none; }
-    .ow-flip.flipped .ow-flip-back { display: block; }
 </style>
 </head>
 <body>
@@ -133,22 +109,16 @@
     <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
         <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This page and a notebook for one short writing question.</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This page.</div>
         </div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; BEFORE THE CONVENTION</div>
-<div class="optima-widget ow-reflect">
-  <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
-  <div class="widget-question">Your whole state is full of excitement for a big, risky plan, and you think the plan is a mistake. Do you say so? (No wrong answer. Just check in with yourself.)</div>
-  <div class="widget-options"><button data-response="That takes courage and honesty together. Watch how Houston handled this exact moment.">&#128483;&#65039; Yes, even if it costs me</button><button data-response="Wise speakers do that. Watch how Houston picked his, and whether it saved him.">&#129300; Maybe, but I would pick my words carefully</button><button data-response="Many people did that in 1861. Watch for what it cost the ones who spoke up, and the ones who did not.">&#129323; No, I would keep quiet</button></div>
-  <div class="widget-feedback"></div>
-  <button class="widget-reset">Reset</button>
-</div><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Man Texans Knew</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By 1861, Sam Houston was the best-known Texan alive. He had won the Battle of San Jacinto in 1836. He had been president of the Republic of Texas, a senator for the new state, and, since 1859, its governor. When the national quarrel over slavery turned into a crisis, everyone wanted to know what Houston would do.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Houston did not want Texas to leave the Union. He was not against slavery. He held enslaved people himself, and he defended the system. His argument was about whether leaving would work. He said it would bring a war, and that Texas would lose.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A Convention Without the Governor</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Lincoln was elected in November 1860, and South Carolina left the Union in December. Many Texans wanted to follow. Houston, as governor, refused to call the legislature into a special session to discuss it. Secession leaders did not wait. They held an election for <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A person chosen to speak and vote for others.">delegate</a>s and called a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A meeting of chosen delegates who make a big decision.">convention</a>. It met in Austin on January 28, 1861. The legislature later gave its approval. Judge Oran M. Roberts, a strong supporter of secession, led the meeting.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">While the convention met, Texas leaders also moved to take over the U.S. Army posts in Texas. On February 18, General David Twiggs gave up the army&rsquo;s property in San Antonio without a fight. Texas was acting like a state that had already left.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Man Texans Knew</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By 1861, Sam Houston was the best-known Texan alive. He had won the Battle of San Jacinto in 1836. He had been president of the Republic of Texas, a senator for the new state, and, since 1859, its governor. When the national quarrel over slavery turned into a crisis, everyone wanted to know what Houston would do.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Houston did not want Texas to leave the Union. He was not against slavery. He held enslaved people himself, and he defended the system. His argument was about whether leaving would work. He said it would bring a war, and that Texas would lose.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A Convention Without the Governor</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Lincoln was elected in November 1860, and South Carolina left the Union in December. Six more states left in January. Many Texans wanted to follow. Houston, as governor, refused to call the legislature into a special session to discuss it. Secession leaders did not wait. They held an election for <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A person chosen to speak and vote for others.">delegate</a>s and called a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A meeting of chosen delegates who make a big decision.">convention</a>. It met in Austin on January 28, 1861. The legislature later gave its approval. Judge Oran M. Roberts, a strong supporter of secession, led the meeting.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">While the convention met, Texas leaders also moved to take over the U.S. Army posts in Texas. On February 18, General David Twiggs gave up the army&rsquo;s property in San Antonio without a fight. Texas was acting like a state that had already left.</p>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE CONVENTION DECIDES</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Vote</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On February 1, the convention voted 166 to 8 for an <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="An official order or law. Here it means the convention&#x27;s decision to leave the Union.">ordinance</a> of <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The act of formally leaving a country or union.">secession</a>. Ordinary voters had to agree, so a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A vote by the people on one question.">referendum</a> was held on February 23. About three of every four voters said yes.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Vote</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On February 1, the convention voted 166 to 8 for an <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="An official order or law. Here it means the convention&#x27;s decision to leave the Union.">ordinance</a> of <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The act of formally leaving a country or union.">secession</a>. Ordinary voters had to agree, so a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A vote by the people on one question.">referendum</a> was held on February 23. About three of every four voters said yes. Texas became the seventh state to leave the Union.</p>
 <div style="margin: 16px 0;">
   <div style="font-size: 14px; color: #0E1C42; margin-bottom: 4px;">The convention vote, February 1, 1861</div>
   <div style="display: flex; height: 30px; border-radius: 6px; overflow: hidden; margin-bottom: 4px;">
@@ -163,34 +133,11 @@
   </div>
   <div style="font-size: 13px; color: #6b7a99;">About 1 in 4 voters said no (the gold bar).</div>
 </div>
-<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A few delegates voted no. One of them was James W. Throckmorton, a lawyer from North Texas who believed secession would bring ruin. He would later serve as governor himself. Eight votes against were not many, but they show that Texas was never of one mind.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What Reason Did They Give?</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The convention also wrote a paper explaining why. It is called the Declaration of Causes. It said that Texas had joined the Union as a state that allowed slavery. It accused Northern states of attacking slavery and breaking their duty to Southern states.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many leaders also spoke of <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The idea that the states hold powers the national government cannot take away.">states' rights</a>. This was the legal argument: that each state had the right to make this choice. But when you read what Texas leaders wrote, the cause they named again and again was slavery. The expansion of slavery had been the national quarrel for years, and Texas answered it by leaving.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By March, Texas had joined the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The group of Southern states that left the Union in 1860 and 1861 and formed their own government.">Confederacy</a>, the new government formed by the Southern states.</p>
+<p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A few delegates voted no. One of them was James W. Throckmorton, a lawyer from North Texas who believed secession would bring ruin. He would later serve as governor himself. Eight votes against were not many, but they show that Texas was never of one mind. In the vote of the people, some parts of the state said no, especially the German settlements of the Hill Country. Even in Austin, where the convention met, the county voted against leaving.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What Reason Did They Give?</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The convention also wrote a paper explaining why. It is called the Declaration of Causes. It said that Texas had joined the Union as a state that allowed slavery. It accused Northern states of attacking slavery and breaking their duty to Southern states.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many leaders also spoke of <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The idea that the states hold powers the national government cannot take away.">states' rights</a>. This was the legal argument: that each state had the right to make this choice. But when you read what Texas leaders wrote, the cause they named again and again was slavery. The expansion of slavery had been the national quarrel for years, and Texas answered it by leaving.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By March, Texas had joined the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The group of Southern states that left the Union in 1860 and 1861 and formed their own government.">Confederacy</a>, the new government formed by the Southern states.</p>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; HOUSTON STANDS APART</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Houston Warns Texas</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Houston spoke out in plain words. He said that war was coming, and that it would not be short or easy. He argued that the North had more than twice as many people. It had most of the factories and most of the railroads. He warned that Northerners were slow to anger but would not quit once they began. In his view, anyone who thought the North would not fight was fooling himself.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many secession leaders told Texans something else. They said the North was weak and would give up quickly. Houston judged that this was a dangerous way to talk. He believed a leader should look at the real strength of the other side, even when the crowd wants to cheer.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Oath</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In March, the convention told state officials to take an <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A solemn promise, often to be loyal to a government.">oath</a> of loyalty to the Confederacy. Houston refused. On March 16, the convention called his name three times. He did not answer. The delegates declared his office empty, and Edward Clark became governor.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Houston is also said to have turned down an offer of Union troops that could have kept him in office. He did not want to bring civil war to Texas. He left quietly. He died in July 1863, while the war was still going on.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What Happened Next</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The war lasted four years. It cost hundreds of thousands of lives. In the end, the South lost, and slavery ended. Houston had not been sure of every detail. But he had looked at the facts and told Texans what to expect, and in the main he was right.</p><div class="optima-widget ow-select">
-  <div class="widget-kicker">&#9889; TRY IT &middot; WHOSE VIEW?</div>
-  <div class="widget-question">Read each statement. Does it match Houston, the secession leaders, or both?</div>
-  <div class="widget-row" data-correct="2" data-fb="Right. Houston held enslaved people and defended slavery. He disagreed about whether secession would work." data-hint="Remember that Houston was not an opponent of slavery.">
-    <div class="widget-row-prompt">1. Slavery was worth defending.</div>
-    <div class="widget-options"><button data-choice="0">Houston</button><button data-choice="1">The secession leaders</button><button data-choice="2">Both</button></div>
-  </div>
-  <div class="widget-row" data-correct="0" data-fb="Right. This was Houston&amp;rsquo;s warning." data-hint="Which side was urging caution about the other side&amp;rsquo;s strength?">
-    <div class="widget-row-prompt">2. The North is strong, and it will not give up easily.</div>
-    <div class="widget-options"><button data-choice="0">Houston</button><button data-choice="1">The secession leaders</button><button data-choice="2">Both</button></div>
-  </div>
-  <div class="widget-row" data-correct="1" data-fb="Right. Houston judged this view dangerous." data-hint="Which side wanted to leave the Union quickly?">
-    <div class="widget-row-prompt">3. The North will not really fight, so leaving the Union is safe.</div>
-    <div class="widget-options"><button data-choice="0">Houston</button><button data-choice="1">The secession leaders</button><button data-choice="2">Both</button></div>
-  </div>
-  <div class="widget-row" data-correct="0" data-fb="Right. Houston said so before the war began." data-hint="Think about who was warning Texans not to expect an easy victory.">
-    <div class="widget-row-prompt">4. A war would be long and costly.</div>
-    <div class="widget-options"><button data-choice="0">Houston</button><button data-choice="1">The secession leaders</button><button data-choice="2">Both</button></div>
-  </div>
-  <button class="widget-reset">Reset</button>
-</div><details style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
-    <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Write your answer in your notebook, then click to compare. Houston lost his office by refusing the oath. Give one reason it was the right choice, and one reason it was not.</summary>
-    <div style="font-size: 17px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">Many answers can be good. A reason for: Houston believed secession would bring a disaster, and he refused to promise loyalty to a cause he thought would hurt Texas. A reason against: if he had taken the oath, he might have kept his office and used it to slow the war. The important thing is to give a reason that fits what you now know about him. A strong answer also names the cost of the choice he made.</div>
-</details>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Houston Warns Texas</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Houston spoke out in plain words. He said that war was coming, and that it would not be short or easy. He argued that the North had more than twice as many people. It had most of the factories and most of the railroads. He warned that Northerners were slow to anger but would not quit once they began. In his view, anyone who thought the North would not fight was fooling himself.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many secession leaders told Texans something else. They said the North was weak and would give up quickly. Houston judged that this was a dangerous way to talk. He believed a leader should look at the real strength of the other side, even when the crowd wants to cheer.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Oath</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In March, the convention told state officials to take an <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A solemn promise, often to be loyal to a government.">oath</a> of loyalty to the Confederacy. Houston refused. On March 16, the convention called his name three times. He did not answer. The delegates declared his office empty, and Edward Clark became governor.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Houston is also said to have turned down an offer of Union troops that could have kept him in office. He did not want to bring civil war to Texas. He left quietly. He died in July 1863, while the war was still going on.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What Happened Next</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The war lasted four years. It cost hundreds of thousands of lives. In the end, the South lost, and slavery ended. Houston had not been sure of every detail. But he had looked at the facts and told Texans what to expect, and in the main he was right.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Was It the Right Choice?</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">People have argued about Houston&rsquo;s choice ever since. One view is that he was right to refuse. He believed secession would bring disaster, and he would not promise loyalty to a cause he thought would hurt Texas. Another view is that he might have done more good by taking the oath, keeping his office, and working to slow the war from inside. Either way, his choice had a clear cost, and he accepted it.</p>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -205,45 +152,5 @@
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 </div>
-<script>
-(function () {
-  document.addEventListener('click', function (e) {
-    var reset = e.target.closest('.widget-reset');
-    if (reset) {
-      var w = reset.closest('.optima-widget');
-      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
-      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
-      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
-      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
-      return;
-    }
-    var rBtn = e.target.closest('.ow-reflect .widget-options button');
-    if (rBtn) {
-      var rw = rBtn.closest('.optima-widget');
-      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
-      rBtn.classList.add('selected');
-      var fb = rw.querySelector('.widget-feedback');
-      fb.textContent = rBtn.dataset.response || '';
-      fb.classList.add('show');
-      return;
-    }
-    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
-    if (sBtn) {
-      var row = sBtn.closest('.widget-row');
-      var correct = row.dataset.correct;
-      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
-      var right = sBtn.dataset.choice === correct;
-      sBtn.classList.add(right ? 'correct' : 'incorrect');
-      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
-      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
-      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
-      rf.textContent = text;
-      return;
-    }
-    var flip = e.target.closest('.ow-flip');
-    if (flip) { flip.classList.toggle('flipped'); return; }
-  });
-})();
-</script>
 </body>
 </html>
