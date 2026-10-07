@@ -68,6 +68,11 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
 
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
     .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
     .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
     .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
@@ -81,17 +86,18 @@
     .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
     .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
     .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
-    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
     .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
-    .ow-seq .seq-item.placed { display: none; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
     .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
-    .ow-seq .seq-line { border-left: 4px solid #0E1C42; padding-left: 14px; margin: 4px 0 10px 4px; min-height: 8px; }
-    .ow-seq .seq-step { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 8px 12px; margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .ow-seq .seq-step .seq-date { font-size: 12px; color: #c7922c; display: block; }
-    .ow-seq .seq-msg { font-size: 14px; color: #8A1F16; min-height: 20px; margin-bottom: 4px; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
     .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-    .ow-flips .ow-flip { flex: 1; min-width: 200px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -370,10 +376,8 @@
 <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Bison and the Red River War</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A bigger change was coming from the Plains itself. The Comanche depended on the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The large, shaggy grazing animal of the Plains, often called a buffalo.">bison</a>. In the 1870s, hunters from the East came by the thousands. Railroads made it easy to ship hides. A single hunter with a heavy rifle could kill many animals in a day. By the middle of the decade, the great southern herds were nearly gone. The army was glad. Generals knew that without bison, the Plains peoples could not live as they had.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In June 1874, the Quahadi leader Isa-tai promised that his medicine would protect warriors from bullets. A young Quahadi war leader, Quanah Parker, joined the attack on a camp of hunters at a trading post called Adobe Walls, in the Texas Panhandle. The hunters had powerful rifles and thick walls. The attack failed. After it, the army and the Plains peoples were headed for open war.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The army launched the Red River War that summer. Soldiers marched from several directions, so that no band could be safe. Colonel Ranald Mackenzie led the 4th <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Soldiers who fight on horseback.">cavalry</a> against a large village hidden in Palo Duro Canyon. At dawn on September 28, 1874, his troopers came down the canyon wall and caught the camp by surprise. Few Comanche and Kiowa were killed. But the soldiers burned the lodges and winter food, and captured about 1,400 horses. Mackenzie had his men shoot most of them. Without horses, a Plains people could not hunt or move.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Black soldiers took part in these campaigns too. The <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Black soldiers in the U.S. Army’s 9th and 10th Cavalry and 24th and 25th Infantry, formed after the Civil War.">Buffalo Soldiers</a> of the 10th Cavalry were stationed at forts in West Texas such as Fort Concho and Fort Davis, and they marched and fought on the Plains. The Texas Rangers also played a part. A new group of Rangers, the Frontier Battalion, was created in 1874 and fought several skirmishes. But in this war, the main force against the Comanche was the U.S. Army.</p><div class="optima-widget ow-seq" data-ra-skip data-next="0" data-done="No single event ended the Comanche empire. The pressure built year after year." data-hint="Not yet. Which of these came earlier?">
   <div class="widget-kicker">&#9889; TRY IT &middot; THE ROAD TO THE RED RIVER WAR</div>
   <div class="widget-question">These six events led to the end of the free Comanche. Click them in the order they happened.</div>
+  <div class="seq-pool"><button type="button" class="seq-item" data-n="4" data-date="June 1874" data-text="The attack on the hunters at Adobe Walls fails" data-fb="The hunters had powerful rifles and thick walls.">The attack on the hunters at Adobe Walls fails<span class="seq-tag">6. June 1874</span></button><button type="button" class="seq-item" data-n="1" data-date="1864" data-text="Comanche and Kiowa raiders strike Elm Creek" data-fb="Settlers were killed and captives taken.">Comanche and Kiowa raiders strike Elm Creek<span class="seq-tag">6. 1864</span></button><button type="button" class="seq-item" data-n="5" data-date="September 28, 1874" data-text="Mackenzie strikes the camp in Palo Duro Canyon" data-fb="About 1,400 horses were captured, and most were shot.">Mackenzie strikes the camp in Palo Duro Canyon<span class="seq-tag">6. September 28, 1874</span></button><button type="button" class="seq-item" data-n="0" data-date="1861" data-text="The army leaves the frontier forts" data-fb="Texas tried to fill the gap with its own soldiers.">The army leaves the frontier forts<span class="seq-tag">6. 1861</span></button><button type="button" class="seq-item" data-n="3" data-date="May 1871" data-text="Kiowa raiders attack a wagon train near Jacksboro" data-fb="Seven teamsters were killed, and General Sherman happened to be passing through.">Kiowa raiders attack a wagon train near Jacksboro<span class="seq-tag">6. May 1871</span></button><button type="button" class="seq-item" data-n="2" data-date="1867" data-text="Leaders sign the treaty at Medicine Lodge Creek" data-fb="It promised a reservation in what is now Oklahoma. The Quahadi did not sign.">Leaders sign the treaty at Medicine Lodge Creek<span class="seq-tag">6. 1867</span></button></div>
   <div class="seq-msg"></div>
-  <div class="seq-pool"><button type="button" class="seq-item" data-n="4" data-date="June 1874" data-text="The attack on the hunters at Adobe Walls fails" data-fb="The hunters had powerful rifles and thick walls.">The attack on the hunters at Adobe Walls fails</button><button type="button" class="seq-item" data-n="1" data-date="1864" data-text="Comanche and Kiowa raiders strike Elm Creek" data-fb="Settlers were killed and captives taken.">Comanche and Kiowa raiders strike Elm Creek</button><button type="button" class="seq-item" data-n="5" data-date="September 28, 1874" data-text="Mackenzie strikes the camp in Palo Duro Canyon" data-fb="About 1,400 horses were captured, and most were shot.">Mackenzie strikes the camp in Palo Duro Canyon</button><button type="button" class="seq-item" data-n="0" data-date="1861" data-text="The army leaves the frontier forts" data-fb="Texas tried to fill the gap with its own soldiers.">The army leaves the frontier forts</button><button type="button" class="seq-item" data-n="3" data-date="May 1871" data-text="Kiowa raiders attack a wagon train near Jacksboro" data-fb="Seven teamsters were killed, and General Sherman happened to be passing through.">Kiowa raiders attack a wagon train near Jacksboro</button><button type="button" class="seq-item" data-n="2" data-date="1867" data-text="Leaders sign the treaty at Medicine Lodge Creek" data-fb="It promised a reservation in what is now Oklahoma. The Quahadi did not sign.">Leaders sign the treaty at Medicine Lodge Creek</button></div>
-  <div class="seq-line"></div>
-  <div class="widget-feedback"></div>
   <button class="widget-reset">Reset</button>
 </div>
     </div>
@@ -383,7 +387,7 @@
   <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
   <div class="widget-question">The Comanche lost their homeland and their way of life, and Texans won the land they had long sought. When a way of life ends, who owes something to the people who lost? (No wrong answer. Just check in with yourself.)</div>
   <div class="widget-options"><button type="button" data-response="The government could keep sending soldiers year after year, and that wore the Comanche down. Historians still ask whether things might have gone differently if the government had kept its word.">&#127963; The government that kept sending soldiers</button><button type="button" data-response="Settlers won what they had long sought. Many came after the fighting began and did not make the policy. Ask where responsibility lies when people gain from a decision they did not make.">&#129309; The settlers who gained the land</button><button type="button" data-response="One answer is to remember honestly what the end cost and who paid. Quanah Parker answered for his people when it was hard. Telling the story fairly is part of the debt.">&#128214; Everyone who remembers the story</button></div>
-  <div class="widget-feedback"></div>
+  <div class="widget-feedback" data-ph="The government could keep sending soldiers year after year, and that wore the Comanche down. Historians still ask whether things might have gone differently if the government had kept its word.">The government could keep sending soldiers year after year, and that wore the Comanche down. Historians still ask whether things might have gone differently if the government had kept its word.</div>
   <button class="widget-reset">Reset</button>
 </div>
     </div>
@@ -418,8 +422,8 @@ function speakGloss(e, text) {
     if (reset) {
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
-      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
-      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
       return;
     }
@@ -452,11 +456,36 @@ function speakGloss(e, text) {
 })();
 
 (function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
   document.querySelectorAll('.ow-road').forEach(function (w) {
     var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
     var slider = w.querySelector('input[type=range]');
     var dots = w.querySelectorAll('.stop');
     var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
     function render() {
       var i = parseInt(slider.value, 10), s = stops[i];
       dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
@@ -466,9 +495,16 @@ function speakGloss(e, text) {
       w.querySelector('.road-body').textContent = s.body;
       w.querySelector('.road-note').textContent = s.note;
     }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
     slider.addEventListener('input', render);
     w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
-    render();
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
   });
 
   document.addEventListener('click', function (e) {
@@ -478,21 +514,16 @@ function speakGloss(e, text) {
       var msg = w.querySelector('.seq-msg');
       if (n === next) {
         it.classList.add('placed');
-        var step = document.createElement('div');
-        step.className = 'seq-step';
-        step.innerHTML = '<span class="seq-date"></span><span class="seq-text"></span>';
-        step.querySelector('.seq-date').textContent = (next + 1) + '. ' + it.dataset.date;
-        step.querySelector('.seq-text').textContent = it.dataset.text + '. ' + (it.dataset.fb || '');
-        w.querySelector('.seq-line').appendChild(step);
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
         w.dataset.next = next + 1;
-        msg.textContent = '';
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
         if (next + 1 === w.querySelectorAll('.seq-item').length) {
-          var done = w.querySelector('.widget-feedback');
-          done.textContent = w.dataset.done || 'All in order.';
-          done.classList.add('show');
+          msg.textContent = w.dataset.done || 'All in order.';
         }
       } else {
         it.classList.add('bad');
+        msg.className = 'seq-msg bad';
         msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
         setTimeout(function () { it.classList.remove('bad'); }, 700);
       }
@@ -503,9 +534,7 @@ function speakGloss(e, text) {
       var q = rs.closest('.ow-seq');
       q.dataset.next = 0;
       q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
-      q.querySelector('.seq-line').innerHTML = '';
-      q.querySelector('.seq-msg').textContent = '';
-      var f = q.querySelector('.widget-feedback'); f.textContent = ''; f.classList.remove('show');
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
     }
   });
 })();

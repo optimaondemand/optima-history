@@ -72,6 +72,11 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
 
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
     .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
     .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
     .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
@@ -85,17 +90,18 @@
     .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
     .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
     .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
-    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
     .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
-    .ow-seq .seq-item.placed { display: none; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
     .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
-    .ow-seq .seq-line { border-left: 4px solid #0E1C42; padding-left: 14px; margin: 4px 0 10px 4px; min-height: 8px; }
-    .ow-seq .seq-step { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 8px 12px; margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .ow-seq .seq-step .seq-date { font-size: 12px; color: #c7922c; display: block; }
-    .ow-seq .seq-msg { font-size: 14px; color: #8A1F16; min-height: 20px; margin-bottom: 4px; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
     .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-    .ow-flips .ow-flip { flex: 1; min-width: 200px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -376,10 +382,8 @@
 <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Who Was Kept Out</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">These rights were not open to every Texan. After Reconstruction ended, Texas leaders found ways to narrow who could vote.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1902, Texas adopted a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A fee people had to pay before they were allowed to vote.">poll tax</a>. A person had to pay a fee in order to vote. The fee was small to some people and large to others. Many Black Texans, many Mexican Americans, and many poor white farmers could not easily afford it. Voter turnout dropped sharply.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">There was another barrier. In Texas, the Democratic Party was so strong that the real contest was often settled in its <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="An election held before the main election, where a party chooses its candidates.">primary election</a>, where the party picked its candidate. Texas Democrats ran their primary as a private club, and they kept Black voters out. People called this the white primary. In 1944, Dr. Lonnie Smith, a Black dentist in Houston, challenged it. In <em>Smith v. Allwright</em>, the U.S. Supreme Court ruled that a party could not keep voters out of a primary because of race.</p><div style="margin: 16px 0;"><div style="display: flex; gap: 12px; margin-bottom: 8px;"><div style="min-width: 92px; font-size: 14px; color: #c7922c;"><strong>1902</strong></div><div style="flex: 1; background: #EEF1F8; border-left: 4px solid #0E1C42; border-radius: 6px; padding: 8px 14px; font-size: 15px; color: #1a2340; line-height: 1.5;">Texas adopts a poll tax.</div></div><div style="display: flex; gap: 12px; margin-bottom: 8px;"><div style="min-width: 92px; font-size: 14px; color: #c7922c;"><strong>1918 to 1919</strong></div><div style="flex: 1; background: #EEF1F8; border-left: 4px solid #0E1C42; border-radius: 6px; padding: 8px 14px; font-size: 15px; color: #1a2340; line-height: 1.5;">Women win the vote in Texas primaries, then Texas ratifies the 19th Amendment.</div></div><div style="display: flex; gap: 12px; margin-bottom: 8px;"><div style="min-width: 92px; font-size: 14px; color: #c7922c;"><strong>1944</strong></div><div style="flex: 1; background: #EEF1F8; border-left: 4px solid #0E1C42; border-radius: 6px; padding: 8px 14px; font-size: 15px; color: #1a2340; line-height: 1.5;">The Supreme Court strikes down the white primary in a Texas case.</div></div><div style="display: flex; gap: 12px; margin-bottom: 8px;"><div style="min-width: 92px; font-size: 14px; color: #c7922c;"><strong>1966</strong></div><div style="flex: 1; background: #EEF1F8; border-left: 4px solid #0E1C42; border-radius: 6px; padding: 8px 14px; font-size: 15px; color: #1a2340; line-height: 1.5;">A federal court ends the Texas poll tax.</div></div><div style="display: flex; gap: 12px; margin-bottom: 8px;"><div style="min-width: 92px; font-size: 14px; color: #c7922c;"><strong>1971</strong></div><div style="flex: 1; background: #EEF1F8; border-left: 4px solid #0E1C42; border-radius: 6px; padding: 8px 14px; font-size: 15px; color: #1a2340; line-height: 1.5;">The voting age drops to 18.</div></div><div style="font-size: 12px; color: #6b7a99;">Steps in the fight over who could vote in Texas.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Women had to fight for their right to vote as well. Texas women won the right to vote in primaries in 1918. In 1919, Texas became the first state in the South to approve the 19th Amendment. Later steps came more slowly. In 1966, a federal court struck down the Texas poll tax. In 1971, the voting age was lowered to 18.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">None of these rights was handed down. Ordinary people had to organize and take cases to court, often over many years, to make the law match its promise. Those people showed courage and perseverance, and Texas is a better place for it.</p><div class="optima-widget ow-seq" data-ra-skip data-next="0" data-done="None of these steps was handed down. Ordinary people organized and went to court, often for years, to make the law match its promise." data-hint="Not yet. Which of these came earlier?">
   <div class="widget-kicker">&#9889; TRY IT &middot; THE FIGHT FOR THE BALLOT</div>
   <div class="widget-question">These five steps changed who could vote in Texas. Click them in the order they happened.</div>
+  <div class="seq-pool"><button type="button" class="seq-item" data-n="3" data-date="1966" data-text="A federal court strikes down the Texas poll tax" data-fb="Voters no longer had to pay to vote.">A federal court strikes down the Texas poll tax<span class="seq-tag">5. 1966</span></button><button type="button" class="seq-item" data-n="0" data-date="1902" data-text="Texas adopts a poll tax" data-fb="Many Black Texans, many Mexican Americans and many poor white farmers could not easily pay it.">Texas adopts a poll tax<span class="seq-tag">5. 1902</span></button><button type="button" class="seq-item" data-n="4" data-date="1971" data-text="The voting age drops to 18" data-fb="More young Texans could take part.">The voting age drops to 18<span class="seq-tag">5. 1971</span></button><button type="button" class="seq-item" data-n="2" data-date="1944" data-text="Smith v. Allwright ends the white primary" data-fb="Dr. Lonnie Smith, a Houston dentist, brought the case.">Smith v. Allwright ends the white primary<span class="seq-tag">5. 1944</span></button><button type="button" class="seq-item" data-n="1" data-date="1918" data-text="Texas women win the vote in primaries" data-fb="A year later Texas became the first Southern state to approve the 19th Amendment.">Texas women win the vote in primaries<span class="seq-tag">5. 1918</span></button></div>
   <div class="seq-msg"></div>
-  <div class="seq-pool"><button type="button" class="seq-item" data-n="3" data-date="1966" data-text="A federal court strikes down the Texas poll tax" data-fb="Voters no longer had to pay to vote.">A federal court strikes down the Texas poll tax</button><button type="button" class="seq-item" data-n="0" data-date="1902" data-text="Texas adopts a poll tax" data-fb="Many Black Texans, many Mexican Americans and many poor white farmers could not easily pay it.">Texas adopts a poll tax</button><button type="button" class="seq-item" data-n="4" data-date="1971" data-text="The voting age drops to 18" data-fb="More young Texans could take part.">The voting age drops to 18</button><button type="button" class="seq-item" data-n="2" data-date="1944" data-text="Smith v. Allwright ends the white primary" data-fb="Dr. Lonnie Smith, a Houston dentist, brought the case.">Smith v. Allwright ends the white primary</button><button type="button" class="seq-item" data-n="1" data-date="1918" data-text="Texas women win the vote in primaries" data-fb="A year later Texas became the first Southern state to approve the 19th Amendment.">Texas women win the vote in primaries</button></div>
-  <div class="seq-line"></div>
-  <div class="widget-feedback"></div>
   <button class="widget-reset">Reset</button>
 </div>
     </div>
@@ -391,18 +395,22 @@
   <div class="widget-row" data-correct="1" data-fb="Right. Taxes are owed whether or not you like how they are spent." data-hint="Think about what a citizen owes to others.">
     <div class="widget-row-prompt">1. Paying taxes to support government.</div>
     <div class="widget-options"><button type="button" data-choice="0">A right</button><button type="button" data-choice="1">A duty</button><button type="button" data-choice="2">Both a right and a duty</button></div>
+    <div class="row-feedback ph" data-ph="Right. Taxes are owed whether or not you like how they are spent.">Right. Taxes are owed whether or not you like how they are spent.</div>
   </div>
   <div class="widget-row" data-correct="0" data-fb="Right. The Texas Bill of Rights protects free speech and a free press." data-hint="Think about what the Bill of Rights protects you from.">
     <div class="widget-row-prompt">2. Speaking and writing freely about how Texas is governed.</div>
     <div class="widget-options"><button type="button" data-choice="0">A right</button><button type="button" data-choice="1">A duty</button><button type="button" data-choice="2">Both a right and a duty</button></div>
+    <div class="row-feedback ph" data-ph="Right. The Texas Bill of Rights protects free speech and a free press.">Right. The Texas Bill of Rights protects free speech and a free press.</div>
   </div>
   <div class="widget-row" data-correct="2" data-fb="Right. Jury service is called a right, but the courts cannot work if people will not serve, so it is a duty too." data-hint="The lesson says this one fits both words. Which answer covers both?">
     <div class="widget-row-prompt">3. Serving on a jury when you are called.</div>
     <div class="widget-options"><button type="button" data-choice="0">A right</button><button type="button" data-choice="1">A duty</button><button type="button" data-choice="2">Both a right and a duty</button></div>
+    <div class="row-feedback ph" data-ph="Right. Jury service is called a right, but the courts cannot work if people will not serve, so it is a duty too.">Right. Jury service is called a right, but the courts cannot work if people will not serve, so it is a duty too.</div>
   </div>
   <div class="widget-row" data-correct="0" data-fb="Right. Lobbying is protected by the right to petition the government." data-hint="Think about which word fits a freedom that protects you.">
     <div class="widget-row-prompt">4. Meeting with lawmakers to argue for or against a bill.</div>
     <div class="widget-options"><button type="button" data-choice="0">A right</button><button type="button" data-choice="1">A duty</button><button type="button" data-choice="2">Both a right and a duty</button></div>
+    <div class="row-feedback ph" data-ph="Right. Lobbying is protected by the right to petition the government.">Right. Lobbying is protected by the right to petition the government.</div>
   </div>
   <button class="widget-reset">Reset</button>
 </div>
@@ -438,8 +446,8 @@ function speakGloss(e, text) {
     if (reset) {
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
-      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
-      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
       return;
     }
@@ -472,11 +480,36 @@ function speakGloss(e, text) {
 })();
 
 (function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
   document.querySelectorAll('.ow-road').forEach(function (w) {
     var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
     var slider = w.querySelector('input[type=range]');
     var dots = w.querySelectorAll('.stop');
     var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
     function render() {
       var i = parseInt(slider.value, 10), s = stops[i];
       dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
@@ -486,9 +519,16 @@ function speakGloss(e, text) {
       w.querySelector('.road-body').textContent = s.body;
       w.querySelector('.road-note').textContent = s.note;
     }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
     slider.addEventListener('input', render);
     w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
-    render();
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
   });
 
   document.addEventListener('click', function (e) {
@@ -498,21 +538,16 @@ function speakGloss(e, text) {
       var msg = w.querySelector('.seq-msg');
       if (n === next) {
         it.classList.add('placed');
-        var step = document.createElement('div');
-        step.className = 'seq-step';
-        step.innerHTML = '<span class="seq-date"></span><span class="seq-text"></span>';
-        step.querySelector('.seq-date').textContent = (next + 1) + '. ' + it.dataset.date;
-        step.querySelector('.seq-text').textContent = it.dataset.text + '. ' + (it.dataset.fb || '');
-        w.querySelector('.seq-line').appendChild(step);
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
         w.dataset.next = next + 1;
-        msg.textContent = '';
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
         if (next + 1 === w.querySelectorAll('.seq-item').length) {
-          var done = w.querySelector('.widget-feedback');
-          done.textContent = w.dataset.done || 'All in order.';
-          done.classList.add('show');
+          msg.textContent = w.dataset.done || 'All in order.';
         }
       } else {
         it.classList.add('bad');
+        msg.className = 'seq-msg bad';
         msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
         setTimeout(function () { it.classList.remove('bad'); }, 700);
       }
@@ -523,9 +558,7 @@ function speakGloss(e, text) {
       var q = rs.closest('.ow-seq');
       q.dataset.next = 0;
       q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
-      q.querySelector('.seq-line').innerHTML = '';
-      q.querySelector('.seq-msg').textContent = '';
-      var f = q.querySelector('.widget-feedback'); f.textContent = ''; f.classList.remove('show');
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
     }
   });
 })();

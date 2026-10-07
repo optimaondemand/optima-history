@@ -76,6 +76,11 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
 
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
     .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
     .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
     .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
@@ -89,17 +94,18 @@
     .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
     .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
     .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
-    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
     .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
-    .ow-seq .seq-item.placed { display: none; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
     .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
-    .ow-seq .seq-line { border-left: 4px solid #0E1C42; padding-left: 14px; margin: 4px 0 10px 4px; min-height: 8px; }
-    .ow-seq .seq-step { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 8px 12px; margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .ow-seq .seq-step .seq-date { font-size: 12px; color: #c7922c; display: block; }
-    .ow-seq .seq-msg { font-size: 14px; color: #8A1F16; min-height: 20px; margin-bottom: 4px; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
     .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-    .ow-flips .ow-flip { flex: 1; min-width: 200px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -379,18 +385,22 @@
   <div class="widget-row" data-correct="1" data-fb="Right. Mexico said the old border was the Nueces, and it had never accepted Texas as a separate country." data-hint="Which river did Texas name? The speaker here wants the other one.">
     <div class="widget-row-prompt">1. &ldquo;The border is the river farther north. Our old Texas province ended there.&rdquo;</div>
     <div class="widget-options"><button type="button" data-choice="0">Texas</button><button type="button" data-choice="1">Mexico</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Right. Mexico said the old border was the Nueces, and it had never accepted Texas as a separate country.">Right. Mexico said the old border was the Nueces, and it had never accepted Texas as a separate country.</div>
   </div>
   <div class="widget-row" data-correct="0" data-fb="Right. The Republic of Texas named the Río Grande as its border in 1836." data-hint="Think about who had a congress in 1836, and which river it named.">
     <div class="widget-row-prompt">2. &ldquo;Our congress passed a law in 1836 naming the Big River as the border.&rdquo;</div>
     <div class="widget-options"><button type="button" data-choice="0">Texas</button><button type="button" data-choice="1">Mexico</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Right. The Republic of Texas named the Río Grande as its border in 1836.">Right. The Republic of Texas named the Río Grande as its border in 1836.</div>
   </div>
   <div class="widget-row" data-correct="2" data-fb="Right. Both countries said the strip was theirs, and that is why it was disputed." data-hint="Think about why the land was called disputed. How many sides wanted it?">
     <div class="widget-row-prompt">3. &ldquo;The dry brush country between the two rivers belongs to us.&rdquo;</div>
     <div class="widget-options"><button type="button" data-choice="0">Texas</button><button type="button" data-choice="1">Mexico</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Right. Both countries said the strip was theirs, and that is why it was disputed.">Right. Both countries said the strip was theirs, and that is why it was disputed.</div>
   </div>
   <div class="widget-row" data-correct="0" data-fb="Right. Texas said its border was the Río Grande. Matamoros sat on the south bank, across the river." data-hint="The Río Grande was the river Texas named. Which side wanted it as the border?">
     <div class="widget-row-prompt">4. &ldquo;The border should run along the R&iacute;o Grande, past the town of Matamoros.&rdquo;</div>
     <div class="widget-options"><button type="button" data-choice="0">Texas</button><button type="button" data-choice="1">Mexico</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Right. Texas said its border was the Río Grande. Matamoros sat on the south bank, across the river.">Right. Texas said its border was the Río Grande. Matamoros sat on the south bank, across the river.</div>
   </div>
   <button class="widget-reset">Reset</button>
 </div><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Who Really Held the Land?</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not Texas. Texans had never really governed the strip. A few Americans lived near Corpus Christi, on the coast. But Mexican ranchers and towns stood along the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="REE-oh GRAN-day. Spanish for &quot;Big River.&quot;"><em>Río Grande</em></a>, such as the city of <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="mat-uh-MOR-ohs. A Mexican city on the south bank of the Río Grande."><em>Matamoros</em></a>.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When the United States Congress voted to annex Texas, it did not settle the question. It left the exact border to be worked out with Mexico later. Mexico cut off its ties with the United States over the annexation. The border had become a problem for the whole country.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">That changed Texas&rsquo;s position. As a republic, Texas had faced Mexico alone. As a state, it could count on the United States Army. But it gave up something too. The choice between talking and fighting now belonged to the president and Congress in Washington, not to Texans.</p>
@@ -403,18 +413,22 @@
   <div class="widget-row" data-correct="2" data-fb="Right. Mexico’s leaders refused to see him, in part because any leader who seemed ready to deal could be called a traitor." data-hint="Slidell was sent to Mexico City. Think about who lived and governed there.">
     <div class="widget-row-prompt">1. Refused to receive John Slidell, the diplomat sent to Mexico City.</div>
     <div class="widget-options"><button type="button" data-choice="0">President Polk</button><button type="button" data-choice="1">General Taylor</button><button type="button" data-choice="2">Mexico’s leaders</button><button type="button" data-choice="3">Congress</button></div>
+    <div class="row-feedback ph" data-ph="Right. Mexico’s leaders refused to see him, in part because any leader who seemed ready to deal could be called a traitor.">Right. Mexico’s leaders refused to see him, in part because any leader who seemed ready to deal could be called a traitor.</div>
   </div>
   <div class="widget-row" data-correct="0" data-fb="Right. Polk gave the order from Washington. Taylor carried it out." data-hint="Think about who commands the army from Washington, not who leads it in the field.">
     <div class="widget-row-prompt">2. Gave the order in March 1846 to march the army all the way to the R&iacute;o Grande.</div>
     <div class="widget-options"><button type="button" data-choice="0">President Polk</button><button type="button" data-choice="1">General Taylor</button><button type="button" data-choice="2">Mexico’s leaders</button><button type="button" data-choice="3">Congress</button></div>
+    <div class="row-feedback ph" data-ph="Think about who commands the army from Washington, not who leads it in the field.">Think about who commands the army from Washington, not who leads it in the field.</div>
   </div>
   <div class="widget-row" data-correct="3" data-fb="Right. Only Congress can declare war, and it did so on May 13, 1846." data-hint="The president sent a message. Who answered it with a vote?">
     <div class="widget-row-prompt">3. Voted to declare war two days after the president&rsquo;s message about American blood on American soil.</div>
     <div class="widget-options"><button type="button" data-choice="0">President Polk</button><button type="button" data-choice="1">General Taylor</button><button type="button" data-choice="2">Mexico’s leaders</button><button type="button" data-choice="3">Congress</button></div>
+    <div class="row-feedback ph" data-ph="Right. Only Congress can declare war, and it did so on May 13, 1846.">Right. Only Congress can declare war, and it did so on May 13, 1846.</div>
   </div>
   <div class="widget-row" data-correct="1" data-fb="Right. Taylor was the general on the spot, and his army’s position set up the clash of April 25." data-hint="Think about who led the army at the river.">
     <div class="widget-row-prompt">4. Built a fort across the river from Matamoros, and stayed when Mexican officers told him to leave.</div>
     <div class="widget-options"><button type="button" data-choice="0">President Polk</button><button type="button" data-choice="1">General Taylor</button><button type="button" data-choice="2">Mexico’s leaders</button><button type="button" data-choice="3">Congress</button></div>
+    <div class="row-feedback ph" data-ph="Right. Taylor was the general on the spot, and his army’s position set up the clash of April 25.">Right. Taylor was the general on the spot, and his army’s position set up the clash of April 25.</div>
   </div>
   <button class="widget-reset">Reset</button>
 </div>
@@ -454,8 +468,8 @@ function speakGloss(e, text) {
     if (reset) {
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
-      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
-      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
       return;
     }
@@ -488,11 +502,36 @@ function speakGloss(e, text) {
 })();
 
 (function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
   document.querySelectorAll('.ow-road').forEach(function (w) {
     var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
     var slider = w.querySelector('input[type=range]');
     var dots = w.querySelectorAll('.stop');
     var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
     function render() {
       var i = parseInt(slider.value, 10), s = stops[i];
       dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
@@ -502,9 +541,16 @@ function speakGloss(e, text) {
       w.querySelector('.road-body').textContent = s.body;
       w.querySelector('.road-note').textContent = s.note;
     }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
     slider.addEventListener('input', render);
     w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
-    render();
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
   });
 
   document.addEventListener('click', function (e) {
@@ -514,21 +560,16 @@ function speakGloss(e, text) {
       var msg = w.querySelector('.seq-msg');
       if (n === next) {
         it.classList.add('placed');
-        var step = document.createElement('div');
-        step.className = 'seq-step';
-        step.innerHTML = '<span class="seq-date"></span><span class="seq-text"></span>';
-        step.querySelector('.seq-date').textContent = (next + 1) + '. ' + it.dataset.date;
-        step.querySelector('.seq-text').textContent = it.dataset.text + '. ' + (it.dataset.fb || '');
-        w.querySelector('.seq-line').appendChild(step);
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
         w.dataset.next = next + 1;
-        msg.textContent = '';
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
         if (next + 1 === w.querySelectorAll('.seq-item').length) {
-          var done = w.querySelector('.widget-feedback');
-          done.textContent = w.dataset.done || 'All in order.';
-          done.classList.add('show');
+          msg.textContent = w.dataset.done || 'All in order.';
         }
       } else {
         it.classList.add('bad');
+        msg.className = 'seq-msg bad';
         msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
         setTimeout(function () { it.classList.remove('bad'); }, 700);
       }
@@ -539,9 +580,7 @@ function speakGloss(e, text) {
       var q = rs.closest('.ow-seq');
       q.dataset.next = 0;
       q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
-      q.querySelector('.seq-line').innerHTML = '';
-      q.querySelector('.seq-msg').textContent = '';
-      var f = q.querySelector('.widget-feedback'); f.textContent = ''; f.classList.remove('show');
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
     }
   });
 })();

@@ -69,6 +69,11 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
 
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
     .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
     .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
     .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
@@ -82,17 +87,18 @@
     .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
     .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
     .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
-    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
     .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
-    .ow-seq .seq-item.placed { display: none; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
     .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
-    .ow-seq .seq-line { border-left: 4px solid #0E1C42; padding-left: 14px; margin: 4px 0 10px 4px; min-height: 8px; }
-    .ow-seq .seq-step { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 8px 12px; margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .ow-seq .seq-step .seq-date { font-size: 12px; color: #c7922c; display: block; }
-    .ow-seq .seq-msg { font-size: 14px; color: #8A1F16; min-height: 20px; margin-bottom: 4px; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
     .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-    .ow-flips .ow-flip { flex: 1; min-width: 200px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -367,7 +373,7 @@
   <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
   <div class="widget-question">You are a ranch family at the edge of the frontier in the 1850s. What would worry you most? (No wrong answer. Just check in with yourself.)</div>
   <div class="widget-options"><button type="button" data-response="A family’s wealth was its herd and its horses, and both could be taken in a single night. That is why raiders went for horses first.">&#128014; Losing the horses in one night</button><button type="button" data-response="Ranch families depended on one another. They traveled in groups, shared news and came to help when a neighbor needed it.">&#127968; Having no neighbor close by</button><button type="button" data-response="Neither the Rangers nor the soldiers in the nearest fort were ever close enough. Many families kept a loaded gun by the door.">&#128737; Help being too far away</button></div>
-  <div class="widget-feedback"></div>
+  <div class="widget-feedback" data-ph="A family’s wealth was its herd and its horses, and both could be taken in a single night. That is why raiders went for horses first.">A family’s wealth was its herd and its horses, and both could be taken in a single night. That is why raiders went for horses first.</div>
   <button class="widget-reset">Reset</button>
 </div>
     </div>
@@ -383,18 +389,22 @@
   <div class="widget-row" data-correct="1" data-fb="Right. After the Mexican War, many Tejano families believed this was not fair." data-hint="Think about whose land titles were questioned after the war.">
     <div class="widget-row-prompt">1. Old land titles were questioned, and some families lost land to lawyers, taxes or threats.</div>
     <div class="widget-options"><button type="button" data-choice="0">Many Anglo Texans</button><button type="button" data-choice="1">Many Tejano families</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Right. After the Mexican War, many Tejano families believed this was not fair.">Right. After the Mexican War, many Tejano families believed this was not fair.</div>
   </div>
   <div class="widget-row" data-correct="2" data-fb="Right. Texans accused Mexican raiders of stealing cattle, and Mexican ranchers said Texans did the same." data-hint="Think about who was complaining about theft along the river.">
     <div class="widget-row-prompt">2. Cattle with unclear brands made it hard to prove who owned what, and the other side was doing the stealing.</div>
     <div class="widget-options"><button type="button" data-choice="0">Many Anglo Texans</button><button type="button" data-choice="1">Many Tejano families</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Right. Texans accused Mexican raiders of stealing cattle, and Mexican ranchers said Texans did the same.">Right. Texans accused Mexican raiders of stealing cattle, and Mexican ranchers said Texans did the same.</div>
   </div>
   <div class="widget-row" data-correct="0" data-fb="Right. Many Texans saw him this way. Many Tejanos saw a defender, though some feared him." data-hint="Think about who was afraid of his raids.">
     <div class="widget-row-prompt">3. Juan Cortina was a bandit leader.</div>
     <div class="widget-options"><button type="button" data-choice="0">Many Anglo Texans</button><button type="button" data-choice="1">Many Tejano families</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Right. Many Texans saw him this way. Many Tejanos saw a defender, though some feared him.">Right. Many Texans saw him this way. Many Tejanos saw a defender, though some feared him.</div>
   </div>
   <div class="widget-row" data-correct="1" data-fb="Right. Among Tejano families the Rangers were often seen this way." data-hint="Think about which families felt the Rangers did not protect them equally.">
     <div class="widget-row-prompt">4. The Rangers protected Anglo claims more than the rule of law for everyone.</div>
     <div class="widget-options"><button type="button" data-choice="0">Many Anglo Texans</button><button type="button" data-choice="1">Many Tejano families</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Think about which families felt the Rangers did not protect them equally.">Think about which families felt the Rangers did not protect them equally.</div>
   </div>
   <button class="widget-reset">Reset</button>
 </div>
@@ -430,8 +440,8 @@ function speakGloss(e, text) {
     if (reset) {
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
-      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
-      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
       return;
     }
@@ -464,11 +474,36 @@ function speakGloss(e, text) {
 })();
 
 (function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
   document.querySelectorAll('.ow-road').forEach(function (w) {
     var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
     var slider = w.querySelector('input[type=range]');
     var dots = w.querySelectorAll('.stop');
     var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
     function render() {
       var i = parseInt(slider.value, 10), s = stops[i];
       dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
@@ -478,9 +513,16 @@ function speakGloss(e, text) {
       w.querySelector('.road-body').textContent = s.body;
       w.querySelector('.road-note').textContent = s.note;
     }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
     slider.addEventListener('input', render);
     w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
-    render();
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
   });
 
   document.addEventListener('click', function (e) {
@@ -490,21 +532,16 @@ function speakGloss(e, text) {
       var msg = w.querySelector('.seq-msg');
       if (n === next) {
         it.classList.add('placed');
-        var step = document.createElement('div');
-        step.className = 'seq-step';
-        step.innerHTML = '<span class="seq-date"></span><span class="seq-text"></span>';
-        step.querySelector('.seq-date').textContent = (next + 1) + '. ' + it.dataset.date;
-        step.querySelector('.seq-text').textContent = it.dataset.text + '. ' + (it.dataset.fb || '');
-        w.querySelector('.seq-line').appendChild(step);
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
         w.dataset.next = next + 1;
-        msg.textContent = '';
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
         if (next + 1 === w.querySelectorAll('.seq-item').length) {
-          var done = w.querySelector('.widget-feedback');
-          done.textContent = w.dataset.done || 'All in order.';
-          done.classList.add('show');
+          msg.textContent = w.dataset.done || 'All in order.';
         }
       } else {
         it.classList.add('bad');
+        msg.className = 'seq-msg bad';
         msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
         setTimeout(function () { it.classList.remove('bad'); }, 700);
       }
@@ -515,9 +552,7 @@ function speakGloss(e, text) {
       var q = rs.closest('.ow-seq');
       q.dataset.next = 0;
       q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
-      q.querySelector('.seq-line').innerHTML = '';
-      q.querySelector('.seq-msg').textContent = '';
-      var f = q.querySelector('.widget-feedback'); f.textContent = ''; f.classList.remove('show');
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
     }
   });
 })();

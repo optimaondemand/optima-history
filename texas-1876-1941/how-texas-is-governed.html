@@ -70,6 +70,11 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
 
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
     .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
     .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
     .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
@@ -83,17 +88,18 @@
     .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
     .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
     .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
-    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
     .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
-    .ow-seq .seq-item.placed { display: none; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
     .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
-    .ow-seq .seq-line { border-left: 4px solid #0E1C42; padding-left: 14px; margin: 4px 0 10px 4px; min-height: 8px; }
-    .ow-seq .seq-step { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 8px 12px; margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .ow-seq .seq-step .seq-date { font-size: 12px; color: #c7922c; display: block; }
-    .ow-seq .seq-msg { font-size: 14px; color: #8A1F16; min-height: 20px; margin-bottom: 4px; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
     .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-    .ow-flips .ow-flip { flex: 1; min-width: 200px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -377,22 +383,27 @@
   <div class="widget-row" data-correct="1" data-fb="Right. This group is called the commissioners court, though it is not a real court." data-hint="Think about which layer has a county seat and a courthouse.">
     <div class="widget-row-prompt">1. A group of five, the county judge and four commissioners, sets the budget and builds roads.</div>
     <div class="widget-options"><button type="button" data-choice="0">The state</button><button type="button" data-choice="1">The county</button><button type="button" data-choice="2">The city</button></div>
+    <div class="row-feedback ph" data-ph="Right. This group is called the commissioners court, though it is not a real court.">Right. This group is called the commissioners court, though it is not a real court.</div>
   </div>
   <div class="widget-row" data-correct="2" data-fb="Right. A change in 1912 let larger cities choose their own form of government." data-hint="Think about which layer is made of people living close together who want services like water and streets.">
     <div class="widget-row-prompt">2. A town with more than 5,000 people writes its own charter under home rule.</div>
     <div class="widget-options"><button type="button" data-choice="0">The state</button><button type="button" data-choice="1">The county</button><button type="button" data-choice="2">The city</button></div>
+    <div class="row-feedback ph" data-ph="Think about which layer is made of people living close together who want services like water and streets.">Think about which layer is made of people living close together who want services like water and streets.</div>
   </div>
   <div class="widget-row" data-correct="0" data-fb="Right. Texas has two top courts, and both belong to the state." data-hint="Think about which layer holds the highest courts.">
     <div class="widget-row-prompt">3. The Court of Criminal Appeals hears the final appeals in crime cases.</div>
     <div class="widget-options"><button type="button" data-choice="0">The state</button><button type="button" data-choice="1">The county</button><button type="button" data-choice="2">The city</button></div>
+    <div class="row-feedback ph" data-ph="Right. Texas has two top courts, and both belong to the state.">Right. Texas has two top courts, and both belong to the state.</div>
   </div>
   <div class="widget-row" data-correct="1" data-fb="Right. Counties also do jobs for the state, such as holding elections and keeping records." data-hint="Think about which layer has a sheriff and a county clerk.">
     <div class="widget-row-prompt">4. An elected clerk keeps birth and land records, and an elected sheriff keeps order.</div>
     <div class="widget-options"><button type="button" data-choice="0">The state</button><button type="button" data-choice="1">The county</button><button type="button" data-choice="2">The city</button></div>
+    <div class="row-feedback ph" data-ph="Right. Counties also do jobs for the state, such as holding elections and keeping records.">Right. Counties also do jobs for the state, such as holding elections and keeping records.</div>
   </div>
   <div class="widget-row" data-correct="2" data-fb="Right. A city exists because people who live together want services close at hand." data-hint="Think about which layer is led by a mayor.">
     <div class="widget-row-prompt">5. A mayor and council run the police, the fire protection and the streets.</div>
     <div class="widget-options"><button type="button" data-choice="0">The state</button><button type="button" data-choice="1">The county</button><button type="button" data-choice="2">The city</button></div>
+    <div class="row-feedback ph" data-ph="Right. A city exists because people who live together want services close at hand.">Right. A city exists because people who live together want services close at hand.</div>
   </div>
   <button class="widget-reset">Reset</button>
 </div>
@@ -405,14 +416,17 @@
   <div class="widget-row" data-correct="2" data-fb="Right. Owners of land and buildings pay the property tax, and it is the biggest local source." data-hint="Think about a tax paid every year by people who own property in the district.">
     <div class="widget-row-prompt">1. A school district needs steady money every year to pay its teachers. Which source fits best?</div>
     <div class="widget-options"><button type="button" data-choice="0">A federal grant for roads</button><button type="button" data-choice="1">A bond that is repaid once</button><button type="button" data-choice="2">The property tax</button><button type="button" data-choice="3">A state income tax</button></div>
+    <div class="row-feedback ph" data-ph="Right. Owners of land and buildings pay the property tax, and it is the biggest local source.">Right. Owners of land and buildings pay the property tax, and it is the biggest local source.</div>
   </div>
   <div class="widget-row" data-correct="0" data-fb="Right. The city can sell a bond, borrow the money now and repay it later with interest. Voters usually must approve the plan." data-hint="Think about a way to borrow money now and repay it over time.">
     <div class="widget-row-prompt">2. A city wants a big new bridge it cannot pay for in a single year. What can it do?</div>
     <div class="widget-options"><button type="button" data-choice="0">Sell a bond</button><button type="button" data-choice="1">Create a personal income tax</button><button type="button" data-choice="2">Collect a fee at the courthouse door</button><button type="button" data-choice="3">Wait for the legislature to meet</button></div>
+    <div class="row-feedback ph" data-ph="Right. The city can sell a bond, borrow the money now and repay it later with interest. Voters usually must approve the plan.">Right. The city can sell a bond, borrow the money now and repay it later with interest. Voters usually must approve the plan.</div>
   </div>
   <div class="widget-row" data-correct="1" data-fb="Right. The state cannot create a personal income tax without a vote of the people. That fits the 1876 delegates’ wish to keep government cheap." data-hint="Think about the one big tax Texas does not have.">
     <div class="widget-row-prompt">3. In 2019, Texas voters changed the constitution about money. What did the change say?</div>
     <div class="widget-options"><button type="button" data-choice="0">The state must collect a property tax</button><button type="button" data-choice="1">The state cannot create a personal income tax without a vote of the people</button><button type="button" data-choice="2">The sales tax must end</button><button type="button" data-choice="3">Cities may not borrow money</button></div>
+    <div class="row-feedback ph" data-ph="Right. The state cannot create a personal income tax without a vote of the people. That fits the 1876 delegates’ wish to keep government cheap.">Right. The state cannot create a personal income tax without a vote of the people. That fits the 1876 delegates’ wish to keep government cheap.</div>
   </div>
   <button class="widget-reset">Reset</button>
 </div>
@@ -448,8 +462,8 @@ function speakGloss(e, text) {
     if (reset) {
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
-      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
-      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
       return;
     }
@@ -482,11 +496,36 @@ function speakGloss(e, text) {
 })();
 
 (function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
   document.querySelectorAll('.ow-road').forEach(function (w) {
     var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
     var slider = w.querySelector('input[type=range]');
     var dots = w.querySelectorAll('.stop');
     var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
     function render() {
       var i = parseInt(slider.value, 10), s = stops[i];
       dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
@@ -496,9 +535,16 @@ function speakGloss(e, text) {
       w.querySelector('.road-body').textContent = s.body;
       w.querySelector('.road-note').textContent = s.note;
     }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
     slider.addEventListener('input', render);
     w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
-    render();
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
   });
 
   document.addEventListener('click', function (e) {
@@ -508,21 +554,16 @@ function speakGloss(e, text) {
       var msg = w.querySelector('.seq-msg');
       if (n === next) {
         it.classList.add('placed');
-        var step = document.createElement('div');
-        step.className = 'seq-step';
-        step.innerHTML = '<span class="seq-date"></span><span class="seq-text"></span>';
-        step.querySelector('.seq-date').textContent = (next + 1) + '. ' + it.dataset.date;
-        step.querySelector('.seq-text').textContent = it.dataset.text + '. ' + (it.dataset.fb || '');
-        w.querySelector('.seq-line').appendChild(step);
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
         w.dataset.next = next + 1;
-        msg.textContent = '';
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
         if (next + 1 === w.querySelectorAll('.seq-item').length) {
-          var done = w.querySelector('.widget-feedback');
-          done.textContent = w.dataset.done || 'All in order.';
-          done.classList.add('show');
+          msg.textContent = w.dataset.done || 'All in order.';
         }
       } else {
         it.classList.add('bad');
+        msg.className = 'seq-msg bad';
         msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
         setTimeout(function () { it.classList.remove('bad'); }, 700);
       }
@@ -533,9 +574,7 @@ function speakGloss(e, text) {
       var q = rs.closest('.ow-seq');
       q.dataset.next = 0;
       q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
-      q.querySelector('.seq-line').innerHTML = '';
-      q.querySelector('.seq-msg').textContent = '';
-      var f = q.querySelector('.widget-feedback'); f.textContent = ''; f.classList.remove('show');
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
     }
   });
 })();

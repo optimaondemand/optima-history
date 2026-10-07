@@ -69,6 +69,11 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
 
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
     .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
     .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
     .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
@@ -82,17 +87,18 @@
     .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
     .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
     .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
-    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
     .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
-    .ow-seq .seq-item.placed { display: none; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
     .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
-    .ow-seq .seq-line { border-left: 4px solid #0E1C42; padding-left: 14px; margin: 4px 0 10px 4px; min-height: 8px; }
-    .ow-seq .seq-step { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 8px 12px; margin-bottom: 8px; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .ow-seq .seq-step .seq-date { font-size: 12px; color: #c7922c; display: block; }
-    .ow-seq .seq-msg { font-size: 14px; color: #8A1F16; min-height: 20px; margin-bottom: 4px; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
     .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-    .ow-flips .ow-flip { flex: 1; min-width: 200px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -387,22 +393,27 @@
   <div class="widget-row" data-correct="1" data-fb="Right. Texans struck first at Mansfield, in the Trans-Mississippi, far from Lee." data-hint="Think about where the Red River campaign took place. Was it near Lee’s army?">
     <div class="widget-row-prompt">1. Mansfield, Louisiana, April 1864</div>
     <div class="widget-options"><button type="button" data-choice="0">Fought in the East with Lee’s army</button><button type="button" data-choice="1">Fought in the West or on Texas ground</button></div>
+    <div class="row-feedback ph" data-ph="Right. Texans struck first at Mansfield, in the Trans-Mississippi, far from Lee.">Right. Texans struck first at Mansfield, in the Trans-Mississippi, far from Lee.</div>
   </div>
   <div class="widget-row" data-correct="0" data-fb="Right. The 1st Texas lost more than 80 of every 100 men in a single day." data-hint="Maryland is far closer to Virginia than to Texas. Which army fought there?">
     <div class="widget-row-prompt">2. Antietam, Maryland, September 1862</div>
     <div class="widget-options"><button type="button" data-choice="0">Fought in the East with Lee’s army</button><button type="button" data-choice="1">Fought in the West or on Texas ground</button></div>
+    <div class="row-feedback ph" data-ph="Maryland is far closer to Virginia than to Texas. Which army fought there?">Maryland is far closer to Virginia than to Texas. Which army fought there?</div>
   </div>
   <div class="widget-row" data-correct="0" data-fb="Right. This is where the Texans shouted “Lee to the rear.”" data-hint="The Texas Brigade served in Lee’s army. Where did that army fight?">
     <div class="widget-row-prompt">3. The Wilderness, Virginia, May 1864</div>
     <div class="widget-options"><button type="button" data-choice="0">Fought in the East with Lee’s army</button><button type="button" data-choice="1">Fought in the West or on Texas ground</button></div>
+    <div class="row-feedback ph" data-ph="The Texas Brigade served in Lee’s army. Where did that army fight?">The Texas Brigade served in Lee’s army. Where did that army fight?</div>
   </div>
   <div class="widget-row" data-correct="1" data-fb="Right. Sibley’s Texans marched far to the west, and they were turned back." data-hint="Sibley marched his men west, away from Virginia.">
     <div class="widget-row-prompt">4. Glorieta Pass, New Mexico, 1862</div>
     <div class="widget-options"><button type="button" data-choice="0">Fought in the East with Lee’s army</button><button type="button" data-choice="1">Fought in the West or on Texas ground</button></div>
+    <div class="row-feedback ph" data-ph="Right. Sibley’s Texans marched far to the west, and they were turned back.">Right. Sibley’s Texans marched far to the west, and they were turned back.</div>
   </div>
   <div class="widget-row" data-correct="0" data-fb="Right. The Texans attacked on the second day, and Hood was badly wounded." data-hint="Pennsylvania is in the North. Which Confederate army went there?">
     <div class="widget-row-prompt">5. Gettysburg, Pennsylvania, July 1863</div>
     <div class="widget-options"><button type="button" data-choice="0">Fought in the East with Lee’s army</button><button type="button" data-choice="1">Fought in the West or on Texas ground</button></div>
+    <div class="row-feedback ph" data-ph="Right. The Texans attacked on the second day, and Hood was badly wounded.">Right. The Texans attacked on the second day, and Hood was badly wounded.</div>
   </div>
   <button class="widget-reset">Reset</button>
 </div>
@@ -412,10 +423,8 @@
 <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The War Reaches Texas</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Union ships <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Using warships to keep ships from entering or leaving a port.">blockade</a>d the Gulf coast. In October 1862, they took Galveston. On New Year&rsquo;s Day 1863, Confederate General John Magruder struck back. His men fought from two steamboats lined with cotton bales and from the shore. They won Galveston back.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In September 1863, a Union fleet tried to land an army at Sabine Pass, on the Louisiana border. Lieutenant Dick Dowling and about 40 men held a small fort with six cannons. They drove off the fleet and captured two gunboats. It was one of the most famous Texas victories of the war.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Cotton Road</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The blockade made it hard to sell cotton overseas. So Texans found another way. Cotton was hauled in wagons to Brownsville, then across the R&iacute;o Grande to the Mexican port of <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="mat-uh-MOR-ohs. A Mexican city on the south bank of the Río Grande."><em>Matamoros</em></a>. Mexico was a neutral country. Ships from other nations could dock there, take the cotton, and bring back guns and supplies.</p><div id="foreign" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;"><div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; FOREIGN LANGUAGE VOCABULARY</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>Matamoros</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of Matamoros" onclick="speakGloss(event,'mat uh mor ohs')">&#128266;</button> <span style="color: #6b7a99;">(mat-uh-MOR-ohs)</span>: A Mexican city on the south bank of the Río Grande.</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>Tejano</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of Tejano" onclick="speakGloss(event,'teh hah noh')">&#128266;</button> <span style="color: #6b7a99;">(teh-HAH-noh)</span>: A Texan of Mexican descent.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="teh-HAH-noh. A Texan of Mexican descent."><em>Tejano</em></a> named Santos Benavides, from Laredo, rose to the rank of colonel. His 33rd Texas <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Soldiers who fight on horseback.">cavalry</a> guarded this route. In 1864, his men defended Laredo against a Union raid.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Border Again</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The cotton trade made the R&iacute;o Grande important once more, the same river that had caused the war with Mexico fifteen years earlier. Union ships could stop vessels at Confederate ports, but they could not easily stop neutral ships at a Mexican port. That is why the Texas border mattered so much to the Confederacy.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Enslaved Texans did much of the work that kept the war effort going. They farmed, hauled cotton, and built defenses. Some risked everything to escape across the R&iacute;o Grande into Mexico, where slavery was against the law.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Back home, women ran farms and ranches while the men were away. Prices climbed, and goods like cloth and salt were hard to find. The war reached almost every Texas family.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Not Every Texan Agreed</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not all Texans supported the Confederacy. Some, especially among German settlers in the Hill Country, were <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A person who stayed loyal to the United States during the Civil War.">Unionist</a>s. In 1862, Confederate forces attacked a group of them near the Nueces River. In the same year, in Gainesville, dozens of men accused of disloyalty were hanged. Texas was divided, and some people paid a heavy price for their beliefs.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Union tried to close the Cotton Road. In November 1863, Union soldiers landed near the mouth of the R&iacute;o Grande and took Brownsville. They held it for months, until Texas troops under Colonel John Ford retook the area in the summer of 1864.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Last Battle</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Robert E. Lee surrendered in Virginia in April 1865. More than a month later, in May, Texans fought a small battle at Palmito Ranch near Brownsville. The Confederates won. It was the last land battle of the war.</p><div class="optima-widget ow-seq" data-ra-skip data-next="0" data-done="The war reached Texas early and ended there late. The last shots of the war were fired on Texas ground." data-hint="Not yet. Which of these came earlier?">
   <div class="widget-kicker">&#9889; TRY IT &middot; THE WAR COMES TO TEXAS</div>
   <div class="widget-question">These six events happened on or near Texas ground. Click them in the order they happened.</div>
+  <div class="seq-pool"><button type="button" class="seq-item" data-n="2" data-date="September 1863" data-text="Dick Dowling holds Sabine Pass" data-fb="About 40 men with six cannons drove off a fleet.">Dick Dowling holds Sabine Pass<span class="seq-tag">6. September 1863</span></button><button type="button" class="seq-item" data-n="5" data-date="May 1865" data-text="The last land battle of the war, at Palmito Ranch" data-fb="The Confederates won, more than a month after Lee surrendered.">The last land battle of the war, at Palmito Ranch<span class="seq-tag">6. May 1865</span></button><button type="button" class="seq-item" data-n="0" data-date="October 1862" data-text="Union ships take Galveston" data-fb="The Confederates struck back soon after.">Union ships take Galveston<span class="seq-tag">6. October 1862</span></button><button type="button" class="seq-item" data-n="4" data-date="Summer 1864" data-text="Texas troops under Colonel Ford retake the area" data-fb="The trade through Matamoros went on.">Texas troops under Colonel Ford retake the area<span class="seq-tag">6. Summer 1864</span></button><button type="button" class="seq-item" data-n="1" data-date="January 1, 1863" data-text="Magruder wins Galveston back" data-fb="His men fought from two steamboats lined with cotton bales.">Magruder wins Galveston back<span class="seq-tag">6. January 1, 1863</span></button><button type="button" class="seq-item" data-n="3" data-date="November 1863" data-text="Union soldiers take Brownsville" data-fb="The Cotton Road was in danger.">Union soldiers take Brownsville<span class="seq-tag">6. November 1863</span></button></div>
   <div class="seq-msg"></div>
-  <div class="seq-pool"><button type="button" class="seq-item" data-n="2" data-date="September 1863" data-text="Dick Dowling holds Sabine Pass" data-fb="About 40 men with six cannons drove off a fleet.">Dick Dowling holds Sabine Pass</button><button type="button" class="seq-item" data-n="5" data-date="May 1865" data-text="The last land battle of the war, at Palmito Ranch" data-fb="The Confederates won, more than a month after Lee surrendered.">The last land battle of the war, at Palmito Ranch</button><button type="button" class="seq-item" data-n="0" data-date="October 1862" data-text="Union ships take Galveston" data-fb="The Confederates struck back soon after.">Union ships take Galveston</button><button type="button" class="seq-item" data-n="4" data-date="Summer 1864" data-text="Texas troops under Colonel Ford retake the area" data-fb="The trade through Matamoros went on.">Texas troops under Colonel Ford retake the area</button><button type="button" class="seq-item" data-n="1" data-date="January 1, 1863" data-text="Magruder wins Galveston back" data-fb="His men fought from two steamboats lined with cotton bales.">Magruder wins Galveston back</button><button type="button" class="seq-item" data-n="3" data-date="November 1863" data-text="Union soldiers take Brownsville" data-fb="The Cotton Road was in danger.">Union soldiers take Brownsville</button></div>
-  <div class="seq-line"></div>
-  <div class="widget-feedback"></div>
   <button class="widget-reset">Reset</button>
 </div>
     </div>
@@ -450,8 +459,8 @@ function speakGloss(e, text) {
     if (reset) {
       var w = reset.closest('.optima-widget');
       w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
-      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
-      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
       return;
     }
@@ -484,11 +493,36 @@ function speakGloss(e, text) {
 })();
 
 (function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
   document.querySelectorAll('.ow-road').forEach(function (w) {
     var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
     var slider = w.querySelector('input[type=range]');
     var dots = w.querySelectorAll('.stop');
     var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
     function render() {
       var i = parseInt(slider.value, 10), s = stops[i];
       dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
@@ -498,9 +532,16 @@ function speakGloss(e, text) {
       w.querySelector('.road-body').textContent = s.body;
       w.querySelector('.road-note').textContent = s.note;
     }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
     slider.addEventListener('input', render);
     w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
-    render();
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
   });
 
   document.addEventListener('click', function (e) {
@@ -510,21 +551,16 @@ function speakGloss(e, text) {
       var msg = w.querySelector('.seq-msg');
       if (n === next) {
         it.classList.add('placed');
-        var step = document.createElement('div');
-        step.className = 'seq-step';
-        step.innerHTML = '<span class="seq-date"></span><span class="seq-text"></span>';
-        step.querySelector('.seq-date').textContent = (next + 1) + '. ' + it.dataset.date;
-        step.querySelector('.seq-text').textContent = it.dataset.text + '. ' + (it.dataset.fb || '');
-        w.querySelector('.seq-line').appendChild(step);
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
         w.dataset.next = next + 1;
-        msg.textContent = '';
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
         if (next + 1 === w.querySelectorAll('.seq-item').length) {
-          var done = w.querySelector('.widget-feedback');
-          done.textContent = w.dataset.done || 'All in order.';
-          done.classList.add('show');
+          msg.textContent = w.dataset.done || 'All in order.';
         }
       } else {
         it.classList.add('bad');
+        msg.className = 'seq-msg bad';
         msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
         setTimeout(function () { it.classList.remove('bad'); }, 700);
       }
@@ -535,9 +571,7 @@ function speakGloss(e, text) {
       var q = rs.closest('.ow-seq');
       q.dataset.next = 0;
       q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
-      q.querySelector('.seq-line').innerHTML = '';
-      q.querySelector('.seq-msg').textContent = '';
-      var f = q.querySelector('.widget-feedback'); f.textContent = ''; f.classList.remove('show');
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
     }
   });
 })();
