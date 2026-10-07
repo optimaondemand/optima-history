@@ -44,6 +44,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -315,7 +371,26 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; COTTON AND DEBT</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">From Cattle to Cotton</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When the open range closed, the empty land did not stay empty. Railroads reached into new parts of Texas. They sold land to families who came to farm. Barbed wire fenced the fields, and better plows broke the prairie sod. Cotton was the main crop. It sold for cash, and merchants and railroads knew how to ship it. By the 1890s, Texas grew more cotton than any other state.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But a cotton farmer needed money months before the crop came in. Seed, tools, flour, and cloth all had to be bought in spring. Most farmers had no savings, so they turned to the local merchant. The merchant sold them goods on credit, at high prices, with high interest. In return, the merchant took a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A claim a merchant held on a farmer&#x27;s next crop in return for goods bought on credit.">crop lien</a>. That meant the merchant had a legal claim on the farmer&rsquo;s coming crop. At harvest, the merchant took his share first.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then came falling prices. Around 1880, cotton sold for about ten cents a pound. By the mid-1890s, it brought less than six cents. A farmer who grew more cotton to pay his debts only pushed prices lower. Many farmers lost their land and became <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A farmer who rents land from an owner instead of owning it.">tenant farmer</a>s, paying rent to owners. By 1900, about half of all Texas farmers were tenants. They had worked hard, and many felt the whole system was set against them.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">From Cattle to Cotton</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When the open range closed, the empty land did not stay empty. Railroads reached into new parts of Texas. They sold land to families who came to farm. Barbed wire fenced the fields, and better plows broke the prairie sod. Cotton was the main crop. It sold for cash, and merchants and railroads knew how to ship it. By the 1890s, Texas grew more cotton than any other state.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But a cotton farmer needed money months before the crop came in. Seed, tools, flour, and cloth all had to be bought in spring. Most farmers had no savings, so they turned to the local merchant. The merchant sold them goods on credit, at high prices, with high interest. In return, the merchant took a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A claim a merchant held on a farmer&#x27;s next crop in return for goods bought on credit.">crop lien</a>. That meant the merchant had a legal claim on the farmer&rsquo;s coming crop. At harvest, the merchant took his share first.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then came falling prices. Around 1880, cotton sold for about ten cents a pound. By the mid-1890s, it brought less than six cents. A farmer who grew more cotton to pay his debts only pushed prices lower. Many farmers lost their land and became <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A farmer who rents land from an owner instead of owning it.">tenant farmer</a>s, paying rent to owners. By 1900, about half of all Texas farmers were tenants. They had worked hard, and many felt the whole system was set against them.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; FOLLOW THE DEBT</div>
+  <div class="widget-question">A cotton farmer could work hard and still end the year owing more than he made. Pick the best answer for each row.</div>
+  <div class="widget-row" data-correct="1" data-fb="Right. He bought goods on credit from the local merchant, at high prices and high interest." data-hint="Think about who sold goods in the spring and could wait until harvest to be paid.">
+    <div class="widget-row-prompt">1. A farmer needs seed, tools and flour months before the crop comes in, and he has no savings. What does he do?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Sells part of his land to a neighbor</button><button type="button" data-choice="1">Buys on credit from the merchant</button><button type="button" data-choice="2">Waits until the whole crop comes in</button><button type="button" data-choice="3">Asks the railroad to lend him money</button></div>
+    <div class="row-feedback ph" data-ph="Right. He bought goods on credit from the local merchant, at high prices and high interest.">Right. He bought goods on credit from the local merchant, at high prices and high interest.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. A crop lien gave the merchant a legal claim on the coming crop, and at harvest the merchant took his share first." data-hint="Think about a legal claim on a crop that has not been harvested yet.">
+    <div class="widget-row-prompt">2. What did the merchant take in return for that credit?</div>
+    <div class="widget-options"><button type="button" data-choice="0">A mortgage on the house</button><button type="button" data-choice="1">A share of the farmer’s labor</button><button type="button" data-choice="2">A crop lien</button><button type="button" data-choice="3">A tax on the cotton</button></div>
+    <div class="row-feedback ph" data-ph="Right. A crop lien gave the merchant a legal claim on the coming crop, and at harvest the merchant took his share first.">Right. A crop lien gave the merchant a legal claim on the coming crop, and at harvest the merchant took his share first.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. When many farmers grew more cotton, prices fell even further, so he still could not pay." data-hint="Think about what happens to a price when everyone grows more of the same thing.">
+    <div class="widget-row-prompt">3. Cotton fell from about ten cents a pound to under six. A farmer grew more cotton to pay his debts. What happened?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Prices fell even further</button><button type="button" data-choice="1">Prices rose because there was more</button><button type="button" data-choice="2">Nothing changed</button><button type="button" data-choice="3">The merchants forgave the debt</button></div>
+    <div class="row-feedback ph" data-ph="Right. When many farmers grew more cotton, prices fell even further, so he still could not pay.">Right. When many farmers grew more cotton, prices fell even further, so he still could not pay.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; FARMERS ORGANIZE</div>
@@ -323,7 +398,13 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; A PARTY OF THEIR OWN</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Populist Party</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Farmers decided to enter politics. In 1891 and 1892, Alliance members and others formed the People&rsquo;s Party, whose members were called <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A member of the People&#x27;s Party, a political party of the 1890s that spoke for farmers and workers.">Populist</a>s. Their national <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A list of the goals and promises of a political group.">platform</a>, written in Omaha in 1892, called for government ownership of railroads, an income tax, and an end to the old money system. In Texas, the Populist candidate for governor in 1892, Thomas Nugent, won about one vote in four. That was a strong showing for a new party in a state where almost everyone voted Democratic.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Democrats fought back hard. Many Democrats said that dividing white voters would let Black voters decide elections. Some Populists tried to win Black votes, and the two parties accused each other of fraud. Meanwhile, Texas Democrats such as Governor James Hogg took up some Populist ideas, such as regulating railroads. That took away some of the Populists&rsquo; strength.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The big test came in 1896. The Democrats chose William Jennings Bryan of Nebraska as their candidate for president. Bryan gave a famous speech that said the country was crucifying working people on a &ldquo;cross of gold.&rdquo; He wanted more silver money, which would raise prices. Most Texas Populists decided to back him. Bryan won Texas by a wide margin, but he lost the nation to William McKinley. Without a candidate of their own, the Populists faded. By 1900, the party was almost gone.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Populism lost at the polls, but its ideas did not vanish. Railroad regulation, the income tax, and the direct election of senators all became law in later years. Historians still debate how much the Populists changed the country, and how much they were a flash of anger over hard times. In Texas, the story leaves behind a lesson about how ordinary people can organize when they feel the rules favor others.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Populist Party</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Farmers decided to enter politics. In 1891 and 1892, Alliance members and others formed the People&rsquo;s Party, whose members were called <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A member of the People&#x27;s Party, a political party of the 1890s that spoke for farmers and workers.">Populist</a>s. Their national <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A list of the goals and promises of a political group.">platform</a>, written in Omaha in 1892, called for government ownership of railroads, an income tax, and an end to the old money system. In Texas, the Populist candidate for governor in 1892, Thomas Nugent, won about one vote in four. That was a strong showing for a new party in a state where almost everyone voted Democratic.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Democrats fought back hard. Many Democrats said that dividing white voters would let Black voters decide elections. Some Populists tried to win Black votes, and the two parties accused each other of fraud. Meanwhile, Texas Democrats such as Governor James Hogg took up some Populist ideas, such as regulating railroads. That took away some of the Populists&rsquo; strength.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The big test came in 1896. The Democrats chose William Jennings Bryan of Nebraska as their candidate for president. Bryan gave a famous speech that said the country was crucifying working people on a &ldquo;cross of gold.&rdquo; He wanted more silver money, which would raise prices. Most Texas Populists decided to back him. Bryan won Texas by a wide margin, but he lost the nation to William McKinley. Without a candidate of their own, the Populists faded. By 1900, the party was almost gone.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Populism lost at the polls, but its ideas did not vanish. Railroad regulation, the income tax, and the direct election of senators all became law in later years. Historians still debate how much the Populists changed the country, and how much they were a flash of anger over hard times. In Texas, the story leaves behind a lesson about how ordinary people can organize when they feel the rules favor others.</p><div class="optima-widget ow-seq" data-ra-skip data-next="0" data-done="The Populists lost at the polls, but many of their ideas became law in later years." data-hint="Not yet. Which of these came earlier?">
+  <div class="widget-kicker">&#9889; TRY IT &middot; FROM ALLIANCE TO PARTY</div>
+  <div class="widget-question">These five steps carried Texas farmers from a club to a political party. Click them in the order they happened.</div>
+  <div class="seq-pool"><button type="button" class="seq-item" data-n="3" data-date="1892" data-text="Populist Thomas Nugent runs for governor and wins about one vote in four" data-fb="That was a strong showing for a new party.">Populist Thomas Nugent runs for governor and wins about one vote in four<span class="seq-tag">5. 1892</span></button><button type="button" class="seq-item" data-n="0" data-date="1877" data-text="Farmers in Lampasas County form the Farmers’ Alliance" data-fb="It spread quickly, because every farming county had the same troubles.">Farmers in Lampasas County form the Farmers’ Alliance<span class="seq-tag">5. 1877</span></button><button type="button" class="seq-item" data-n="4" data-date="1896" data-text="Bryan wins Texas but loses the nation, and the Populists fade" data-fb="By 1900 the party was almost gone.">Bryan wins Texas but loses the nation, and the Populists fade<span class="seq-tag">5. 1896</span></button><button type="button" class="seq-item" data-n="2" data-date="1887" data-text="Charles Macune starts the Texas Exchange" data-fb="It was a good idea, but it ran short of money.">Charles Macune starts the Texas Exchange<span class="seq-tag">5. 1887</span></button><button type="button" class="seq-item" data-n="1" data-date="1886" data-text="Alliance delegates meet in Cleburne and list their demands" data-fb="They asked for regulation of the railroads and limits on large land holdings.">Alliance delegates meet in Cleburne and list their demands<span class="seq-tag">5. 1886</span></button></div>
+  <div class="seq-msg"></div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -348,6 +429,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

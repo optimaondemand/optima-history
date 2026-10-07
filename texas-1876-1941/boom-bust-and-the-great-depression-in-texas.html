@@ -44,6 +44,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -318,11 +374,41 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE DEPRESSION ARRIVES</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Crash of 1929</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In October 1929, the New York stock market crashed. Prices of shares fell by large amounts in a few days. Banks that had lent money to stock buyers began to fail. In the months that followed, factories closed and workers lost their jobs. By 1932, about one American worker in four had no job. This long period of hard times is called the Great Depression.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Farmers felt it first. In 1929, a pound of cotton sold for about seventeen cents. By 1931, it sold for less than six cents, which was below what it cost to grow it. Many farmers could not pay their debts, and they lost their land. Tenant farmers had it worst. Landowners sent families away or cut what they were paid, and thousands of families left the land with everything they owned loaded on a truck or wagon. Some went to town to find work, and some went on the road.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then came the drought. In the early and middle 1930s, rain stopped falling on the High Plains of the Texas Panhandle. Farmers there had plowed up the grass that held the soil, and the wind now picked up the dry dirt. Great dust storms rolled across the land. The worst came on April 14, 1935, called Black Sunday, when a black wall of dust turned day into night. The region became part of the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The dry region of the Great Plains where drought and wind stripped away the topsoil in the 1930s.">Dust Bowl</a>. Dust filled houses, killed crops, and made children and livestock sick. Many families gave up and left.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many families who left the land headed west. Thousands of Texans joined the long stream of Dust Bowl migrants to California, where they hoped to find work in the fields and orchards. They often found low pay, crowded camps, and a cold welcome. Newcomers from the Southern Plains were all called &ldquo;Okies&rdquo; by Californians, no matter what state they came from. Others stayed near home and took what work they could find, picking cotton for pennies or doing odd jobs in town.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oil workers and city people suffered too. When oil prices fell, drilling stopped and crews were laid off. Banks in every part of Texas closed their doors. In cities such as Houston, Dallas, and San Antonio, <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The condition of being without a job while wanting to work.">unemployment</a> was high. Some people stood in lines for food, and some lived in shacks of scrap lumber. East Texas was an odd exception. Because of the oil boom there, jobs and wages held up better for a time, though the oil crash soon hit it too.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Crash of 1929</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In October 1929, the New York stock market crashed. Prices of shares fell by large amounts in a few days. Banks that had lent money to stock buyers began to fail. In the months that followed, factories closed and workers lost their jobs. By 1932, about one American worker in four had no job. This long period of hard times is called the Great Depression.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Farmers felt it first. In 1929, a pound of cotton sold for about seventeen cents. By 1931, it sold for less than six cents, which was below what it cost to grow it. Many farmers could not pay their debts, and they lost their land. Tenant farmers had it worst. Landowners sent families away or cut what they were paid, and thousands of families left the land with everything they owned loaded on a truck or wagon. Some went to town to find work, and some went on the road.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Then came the drought. In the early and middle 1930s, rain stopped falling on the High Plains of the Texas Panhandle. Farmers there had plowed up the grass that held the soil, and the wind now picked up the dry dirt. Great dust storms rolled across the land. The worst came on April 14, 1935, called Black Sunday, when a black wall of dust turned day into night. The region became part of the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The dry region of the Great Plains where drought and wind stripped away the topsoil in the 1930s.">Dust Bowl</a>. Dust filled houses, killed crops, and made children and livestock sick. Many families gave up and left.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many families who left the land headed west. Thousands of Texans joined the long stream of Dust Bowl migrants to California, where they hoped to find work in the fields and orchards. They often found low pay, crowded camps, and a cold welcome. Newcomers from the Southern Plains were all called &ldquo;Okies&rdquo; by Californians, no matter what state they came from. Others stayed near home and took what work they could find, picking cotton for pennies or doing odd jobs in town.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Oil workers and city people suffered too. When oil prices fell, drilling stopped and crews were laid off. Banks in every part of Texas closed their doors. In cities such as Houston, Dallas, and San Antonio, <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The condition of being without a job while wanting to work.">unemployment</a> was high. Some people stood in lines for food, and some lived in shacks of scrap lumber. East Texas was an odd exception. Because of the oil boom there, jobs and wages held up better for a time, though the oil crash soon hit it too.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; WHO SUFFERED HOW?</div>
+  <div class="widget-question">The Depression hit Texans in different ways. For each row, decide which group it describes.</div>
+  <div class="widget-row" data-correct="2" data-fb="Right. Oil workers and city people suffered too, and banks in every part of Texas closed their doors." data-hint="Think about who depended on oil prices and city jobs.">
+    <div class="widget-row-prompt">1. Drilling stopped and crews were laid off when oil prices fell.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Cotton farmers</button><button type="button" data-choice="1">Dust Bowl families</button><button type="button" data-choice="2">Oil and city workers</button></div>
+    <div class="row-feedback ph" data-ph="Right. Oil workers and city people suffered too, and banks in every part of Texas closed their doors.">Right. Oil workers and city people suffered too, and banks in every part of Texas closed their doors.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. A pound of cotton fell from about seventeen cents in 1929 to under six cents by 1931." data-hint="Think about whose crop lost its value.">
+    <div class="widget-row-prompt">2. Cotton sold for less than it cost to grow, and landowners sent tenant families away.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Cotton farmers</button><button type="button" data-choice="1">Dust Bowl families</button><button type="button" data-choice="2">Oil and city workers</button></div>
+    <div class="row-feedback ph" data-ph="Right. A pound of cotton fell from about seventeen cents in 1929 to under six cents by 1931.">Right. A pound of cotton fell from about seventeen cents in 1929 to under six cents by 1931.</div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. Thousands of Texans joined the long stream of Dust Bowl migrants, hoping for work in the fields and orchards." data-hint="Think about who had to leave the land when the rain stopped.">
+    <div class="widget-row-prompt">3. Many left for California, where Californians called them &ldquo;Okies.&rdquo;</div>
+    <div class="widget-options"><button type="button" data-choice="0">Cotton farmers</button><button type="button" data-choice="1">Dust Bowl families</button><button type="button" data-choice="2">Oil and city workers</button></div>
+    <div class="row-feedback ph" data-ph="Right. Thousands of Texans joined the long stream of Dust Bowl migrants, hoping for work in the fields and orchards.">Right. Thousands of Texans joined the long stream of Dust Bowl migrants, hoping for work in the fields and orchards.</div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. On April 14, 1935, a black wall of dust turned day into night." data-hint="Think about where the rain stopped falling in the 1930s.">
+    <div class="widget-row-prompt">4. Dust storms like Black Sunday filled houses and killed crops on the High Plains.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Cotton farmers</button><button type="button" data-choice="1">Dust Bowl families</button><button type="button" data-choice="2">Oil and city workers</button></div>
+    <div class="row-feedback ph" data-ph="Right. On April 14, 1935, a black wall of dust turned day into night.">Right. On April 14, 1935, a black wall of dust turned day into night.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; HELP AND HARDSHIP</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Relief</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">At first, most help came from families, churches, and charities. Neighbors shared what they had. Cities set up soup kitchens, and local governments gave out food and clothing. But the need was too great. In Texas, the state government had little power or money. The constitution of 1876 limited what the state could spend and borrow, and Texans were not used to looking to government for help.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texas leaders took different paths. Miriam &ldquo;Ma&rdquo; Ferguson, the first woman to serve as governor of Texas, held office a second time from 1933 to 1935. She supported some federal aid. The next governor, James Allred, worked closely with President Franklin Roosevelt&rsquo;s New Deal. Under the New Deal, the federal government created programs that gave out money and created jobs. The Civilian Conservation Corps put young men to work building roads, bridges, and state parks, such as those at Bastrop and Garner.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not everyone shared equally in the help. Mexican American Texans were often treated unfairly. In the early 1930s, local officials in Texas and other states pressured many Mexican families to leave the country. Some of them were United States citizens. Black Texans were often the last hired and the first fired. Women and children worked for very low pay. The Depression was hard on almost everyone, but it was hardest on those with the least power.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texans had a reputation for self-reliance, and many people were proud and slow to ask for help. But hunger and loss showed that some troubles are too large for any one family or town. People endured with patience and a good deal of mutual aid. By the late 1930s, jobs were returning, though full recovery came only with the war that followed.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Relief</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">At first, most help came from families, churches, and charities. Neighbors shared what they had. Cities set up soup kitchens, and local governments gave out food and clothing. But the need was too great. In Texas, the state government had little power or money. The constitution of 1876 limited what the state could spend and borrow, and Texans were not used to looking to government for help.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texas leaders took different paths. Miriam &ldquo;Ma&rdquo; Ferguson, the first woman to serve as governor of Texas, held office a second time from 1933 to 1935. She supported some federal aid. The next governor, James Allred, worked closely with President Franklin Roosevelt&rsquo;s New Deal. Under the New Deal, the federal government created programs that gave out money and created jobs. The Civilian Conservation Corps put young men to work building roads, bridges, and state parks, such as those at Bastrop and Garner.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not everyone shared equally in the help. Mexican American Texans were often treated unfairly. In the early 1930s, local officials in Texas and other states pressured many Mexican families to leave the country. Some of them were United States citizens. Black Texans were often the last hired and the first fired. Women and children worked for very low pay. The Depression was hard on almost everyone, but it was hardest on those with the least power.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texans had a reputation for self-reliance, and many people were proud and slow to ask for help. But hunger and loss showed that some troubles are too large for any one family or town. People endured with patience and a good deal of mutual aid. By the late 1930s, jobs were returning, though full recovery came only with the war that followed.</p><div class="optima-widget ow-reflect" data-ra-skip>
+  <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+  <div class="widget-question">Many Texans were proud and slow to ask for help. If your neighbors lost everything in the Depression, what would you do? (No wrong answer. Just check in with yourself.)</div>
+  <div class="widget-options"><button type="button" data-response="That is what many Texans did. Neighbors shared what they had, and churches and charities helped first. But in the end the need was too great for families alone.">&#129309; Share what I have</button><button type="button" data-response="Texas leaders disagreed about this. The state had little power or money, but Governor Allred worked with the New Deal, and programs like the CCC gave young men jobs.">&#127963; Ask the government to step in</button><button type="button" data-response="Anyone willing to work with their hands could find a place on a drilling crew in East Texas, and the CCC put young men to work building roads and state parks. Work is a kind of help too.">&#128188; Help them find work</button></div>
+  <div class="widget-feedback" data-ph="Anyone willing to work with their hands could find a place on a drilling crew in East Texas, and the CCC put young men to work building roads and state parks. Work is a kind of help too.">Anyone willing to work with their hands could find a place on a drilling crew in East Texas, and the CCC put young men to work building roads and state parks. Work is a kind of help too.</div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -347,6 +433,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

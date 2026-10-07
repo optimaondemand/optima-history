@@ -43,6 +43,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -313,7 +369,31 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; ARTISTS AND THINKERS</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A City of Artists</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Long before the music scene, Austin had a culture of its own. Elisabet Ney, a German <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="An artist who shapes stone, clay, metal, or other materials into figures.">sculptor</a>, came to Texas in 1873 and settled in Austin. She made statues of Sam Houston and Stephen F. Austin, which now stand in the state Capitol and in the U.S. Capitol in Washington. Her studio, Formosa, was a meeting place for artists and thinkers, and it is now a museum.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In the early and middle 1900s, three Texas writers gathered in Austin and became close friends. J. Frank Dobie wrote about the cowboys, stories, and wild places of the Southwest. Walter Prescott Webb, a historian, wrote about how the Great Plains shaped Texas. Roy Bedichek, a naturalist, wrote about birds and the outdoors, including a book called <em>Adventures with a Texas Naturalist</em>. They often met to talk and swim at Barton Springs, a spring-fed pool in the middle of the city. They helped make Austin a place where people thought and wrote about Texas.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A City of Artists</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Long before the music scene, Austin had a culture of its own. Elisabet Ney, a German <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="An artist who shapes stone, clay, metal, or other materials into figures.">sculptor</a>, came to Texas in 1873 and settled in Austin. She made statues of Sam Houston and Stephen F. Austin, which now stand in the state Capitol and in the U.S. Capitol in Washington. Her studio, Formosa, was a meeting place for artists and thinkers, and it is now a museum.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In the early and middle 1900s, three Texas writers gathered in Austin and became close friends. J. Frank Dobie wrote about the cowboys, stories, and wild places of the Southwest. Walter Prescott Webb, a historian, wrote about how the Great Plains shaped Texas. Roy Bedichek, a naturalist, wrote about birds and the outdoors, including a book called <em>Adventures with a Texas Naturalist</em>. They often met to talk and swim at Barton Springs, a spring-fed pool in the middle of the city. They helped make Austin a place where people thought and wrote about Texas.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; WHOSE WORK?</div>
+  <div class="widget-question">Austin was a city of artists and thinkers long before the music scene. For each row, decide who it describes.</div>
+  <div class="widget-row" data-correct="2" data-fb="Right. Webb was a historian who taught at the University of Texas." data-hint="Think about the one of the three friends who wrote history rather than stories or nature books.">
+    <div class="widget-row-prompt">1. A historian who wrote about how the Great Plains shaped Texas.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Elisabet Ney</button><button type="button" data-choice="1">J. Frank Dobie</button><button type="button" data-choice="2">Walter Prescott Webb</button><button type="button" data-choice="3">Roy Bedichek</button></div>
+    <div class="row-feedback ph" data-ph="Think about the one of the three friends who wrote history rather than stories or nature books.">Think about the one of the three friends who wrote history rather than stories or nature books.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. She came to Texas in 1873 and made statues of Sam Houston and Stephen F. Austin." data-hint="Think about the person who made statues rather than writing books.">
+    <div class="widget-row-prompt">2. A German sculptor whose studio, Formosa, is now a museum.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Elisabet Ney</button><button type="button" data-choice="1">J. Frank Dobie</button><button type="button" data-choice="2">Walter Prescott Webb</button><button type="button" data-choice="3">Roy Bedichek</button></div>
+    <div class="row-feedback ph" data-ph="Right. She came to Texas in 1873 and made statues of Sam Houston and Stephen F. Austin.">Right. She came to Texas in 1873 and made statues of Sam Houston and Stephen F. Austin.</div>
+  </div>
+  <div class="widget-row" data-correct="3" data-fb="Right. He wrote about birds and the outdoors." data-hint="Think about the one who wrote about birds and the outdoors.">
+    <div class="widget-row-prompt">3. A naturalist who wrote Adventures with a Texas Naturalist.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Elisabet Ney</button><button type="button" data-choice="1">J. Frank Dobie</button><button type="button" data-choice="2">Walter Prescott Webb</button><button type="button" data-choice="3">Roy Bedichek</button></div>
+    <div class="row-feedback ph" data-ph="Think about the one who wrote about birds and the outdoors.">Think about the one who wrote about birds and the outdoors.</div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. He was one of three friends who met to talk and swim at Barton Springs." data-hint="Think about the writer of tales about the cowboys and wild places.">
+    <div class="widget-row-prompt">4. A writer of cowboys, stories and wild places of the Southwest.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Elisabet Ney</button><button type="button" data-choice="1">J. Frank Dobie</button><button type="button" data-choice="2">Walter Prescott Webb</button><button type="button" data-choice="3">Roy Bedichek</button></div>
+    <div class="row-feedback ph" data-ph="Right. He was one of three friends who met to talk and swim at Barton Springs.">Right. He was one of three friends who met to talk and swim at Barton Springs.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; ARMADILLOS AND OUTLAWS</div>
@@ -321,7 +401,13 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; A MUSIC CAPITAL</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Live Music Capital</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Blues and rock grew in Austin, too. A club called Antone&rsquo;s opened in 1975 and brought in great blues players from Texas and Chicago to perform. A young guitarist named Stevie Ray Vaughan, who grew up in Dallas and made his name in Austin, became a national star in the 1980s. After his death in 1990, the city placed a statue of him along the lake in downtown Austin. Austin became a city where players of many kinds could find a stage and a crowd.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Armadillo closed in 1980, but its spirit lived on. In 1987, a group of Austin friends, who worked at a local newspaper and in the music business, started a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A special event with music, food, and activities, often held every year.">festival</a> called South by Southwest, or SXSW. About 700 people came the first year. It was meant to show off local and regional bands. It grew into a giant event with film and technology sections as well. Hundreds of thousands of visitors now come to Austin each March. In 1991, the state officially named Austin the Live Music Capital of the World.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Why Austin? Students play a big part. The University of Texas has tens of thousands of undergraduates who want to hear music, and they make a ready audience on any night. Cheap rent in early years meant musicians could afford to live in the city. The state government and the university also meant a steady crowd of educated listeners. Clubs on Sixth Street and elsewhere gave bands places to play nearly every night of the week.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Austin has also tried to hold on to its identity. Around 2000, local residents began a slogan, &ldquo;Keep Austin Weird.&rdquo; It meant they wanted to protect small, local businesses and unusual people against big chains. Some people felt that the city was getting too expensive and too much like everywhere else. Others said the slogan had itself become a marketing gimmick. That argument continues.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">There is a link between the music scene and the tech scene. People moved to Austin for the culture, and companies followed them. Austin&rsquo;s way of life, which was more relaxed and creative than many Texas cities, made it unlike most of the state. In a time when Texas was becoming more like the rest of America, Austin showed that one Texas city could stay different.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Live Music Capital</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Blues and rock grew in Austin, too. A club called Antone&rsquo;s opened in 1975 and brought in great blues players from Texas and Chicago to perform. A young guitarist named Stevie Ray Vaughan, who grew up in Dallas and made his name in Austin, became a national star in the 1980s. After his death in 1990, the city placed a statue of him along the lake in downtown Austin. Austin became a city where players of many kinds could find a stage and a crowd.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Armadillo closed in 1980, but its spirit lived on. In 1987, a group of Austin friends, who worked at a local newspaper and in the music business, started a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A special event with music, food, and activities, often held every year.">festival</a> called South by Southwest, or SXSW. About 700 people came the first year. It was meant to show off local and regional bands. It grew into a giant event with film and technology sections as well. Hundreds of thousands of visitors now come to Austin each March. In 1991, the state officially named Austin the Live Music Capital of the World.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Why Austin? Students play a big part. The University of Texas has tens of thousands of undergraduates who want to hear music, and they make a ready audience on any night. Cheap rent in early years meant musicians could afford to live in the city. The state government and the university also meant a steady crowd of educated listeners. Clubs on Sixth Street and elsewhere gave bands places to play nearly every night of the week.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Austin has also tried to hold on to its identity. Around 2000, local residents began a slogan, &ldquo;Keep Austin Weird.&rdquo; It meant they wanted to protect small, local businesses and unusual people against big chains. Some people felt that the city was getting too expensive and too much like everywhere else. Others said the slogan had itself become a marketing gimmick. That argument continues.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">There is a link between the music scene and the tech scene. People moved to Austin for the culture, and companies followed them. Austin&rsquo;s way of life, which was more relaxed and creative than many Texas cities, made it unlike most of the state. In a time when Texas was becoming more like the rest of America, Austin showed that one Texas city could stay different.</p><div class="optima-widget ow-seq" data-ra-skip data-next="0" data-done="A dusty armory, a television show and a college crowd built a reputation that the whole state recognized." data-hint="Not yet. Which of these came earlier?">
+  <div class="widget-kicker">&#9889; TRY IT &middot; HOW AUSTIN BECAME THE LIVE MUSIC CAPITAL</div>
+  <div class="widget-question">These seven steps built Austin&rsquo;s music reputation. Click them in the order they happened.</div>
+  <div class="seq-pool"><button type="button" class="seq-item" data-n="4" data-date="1980" data-text="The Armadillo closes" data-fb="Its spirit lived on.">The Armadillo closes<span class="seq-tag">7. 1980</span></button><button type="button" class="seq-item" data-n="1" data-date="1972" data-text="Willie Nelson moves back to Austin" data-fb="He grew his hair long and played for crowds that cheered him on.">Willie Nelson moves back to Austin<span class="seq-tag">7. 1972</span></button><button type="button" class="seq-item" data-n="6" data-date="1991" data-text="The state names Austin the Live Music Capital of the World" data-fb="Sixth Street clubs gave bands places to play nearly every night.">The state names Austin the Live Music Capital of the World<span class="seq-tag">7. 1991</span></button><button type="button" class="seq-item" data-n="0" data-date="1970" data-text="A group of young Austinites open the Armadillo World Headquarters" data-fb="It was cheap, loose and welcoming.">A group of young Austinites open the Armadillo World Headquarters<span class="seq-tag">7. 1970</span></button><button type="button" class="seq-item" data-n="3" data-date="1975" data-text="Antone’s opens and brings in great blues players" data-fb="The regular run of Austin City Limits also began this year.">Antone’s opens and brings in great blues players<span class="seq-tag">7. 1975</span></button><button type="button" class="seq-item" data-n="5" data-date="1987" data-text="Friends start the festival South by Southwest" data-fb="About 700 people came the first year.">Friends start the festival South by Southwest<span class="seq-tag">7. 1987</span></button><button type="button" class="seq-item" data-n="2" data-date="1974" data-text="A pilot is made for Austin City Limits" data-fb="Willie Nelson played on the first episode.">A pilot is made for Austin City Limits<span class="seq-tag">7. 1974</span></button></div>
+  <div class="seq-msg"></div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -346,6 +432,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

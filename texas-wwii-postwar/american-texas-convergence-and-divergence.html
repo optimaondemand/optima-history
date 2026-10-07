@@ -46,6 +46,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -320,7 +376,31 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; DRIFTING APART</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Drifting Apart</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Yet beginning around 1970, Texas started to move in its own direction in several ways. The first was politics. Beginning in the 1960s, Texas voters turned from the Democratic Party to the Republican Party, and the state moved away from the national mood of the mid-century. Texans have often favored lower taxes, less regulation, and a smaller role for Washington more than the nation as a whole. Not all Texans agree, but the state has taken its own course.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The second is energy and the economy. Texas is the nation&rsquo;s largest producer of oil and natural gas. It is also the country&rsquo;s leading producer of wind power. Texas has its own <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The network of power plants, wires, and equipment that brings electricity to homes and businesses.">electric grid</a>, run by an organization called ERCOT, which mostly stays inside the state. Because it is separate from the large national grids, it is mostly free from federal oversight, but it also cannot easily borrow power from other states. In February 2021, a deadly winter storm knocked out much of the grid, and millions of Texans lost power in freezing weather. Hundreds died. The disaster began a national debate about the costs and benefits of Texas&rsquo;s independent system.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The third is people. Texas had about 29 million residents in 2020, and it adds hundreds of thousands each year. It has become one of the most diverse states in the country. About four in ten Texans are Hispanic, and large groups of Black, Asian, and white Texans live in its cities and suburbs. Its largest cities, such as Houston, Dallas, San Antonio, and Austin, are among the biggest in the nation. And its culture, from barbecue and Tejano music to football on Friday nights, still has a strong Texas flavor. The state has also built its own tech and music scenes, and both have an unusual character.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Drifting Apart</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Yet beginning around 1970, Texas started to move in its own direction in several ways. The first was politics. Beginning in the 1960s, Texas voters turned from the Democratic Party to the Republican Party, and the state moved away from the national mood of the mid-century. Texans have often favored lower taxes, less regulation, and a smaller role for Washington more than the nation as a whole. Not all Texans agree, but the state has taken its own course.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The second is energy and the economy. Texas is the nation&rsquo;s largest producer of oil and natural gas. It is also the country&rsquo;s leading producer of wind power. Texas has its own <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The network of power plants, wires, and equipment that brings electricity to homes and businesses.">electric grid</a>, run by an organization called ERCOT, which mostly stays inside the state. Because it is separate from the large national grids, it is mostly free from federal oversight, but it also cannot easily borrow power from other states. In February 2021, a deadly winter storm knocked out much of the grid, and millions of Texans lost power in freezing weather. Hundreds died. The disaster began a national debate about the costs and benefits of Texas&rsquo;s independent system.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The third is people. Texas had about 29 million residents in 2020, and it adds hundreds of thousands each year. It has become one of the most diverse states in the country. About four in ten Texans are Hispanic, and large groups of Black, Asian, and white Texans live in its cities and suburbs. Its largest cities, such as Houston, Dallas, San Antonio, and Austin, are among the biggest in the nation. And its culture, from barbecue and Tejano music to football on Friday nights, still has a strong Texas flavor. The state has also built its own tech and music scenes, and both have an unusual character.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; CLOSER OR APART?</div>
+  <div class="widget-question">The lesson tells two stories: Texas growing closer to the nation, and Texas going its own way. For each row, decide which story it belongs to.</div>
+  <div class="widget-row" data-correct="1" data-fb="Right. ERCOT is separate from the large national grids, which is why the February 2021 storm started a national debate." data-hint="Think about something Texas does differently from most other states.">
+    <div class="widget-row-prompt">1. Texas runs its own electric grid, which mostly stays inside the state.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Brought Texas closer to the nation</button><button type="button" data-choice="1">Set Texas apart</button></div>
+    <div class="row-feedback ph" data-ph="Right. ERCOT is separate from the large national grids, which is why the February 2021 storm started a national debate.">Right. ERCOT is separate from the large national grids, which is why the February 2021 storm started a national debate.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. It mixed Texans with people from every part of the country." data-hint="Think about a force that mixed Texans with people from other states.">
+    <div class="widget-row-prompt">2. World War II built bases and factories and sent Texans to fight beside Americans from every region.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Brought Texas closer to the nation</button><button type="button" data-choice="1">Set Texas apart</button></div>
+    <div class="row-feedback ph" data-ph="Think about a force that mixed Texans with people from other states.">Think about a force that mixed Texans with people from other states.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. Radio helped give Texans and other Americans the same songs, news and jokes." data-hint="Think about a tool that carried national programs into Texas homes.">
+    <div class="widget-row-prompt">3. Radio brought the same programs and news to every Texas town.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Brought Texas closer to the nation</button><button type="button" data-choice="1">Set Texas apart</button></div>
+    <div class="row-feedback ph" data-ph="Right. Radio helped give Texans and other Americans the same songs, news and jokes.">Right. Radio helped give Texans and other Americans the same songs, news and jokes.</div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. After about 1970, Texas politics moved away from the national mood of mid-century." data-hint="Think about a way Texas moved away from the national consensus.">
+    <div class="widget-row-prompt">4. Texans favor lower taxes and a smaller role for Washington more strongly than the country as a whole.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Brought Texas closer to the nation</button><button type="button" data-choice="1">Set Texas apart</button></div>
+    <div class="row-feedback ph" data-ph="Right. After about 1970, Texas politics moved away from the national mood of mid-century.">Right. After about 1970, Texas politics moved away from the national mood of mid-century.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE BORDER</div>
@@ -328,7 +408,13 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; BOTH AT ONCE</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Both at Once</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Is Texas just another American state, or a place apart? The honest answer is both. Its economy is tied to the nation&rsquo;s, its people follow national news, and its leaders sit in Washington. At the same time, Texas has its own history as a republic, its own political habits, its own power grid, and its own sense of <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The set of qualities and beliefs that make a person or a place who they are.">identity</a>. A place can be deeply a part of a nation and still be itself.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Historians do not see this as a story with a set ending. Texans, and the people who came to live among them, shaped each step by the choices they made. The question of what it means to be both American and Texan will be answered again by each new generation.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Both at Once</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Is Texas just another American state, or a place apart? The honest answer is both. Its economy is tied to the nation&rsquo;s, its people follow national news, and its leaders sit in Washington. At the same time, Texas has its own history as a republic, its own political habits, its own power grid, and its own sense of <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The set of qualities and beliefs that make a person or a place who they are.">identity</a>. A place can be deeply a part of a nation and still be itself.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Historians do not see this as a story with a set ending. Texans, and the people who came to live among them, shaped each step by the choices they made. The question of what it means to be both American and Texan will be answered again by each new generation.</p><div class="optima-widget ow-reflect" data-ra-skip>
+  <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+  <div class="widget-question">Is Texas just another American state, or a place apart? Which answer sounds closest to your own? (No wrong answer. Just check in with yourself.)</div>
+  <div class="widget-options"><button type="button" data-response="Texas’s economy is tied to the nation’s, its people follow national news and its leaders sit in Washington. But a place can be part of a nation and still be itself.">&#127482;&#127480; Mostly just another American state</button><button type="button" data-response="Texas has its own history as a republic, its own political habits and its own power grid. But it is also deeply tied to the nation’s economy and news.">&#11088; A place apart</button><button type="button" data-response="That is the lesson’s own answer. A place can be deeply a part of a nation and still be itself, and each new generation will answer the question again.">&#129309; Both at once</button></div>
+  <div class="widget-feedback" data-ph="Texas’s economy is tied to the nation’s, its people follow national news and its leaders sit in Washington. But a place can be part of a nation and still be itself.">Texas’s economy is tied to the nation’s, its people follow national news and its leaders sit in Washington. But a place can be part of a nation and still be itself.</div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -353,6 +439,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

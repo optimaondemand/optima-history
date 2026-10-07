@@ -45,6 +45,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -319,11 +375,36 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; OIL AND BANKS</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Oil Money Moves In</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Dallas had no oil wells, but it was close to the fields. Oilmen needed money to drill, and they needed lawyers, bankers, and offices. Dallas had all of these. After the discovery in East Texas, Dallas became the place where oil deals were signed. Oil companies opened offices there. In 1922, the Magnolia Petroleum Company finished a skyscraper downtown. A big red neon horse, a Pegasus, turned on its roof, and it became the symbol of the city.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">H. L. Hunt, the Oklahoma oilman who bought out Dad Joiner&rsquo;s leases, moved his company to Dallas in the 1930s. Other wildcatters followed. When a well came in, the money often passed through a Dallas bank. Dallas banks lent money for drilling, held the cash from oil sales, and sold shares in oil companies to investors. In the Depression years, when banks failed all across Texas, Dallas banks kept growing. Oil money gave them an unusual cushion.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Dallas used that money in clever ways. In 1930, two scientists started a company in Dallas called Geophysical Service. It used sound waves to find oil underground. Many years later, the same firm turned into Texas Instruments. Dallas also became known for fashion. Neiman Marcus, a store opened in 1907, drew wealthy shoppers from all over the country. During World War II, aircraft factories would come as well. The city was not tied to just one product.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Oil Money Moves In</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Dallas had no oil wells, but it was close to the fields. Oilmen needed money to drill, and they needed lawyers, bankers, and offices. Dallas had all of these. After the discovery in East Texas, Dallas became the place where oil deals were signed. Oil companies opened offices there. In 1922, the Magnolia Petroleum Company finished a skyscraper downtown. A big red neon horse, a Pegasus, turned on its roof, and it became the symbol of the city.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">H. L. Hunt, the Oklahoma oilman who bought out Dad Joiner&rsquo;s leases, moved his company to Dallas in the 1930s. Other wildcatters followed. When a well came in, the money often passed through a Dallas bank. Dallas banks lent money for drilling, held the cash from oil sales, and sold shares in oil companies to investors. In the Depression years, when banks failed all across Texas, Dallas banks kept growing. Oil money gave them an unusual cushion.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Dallas used that money in clever ways. In 1930, two scientists started a company in Dallas called Geophysical Service. It used sound waves to find oil underground. Many years later, the same firm turned into Texas Instruments. Dallas also became known for fashion. Neiman Marcus, a store opened in 1907, drew wealthy shoppers from all over the country. During World War II, aircraft factories would come as well. The city was not tied to just one product.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; WHY DALLAS?</div>
+  <div class="widget-question">Dallas had no seaport and no oil under its streets. Pick the best answer for each row.</div>
+  <div class="widget-row" data-correct="1" data-fb="Right. Two railroads crossed there, in 1872 and 1873, which made it a crossroads with tracks in four directions." data-hint="Think about what arrived in 1872 and 1873.">
+    <div class="widget-row-prompt">1. Why did Dallas grow when it had no seaport or great river?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Oil was found under its streets</button><button type="button" data-choice="1">Two railroads crossed there</button><button type="button" data-choice="2">Ships could sail up the Trinity</button><button type="button" data-choice="3">The state capital moved there</button></div>
+    <div class="row-feedback ph" data-ph="Right. Two railroads crossed there, in 1872 and 1873, which made it a crossroads with tracks in four directions.">Right. Two railroads crossed there, in 1872 and 1873, which made it a crossroads with tracks in four directions.</div>
+  </div>
+  <div class="widget-row" data-correct="3" data-fb="Right. Oilmen needed bankers, lawyers and offices, and Dallas had them, close to the fields." data-hint="Think about what drillers needed besides a drilling rig.">
+    <div class="widget-row-prompt">2. Dallas had no oil wells. Why did oil deals happen there anyway?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Oil ran through pipes under the city</button><button type="button" data-choice="1">The state required deals there</button><button type="button" data-choice="2">Dallas had the biggest port</button><button type="button" data-choice="3">Dallas had bankers and lawyers</button></div>
+    <div class="row-feedback ph" data-ph="Right. Oilmen needed bankers, lawyers and offices, and Dallas had them, close to the fields.">Right. Oilmen needed bankers, lawyers and offices, and Dallas had them, close to the fields.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. Geophysical Service later turned into Texas Instruments." data-hint="Think about a company that later made electronics.">
+    <div class="widget-row-prompt">3. In 1930, two scientists started a Dallas company that used sound waves to find oil. What did it later become?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Texas Instruments</button><button type="button" data-choice="1">Texaco</button><button type="button" data-choice="2">Neiman Marcus</button><button type="button" data-choice="3">Magnolia Petroleum</button></div>
+    <div class="row-feedback ph" data-ph="Right. Geophysical Service later turned into Texas Instruments.">Right. Geophysical Service later turned into Texas Instruments.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; A CITY OF COMMERCE</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A National City</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1936, Texas celebrated the hundredth anniversary of its independence. Cities competed to host the main celebration, the Texas Centennial Exposition. Dallas won. Its leaders promised to put up large sums of money, and Dallas had more banks and businesses to raise it from than any other Texas city. Millions of people visited Fair Park, where new buildings, museums, and shows opened. Federal money from the New Deal helped pay for it. The fair showed off the city to the whole country.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This was a sign of where Dallas stood. By 1930, it had grown from about 42,000 people to over 250,000. Its great strength was that it did not depend on a single thing. Cotton, oil, banking, insurance, retail stores, and manufacturing all grew at once. When one part had a bad year, the others could carry the city. To <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="To spread out into many different kinds of business instead of only one.">diversify</a> is to spread out like this. It is one reason Dallas survived the Depression better than cities that relied on one crop or one industry.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Dallas also looked to the sky. Love Field began as an Army flying school in 1917. In the 1920s it became a commercial airport, and Dallas was soon on the first airline routes across the country. A city that had won its start from railroads was now planning for the next kind of travel. Businesses that wanted to reach Texas customers often chose Dallas as their regional office, since a salesman could get there from almost anywhere. Each new office brought more workers, who needed houses, schools, and stores, and those in turn gave work to still more people.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Houston and Dallas grew in different ways. Houston was the city of oil, ships, and refineries. Dallas was the city of <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The work of managing money, such as banking, lending, and investing.">finance</a>, selling, and deal making. People in Dallas were proud of their city, and often said they had built it with no natural advantages. Some historians point out that Dallas had a great one: its location on the main rail lines. Dallas leaders also sold their city hard, and did not wait for luck to come to them.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A National City</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1936, Texas celebrated the hundredth anniversary of its independence. Cities competed to host the main celebration, the Texas Centennial Exposition. Dallas won. Its leaders promised to put up large sums of money, and Dallas had more banks and businesses to raise it from than any other Texas city. Millions of people visited Fair Park, where new buildings, museums, and shows opened. Federal money from the New Deal helped pay for it. The fair showed off the city to the whole country.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This was a sign of where Dallas stood. By 1930, it had grown from about 42,000 people to over 250,000. Its great strength was that it did not depend on a single thing. Cotton, oil, banking, insurance, retail stores, and manufacturing all grew at once. When one part had a bad year, the others could carry the city. To <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="To spread out into many different kinds of business instead of only one.">diversify</a> is to spread out like this. It is one reason Dallas survived the Depression better than cities that relied on one crop or one industry.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Dallas also looked to the sky. Love Field began as an Army flying school in 1917. In the 1920s it became a commercial airport, and Dallas was soon on the first airline routes across the country. A city that had won its start from railroads was now planning for the next kind of travel. Businesses that wanted to reach Texas customers often chose Dallas as their regional office, since a salesman could get there from almost anywhere. Each new office brought more workers, who needed houses, schools, and stores, and those in turn gave work to still more people.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Houston and Dallas grew in different ways. Houston was the city of oil, ships, and refineries. Dallas was the city of <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The work of managing money, such as banking, lending, and investing.">finance</a>, selling, and deal making. People in Dallas were proud of their city, and often said they had built it with no natural advantages. Some historians point out that Dallas had a great one: its location on the main rail lines. Dallas leaders also sold their city hard, and did not wait for luck to come to them.</p><div class="optima-widget ow-seq" data-ra-skip data-next="0" data-done="Railroads, banks, oil money and airplanes: Dallas kept finding the next kind of business." data-hint="Not yet. Which of these came earlier?">
+  <div class="widget-kicker">&#9889; TRY IT &middot; HOW DALLAS BECAME A CITY OF COMMERCE</div>
+  <div class="widget-question">These six steps built Dallas into the money center of the Southwest. Click them in the order they happened.</div>
+  <div class="seq-pool"><button type="button" class="seq-item" data-n="3" data-date="1917" data-text="Love Field begins as an Army flying school" data-fb="It later became a commercial airport.">Love Field begins as an Army flying school<span class="seq-tag">6. 1917</span></button><button type="button" class="seq-item" data-n="0" data-date="1841" data-text="John Neely Bryan founds Dallas on the Trinity River" data-fb="It was a spot where travelers could cross.">John Neely Bryan founds Dallas on the Trinity River<span class="seq-tag">6. 1841</span></button><button type="button" class="seq-item" data-n="5" data-date="1936" data-text="Dallas hosts the Texas Centennial Exposition" data-fb="Millions visited Fair Park.">Dallas hosts the Texas Centennial Exposition<span class="seq-tag">6. 1936</span></button><button type="button" class="seq-item" data-n="2" data-date="1914" data-text="Dallas wins a Federal Reserve Bank" data-fb="It beat out other Texas cities, including Houston.">Dallas wins a Federal Reserve Bank<span class="seq-tag">6. 1914</span></button><button type="button" class="seq-item" data-n="4" data-date="1922" data-text="The Magnolia Petroleum building opens, with a red neon Pegasus on its roof" data-fb="It became the symbol of the city.">The Magnolia Petroleum building opens, with a red neon Pegasus on its roof<span class="seq-tag">6. 1922</span></button><button type="button" class="seq-item" data-n="1" data-date="1872" data-text="The Houston and Texas Central Railroad reaches Dallas" data-fb="The Texas and Pacific crossed it the next year.">The Houston and Texas Central Railroad reaches Dallas<span class="seq-tag">6. 1872</span></button></div>
+  <div class="seq-msg"></div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -348,6 +429,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

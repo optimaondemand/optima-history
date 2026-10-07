@@ -44,6 +44,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -318,11 +374,36 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; REGULATION</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Railroad Commission</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Railroad Commission of Texas had three members. They set the rates that railroads could charge to haul freight in Texas. They could stop a railroad from charging one shipper less than another. The first leader of the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A group of officials chosen to oversee a particular job, such as setting rules for an industry.">commission</a> was John H. Reagan. He had been a Confederate cabinet officer, and he left the United States Senate to take the job. His long public record gave the new agency credibility.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Railroads fought back. They went to court and argued that Texas could not control them. A federal court at first stopped some of the rules. But the commission and Hogg held on, and the idea spread. Other states set up similar groups, and in time Congress did too. This was one kind of <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A rule made by government to control how something is done.">regulation</a>. Hogg also supported laws that limited how much debt a railroad could take on, and a law to keep foreign companies from buying too much Texas land.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hogg also took on the way railroads sold stock. Some companies had issued shares and bonds worth far more than their tracks and trains, a trick called &ldquo;watered stock.&rdquo; Investors and customers paid the price when such companies failed. In 1893, Texas passed the Stock and Bond Law, which said that a railroad could not issue stocks and bonds worth more than the real value of its property. Reformers across the country watched what Texas did. To Hogg, the point was simple. Businesses that served the public, and depended on public land and public law, ought to answer to the public.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Railroad Commission outlived Hogg by a long time. In the early 1900s, as oil became a Texas business, the legislature gave the commission power over oil pipelines. Later, in the oil boom of the 1930s, it would become one of the most important oil agencies in the world. Hogg left office in 1895. He went into business himself, and after Spindletop he made money in oil. His daughter Ima Hogg became one of the great supporters of Texas art and music.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hogg stands between two movements. He was a Democrat, not a Populist. Yet he listened to Populist complaints, and he made them into laws. Later reformers called <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A reformer of the early 1900s who wanted government to fix problems caused by big business and fast change.">Progressive</a>s used the same ideas to attack other problems. Some were about government, such as reform of voting, and some were about the problems of growing cities. In 1905 the legislature passed a law that required parties to hold primary elections to pick their candidates. It was meant to give voters more say.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Railroad Commission</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Railroad Commission of Texas had three members. They set the rates that railroads could charge to haul freight in Texas. They could stop a railroad from charging one shipper less than another. The first leader of the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A group of officials chosen to oversee a particular job, such as setting rules for an industry.">commission</a> was John H. Reagan. He had been a Confederate cabinet officer, and he left the United States Senate to take the job. His long public record gave the new agency credibility.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Railroads fought back. They went to court and argued that Texas could not control them. A federal court at first stopped some of the rules. But the commission and Hogg held on, and the idea spread. Other states set up similar groups, and in time Congress did too. This was one kind of <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A rule made by government to control how something is done.">regulation</a>. Hogg also supported laws that limited how much debt a railroad could take on, and a law to keep foreign companies from buying too much Texas land.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hogg also took on the way railroads sold stock. Some companies had issued shares and bonds worth far more than their tracks and trains, a trick called &ldquo;watered stock.&rdquo; Investors and customers paid the price when such companies failed. In 1893, Texas passed the Stock and Bond Law, which said that a railroad could not issue stocks and bonds worth more than the real value of its property. Reformers across the country watched what Texas did. To Hogg, the point was simple. Businesses that served the public, and depended on public land and public law, ought to answer to the public.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Railroad Commission outlived Hogg by a long time. In the early 1900s, as oil became a Texas business, the legislature gave the commission power over oil pipelines. Later, in the oil boom of the 1930s, it would become one of the most important oil agencies in the world. Hogg left office in 1895. He went into business himself, and after Spindletop he made money in oil. His daughter Ima Hogg became one of the great supporters of Texas art and music.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hogg stands between two movements. He was a Democrat, not a Populist. Yet he listened to Populist complaints, and he made them into laws. Later reformers called <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A reformer of the early 1900s who wanted government to fix problems caused by big business and fast change.">Progressive</a>s used the same ideas to attack other problems. Some were about government, such as reform of voting, and some were about the problems of growing cities. In 1905 the legislature passed a law that required parties to hold primary elections to pick their candidates. It was meant to give voters more say.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; HOGG&rsquo;S TOOLS</div>
+  <div class="widget-question">Governor Hogg turned farmers&rsquo; complaints into law. Pick the best answer for each row.</div>
+  <div class="widget-row" data-correct="0" data-fb="Right. The three-member Railroad Commission set the rates railroads could charge to haul freight in Texas." data-hint="Think about the three-member body the legislature created in 1891.">
+    <div class="widget-row-prompt">1. Railroads charged too much and favored some customers. What new body could set freight rates?</div>
+    <div class="widget-options"><button type="button" data-choice="0">The Railroad Commission</button><button type="button" data-choice="1">The Texas Exchange</button><button type="button" data-choice="2">The Stock and Bond Law</button><button type="button" data-choice="3">A farmers’ cooperative</button></div>
+    <div class="row-feedback ph" data-ph="Right. The three-member Railroad Commission set the rates railroads could charge to haul freight in Texas.">Right. The three-member Railroad Commission set the rates railroads could charge to haul freight in Texas.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. A railroad could not issue stocks and bonds worth more than the real value of its property." data-hint="Think about what “watered stock” means: shares worth more than what stands behind them.">
+    <div class="widget-row-prompt">2. Some companies issued shares and bonds worth far more than their tracks and trains. What did the 1893 law say?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Railroads could not carry cotton to Galveston</button><button type="button" data-choice="1">Railroads had to repay farmers for old debts</button><button type="button" data-choice="2">Stock could not exceed the property value</button><button type="button" data-choice="3">Railroads had to sell their land to farmers</button></div>
+    <div class="row-feedback ph" data-ph="Right. A railroad could not issue stocks and bonds worth more than the real value of its property.">Right. A railroad could not issue stocks and bonds worth more than the real value of its property.</div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. Other states set up similar groups, and in time Congress did too. Hogg’s idea spread." data-hint="Think about what happened after the Texas commission survived the court fights.">
+    <div class="widget-row-prompt">3. Why did other states pay attention to what Texas did?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Texas had the most railroads</button><button type="button" data-choice="1">Other states copied the idea</button><button type="button" data-choice="2">Texas paid them to</button><button type="button" data-choice="3">Federal judges ordered it</button></div>
+    <div class="row-feedback ph" data-ph="Right. Other states set up similar groups, and in time Congress did too. Hogg’s idea spread.">Right. Other states set up similar groups, and in time Congress did too. Hogg’s idea spread.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; SUFFRAGE</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Women Win the Vote</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Women&rsquo;s <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The right to vote.">suffrage</a>, the right to vote, was one of the great reform battles. Texas women began organizing in the 1890s. In 1893, they formed the Texas Equal Rights Association in Galveston. But the movement was small for years, and the legislature ignored it.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In the 1910s, it took on new life. Minnie Fisher Cunningham became president of the Texas Equal Suffrage Association in 1915. Jane McCallum of Austin was one of the organization&rsquo;s leading voices. She wrote newspaper articles, gave speeches, and helped plan the lobbying at the Capitol. Women wrote letters, held rallies, and went door to door. They also argued that women would use the vote to clean up politics, which appealed to many Progressives.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A political fight in Austin helped them. In 1917, the legislature impeached Governor James Ferguson, who was accused of misusing public money. The new governor, William P. Hobby, owed much to suffrage supporters, and he backed their cause. In March 1918, Texas women won the right to vote in primary elections. In Texas in those years, the Democratic primary was the real contest, so this mattered a great deal. About 386,000 women registered in just seventeen days.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The next year, Congress approved a national amendment, the Nineteenth, giving women the vote everywhere. On June 28, 1919, Texas became the first state in the South, and the ninth in the nation, to ratify it. Jane McCallum later served as Texas Secretary of State, from 1927 to 1933.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The story has a hard side, too. Many white suffrage leaders did not work with Black women, and some accepted the customs of the segregated South. The poll tax, which Texas began requiring in 1902, and the white primary kept many Black and Mexican American voters from the ballot, women and men alike. A law on paper did not always become a vote in practice. That fight would last for decades.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Women Win the Vote</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Women&rsquo;s <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The right to vote.">suffrage</a>, the right to vote, was one of the great reform battles. Texas women began organizing in the 1890s. In 1893, they formed the Texas Equal Rights Association in Galveston. But the movement was small for years, and the legislature ignored it.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In the 1910s, it took on new life. Minnie Fisher Cunningham became president of the Texas Equal Suffrage Association in 1915. Jane McCallum of Austin was one of the organization&rsquo;s leading voices. She wrote newspaper articles, gave speeches, and helped plan the lobbying at the Capitol. Women wrote letters, held rallies, and went door to door. They also argued that women would use the vote to clean up politics, which appealed to many Progressives.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A political fight in Austin helped them. In 1917, the legislature impeached Governor James Ferguson, who was accused of misusing public money. The new governor, William P. Hobby, owed much to suffrage supporters, and he backed their cause. In March 1918, Texas women won the right to vote in primary elections. In Texas in those years, the Democratic primary was the real contest, so this mattered a great deal. About 386,000 women registered in just seventeen days.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The next year, Congress approved a national amendment, the Nineteenth, giving women the vote everywhere. On June 28, 1919, Texas became the first state in the South, and the ninth in the nation, to ratify it. Jane McCallum later served as Texas Secretary of State, from 1927 to 1933.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The story has a hard side, too. Many white suffrage leaders did not work with Black women, and some accepted the customs of the segregated South. The poll tax, which Texas began requiring in 1902, and the white primary kept many Black and Mexican American voters from the ballot, women and men alike. A law on paper did not always become a vote in practice. That fight would last for decades.</p><div class="optima-widget ow-seq" data-ra-skip data-next="0" data-done="It took years of work and a lucky political moment. And the poll tax and the white primary still kept many voters out." data-hint="Not yet. Which of these came earlier?">
+  <div class="widget-kicker">&#9889; TRY IT &middot; THE ROAD TO THE VOTE</div>
+  <div class="widget-question">These five steps carried Texas women toward the ballot. Click them in the order they happened.</div>
+  <div class="seq-pool"><button type="button" class="seq-item" data-n="3" data-date="March 1918" data-text="Texas women win the vote in primary elections" data-fb="About 386,000 women registered in just seventeen days.">Texas women win the vote in primary elections<span class="seq-tag">5. March 1918</span></button><button type="button" class="seq-item" data-n="0" data-date="1893" data-text="Women form the Texas Equal Rights Association in Galveston" data-fb="The movement stayed small for years.">Women form the Texas Equal Rights Association in Galveston<span class="seq-tag">5. 1893</span></button><button type="button" class="seq-item" data-n="4" data-date="June 28, 1919" data-text="Texas ratifies the 19th Amendment" data-fb="Texas was the first state in the South to do so.">Texas ratifies the 19th Amendment<span class="seq-tag">5. June 28, 1919</span></button><button type="button" class="seq-item" data-n="2" data-date="1917" data-text="The legislature impeaches Governor James Ferguson" data-fb="The new governor, William P. Hobby, owed much to suffrage supporters.">The legislature impeaches Governor James Ferguson<span class="seq-tag">5. 1917</span></button><button type="button" class="seq-item" data-n="1" data-date="1915" data-text="Minnie Fisher Cunningham becomes president of the Texas Equal Suffrage Association" data-fb="Women wrote letters, held rallies and went door to door.">Minnie Fisher Cunningham becomes president of the Texas Equal Suffrage Association<span class="seq-tag">5. 1915</span></button></div>
+  <div class="seq-msg"></div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -347,6 +428,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>
