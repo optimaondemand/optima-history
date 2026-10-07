@@ -44,6 +44,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -318,11 +374,36 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE STAKED PLAIN</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Land Beyond</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">What was this land like? Spanish explorers called the high plateau of West Texas the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="YAH-noh es-tah-KAH-doh. Spanish for the Staked Plain, the huge, flat, treeless plateau of the Texas Panhandle and South Plains."><em>Llano Estacado</em></a>. The name means the &ldquo;Staked Plain.&rdquo; Nobody is sure why. One idea is that the explorers marked their way with stakes, because the plain was so flat and empty that a traveler could get lost. A flat sea of grass stretched for hundreds of miles with hardly a tree.</p><div id="foreign" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;"><div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; FOREIGN LANGUAGE VOCABULARY</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>Llano Estacado</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of Llano Estacado" onclick="speakGloss(event,'yah noh es tah kah doh')">&#128266;</button> <span style="color: #6b7a99;">(YAH-noh es-tah-KAH-doh)</span>: Spanish for the Staked Plain, the huge, flat, treeless plateau of the Texas Panhandle and South Plains.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The grass was good. Bison had grazed it for centuries, and cattle could too. But the land had one big problem: water. There were few rivers. The rain was light. Water collected in shallow lakes called playas, which dried up in drought, and in springs along the edges of canyons. A rancher could have good grass and still lose his herd for lack of water. The great bison herds were gone from Texas by the early 1880s. For a time, people gathered the bleached bones from the plains and sold them to be ground up for fertilizer.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The solution came from a machine. The <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A tall machine with blades that turn in the wind to pump water from underground.">windmill</a> pumped water up from underground and filled tanks for cattle. Windmills spread across the plains in the 1880s. A rancher no longer had to stay near a river. Later, farmers drilled deep wells into the Ogallala <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A layer of rock, sand, or gravel underground that holds water.">aquifer</a>, a huge layer of water beneath the High Plains. That water let farmers grow crops in a place that had always been too dry. But the aquifer fills very slowly, and in many places farmers pump water out faster than the rain puts it back. It is a gift that can be used up.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Land Beyond</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">What was this land like? Spanish explorers called the high plateau of West Texas the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="YAH-noh es-tah-KAH-doh. Spanish for the Staked Plain, the huge, flat, treeless plateau of the Texas Panhandle and South Plains."><em>Llano Estacado</em></a>. The name means the &ldquo;Staked Plain.&rdquo; Nobody is sure why. One idea is that the explorers marked their way with stakes, because the plain was so flat and empty that a traveler could get lost. A flat sea of grass stretched for hundreds of miles with hardly a tree.</p><div id="foreign" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;"><div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; FOREIGN LANGUAGE VOCABULARY</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>Llano Estacado</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of Llano Estacado" onclick="speakGloss(event,'yah noh es tah kah doh')">&#128266;</button> <span style="color: #6b7a99;">(YAH-noh es-tah-KAH-doh)</span>: Spanish for the Staked Plain, the huge, flat, treeless plateau of the Texas Panhandle and South Plains.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The grass was good. Bison had grazed it for centuries, and cattle could too. But the land had one big problem: water. There were few rivers. The rain was light. Water collected in shallow lakes called playas, which dried up in drought, and in springs along the edges of canyons. A rancher could have good grass and still lose his herd for lack of water. The great bison herds were gone from Texas by the early 1880s. For a time, people gathered the bleached bones from the plains and sold them to be ground up for fertilizer.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The solution came from a machine. The <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A tall machine with blades that turn in the wind to pump water from underground.">windmill</a> pumped water up from underground and filled tanks for cattle. Windmills spread across the plains in the 1880s. A rancher no longer had to stay near a river. Later, farmers drilled deep wells into the Ogallala <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A layer of rock, sand, or gravel underground that holds water.">aquifer</a>, a huge layer of water beneath the High Plains. That water let farmers grow crops in a place that had always been too dry. But the aquifer fills very slowly, and in many places farmers pump water out faster than the rain puts it back. It is a gift that can be used up.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; WATER AND THE PLAINS</div>
+  <div class="widget-question">The land beyond the old frontier had good grass and little water. Pick the best answer for each row.</div>
+  <div class="widget-row" data-correct="1" data-fb="Right. The windmill pumped water up from underground and filled tanks for cattle, so a rancher no longer had to stay near a river." data-hint="Think about a machine that brings water up from underground.">
+    <div class="widget-row-prompt">1. A rancher has good grass but no river nearby. What solved the problem?</div>
+    <div class="widget-options"><button type="button" data-choice="0">A new railroad</button><button type="button" data-choice="1">The windmill</button><button type="button" data-choice="2">A new fort</button><button type="button" data-choice="3">A flatter plain</button></div>
+    <div class="row-feedback ph" data-ph="Right. The windmill pumped water up from underground and filled tanks for cattle, so a rancher no longer had to stay near a river.">Right. The windmill pumped water up from underground and filled tanks for cattle, so a rancher no longer had to stay near a river.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. Deep wells into the Ogallala aquifer let farmers grow crops. But the aquifer fills very slowly and can be used up." data-hint="Think about the huge layer of water beneath the High Plains.">
+    <div class="widget-row-prompt">2. Farmers wanted to grow crops where it had always been too dry. What made that possible?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Deep wells into the Ogallala aquifer</button><button type="button" data-choice="1">Shallow lakes called playas</button><button type="button" data-choice="2">Plowing up the grass first</button><button type="button" data-choice="3">Bringing the bison back</button></div>
+    <div class="row-feedback ph" data-ph="Right. Deep wells into the Ogallala aquifer let farmers grow crops. But the aquifer fills very slowly and can be used up.">Right. Deep wells into the Ogallala aquifer let farmers grow crops. But the aquifer fills very slowly and can be used up.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. The word is playas, and they can dry up completely when the rain stops." data-hint="The lesson gives a Spanish name for these lakes.">
+    <div class="widget-row-prompt">3. Water collects in shallow lakes that dry up in a drought. What are these lakes called?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Llanos</button><button type="button" data-choice="1">Aquifers</button><button type="button" data-choice="2">Playas</button><button type="button" data-choice="3">Estacados</button></div>
+    <div class="row-feedback ph" data-ph="Right. The word is playas, and they can dry up completely when the rain stops.">Right. The word is playas, and they can dry up completely when the rain stops.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; RANCHERS AND RAILS</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Cattle, Rails, and the Next Step</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The first ranchers moved onto the plains almost at once. In 1876, a Texas rancher named Charles Goodnight drove a herd of cattle into Palo Duro Canyon, the same canyon where the army had struck the Comanche camp only two years before. The canyon had water, grass, and walls to shelter the cattle from winter storms. The next year, Goodnight joined with an Irish investor, John Adair, to start the JA Ranch. It became one of the great ranches of the Panhandle.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Goodnight was not alone. Others followed him up onto the plains with cattle, and cattle companies bought huge tracts of land. Some of the money came from as far away as Britain. They saw a chance for profit on grass that cost almost nothing.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The railroads were just behind them. The Texas and Pacific Railway reached Fort Worth in 1876 and pushed westward in the following years. Another line, the Fort Worth and Denver City, crossed the Panhandle in the 1880s, and new towns grew up beside the tracks. Amarillo was founded in 1887. A rancher on the plains could now ship cattle by rail. The old trail drives, across hundreds of miles of open country, were about to give way to the train.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Farmers came too, slowly. The first settlers on the dry plains were mostly ranchers, but the land was also good for crops if the rain came. Over the next generation, more families arrived and began the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Growing crops by plowing and planting the land.">cultivation</a> of wheat and cotton, plowing ground where grass had grown for thousands of years. The same plain that had been Comanche hunting ground now became a different kind of country.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that none of this was planned from the start. The opening of the plains came from a chain of events: soldiers, bison hunters, windmills, rails, and investors. Each link depended on the others. That opened land was about to become the home of a cattle kingdom.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Cattle, Rails, and the Next Step</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The first ranchers moved onto the plains almost at once. In 1876, a Texas rancher named Charles Goodnight drove a herd of cattle into Palo Duro Canyon, the same canyon where the army had struck the Comanche camp only two years before. The canyon had water, grass, and walls to shelter the cattle from winter storms. The next year, Goodnight joined with an Irish investor, John Adair, to start the JA Ranch. It became one of the great ranches of the Panhandle.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Goodnight was not alone. Others followed him up onto the plains with cattle, and cattle companies bought huge tracts of land. Some of the money came from as far away as Britain. They saw a chance for profit on grass that cost almost nothing.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The railroads were just behind them. The Texas and Pacific Railway reached Fort Worth in 1876 and pushed westward in the following years. Another line, the Fort Worth and Denver City, crossed the Panhandle in the 1880s, and new towns grew up beside the tracks. Amarillo was founded in 1887. A rancher on the plains could now ship cattle by rail. The old trail drives, across hundreds of miles of open country, were about to give way to the train.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Farmers came too, slowly. The first settlers on the dry plains were mostly ranchers, but the land was also good for crops if the rain came. Over the next generation, more families arrived and began the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Growing crops by plowing and planting the land.">cultivation</a> of wheat and cotton, plowing ground where grass had grown for thousands of years. The same plain that had been Comanche hunting ground now became a different kind of country.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that none of this was planned from the start. The opening of the plains came from a chain of events: soldiers, bison hunters, windmills, rails, and investors. Each link depended on the others. That opened land was about to become the home of a cattle kingdom.</p><div class="optima-widget ow-seq" data-ra-skip data-next="0" data-done="Each link depended on the others. None of this was planned from the start." data-hint="Not yet. Which of these came earlier?">
+  <div class="widget-kicker">&#9889; TRY IT &middot; LINKS IN THE CHAIN</div>
+  <div class="widget-question">The opening of the plains came from a chain of events. Click the six links in the order they happened.</div>
+  <div class="seq-pool"><button type="button" class="seq-item" data-n="4" data-date="1887" data-text="Amarillo is founded beside the railroad" data-fb="Cattle could now be shipped by rail.">Amarillo is founded beside the railroad<span class="seq-tag">6. 1887</span></button><button type="button" class="seq-item" data-n="1" data-date="1876" data-text="Charles Goodnight drives cattle into Palo Duro Canyon" data-fb="It was the same canyon where the army had struck a Comanche camp two years before.">Charles Goodnight drives cattle into Palo Duro Canyon<span class="seq-tag">6. 1876</span></button><button type="button" class="seq-item" data-n="5" data-date="Over the next generation" data-text="Farmers plow ground where grass had grown for thousands of years" data-fb="Wheat and cotton replaced the grass.">Farmers plow ground where grass had grown for thousands of years<span class="seq-tag">6. Over the next generation</span></button><button type="button" class="seq-item" data-n="0" data-date="1874 and 1875" data-text="The army breaks the Comanche hold on the plains" data-fb="Land that had been held by force was suddenly open.">The army breaks the Comanche hold on the plains<span class="seq-tag">6. 1874 and 1875</span></button><button type="button" class="seq-item" data-n="3" data-date="The 1880s" data-text="Windmills spread across the plains" data-fb="A rancher no longer had to stay near a river.">Windmills spread across the plains<span class="seq-tag">6. The 1880s</span></button><button type="button" class="seq-item" data-n="2" data-date="1877" data-text="Goodnight and John Adair start the JA Ranch" data-fb="It became one of the great ranches of the Panhandle.">Goodnight and John Adair start the JA Ranch<span class="seq-tag">6. 1877</span></button></div>
+  <div class="seq-msg"></div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -347,6 +428,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

@@ -49,6 +49,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -324,11 +380,41 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE WIRE</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Wire and the Windmill</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1874, an Illinois farmer named Joseph Glidden patented a new kind of fence: wire twisted with sharp barbs. It was cheap, strong, and easy to build. A story says that in 1876, a salesman fenced a pen of wild Texas longhorns in San Antonio&rsquo;s Military Plaza to show that the wire could hold them. Whether or not it happened just that way, ranchers soon saw that <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Fence wire with sharp points twisted into it, used to keep cattle in or out.">barbed wire</a> would let them keep cattle on their own land, and keep other herds off it.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Open-range ranchers hated it. Fences cut off trails, and cut off water holes that had been free to everyone. In 1883, in a drought year, angry cowboys and small ranchers began to cut fences across Texas. The trouble spread to dozens of counties. People were hurt and killed. In 1884, the legislature made fence cutting a felony, and it also required fence builders to put in gates. The open range was ending.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texas historian Walter Prescott Webb, who was born in East Texas in 1888 and taught at the University of Texas, later wrote that three tools made it possible to settle the dry Great Plains: the Colt revolver, barbed wire, and the windmill. Each did a different job. The revolver helped defend against attack, the wire marked ownership, and the windmill gave water. Webb&rsquo;s idea is a good reminder that machines can change a landscape, though no one tool does it alone.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Fences and wells changed the land itself. Windmills let cattle graze where there had been no water, and herds grew. Many ranchers put more cattle on the range than it could feed. This <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Letting too many animals eat the grass until it cannot grow back.">overgrazing</a> tore up the grass, and mesquite brush spread across ground where grass had been thick. A mid-1880s drought and a fall in cattle prices ruined many ranchers who had borrowed to buy too many animals.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Wire and the Windmill</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1874, an Illinois farmer named Joseph Glidden patented a new kind of fence: wire twisted with sharp barbs. It was cheap, strong, and easy to build. A story says that in 1876, a salesman fenced a pen of wild Texas longhorns in San Antonio&rsquo;s Military Plaza to show that the wire could hold them. Whether or not it happened just that way, ranchers soon saw that <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Fence wire with sharp points twisted into it, used to keep cattle in or out.">barbed wire</a> would let them keep cattle on their own land, and keep other herds off it.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Open-range ranchers hated it. Fences cut off trails, and cut off water holes that had been free to everyone. In 1883, in a drought year, angry cowboys and small ranchers began to cut fences across Texas. The trouble spread to dozens of counties. People were hurt and killed. In 1884, the legislature made fence cutting a felony, and it also required fence builders to put in gates. The open range was ending.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texas historian Walter Prescott Webb, who was born in East Texas in 1888 and taught at the University of Texas, later wrote that three tools made it possible to settle the dry Great Plains: the Colt revolver, barbed wire, and the windmill. Each did a different job. The revolver helped defend against attack, the wire marked ownership, and the windmill gave water. Webb&rsquo;s idea is a good reminder that machines can change a landscape, though no one tool does it alone.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Fences and wells changed the land itself. Windmills let cattle graze where there had been no water, and herds grew. Many ranchers put more cattle on the range than it could feed. This <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Letting too many animals eat the grass until it cannot grow back.">overgrazing</a> tore up the grass, and mesquite brush spread across ground where grass had been thick. A mid-1880s drought and a fall in cattle prices ruined many ranchers who had borrowed to buy too many animals.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; WHICH TOOL?</div>
+  <div class="widget-question">Walter Prescott Webb named three tools that made it possible to settle the dry Great Plains. For each row, decide which tool it describes.</div>
+  <div class="widget-row" data-correct="1" data-fb="Right. Wire let a rancher keep cattle in and other herds out." data-hint="Think about which tool makes a fence.">
+    <div class="widget-row-prompt">1. It marked who owned the land.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The Colt revolver</button><button type="button" data-choice="1">Barbed wire</button><button type="button" data-choice="2">The windmill</button></div>
+    <div class="row-feedback ph" data-ph="Right. Wire let a rancher keep cattle in and other herds out.">Right. Wire let a rancher keep cattle in and other herds out.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. Windmills pumped water up from underground." data-hint="Think about which tool lifts water out of the ground.">
+    <div class="widget-row-prompt">2. It gave cattle water far from any river.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The Colt revolver</button><button type="button" data-choice="1">Barbed wire</button><button type="button" data-choice="2">The windmill</button></div>
+    <div class="row-feedback ph" data-ph="Think about which tool lifts water out of the ground.">Think about which tool lifts water out of the ground.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. The revolver let a rider fire again and again from horseback." data-hint="Think about the weapon the Rangers carried at Walker’s Creek.">
+    <div class="widget-row-prompt">3. It helped settlers defend themselves against attack.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The Colt revolver</button><button type="button" data-choice="1">Barbed wire</button><button type="button" data-choice="2">The windmill</button></div>
+    <div class="row-feedback ph" data-ph="Right. The revolver let a rider fire again and again from horseback.">Right. The revolver let a rider fire again and again from horseback.</div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. Fence cutting spread to dozens of counties, and in 1884 the legislature made it a felony." data-hint="Think about which tool cut off trails and water holes that had been free to everyone.">
+    <div class="widget-row-prompt">4. Angry cowboys and small ranchers cut it in the drought year of 1883.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The Colt revolver</button><button type="button" data-choice="1">Barbed wire</button><button type="button" data-choice="2">The windmill</button></div>
+    <div class="row-feedback ph" data-ph="Right. Fence cutting spread to dozens of counties, and in 1884 the legislature made it a felony.">Right. Fence cutting spread to dozens of counties, and in 1884 the legislature made it a felony.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; A NEW BUSINESS</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Ranching Becomes a Business</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ranching now needed more money than most families had. Land, fences, windmills, and a large herd all cost a lot. So <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A business owned by many investors, who share its profits and risks.">corporation</a>s moved in. Investors in Chicago, Scotland, and England put their money into Texas ranches. In 1879, the Matador Ranch began in the Panhandle, and in 1882 it was sold to a Scottish company. The biggest of all was the XIT. The Texas government had no money to pay for a new state capitol, so it traded three million acres of Panhandle land to a Chicago group in exchange for building one. The group turned the land into a ranch that stretched across ten counties.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The cowboy changed too. In the days of the drives, many cowboys hoped to start herds of their own. By the 1880s, ranches were big companies, and a cowboy worked for a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Money paid to a worker for work done, usually by the day, week, or month.">wage</a>, usually about $25 to $40 a month. In 1883, dozens of cowboys in the Panhandle went on strike for higher pay. The ranch owners refused, and the strike failed. The cowboy&rsquo;s life was still hard, but now he worked for someone else.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Government Steps In</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texans began to ask whether companies from far away should own so much of the state. In 1891, Governor James Stephen Hogg signed a law limiting how much land foreign owners could hold. The same year, Texas created the Railroad Commission to <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="To control something by rules and laws.">regulate</a> what railroads could charge, since ranchers and farmers depended on them. It was the beginning of a regulatory era in Texas.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Meanwhile, settlers kept coming. Railroads sold land to farmers, and new towns grew up. Farmers plowed the grass where ranches had been and planted wheat and cotton. For a time, the rains came and the crops grew. But the grass had held the soil in place for thousands of years. When it was gone and the rains stopped, the wind would take the soil away. Texans of a later generation would pay for that.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Ranching Becomes a Business</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ranching now needed more money than most families had. Land, fences, windmills, and a large herd all cost a lot. So <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A business owned by many investors, who share its profits and risks.">corporation</a>s moved in. Investors in Chicago, Scotland, and England put their money into Texas ranches. In 1879, the Matador Ranch began in the Panhandle, and in 1882 it was sold to a Scottish company. The biggest of all was the XIT. The Texas government had no money to pay for a new state capitol, so it traded three million acres of Panhandle land to a Chicago group in exchange for building one. The group turned the land into a ranch that stretched across ten counties.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The cowboy changed too. In the days of the drives, many cowboys hoped to start herds of their own. By the 1880s, ranches were big companies, and a cowboy worked for a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Money paid to a worker for work done, usually by the day, week, or month.">wage</a>, usually about $25 to $40 a month. In 1883, dozens of cowboys in the Panhandle went on strike for higher pay. The ranch owners refused, and the strike failed. The cowboy&rsquo;s life was still hard, but now he worked for someone else.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Government Steps In</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texans began to ask whether companies from far away should own so much of the state. In 1891, Governor James Stephen Hogg signed a law limiting how much land foreign owners could hold. The same year, Texas created the Railroad Commission to <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="To control something by rules and laws.">regulate</a> what railroads could charge, since ranchers and farmers depended on them. It was the beginning of a regulatory era in Texas.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Meanwhile, settlers kept coming. Railroads sold land to farmers, and new towns grew up. Farmers plowed the grass where ranches had been and planted wheat and cotton. For a time, the rains came and the crops grew. But the grass had held the soil in place for thousands of years. When it was gone and the rains stopped, the wind would take the soil away. Texans of a later generation would pay for that.</p><div class="optima-widget ow-reflect" data-ra-skip>
+  <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+  <div class="widget-question">A new tool helps you but hurts your neighbor, the way barbed wire hurt small ranchers. What would you want your community to do? (No wrong answer. Just check in with yourself.)</div>
+  <div class="widget-options"><button type="button" data-response="Texas did something like this. In 1884 the legislature made fence cutting a felony and required fence builders to put in gates. Rules can protect both the owner and the neighbor.">&#9878; Make rules so the tool is used fairly</button><button type="button" data-response="Sometimes that works. But when people have no fair way to settle a dispute, quarrels can turn violent. The fence cutting of 1883 hurt and killed people in dozens of counties.">&#128170; Let people work it out themselves</button><button type="button" data-response="Ranching now cost more than most families had. Land, fences, windmills and a large herd were out of reach for small ranchers, and corporations moved in. Helping people adjust is one way a community holds together.">&#129309; Help those who cannot afford the new way</button></div>
+  <div class="widget-feedback" data-ph="Ranching now cost more than most families had. Land, fences, windmills and a large herd were out of reach for small ranchers, and corporations moved in. Helping people adjust is one way a community holds together.">Ranching now cost more than most families had. Land, fences, windmills and a large herd were out of reach for small ranchers, and corporations moved in. Helping people adjust is one way a community holds together.</div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -353,6 +439,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

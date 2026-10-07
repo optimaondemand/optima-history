@@ -46,6 +46,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -316,7 +372,12 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE VAQUERO WAY</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Vaquero Way</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Spanish settlers brought cattle and horses to the Americas in the 1500s. Ranching grew up in the dry lands of New Spain. In what is now Texas, Spanish priests ran large herds at their <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A Spanish settlement run by priests, which often included farms and ranches.">mission</a>s, such as Mission Espiritu Santo near Goliad. Herdsmen on horseback worked these cattle. They were called <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="vah-KAIR-oh. A Mexican or Spanish herdsman who works cattle on horseback. The word comes from vaca, the Spanish word for cow."><em>vaquero</em></a>s, and many of them were Mexican, Native, or of mixed ancestry.</p><div id="foreign" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;"><div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; FOREIGN LANGUAGE VOCABULARY</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>reata</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of reata" onclick="speakGloss(event,'ray ah tah')">&#128266;</button> <span style="color: #6b7a99;">(ray-AH-tah)</span>: A long rope of braided leather. English speakers turned the word into lariat.</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>vaquero</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of vaquero" onclick="speakGloss(event,'vah kair oh')">&#128266;</button> <span style="color: #6b7a99;">(vah-KAIR-oh)</span>: A Mexican or Spanish herdsman who works cattle on horseback. The word comes from vaca, the Spanish word for cow.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Vaqueros worked out a complete system. Cattle ran loose across open grass, so owners marked them with a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A mark burned into an animal’s hide to show who owns it.">brand</a>, a pattern burned into the hide. In the spring, the vaqueros gathered the herds in a round-up, called a <em>rodeo</em>, sorted the animals by brand, and marked the calves. To catch an animal, they used the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="ray-AH-tah. A long rope of braided leather. English speakers turned the word into lariat."><em>reata</em></a>, a long, braided rope. They wrapped it around the horn of the saddle to hold a pulling animal, a skill the English word &ldquo;dally&rdquo; comes from (<em>dar la vuelta</em>, &ldquo;to take a turn&rdquo;). Leather leggings, later called chaps, protected a rider&rsquo;s legs from thorny brush.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many familiar English words arrived this way. Ranch, rodeo, corral, lariat, and mustang all come from Spanish. Even the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A hardy breed of cattle with very long horns, common in Texas.">longhorn</a> came from this tradition. Longhorns were descended from Spanish cattle that ran wild and grew tough in the brush country of South Texas.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Vaquero Way</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Spanish settlers brought cattle and horses to the Americas in the 1500s. Ranching grew up in the dry lands of New Spain. In what is now Texas, Spanish priests ran large herds at their <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A Spanish settlement run by priests, which often included farms and ranches.">mission</a>s, such as Mission Espiritu Santo near Goliad. Herdsmen on horseback worked these cattle. They were called <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="vah-KAIR-oh. A Mexican or Spanish herdsman who works cattle on horseback. The word comes from vaca, the Spanish word for cow."><em>vaquero</em></a>s, and many of them were Mexican, Native, or of mixed ancestry.</p><div id="foreign" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;"><div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; FOREIGN LANGUAGE VOCABULARY</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>reata</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of reata" onclick="speakGloss(event,'ray ah tah')">&#128266;</button> <span style="color: #6b7a99;">(ray-AH-tah)</span>: A long rope of braided leather. English speakers turned the word into lariat.</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>vaquero</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of vaquero" onclick="speakGloss(event,'vah kair oh')">&#128266;</button> <span style="color: #6b7a99;">(vah-KAIR-oh)</span>: A Mexican or Spanish herdsman who works cattle on horseback. The word comes from vaca, the Spanish word for cow.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Vaqueros worked out a complete system. Cattle ran loose across open grass, so owners marked them with a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A mark burned into an animal’s hide to show who owns it.">brand</a>, a pattern burned into the hide. In the spring, the vaqueros gathered the herds in a round-up, called a <em>rodeo</em>, sorted the animals by brand, and marked the calves. To catch an animal, they used the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="ray-AH-tah. A long rope of braided leather. English speakers turned the word into lariat."><em>reata</em></a>, a long, braided rope. They wrapped it around the horn of the saddle to hold a pulling animal, a skill the English word &ldquo;dally&rdquo; comes from (<em>dar la vuelta</em>, &ldquo;to take a turn&rdquo;). Leather leggings, later called chaps, protected a rider&rsquo;s legs from thorny brush.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many familiar English words arrived this way. Ranch, rodeo, corral, lariat, and mustang all come from Spanish. Even the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A hardy breed of cattle with very long horns, common in Texas.">longhorn</a> came from this tradition. Longhorns were descended from Spanish cattle that ran wild and grew tough in the brush country of South Texas.</p><div class="optima-widget ow-flips" data-ra-skip>
+  <div class="widget-kicker">&#9889; TAP TO REVEAL &middot; WORDS FROM THE VAQUERO WAY</div>
+  <div class="widget-question">Tap each English word to see the Spanish word and idea behind it.</div>
+  <div class="flip-grid"><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">lariat</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">lariat</div>From the Spanish <em>reata</em>, a long rope of braided leather.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">dally</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">dally</div>From <em>dar la vuelta</em>, &ldquo;to take a turn,&rdquo; the way a vaquero wrapped the rope around the saddle horn.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">vaquero</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">vaquero</div>From <em>vaca</em>, the Spanish word for cow. A herdsman who works cattle on horseback.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">rodeo</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">rodeo</div>The Spanish word for the round-up, when herds were gathered and sorted by brand.</div></div></div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE COWBOY APPEARS</div>
@@ -324,7 +385,31 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE GERMANS, AND REMEMBERING</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Germans of the Hill Country</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not every Texan ranched on the open range. In the 1840s, a society of German nobles helped thousands of Germans move to Texas. They founded New Braunfels in 1845 and Fredericksburg in 1846. The new arrivals settled in the Hill Country, in rocky, rolling land where Comanche riders still came. Many were farmers. They worked smaller farms than the big ranches to the south, and they built stone houses and stone fences from the rock they found in their fields.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Germans kept their <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Customs, language, and ways of life handed down from earlier generations.">heritage</a> alive. They spoke German at home and in school, and they printed German-language newspapers. They built churches, dance halls, and shooting clubs. They formed singing societies, and some brought the Alpine art of yodeling. Fredericksburg is known for its &ldquo;Sunday houses,&rdquo; small town houses where farm families stayed when they came into town for church and market on the weekend.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Germans also brought a way with meat. German butchers in Central Texas smoked sausage and beef in smokehouses, a craft that grew into the barbecue tradition the region is known for today. Most German farmers raised cattle on fenced land, with fewer animals than open-range ranchers kept.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Remembering the Tradition</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The vaquero and cowboy ways nearly vanished when ranching changed. One man who worked to save them was J. Frank Dobie, who was born in 1888 on a ranch in South Texas. He became a professor and a writer. In books like <em>A Vaquero of the Brush Country</em> and <em>The Longhorns</em>, he collected the stories of old ranch hands. Dobie did not invent the tradition. He wrote down what he heard, so that later readers could know where it came from.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what this lesson shows about Texas. The state was not built by one people alone. Spanish and Mexican herdsmen, Southern settlers, and German farmers each gave Texas something, and each kept something of their own. Some of what they gave is so familiar that we hardly notice it: the words we use for a ranch, a rope, or a corral, and the foods served at a Texas table. Heritage is not only what is kept in a museum. It is also what people go on doing every day, long after they forget where they learned it.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Germans of the Hill Country</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not every Texan ranched on the open range. In the 1840s, a society of German nobles helped thousands of Germans move to Texas. They founded New Braunfels in 1845 and Fredericksburg in 1846. The new arrivals settled in the Hill Country, in rocky, rolling land where Comanche riders still came. Many were farmers. They worked smaller farms than the big ranches to the south, and they built stone houses and stone fences from the rock they found in their fields.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Germans kept their <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Customs, language, and ways of life handed down from earlier generations.">heritage</a> alive. They spoke German at home and in school, and they printed German-language newspapers. They built churches, dance halls, and shooting clubs. They formed singing societies, and some brought the Alpine art of yodeling. Fredericksburg is known for its &ldquo;Sunday houses,&rdquo; small town houses where farm families stayed when they came into town for church and market on the weekend.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Germans also brought a way with meat. German butchers in Central Texas smoked sausage and beef in smokehouses, a craft that grew into the barbecue tradition the region is known for today. Most German farmers raised cattle on fenced land, with fewer animals than open-range ranchers kept.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Remembering the Tradition</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The vaquero and cowboy ways nearly vanished when ranching changed. One man who worked to save them was J. Frank Dobie, who was born in 1888 on a ranch in South Texas. He became a professor and a writer. In books like <em>A Vaquero of the Brush Country</em> and <em>The Longhorns</em>, he collected the stories of old ranch hands. Dobie did not invent the tradition. He wrote down what he heard, so that later readers could know where it came from.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what this lesson shows about Texas. The state was not built by one people alone. Spanish and Mexican herdsmen, Southern settlers, and German farmers each gave Texas something, and each kept something of their own. Some of what they gave is so familiar that we hardly notice it: the words we use for a ranch, a rope, or a corral, and the foods served at a Texas table. Heritage is not only what is kept in a museum. It is also what people go on doing every day, long after they forget where they learned it.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; WHICH TRADITION?</div>
+  <div class="widget-question">Texas ranch life grew from more than one tradition. For each row, decide where the practice came from.</div>
+  <div class="widget-row" data-correct="2" data-fb="Right. The Germans of the Hill Country kept their heritage alive in many ways." data-hint="Think about who settled New Braunfels and Fredericksburg.">
+    <div class="widget-row-prompt">1. Singing societies, Sunday houses and German-language newspapers.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The vaquero tradition</button><button type="button" data-choice="1">Anglo and Southern ranchers</button><button type="button" data-choice="2">German settlers</button></div>
+    <div class="row-feedback ph" data-ph="Right. The Germans of the Hill Country kept their heritage alive in many ways.">Right. The Germans of the Hill Country kept their heritage alive in many ways.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. Vaqueros worked out this whole system in the dry lands of New Spain." data-hint="Think about who worked cattle on horseback in New Spain long before the cowboy.">
+    <div class="widget-row-prompt">2. The reata, the round-up and branding on open grass.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The vaquero tradition</button><button type="button" data-choice="1">Anglo and Southern ranchers</button><button type="button" data-choice="2">German settlers</button></div>
+    <div class="row-feedback ph" data-ph="Think about who worked cattle on horseback in New Spain long before the cowboy.">Think about who worked cattle on horseback in New Spain long before the cowboy.</div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. Anglo settlers from the South also raised cattle on open land, and they borrowed what worked in Texas." data-hint="Think about who came to Texas from the South and then borrowed from the people already here.">
+    <div class="widget-row-prompt">3. Cattle drovers from the older Southern states who borrowed the rope, saddle and brand.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The vaquero tradition</button><button type="button" data-choice="1">Anglo and Southern ranchers</button><button type="button" data-choice="2">German settlers</button></div>
+    <div class="row-feedback ph" data-ph="Right. Anglo settlers from the South also raised cattle on open land, and they borrowed what worked in Texas.">Right. Anglo settlers from the South also raised cattle on open land, and they borrowed what worked in Texas.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. German butchers in Central Texas began the craft." data-hint="Think about the butchers of Central Texas.">
+    <div class="widget-row-prompt">4. Smoking sausage and beef in smokehouses, which grew into barbecue.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The vaquero tradition</button><button type="button" data-choice="1">Anglo and Southern ranchers</button><button type="button" data-choice="2">German settlers</button></div>
+    <div class="row-feedback ph" data-ph="Right. German butchers in Central Texas began the craft.">Right. German butchers in Central Texas began the craft.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -349,6 +434,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

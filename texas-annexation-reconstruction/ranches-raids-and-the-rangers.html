@@ -43,6 +43,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -313,7 +369,13 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; LIFE ON THE EDGE</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Ranches at the Edge</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In the 1850s, two parts of Texas stood at the edge of the frontier. One was the Hill Country, where German farmers and Anglo ranchers raised cattle in the valleys. The other was South Texas, between the Nueces River and the Rio Grande. There, Mexican and Tejano families had run <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="RAN-choh. A Spanish word for a ranch or a small ranch settlement."><em>rancho</em></a>s since Spanish times. Newcomers like Richard King and Mifflin Kenedy were building huge ranches on the same ground. Both areas were open grassland with few fences, and the cattle ran on land no one had ever walked off.</p><div id="foreign" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;"><div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; FOREIGN LANGUAGE VOCABULARY</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>rancho</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of rancho" onclick="speakGloss(event,'ran choh')">&#128266;</button> <span style="color: #6b7a99;">(RAN-choh)</span>: A Spanish word for a ranch or a small ranch settlement.</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>vaquero</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of vaquero" onclick="speakGloss(event,'vah kair oh')">&#128266;</button> <span style="color: #6b7a99;">(vah-KAIR-oh)</span>: A Mexican or Spanish herdsman who works cattle on horseback.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Life on such a ranch was hard. A house might be built of stone or heavy timber, with few windows. The nearest neighbor could be miles away. Men rode for days to gather cattle, and during that time women and children were often left to protect the house. A family&rsquo;s wealth was its herd and its horses, and both could be taken in a single night.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ranch families depended on one another. They traveled in groups, shared news, and came to help when a neighbor needed it. They also relied on the Texas Rangers, and on the soldiers in the nearest fort, though neither was ever close enough.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Ranches at the Edge</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In the 1850s, two parts of Texas stood at the edge of the frontier. One was the Hill Country, where German farmers and Anglo ranchers raised cattle in the valleys. The other was South Texas, between the Nueces River and the Rio Grande. There, Mexican and Tejano families had run <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="RAN-choh. A Spanish word for a ranch or a small ranch settlement."><em>rancho</em></a>s since Spanish times. Newcomers like Richard King and Mifflin Kenedy were building huge ranches on the same ground. Both areas were open grassland with few fences, and the cattle ran on land no one had ever walked off.</p><div id="foreign" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;"><div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; FOREIGN LANGUAGE VOCABULARY</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>rancho</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of rancho" onclick="speakGloss(event,'ran choh')">&#128266;</button> <span style="color: #6b7a99;">(RAN-choh)</span>: A Spanish word for a ranch or a small ranch settlement.</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>vaquero</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of vaquero" onclick="speakGloss(event,'vah kair oh')">&#128266;</button> <span style="color: #6b7a99;">(vah-KAIR-oh)</span>: A Mexican or Spanish herdsman who works cattle on horseback.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Life on such a ranch was hard. A house might be built of stone or heavy timber, with few windows. The nearest neighbor could be miles away. Men rode for days to gather cattle, and during that time women and children were often left to protect the house. A family&rsquo;s wealth was its herd and its horses, and both could be taken in a single night.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ranch families depended on one another. They traveled in groups, shared news, and came to help when a neighbor needed it. They also relied on the Texas Rangers, and on the soldiers in the nearest fort, though neither was ever close enough.</p><div class="optima-widget ow-reflect" data-ra-skip>
+  <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+  <div class="widget-question">You are a ranch family at the edge of the frontier in the 1850s. What would worry you most? (No wrong answer. Just check in with yourself.)</div>
+  <div class="widget-options"><button type="button" data-response="A family’s wealth was its herd and its horses, and both could be taken in a single night. That is why raiders went for horses first.">&#128014; Losing the horses in one night</button><button type="button" data-response="Ranch families depended on one another. They traveled in groups, shared news and came to help when a neighbor needed it.">&#127968; Having no neighbor close by</button><button type="button" data-response="Neither the Rangers nor the soldiers in the nearest fort were ever close enough. Many families kept a loaded gun by the door.">&#128737; Help being too far away</button></div>
+  <div class="widget-feedback" data-ph="A family’s wealth was its herd and its horses, and both could be taken in a single night. That is why raiders went for horses first.">A family’s wealth was its herd and its horses, and both could be taken in a single night. That is why raiders went for horses first.</div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; RAIDS</div>
@@ -321,7 +383,31 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE BORDER</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Trouble at the River</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1848, the Treaty of Guadalupe Hidalgo fixed the Rio Grande as the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A line that marks where one country, state, or property ends and another begins.">boundary</a> between the United States and Mexico. The line was easy to cross. Horses and cattle crossed in both directions, and so did <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Robbery and violence carried out by outlaw bands.">banditry</a>. Texans accused Mexican raiders of stealing their cattle. Mexican ranchers complained about Texans doing the same thing. Cattle with unclear <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A mark burned into an animal’s hide to show who owns it.">brand</a>s made it hard to prove who owned what.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Another cause of trouble was slavery. Mexico did not allow it, so enslaved Texans who reached the Rio Grande could cross to freedom. Thousands did. Texas slaveholders were furious, and demanded that Mexico send people back. Mexico refused. In 1855, a Ranger leader named James Callahan took about a hundred men across the river after Lipan Apache raiders. They burned part of the Mexican town of Piedras Negras before retreating. Mexico protested, and many Texans believed that recapturing escaped slaves was also one of the goals.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">There was a third kind of trouble. After the Mexican War, many Tejano families found their old land titles questioned. Some lost land to new owners, and some lost it to lawyers, taxes, or threats. Not all of this was legal, and many Tejano families believed it was not fair.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Juan Cortina</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Juan Nepomuceno Cortina was a rancher near Brownsville who watched his neighbors lose land. In July 1859, he saw the town marshal beating a man who had once worked for his family. Cortina shot the marshal in the shoulder and rode away with the man. In September, he and some armed followers took over Brownsville for a day. They killed several men who had been accused of crimes against Tejanos, then withdrew.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Cortina then issued <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="An official public announcement.">proclamation</a>s. He said that Tejanos had been robbed of their land and treated unjustly, and that he was fighting to protect them. Many Texans saw him as a bandit leader. Many Tejanos saw a defender, though some feared him. Texas sent Rangers under Captain John S. &ldquo;Rip&rdquo; Ford, who worked with U.S. soldiers. By early 1860, they had driven Cortina&rsquo;s force across the river into Mexico. He kept raiding from across the river for years.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What the Rangers Did</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Rangers did help keep the peace in some places. They made a rule of law and a defense possible where there was no other, and settlers depended on them. But their work was not even-handed. Among Tejano families, the Rangers were often seen as the force that protected Anglo claims, not the rule of law for all. A peace that works for one family and frightens another is a weak kind of peace. Texas still lived with the questions the border raised.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Trouble at the River</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1848, the Treaty of Guadalupe Hidalgo fixed the Rio Grande as the <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A line that marks where one country, state, or property ends and another begins.">boundary</a> between the United States and Mexico. The line was easy to cross. Horses and cattle crossed in both directions, and so did <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Robbery and violence carried out by outlaw bands.">banditry</a>. Texans accused Mexican raiders of stealing their cattle. Mexican ranchers complained about Texans doing the same thing. Cattle with unclear <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A mark burned into an animal’s hide to show who owns it.">brand</a>s made it hard to prove who owned what.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Another cause of trouble was slavery. Mexico did not allow it, so enslaved Texans who reached the Rio Grande could cross to freedom. Thousands did. Texas slaveholders were furious, and demanded that Mexico send people back. Mexico refused. In 1855, a Ranger leader named James Callahan took about a hundred men across the river after Lipan Apache raiders. They burned part of the Mexican town of Piedras Negras before retreating. Mexico protested, and many Texans believed that recapturing escaped slaves was also one of the goals.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">There was a third kind of trouble. After the Mexican War, many Tejano families found their old land titles questioned. Some lost land to new owners, and some lost it to lawyers, taxes, or threats. Not all of this was legal, and many Tejano families believed it was not fair.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Juan Cortina</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Juan Nepomuceno Cortina was a rancher near Brownsville who watched his neighbors lose land. In July 1859, he saw the town marshal beating a man who had once worked for his family. Cortina shot the marshal in the shoulder and rode away with the man. In September, he and some armed followers took over Brownsville for a day. They killed several men who had been accused of crimes against Tejanos, then withdrew.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Cortina then issued <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="An official public announcement.">proclamation</a>s. He said that Tejanos had been robbed of their land and treated unjustly, and that he was fighting to protect them. Many Texans saw him as a bandit leader. Many Tejanos saw a defender, though some feared him. Texas sent Rangers under Captain John S. &ldquo;Rip&rdquo; Ford, who worked with U.S. soldiers. By early 1860, they had driven Cortina&rsquo;s force across the river into Mexico. He kept raiding from across the river for years.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What the Rangers Did</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Rangers did help keep the peace in some places. They made a rule of law and a defense possible where there was no other, and settlers depended on them. But their work was not even-handed. Among Tejano families, the Rangers were often seen as the force that protected Anglo claims, not the rule of law for all. A peace that works for one family and frightens another is a weak kind of peace. Texas still lived with the questions the border raised.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; WHOSE VIEW?</div>
+  <div class="widget-question">People on the border saw the same events in different ways. For each row, decide whose view it is.</div>
+  <div class="widget-row" data-correct="1" data-fb="Right. After the Mexican War, many Tejano families believed this was not fair." data-hint="Think about whose land titles were questioned after the war.">
+    <div class="widget-row-prompt">1. Old land titles were questioned, and some families lost land to lawyers, taxes or threats.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Many Anglo Texans</button><button type="button" data-choice="1">Many Tejano families</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Right. After the Mexican War, many Tejano families believed this was not fair.">Right. After the Mexican War, many Tejano families believed this was not fair.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. Texans accused Mexican raiders of stealing cattle, and Mexican ranchers said Texans did the same." data-hint="Think about who was complaining about theft along the river.">
+    <div class="widget-row-prompt">2. Cattle with unclear brands made it hard to prove who owned what, and the other side was doing the stealing.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Many Anglo Texans</button><button type="button" data-choice="1">Many Tejano families</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Right. Texans accused Mexican raiders of stealing cattle, and Mexican ranchers said Texans did the same.">Right. Texans accused Mexican raiders of stealing cattle, and Mexican ranchers said Texans did the same.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. Many Texans saw him this way. Many Tejanos saw a defender, though some feared him." data-hint="Think about who was afraid of his raids.">
+    <div class="widget-row-prompt">3. Juan Cortina was a bandit leader.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Many Anglo Texans</button><button type="button" data-choice="1">Many Tejano families</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Right. Many Texans saw him this way. Many Tejanos saw a defender, though some feared him.">Right. Many Texans saw him this way. Many Tejanos saw a defender, though some feared him.</div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. Among Tejano families the Rangers were often seen this way." data-hint="Think about which families felt the Rangers did not protect them equally.">
+    <div class="widget-row-prompt">4. The Rangers protected Anglo claims more than the rule of law for everyone.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Many Anglo Texans</button><button type="button" data-choice="1">Many Tejano families</button><button type="button" data-choice="2">Both sides</button></div>
+    <div class="row-feedback ph" data-ph="Think about which families felt the Rangers did not protect them equally.">Think about which families felt the Rangers did not protect them equally.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -346,6 +432,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

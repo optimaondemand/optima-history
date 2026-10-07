@@ -43,6 +43,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -318,11 +374,36 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; HOW THEY LIVED AND FOUGHT</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Bison, Trade, and Raiding</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The bison gave the Comanche nearly everything they needed. They ate its meat. They made tents, clothing, and tools from its hides and bones. They traded the extra hides, and they traded horses. For years, Spanish and then Mexican officials in New Mexico and Texas treated the Comanche as a power to be dealt with, not a people to be conquered.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Comanche also made war and took what they wanted. A <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A sudden attack made to take horses, cattle, goods, or captives.">raid</a> on a ranch or village in Texas or northern Mexico could bring horses, cattle, and goods. It could also bring captives. Some captives were adopted into Comanche families, some were traded, and some were ransomed back. Warriors won honor in such raids, and wealth. The reach was long. In 1840, riders had come all the way to the Gulf coast at Linnville, and they burned the town. The Comanche had the strength to do that when Texas was an independent republic. They were still strong after Texas became a state.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Comanche raiders also had friends. <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="koh-man-CHAIR-oh. A New Mexican trader who traveled onto the Plains to trade with the Comanche."><em>Comanchero</em></a>s, traders from New Mexico, rode out onto the Plains to trade bread, tools, and cloth for horses and cattle. Many of those animals had been taken in raids. That trade helped keep the Comanche economy running.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When you read about the Comanche, avoid two simple stories. One says they were only cruel raiders. The other says they were only victims. The truth is that they were a rich and powerful people whose way of life depended on horses, bison, trade, and war. Texans who met them had good reason to fear them, and the Comanche had good reason to defend their land.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Bison, Trade, and Raiding</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The bison gave the Comanche nearly everything they needed. They ate its meat. They made tents, clothing, and tools from its hides and bones. They traded the extra hides, and they traded horses. For years, Spanish and then Mexican officials in New Mexico and Texas treated the Comanche as a power to be dealt with, not a people to be conquered.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Comanche also made war and took what they wanted. A <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A sudden attack made to take horses, cattle, goods, or captives.">raid</a> on a ranch or village in Texas or northern Mexico could bring horses, cattle, and goods. It could also bring captives. Some captives were adopted into Comanche families, some were traded, and some were ransomed back. Warriors won honor in such raids, and wealth. The reach was long. In 1840, riders had come all the way to the Gulf coast at Linnville, and they burned the town. The Comanche had the strength to do that when Texas was an independent republic. They were still strong after Texas became a state.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Comanche raiders also had friends. <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="koh-man-CHAIR-oh. A New Mexican trader who traveled onto the Plains to trade with the Comanche."><em>Comanchero</em></a>s, traders from New Mexico, rode out onto the Plains to trade bread, tools, and cloth for horses and cattle. Many of those animals had been taken in raids. That trade helped keep the Comanche economy running.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When you read about the Comanche, avoid two simple stories. One says they were only cruel raiders. The other says they were only victims. The truth is that they were a rich and powerful people whose way of life depended on horses, bison, trade, and war. Texans who met them had good reason to fear them, and the Comanche had good reason to defend their land.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; CAUSE AND RESULT</div>
+  <div class="widget-question">Each row names something about Comanche life. Pick what followed from it.</div>
+  <div class="widget-row" data-correct="1" data-fb="Right. A rider could follow a bison herd for hundreds of miles, or strike a camp and be gone before help arrived." data-hint="Think about how far a rider can travel compared with a person on foot.">
+    <div class="widget-row-prompt">1. The Comanche got horses.</div>
+    <div class="widget-options"><button type="button" data-choice="0">They stopped hunting bison</button><button type="button" data-choice="1">They could follow bison and strike far from home</button><button type="button" data-choice="2">They moved back to the mountains</button></div>
+    <div class="row-feedback ph" data-ph="Right. A rider could follow a bison herd for hundreds of miles, or strike a camp and be gone before help arrived.">Right. A rider could follow a bison herd for hundreds of miles, or strike a camp and be gone before help arrived.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. A promise by one band did not bind another, which is one reason treaties were so hard." data-hint="Think about what a treaty needs: someone who can promise for everyone.">
+    <div class="widget-row-prompt">2. No single chief could speak for all the Comanche bands.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Treaties were easy to make</button><button type="button" data-choice="1">Every band followed the Penateka</button><button type="button" data-choice="2">A promise by one band did not bind the others</button></div>
+    <div class="row-feedback ph" data-ph="Right. A promise by one band did not bind another, which is one reason treaties were so hard.">Right. A promise by one band did not bind another, which is one reason treaties were so hard.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. Many of those animals had been taken in raids, so the trade helped keep the Comanche economy running." data-hint="Ask where many of the horses and cattle came from.">
+    <div class="widget-row-prompt">3. Comancheros brought bread, tools and cloth onto the Plains to trade for horses and cattle.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The trade helped keep raiding and the Comanche economy going</button><button type="button" data-choice="1">The trade ended the raiding</button><button type="button" data-choice="2">The trade made the Comanche poor</button></div>
+    <div class="row-feedback ph" data-ph="Right. Many of those animals had been taken in raids, so the trade helped keep the Comanche economy running.">Right. Many of those animals had been taken in raids, so the trade helped keep the Comanche economy running.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; TEXAS MEETS THE PLAINS</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Settlers Press the Line</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1850, Texas had about 212,000 people. By 1860, it had about 604,000. The number nearly tripled in ten years. Many newcomers came from the older Southern states. They came to farm cotton, and some brought enslaved people. German settlers built towns such as New Braunfels and Fredericksburg in the Hill Country. Every new farm and town moved the line of settlement farther west, toward Comanche hunting grounds.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When Texas joined the Union, the United States took responsibility for defending the frontier. The army built a first line of forts in 1848 and 1849, running south from the Red River to the Rio Grande. As settlers pushed farther west, it built a second line in the 1850s. But the forts were far apart, and soldiers on foot could rarely catch Comanche riders. Texans often felt the army was not doing enough. They argued that Texas should defend itself, and so the Texas Rangers stayed in the picture.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Some leaders tried peace. In 1847, John O. Meusebach, who led the German settlers, met Penateka leaders in the Hill Country. They made a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A written agreement between nations or peoples.">treaty</a>. The Comanche agreed to let the Germans settle and travel on certain lands, and the Germans promised gifts. Texans told for years afterward how well it was kept. But it covered only the Penateka and a small area. Other bands were not part of it.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Penateka were also in trouble from within. A cholera epidemic in 1849 killed many Comanche. War and settlement pushed them out of their old lands. In the 1850s, a few hundred of them moved to a small <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Land set aside by a government for Native people to live on.">reservation</a> on the Clear Fork of the Brazos River. Texas had kept its public lands when it joined the Union, so the federal government could not simply set aside reservations, and the state agreed to a small amount. Settlers nearby complained that raids still happened, and they blamed the reservation Indians. In 1859, angry Texans threatened the reservations, and federal officials moved the Native people north to Indian Territory.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">So by 1860, the frontier had not closed. Settlers had come farther west, but the Comanche remained a power on the plains beyond them. Then the Civil War pulled the army out of Texas, and the story took a new turn.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Settlers Press the Line</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1850, Texas had about 212,000 people. By 1860, it had about 604,000. The number nearly tripled in ten years. Many newcomers came from the older Southern states. They came to farm cotton, and some brought enslaved people. German settlers built towns such as New Braunfels and Fredericksburg in the Hill Country. Every new farm and town moved the line of settlement farther west, toward Comanche hunting grounds.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When Texas joined the Union, the United States took responsibility for defending the frontier. The army built a first line of forts in 1848 and 1849, running south from the Red River to the Rio Grande. As settlers pushed farther west, it built a second line in the 1850s. But the forts were far apart, and soldiers on foot could rarely catch Comanche riders. Texans often felt the army was not doing enough. They argued that Texas should defend itself, and so the Texas Rangers stayed in the picture.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Some leaders tried peace. In 1847, John O. Meusebach, who led the German settlers, met Penateka leaders in the Hill Country. They made a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A written agreement between nations or peoples.">treaty</a>. The Comanche agreed to let the Germans settle and travel on certain lands, and the Germans promised gifts. Texans told for years afterward how well it was kept. But it covered only the Penateka and a small area. Other bands were not part of it.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Penateka were also in trouble from within. A cholera epidemic in 1849 killed many Comanche. War and settlement pushed them out of their old lands. In the 1850s, a few hundred of them moved to a small <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Land set aside by a government for Native people to live on.">reservation</a> on the Clear Fork of the Brazos River. Texas had kept its public lands when it joined the Union, so the federal government could not simply set aside reservations, and the state agreed to a small amount. Settlers nearby complained that raids still happened, and they blamed the reservation Indians. In 1859, angry Texans threatened the reservations, and federal officials moved the Native people north to Indian Territory.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">So by 1860, the frontier had not closed. Settlers had come farther west, but the Comanche remained a power on the plains beyond them. Then the Civil War pulled the army out of Texas, and the story took a new turn.</p><div class="optima-widget ow-seq" data-ra-skip data-next="0" data-done="By 1860 the frontier had not closed. The Comanche remained a power on the plains beyond the settlers." data-hint="Not yet. Which of these came earlier?">
+  <div class="widget-kicker">&#9889; TRY IT &middot; TEXAS MEETS THE PLAINS</div>
+  <div class="widget-question">These five events show how Texans and the Comanche met on the frontier. Click them in the order they happened.</div>
+  <div class="seq-pool"><button type="button" class="seq-item" data-n="3" data-date="The 1850s" data-text="A few hundred Penateka move to a small reservation on the Clear Fork" data-fb="It sat on the Brazos River.">A few hundred Penateka move to a small reservation on the Clear Fork<span class="seq-tag">5. The 1850s</span></button><button type="button" class="seq-item" data-n="0" data-date="1840" data-text="Comanche riders reach the Gulf coast and burn Linnville" data-fb="They struck when Texas was still an independent republic.">Comanche riders reach the Gulf coast and burn Linnville<span class="seq-tag">5. 1840</span></button><button type="button" class="seq-item" data-n="4" data-date="1859" data-text="Federal officials move the reservation peoples north" data-fb="Angry Texans had threatened the reservations.">Federal officials move the reservation peoples north<span class="seq-tag">5. 1859</span></button><button type="button" class="seq-item" data-n="2" data-date="1848 and 1849" data-text="The army builds its first line of forts" data-fb="The line ran south from the Red River to the Rio Grande.">The army builds its first line of forts<span class="seq-tag">5. 1848 and 1849</span></button><button type="button" class="seq-item" data-n="1" data-date="1847" data-text="Meusebach makes a treaty with Penateka leaders" data-fb="It covered only the Penateka and a small area.">Meusebach makes a treaty with Penateka leaders<span class="seq-tag">5. 1847</span></button></div>
+  <div class="seq-msg"></div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -347,6 +428,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

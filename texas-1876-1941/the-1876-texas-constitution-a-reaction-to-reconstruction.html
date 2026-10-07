@@ -44,6 +44,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -320,11 +376,41 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE DESIGN</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Three Big Ideas</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The delegates worked for about two and a half months. Their finished plan rested on three ideas.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Limited government.</strong> The convention believed that power given to officials will be misused sooner or later. So it kept power small. The governor&rsquo;s term was cut to two years, and the salary was set low. The legislature would meet only every other year, for a short time. The constitution also limited how much the state could tax and how much it could borrow. If officials could not do much, they could not do much harm.</p><div style="margin: 16px 0;"><div style="display: flex; gap: 8px; margin-bottom: 6px;"><div style="flex: 1; font-size: 13px; color: #6b7a99;">&nbsp;</div><div style="flex: 2; font-size: 14px; color: #0E1C42;"><strong>1869</strong></div><div style="flex: 2; font-size: 14px; color: #0E1C42;"><strong>1876</strong></div></div><div style="display: flex; gap: 8px; margin-bottom: 6px;"><div style="flex: 1; background: #0E1C42; color: #fff; font-size: 14px; padding: 10px; border-radius: 6px;">The governor</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #C7922C; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Four-year term, strong powers of appointment</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #2196D0; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Two-year term, a small salary, fewer powers</div></div><div style="display: flex; gap: 8px; margin-bottom: 6px;"><div style="flex: 1; background: #0E1C42; color: #fff; font-size: 14px; padding: 10px; border-radius: 6px;">Judges</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #C7922C; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Appointed by the governor</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #2196D0; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Elected by the voters</div></div><div style="display: flex; gap: 8px; margin-bottom: 6px;"><div style="flex: 1; background: #0E1C42; color: #fff; font-size: 14px; padding: 10px; border-radius: 6px;">Public schools</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #C7922C; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Run by a state office in Austin</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #2196D0; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Left more to local districts, with limited state money</div></div><div style="display: flex; gap: 8px; margin-bottom: 6px;"><div style="flex: 1; background: #0E1C42; color: #fff; font-size: 14px; padding: 10px; border-radius: 6px;">Police</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #C7922C; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">A state police force under the governor</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #2196D0; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">No state police force</div></div><div style="font-size: 12px; color: #6b7a99;">How the two constitutions handled four important questions.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Checks and balances.</strong> Like the U.S. Constitution, the Texas Constitution splits power among three branches: one makes the laws, one carries them out, and one decides what they mean. Texas went further. Voters elect the lieutenant governor, the attorney general, the comptroller, the land commissioner, and other officers on their own. The governor cannot fire any of them. So even the executive branch is divided, and no single person runs it. Judges are elected too, so they answer to the voters and not to the governor.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Federalism.</strong> Texas had just spent four years fighting the Union, and then it had been governed by the army. The delegates wrote a careful sentence about where Texas stood. The first section says Texas is a &ldquo;free and independent State, subject only to the Constitution of the United States.&rdquo; It goes on to say that the Union depends on keeping &ldquo;local self-government&rdquo; for the states. Texas accepted its place in the nation. But the delegates wanted it written down that Texans would govern themselves at home.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The constitution also had a Bill of Rights, protecting free speech, trial by jury, and other rights. It protected a family&rsquo;s homestead from being taken to pay most debts. Voters approved the new constitution in February 1876, about seven votes in ten.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Three Big Ideas</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The delegates worked for about two and a half months. Their finished plan rested on three ideas.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Limited government.</strong> The convention believed that power given to officials will be misused sooner or later. So it kept power small. The governor&rsquo;s term was cut to two years, and the salary was set low. The legislature would meet only every other year, for a short time. The constitution also limited how much the state could tax and how much it could borrow. If officials could not do much, they could not do much harm.</p><div style="margin: 16px 0;"><div style="display: flex; gap: 8px; margin-bottom: 6px;"><div style="flex: 1; font-size: 13px; color: #6b7a99;">&nbsp;</div><div style="flex: 2; font-size: 14px; color: #0E1C42;"><strong>1869</strong></div><div style="flex: 2; font-size: 14px; color: #0E1C42;"><strong>1876</strong></div></div><div style="display: flex; gap: 8px; margin-bottom: 6px;"><div style="flex: 1; background: #0E1C42; color: #fff; font-size: 14px; padding: 10px; border-radius: 6px;">The governor</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #C7922C; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Four-year term, strong powers of appointment</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #2196D0; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Two-year term, a small salary, fewer powers</div></div><div style="display: flex; gap: 8px; margin-bottom: 6px;"><div style="flex: 1; background: #0E1C42; color: #fff; font-size: 14px; padding: 10px; border-radius: 6px;">Judges</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #C7922C; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Appointed by the governor</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #2196D0; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Elected by the voters</div></div><div style="display: flex; gap: 8px; margin-bottom: 6px;"><div style="flex: 1; background: #0E1C42; color: #fff; font-size: 14px; padding: 10px; border-radius: 6px;">Public schools</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #C7922C; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Run by a state office in Austin</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #2196D0; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">Left more to local districts, with limited state money</div></div><div style="display: flex; gap: 8px; margin-bottom: 6px;"><div style="flex: 1; background: #0E1C42; color: #fff; font-size: 14px; padding: 10px; border-radius: 6px;">Police</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #C7922C; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">A state police force under the governor</div><div style="flex: 2; background: #EEF1F8; border-left: 4px solid #2196D0; font-size: 15px; color: #1a2340; padding: 10px 12px; border-radius: 6px; line-height: 1.5;">No state police force</div></div><div style="font-size: 12px; color: #6b7a99;">How the two constitutions handled four important questions.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Checks and balances.</strong> Like the U.S. Constitution, the Texas Constitution splits power among three branches: one makes the laws, one carries them out, and one decides what they mean. Texas went further. Voters elect the lieutenant governor, the attorney general, the comptroller, the land commissioner, and other officers on their own. The governor cannot fire any of them. So even the executive branch is divided, and no single person runs it. Judges are elected too, so they answer to the voters and not to the governor.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong>Federalism.</strong> Texas had just spent four years fighting the Union, and then it had been governed by the army. The delegates wrote a careful sentence about where Texas stood. The first section says Texas is a &ldquo;free and independent State, subject only to the Constitution of the United States.&rdquo; It goes on to say that the Union depends on keeping &ldquo;local self-government&rdquo; for the states. Texas accepted its place in the nation. But the delegates wanted it written down that Texans would govern themselves at home.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The constitution also had a Bill of Rights, protecting free speech, trial by jury, and other rights. It protected a family&rsquo;s homestead from being taken to pay most debts. Voters approved the new constitution in February 1876, about seven votes in ten.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; WHAT WAS THE LIMIT FOR?</div>
+  <div class="widget-question">Each row is a limit the delegates of 1875 wrote into the constitution. Decide which fear it answered.</div>
+  <div class="widget-row" data-correct="1" data-fb="Right. Farmers with little cash wanted government to cost less, so the delegates limited taxing and borrowing." data-hint="Think about the money panic of 1873 and the farmers who had little cash.">
+    <div class="widget-row-prompt">1. Texas could tax and borrow only up to limits set in the constitution.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Too much power in one person</button><button type="button" data-choice="1">Too much cost for taxpayers</button><button type="button" data-choice="2">Power moving far from home</button></div>
+    <div class="row-feedback ph" data-ph="Right. Farmers with little cash wanted government to cost less, so the delegates limited taxing and borrowing.">Right. Farmers with little cash wanted government to cost less, so the delegates limited taxing and borrowing.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. No single person runs the executive branch, so power cannot gather in one pair of hands." data-hint="Ask who would lose power if the governor could not fire these officers.">
+    <div class="widget-row-prompt">2. Voters elect the attorney general and the comptroller, and the governor cannot fire them.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Too much power in one person</button><button type="button" data-choice="1">Too much cost for taxpayers</button><button type="button" data-choice="2">Power moving far from home</button></div>
+    <div class="row-feedback ph" data-ph="Right. No single person runs the executive branch, so power cannot gather in one pair of hands.">Right. No single person runs the executive branch, so power cannot gather in one pair of hands.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. Many white Texans saw power moving from their counties toward Austin, and the delegates pushed it back." data-hint="The 1869 schools were run from the capital. Where did the delegates want decisions made instead?">
+    <div class="widget-row-prompt">3. Public schools were left more to local districts.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Too much power in one person</button><button type="button" data-choice="1">Too much cost for taxpayers</button><button type="button" data-choice="2">Power moving far from home</button></div>
+    <div class="row-feedback ph" data-ph="Right. Many white Texans saw power moving from their counties toward Austin, and the delegates pushed it back.">Right. Many white Texans saw power moving from their counties toward Austin, and the delegates pushed it back.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. Governor Davis’s police answered to one man, and the delegates did not want that again." data-hint="Think about who the state police answered to under the 1869 constitution.">
+    <div class="widget-row-prompt">4. There was no state police force.</div>
+    <div class="widget-options"><button type="button" data-choice="0">Too much power in one person</button><button type="button" data-choice="1">Too much cost for taxpayers</button><button type="button" data-choice="2">Power moving far from home</button></div>
+    <div class="row-feedback ph" data-ph="Right. Governor Davis’s police answered to one man, and the delegates did not want that again.">Right. Governor Davis’s police answered to one man, and the delegates did not want that again.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE COST</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Long and Tight, or Short and Open?</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Compare the Texas Constitution to the U.S. Constitution. The national one is short. It sets up the main offices, divides their powers, and leaves most of the details to Congress and the courts. The Texas Constitution is much longer. It spells out how much officials may be paid, how long they may serve, how taxes may be raised, and many other details. The U.S. Constitution trusts later leaders to fill in the gaps. The Texas Constitution mostly does not, because the men who wrote it did not trust the leaders they had just lived under.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This had a cost. Because so many details are written into the constitution, a change often needs an <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A change or addition to a constitution.">amendment</a>, and an amendment needs a vote of the people. Texas voters have approved hundreds of amendments over the years. A document meant to keep government on a short leash has had to be fixed again and again to keep up with a growing state.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">There was a darker cost too. The 1876 constitution required separate public schools for white and Black children. Remember that Black Texans had voted and held office under the government the convention was reacting against. As the new plan took hold, they lost ground. The limits the delegates wrote were aimed at the governor, but they did not fall on the governor alone.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Historians ask what Texas would have looked like had the delegates made a different choice. They might have kept the strong governor but added limits. They might have trusted the legislature more. We cannot know. We do know what they chose, and that Texas has lived with the choice for almost 150 years. The question the delegates answered, how much power to trust to government, is one every free people has to answer.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Long and Tight, or Short and Open?</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Compare the Texas Constitution to the U.S. Constitution. The national one is short. It sets up the main offices, divides their powers, and leaves most of the details to Congress and the courts. The Texas Constitution is much longer. It spells out how much officials may be paid, how long they may serve, how taxes may be raised, and many other details. The U.S. Constitution trusts later leaders to fill in the gaps. The Texas Constitution mostly does not, because the men who wrote it did not trust the leaders they had just lived under.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This had a cost. Because so many details are written into the constitution, a change often needs an <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A change or addition to a constitution.">amendment</a>, and an amendment needs a vote of the people. Texas voters have approved hundreds of amendments over the years. A document meant to keep government on a short leash has had to be fixed again and again to keep up with a growing state.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">There was a darker cost too. The 1876 constitution required separate public schools for white and Black children. Remember that Black Texans had voted and held office under the government the convention was reacting against. As the new plan took hold, they lost ground. The limits the delegates wrote were aimed at the governor, but they did not fall on the governor alone.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Historians ask what Texas would have looked like had the delegates made a different choice. They might have kept the strong governor but added limits. They might have trusted the legislature more. We cannot know. We do know what they chose, and that Texas has lived with the choice for almost 150 years. The question the delegates answered, how much power to trust to government, is one every free people has to answer.</p><div class="optima-widget ow-reflect" data-ra-skip>
+  <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+  <div class="widget-question">You are asked to help write the constitution for a new state. Which kind would you trust more? (No wrong answer. Just check in with yourself.)</div>
+  <div class="widget-options"><button type="button" data-response="The U.S. Constitution works this way. It sets up the main offices and leaves most details to Congress and the courts. The risk is that later leaders can stretch the gaps.">&#128221; A short one that trusts later leaders</button><button type="button" data-response="That is the Texas way. It is a strong promise that some things will not change on a whim. The cost is that Texans have to vote on hundreds of amendments to keep it up to date.">&#128207; A long one that spells out the limits</button><button type="button" data-response="That was the delegates’ own reasoning. They wrote long and tight because they had just lived under leaders they did not trust. Ask who paid the price for their caution.">&#9878; It depends on how much I trust the leaders</button></div>
+  <div class="widget-feedback" data-ph="That is the Texas way. It is a strong promise that some things will not change on a whim. The cost is that Texans have to vote on hundreds of amendments to keep it up to date.">That is the Texas way. It is a strong promise that some things will not change on a whim. The cost is that Texans have to vote on hundreds of amendments to keep it up to date.</div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -349,6 +435,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

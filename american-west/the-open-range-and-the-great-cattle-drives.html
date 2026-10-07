@@ -44,6 +44,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -315,7 +371,26 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE DRIVES BEGIN</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Closing the Gap</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">During the Civil War, Texas ranchers could not ship their cattle anywhere. Herds multiplied on the open range. By 1865, millions of longhorns roamed Texas, and almost nobody wanted to buy them. A steer sold for just a few dollars. In Northern cities, which had grown quickly, beef was in demand, and a steer might sell for ten times as much.</p><div style="margin: 16px 0;"><div style="font-size: 14px; color: #0E1C42; margin-bottom: 4px;">What a steer was worth, as a rough guide</div><div style="display: flex; height: 30px; border-radius: 6px; overflow: hidden; margin-bottom: 6px;"><div style="width: 10%; background: #C7922C; color: #fff; font-size: 13px; line-height: 30px; padding-left: 8px; white-space: nowrap;">Texas</div></div><div style="display: flex; height: 30px; border-radius: 6px; overflow: hidden; margin-bottom: 6px;"><div style="width: 100%; background: #0E1C42; color: #fff; font-size: 13px; line-height: 30px; padding-left: 10px; white-space: nowrap;">Northern markets: about ten times as much</div></div><div style="font-size: 12px; color: #6b7a99;">Rough figures. The exact prices changed from year to year.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is a simple lesson in supply and demand. Where something is plentiful and demand is low, the price is low. Where it is scarce and demand is high, the price is high. A person who could carry the cattle from one place to the other could earn a profit. The problem was the distance, and the lack of railroads in Texas.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The answer was to drive the herds north on foot to a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The end of a railroad line, where cattle and goods were loaded onto trains.">railhead</a>, a town at the end of a rail line, where cattle could be loaded on trains. The first big drives went to Sedalia, Missouri, in 1866. In 1867, an Illinois businessman named Joseph McCoy built stockyards at Abilene, Kansas, on a railroad, and invited Texas <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A person who drives cattle or other animals over a long distance.">drover</a>s to bring their cattle there. The route that led to Abilene became known as the Chisholm Trail, named for Jesse Chisholm, a trader who had marked part of the way. The trail ran north from South Texas, through San Antonio, Austin, Waco, and Fort Worth, crossed the Red River into Indian Territory, and ended in Kansas.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Closing the Gap</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">During the Civil War, Texas ranchers could not ship their cattle anywhere. Herds multiplied on the open range. By 1865, millions of longhorns roamed Texas, and almost nobody wanted to buy them. A steer sold for just a few dollars. In Northern cities, which had grown quickly, beef was in demand, and a steer might sell for ten times as much.</p><div style="margin: 16px 0;"><div style="font-size: 14px; color: #0E1C42; margin-bottom: 4px;">What a steer was worth, as a rough guide</div><div style="display: flex; height: 30px; border-radius: 6px; overflow: hidden; margin-bottom: 6px;"><div style="width: 10%; background: #C7922C; color: #fff; font-size: 13px; line-height: 30px; padding-left: 8px; white-space: nowrap;">Texas</div></div><div style="display: flex; height: 30px; border-radius: 6px; overflow: hidden; margin-bottom: 6px;"><div style="width: 100%; background: #0E1C42; color: #fff; font-size: 13px; line-height: 30px; padding-left: 10px; white-space: nowrap;">Northern markets: about ten times as much</div></div><div style="font-size: 12px; color: #6b7a99;">Rough figures. The exact prices changed from year to year.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is a simple lesson in supply and demand. Where something is plentiful and demand is low, the price is low. Where it is scarce and demand is high, the price is high. A person who could carry the cattle from one place to the other could earn a profit. The problem was the distance, and the lack of railroads in Texas.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The answer was to drive the herds north on foot to a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The end of a railroad line, where cattle and goods were loaded onto trains.">railhead</a>, a town at the end of a rail line, where cattle could be loaded on trains. The first big drives went to Sedalia, Missouri, in 1866. In 1867, an Illinois businessman named Joseph McCoy built stockyards at Abilene, Kansas, on a railroad, and invited Texas <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A person who drives cattle or other animals over a long distance.">drover</a>s to bring their cattle there. The route that led to Abilene became known as the Chisholm Trail, named for Jesse Chisholm, a trader who had marked part of the way. The trail ran north from South Texas, through San Antonio, Austin, Waco, and Fort Worth, crossed the Red River into Indian Territory, and ended in Kansas.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; WHY THE PRICE GAP?</div>
+  <div class="widget-question">A steer was worth a few dollars in Texas and ten times as much in the North. Pick the best answer for each row.</div>
+  <div class="widget-row" data-correct="0" data-fb="Right. Millions of longhorns roamed Texas and almost nobody wanted to buy them. Plentiful and little demand means a low price." data-hint="Think about what happens to the price of something when there is far too much of it.">
+    <div class="widget-row-prompt">1. Why did a steer sell for just a few dollars in Texas in 1865?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Millions of longhorns and almost no buyers</button><button type="button" data-choice="1">Texas cattle were poor in quality</button><button type="button" data-choice="2">There was a shortage of cattle</button></div>
+    <div class="row-feedback ph" data-ph="Right. Millions of longhorns roamed Texas and almost nobody wanted to buy them. Plentiful and little demand means a low price.">Right. Millions of longhorns roamed Texas and almost nobody wanted to buy them. Plentiful and little demand means a low price.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. Fast-growing cities wanted beef, and it was scarce there. High demand and scarcity mean a high price." data-hint="Think about who lived in the growing cities and what they wanted to buy.">
+    <div class="widget-row-prompt">2. Why was the same steer worth about ten times as much in Northern cities?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Texas beef tasted better</button><button type="button" data-choice="1">Cattle in the North came from Mexico</button><button type="button" data-choice="2">Beef was in demand and cattle were scarce</button></div>
+    <div class="row-feedback ph" data-ph="Right. Fast-growing cities wanted beef, and it was scarce there. High demand and scarcity mean a high price.">Right. Fast-growing cities wanted beef, and it was scarce there. High demand and scarcity mean a high price.</div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. At a railhead cattle could be loaded on trains, which closed the gap between a cheap steer in Texas and an expensive one in the North." data-hint="Think about what the cattle needed in order to travel from Texas to Northern cities.">
+    <div class="widget-row-prompt">3. Joseph McCoy built stockyards at Abilene, Kansas. What problem was he helping to solve?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Too many fences on the open range</button><button type="button" data-choice="1">Getting Texas cattle onto trains headed north</button><button type="button" data-choice="2">Too few cowboys on the trail</button></div>
+    <div class="row-feedback ph" data-ph="Right. At a railhead cattle could be loaded on trains, which closed the gap between a cheap steer in Texas and an expensive one in the North.">Right. At a railhead cattle could be loaded on trains, which closed the gap between a cheap steer in Texas and an expensive one in the North.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; ON THE TRAIL</div>
@@ -323,7 +398,13 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE CATTLE TRADE</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Rivers, Rails, and Stockyards</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The drives needed roads and bridges. The Brazos River at Waco was hard to cross when it ran high. In 1870, the city opened the Waco Suspension Bridge. It was the longest bridge of its kind west of the Mississippi River at the time, and drovers paid a toll for each animal that crossed. Farther north, cowboys swam herds across the Red River.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The railroads themselves came closer. In 1872, the Missouri-Kansas-Texas Railroad reached Denison, on the Red River. Soon other lines entered Texas, and cattle could be loaded on trains much closer to the ranches. Fort Worth, a town on the trail, grew into &ldquo;Cowtown.&rdquo; In 1887, the Fort Worth Stockyards opened, and after 1902, large meatpacking plants were built there. The cattle trade became a business, and Texas beef went to markets across the country. Over time, some drives shifted west onto the Western Trail toward Dodge City, Kansas, as Kansas, worried about a tick-borne cattle disease called Texas fever, closed more of its land to Texas herds.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">When the Law Was Weak</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The open range made the drives possible. But open land had a downside. Cattle wandered, brands were hard to check, and a calf with no brand was a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A calf with no brand. The word comes from Samuel Maverick, a Texas rancher who did not brand his cattle.">maverick</a>. The word comes from Samuel Maverick, a Texas rancher who did not brand his herds. Anyone who found one could claim it. Many honest ranchers did. Some thieves used it as an excuse to take other men&rsquo;s cattle.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In Mason County, in the Hill Country, quarrels over cattle exploded in 1875. Men were shot and masked groups hanged suspected thieves. The community split along family and ethnic lines, between German settlers and Anglo ranchers. The county courts could not stop it. The state sent Texas Rangers, and the killing slowed after a few years. At least a dozen men died. The lesson of the Mason County War is plain. When the means to settle disputes peacefully are missing, people settle them with guns.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texas beef fed a growing nation, and Texans learned lessons about markets, bridges, and law. But the open range itself was not going to last. In a few years, a simple invention would begin to change it.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Rivers, Rails, and Stockyards</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The drives needed roads and bridges. The Brazos River at Waco was hard to cross when it ran high. In 1870, the city opened the Waco Suspension Bridge. It was the longest bridge of its kind west of the Mississippi River at the time, and drovers paid a toll for each animal that crossed. Farther north, cowboys swam herds across the Red River.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The railroads themselves came closer. In 1872, the Missouri-Kansas-Texas Railroad reached Denison, on the Red River. Soon other lines entered Texas, and cattle could be loaded on trains much closer to the ranches. Fort Worth, a town on the trail, grew into &ldquo;Cowtown.&rdquo; In 1887, the Fort Worth Stockyards opened, and after 1902, large meatpacking plants were built there. The cattle trade became a business, and Texas beef went to markets across the country. Over time, some drives shifted west onto the Western Trail toward Dodge City, Kansas, as Kansas, worried about a tick-borne cattle disease called Texas fever, closed more of its land to Texas herds.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">When the Law Was Weak</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The open range made the drives possible. But open land had a downside. Cattle wandered, brands were hard to check, and a calf with no brand was a <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A calf with no brand. The word comes from Samuel Maverick, a Texas rancher who did not brand his cattle.">maverick</a>. The word comes from Samuel Maverick, a Texas rancher who did not brand his herds. Anyone who found one could claim it. Many honest ranchers did. Some thieves used it as an excuse to take other men&rsquo;s cattle.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In Mason County, in the Hill Country, quarrels over cattle exploded in 1875. Men were shot and masked groups hanged suspected thieves. The community split along family and ethnic lines, between German settlers and Anglo ranchers. The county courts could not stop it. The state sent Texas Rangers, and the killing slowed after a few years. At least a dozen men died. The lesson of the Mason County War is plain. When the means to settle disputes peacefully are missing, people settle them with guns.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texas beef fed a growing nation, and Texans learned lessons about markets, bridges, and law. But the open range itself was not going to last. In a few years, a simple invention would begin to change it.</p><div class="optima-widget ow-seq" data-ra-skip data-next="0" data-done="Bridges, rails and stockyards turned a risky trip into a business. Law was the part that lagged behind." data-hint="Not yet. Which of these came earlier?">
+  <div class="widget-kicker">&#9889; TRY IT &middot; THE CATTLE TRADE GROWS UP</div>
+  <div class="widget-question">These six events turned a few long drives into a business. Click them in the order they happened.</div>
+  <div class="seq-pool"><button type="button" class="seq-item" data-n="2" data-date="1870" data-text="The Waco Suspension Bridge opens" data-fb="Drovers paid a toll for each animal that crossed.">The Waco Suspension Bridge opens<span class="seq-tag">6. 1870</span></button><button type="button" class="seq-item" data-n="5" data-date="1887" data-text="The Fort Worth Stockyards open" data-fb="Fort Worth had grown into “Cowtown.”">The Fort Worth Stockyards open<span class="seq-tag">6. 1887</span></button><button type="button" class="seq-item" data-n="0" data-date="1866" data-text="The first big drives go to Sedalia, Missouri" data-fb="Charles Goodnight is also credited with inventing the chuck wagon this year.">The first big drives go to Sedalia, Missouri<span class="seq-tag">6. 1866</span></button><button type="button" class="seq-item" data-n="4" data-date="1875" data-text="Quarrels over cattle explode in Mason County" data-fb="Masked groups hanged suspected thieves, and the state sent Rangers.">Quarrels over cattle explode in Mason County<span class="seq-tag">6. 1875</span></button><button type="button" class="seq-item" data-n="1" data-date="1867" data-text="Joseph McCoy builds stockyards at Abilene, Kansas" data-fb="The Chisholm Trail led there.">Joseph McCoy builds stockyards at Abilene, Kansas<span class="seq-tag">6. 1867</span></button><button type="button" class="seq-item" data-n="3" data-date="1872" data-text="The Missouri-Kansas-Texas Railroad reaches Denison" data-fb="Cattle could be loaded on trains closer to the ranches.">The Missouri-Kansas-Texas Railroad reaches Denison<span class="seq-tag">6. 1872</span></button></div>
+  <div class="seq-msg"></div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -348,6 +429,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>

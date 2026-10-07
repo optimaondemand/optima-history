@@ -42,6 +42,62 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .widget-feedback[data-ph] { display: block; visibility: hidden; }
+    .widget-feedback[data-ph].show { visibility: visible; }
+    .row-feedback { border-left: 3px solid transparent; }
+    .row-feedback.ph { visibility: hidden; }
+    .row-feedback, .widget-feedback[data-ph], .ow-seq .seq-msg { box-sizing: border-box; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
+    .ow-seq .seq-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+    .ow-seq .seq-item { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 9px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+    .ow-seq .seq-item:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-seq .seq-tag { visibility: hidden; margin-left: 8px; font-size: 12px; color: #1A6B3D; white-space: nowrap; }
+    .ow-seq .seq-item.placed { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; cursor: default; }
+    .ow-seq .seq-item.placed .seq-tag { visibility: visible; }
+    .ow-seq .seq-item.bad { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .ow-seq .seq-msg { font-size: 15px; color: #1a2340; line-height: 1.5; min-height: 40px; background: #FFFFFF; border-left: 3px solid #D0D9E8; border-radius: 4px; padding: 8px 12px; margin-bottom: 8px; }
+    .ow-seq .seq-msg.bad { color: #8A1F16; border-left-color: #C0392B; background: #FDECEC; }
+    .ow-seq .seq-msg.good { color: #1A6B3D; border-left-color: #2A9D5C; background: #D8F0DD; }
+    .ow-flips .flip-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .ow-flips .ow-flip { flex: 1; min-width: 200px; min-height: 150px; display: flex; flex-direction: column; justify-content: center; }
 </style>
 </head>
 <body>
@@ -318,11 +374,46 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; TWO PLANS FOR RECONSTRUCTION</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Congress Takes Over</h3><div style="margin: 16px 0;"><div style="display: flex; gap: 12px; margin-bottom: 10px;"><div style="min-width: 92px; font-size: 14px; color: #c7922c;">1865-1866</div><div style="flex: 1; background: #EEF1F8; border-left: 4px solid #0E1C42; border-radius: 6px; padding: 10px 14px;"><div style="font-size: 15px; color: #0E1C42; margin-bottom: 4px;"><strong>Presidential plan</strong></div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">President Johnson lets Southern whites rebuild their state governments quickly. Texas passes Black Codes.</div></div></div><div style="display: flex; gap: 12px; margin-bottom: 10px;"><div style="min-width: 92px; font-size: 14px; color: #c7922c;">1867-1870</div><div style="flex: 1; background: #EEF1F8; border-left: 4px solid #0E1C42; border-radius: 6px; padding: 10px 14px;"><div style="font-size: 15px; color: #0E1C42; margin-bottom: 4px;"><strong>Congress takes over</strong></div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">The army governs Texas. Black men vote. A new constitution is written. Texas is let back into the Union.</div></div></div><div style="display: flex; gap: 12px; margin-bottom: 10px;"><div style="min-width: 92px; font-size: 14px; color: #c7922c;">1874</div><div style="flex: 1; background: #EEF1F8; border-left: 4px solid #0E1C42; border-radius: 6px; padding: 10px 14px;"><div style="font-size: 15px; color: #0E1C42; margin-bottom: 4px;"><strong>Redemption</strong></div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">Democrats return to power. Governor Davis leaves office.</div></div></div><div style="font-size: 12px; color: #6b7a99;">The three stages of Reconstruction in Texas.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1867, Congress put a stricter plan in place. The army would govern Texas until the state met new rules. General Philip Sheridan removed Governor James Throckmorton from office. Black men were allowed to vote for the first time, and many white Texans who had led the Confederacy were not.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">To return to the Union, Texas had to approve the 13th, 14th, and 15th Amendments. They ended slavery, made Black Americans citizens, and protected the right of Black men to vote.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texas wrote a new constitution in 1869. It gave Black men the vote and created a public school system. Black Texans were elected to office. George Ruby of Galveston and Matthew Gaines of Washington County served in the state senate. Edmund J. Davis, a Republican who had fought for the Union, became governor by a very narrow margin. In 1870, Texas was allowed back into the Union.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Davis tried to build a strong state government. He created a state police and a larger school system. His opponents hated both, and many said his government cost too much and held too much power.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Congress Takes Over</h3><div style="margin: 16px 0;"><div style="display: flex; gap: 12px; margin-bottom: 10px;"><div style="min-width: 92px; font-size: 14px; color: #c7922c;">1865-1866</div><div style="flex: 1; background: #EEF1F8; border-left: 4px solid #0E1C42; border-radius: 6px; padding: 10px 14px;"><div style="font-size: 15px; color: #0E1C42; margin-bottom: 4px;"><strong>Presidential plan</strong></div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">President Johnson lets Southern whites rebuild their state governments quickly. Texas passes Black Codes.</div></div></div><div style="display: flex; gap: 12px; margin-bottom: 10px;"><div style="min-width: 92px; font-size: 14px; color: #c7922c;">1867-1870</div><div style="flex: 1; background: #EEF1F8; border-left: 4px solid #0E1C42; border-radius: 6px; padding: 10px 14px;"><div style="font-size: 15px; color: #0E1C42; margin-bottom: 4px;"><strong>Congress takes over</strong></div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">The army governs Texas. Black men vote. A new constitution is written. Texas is let back into the Union.</div></div></div><div style="display: flex; gap: 12px; margin-bottom: 10px;"><div style="min-width: 92px; font-size: 14px; color: #c7922c;">1874</div><div style="flex: 1; background: #EEF1F8; border-left: 4px solid #0E1C42; border-radius: 6px; padding: 10px 14px;"><div style="font-size: 15px; color: #0E1C42; margin-bottom: 4px;"><strong>Redemption</strong></div><div style="font-size: 15px; color: #1a2340; line-height: 1.5;">Democrats return to power. Governor Davis leaves office.</div></div></div><div style="font-size: 12px; color: #6b7a99;">The three stages of Reconstruction in Texas.</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1867, Congress put a stricter plan in place. The army would govern Texas until the state met new rules. General Philip Sheridan removed Governor James Throckmorton from office. Black men were allowed to vote for the first time, and many white Texans who had led the Confederacy were not.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">To return to the Union, Texas had to approve the 13th, 14th, and 15th Amendments. They ended slavery, made Black Americans citizens, and protected the right of Black men to vote.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Texas wrote a new constitution in 1869. It gave Black men the vote and created a public school system. Black Texans were elected to office. George Ruby of Galveston and Matthew Gaines of Washington County served in the state senate. Edmund J. Davis, a Republican who had fought for the Union, became governor by a very narrow margin. In 1870, Texas was allowed back into the Union.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Davis tried to build a strong state government. He created a state police and a larger school system. His opponents hated both, and many said his government cost too much and held too much power.</p><div class="optima-widget ow-seq" data-ra-skip data-next="0" data-done="Each step changed who held power. The next question is who held it at each stage." data-hint="Not yet. Which of these came earlier?">
+  <div class="widget-kicker">&#9889; TRY IT &middot; FROM FREEDOM TO READMISSION</div>
+  <div class="widget-question">Freedom came in steps. Click these five steps in the order they happened.</div>
+  <div class="seq-pool"><button type="button" class="seq-item" data-n="3" data-date="1869" data-text="Texas writes a new constitution" data-fb="It gave Black men the vote and created a public school system.">Texas writes a new constitution<span class="seq-tag">5. 1869</span></button><button type="button" class="seq-item" data-n="0" data-date="June 19, 1865" data-text="General Granger announces freedom in Galveston" data-fb="Texans still celebrate this day as Juneteenth.">General Granger announces freedom in Galveston<span class="seq-tag">5. June 19, 1865</span></button><button type="button" class="seq-item" data-n="4" data-date="1870" data-text="Texas is let back into the Union" data-fb="Edmund J. Davis was governor.">Texas is let back into the Union<span class="seq-tag">5. 1870</span></button><button type="button" class="seq-item" data-n="2" data-date="1867" data-text="Congress puts the army in charge of Texas" data-fb="Black men could vote for the first time.">Congress puts the army in charge of Texas<span class="seq-tag">5. 1867</span></button><button type="button" class="seq-item" data-n="1" data-date="1866" data-text="The legislature passes the Black Codes" data-fb="Many Northerners saw them as slavery under another name.">The legislature passes the Black Codes<span class="seq-tag">5. 1866</span></button></div>
+  <div class="seq-msg"></div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE END OF RECONSTRUCTION</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Redemption</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">White Texans who opposed Reconstruction began to win elections. Violence by groups like the Ku Klux Klan frightened many Republican voters and many Black voters. In 1872, Democrats won control of the legislature. In 1873, Richard Coke ran for governor against Davis and won by a wide margin.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Davis claimed the election was not legal. He asked President Ulysses S. Grant to send soldiers. Grant refused. In January 1874, Davis left office and Coke took his place. Democrats called their return to power <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The name Democrats gave to their return to power in the South at the end of Reconstruction.">Redemption</a>. That word shows their view of it. Many freedpeople saw it as the loss of the rights they had just gained.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What If Grant Had Sent Troops?</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Historians ask what might have happened if Grant had sent soldiers to support Davis in 1874. Soldiers might have kept Davis in office for a while, and that might have protected Black voters for longer. But Davis had lost the election by a wide margin, and many white Texans would have fought the army. Holding a government in place by force would have been very hard to keep up. Historians cannot be sure what would have happened.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What Changed</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The new Democratic government cut state spending, lowered taxes, and ended Davis&rsquo;s state police. It also weakened the public school system Davis had built. Texans soon wrote a new constitution that limited the power of government. Black Texans lost much of their political power over the following years. Many farmed as <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A farming system where a family works land owned by someone else and pays with part of the crop.">sharecropping</a> families on land owned by others. A landowner with little cash would let a family work a plot. The family got a place to live and supplies on credit, and paid back with a large share of the cotton crop. A bad year left them in debt, and the debt could last for years. At the same time, freedpeople kept the churches, schools, and communities they had built.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Reconstruction had not followed a straight path. It could have gone another way at several points, and the choices people made decided where it ended.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Redemption</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">White Texans who opposed Reconstruction began to win elections. Violence by groups like the Ku Klux Klan frightened many Republican voters and many Black voters. In 1872, Democrats won control of the legislature. In 1873, Richard Coke ran for governor against Davis and won by a wide margin.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Davis claimed the election was not legal. He asked President Ulysses S. Grant to send soldiers. Grant refused. In January 1874, Davis left office and Coke took his place. Democrats called their return to power <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The name Democrats gave to their return to power in the South at the end of Reconstruction.">Redemption</a>. That word shows their view of it. Many freedpeople saw it as the loss of the rights they had just gained.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What If Grant Had Sent Troops?</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Historians ask what might have happened if Grant had sent soldiers to support Davis in 1874. Soldiers might have kept Davis in office for a while, and that might have protected Black voters for longer. But Davis had lost the election by a wide margin, and many white Texans would have fought the army. Holding a government in place by force would have been very hard to keep up. Historians cannot be sure what would have happened.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What Changed</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The new Democratic government cut state spending, lowered taxes, and ended Davis&rsquo;s state police. It also weakened the public school system Davis had built. Texans soon wrote a new constitution that limited the power of government. Black Texans lost much of their political power over the following years. Many farmed as <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A farming system where a family works land owned by someone else and pays with part of the crop.">sharecropping</a> families on land owned by others. A landowner with little cash would let a family work a plot. The family got a place to live and supplies on credit, and paid back with a large share of the cotton crop. A bad year left them in debt, and the debt could last for years. At the same time, freedpeople kept the churches, schools, and communities they had built.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Reconstruction had not followed a straight path. It could have gone another way at several points, and the choices people made decided where it ended.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; WHO HELD POWER?</div>
+  <div class="widget-question">Reconstruction in Texas had three stages. For each row, decide which stage it belongs to.</div>
+  <div class="widget-row" data-correct="0" data-fb="Right. Under President Johnson’s plan, Southern whites rebuilt their governments quickly, and the Black Codes followed." data-hint="Think about who ran the state government before the army took over.">
+    <div class="widget-row-prompt">1. Texas passes laws about vagrancy and other Black Codes.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The presidential plan (1865 to 1866)</button><button type="button" data-choice="1">Congress takes over (1867 to 1870)</button><button type="button" data-choice="2">Redemption (1873 and 1874)</button></div>
+    <div class="row-feedback ph" data-ph="Right. Under President Johnson’s plan, Southern whites rebuilt their governments quickly, and the Black Codes followed.">Right. Under President Johnson’s plan, Southern whites rebuilt their governments quickly, and the Black Codes followed.</div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. Congress’s stricter plan put the army in charge of Texas." data-hint="Which plan put the army in charge?">
+    <div class="widget-row-prompt">2. General Sheridan removes Governor Throckmorton from office.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The presidential plan (1865 to 1866)</button><button type="button" data-choice="1">Congress takes over (1867 to 1870)</button><button type="button" data-choice="2">Redemption (1873 and 1874)</button></div>
+    <div class="row-feedback ph" data-ph="Right. Congress’s stricter plan put the army in charge of Texas.">Right. Congress’s stricter plan put the army in charge of Texas.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. The new Democratic government cut spending and undid much of what Davis had built." data-hint="Think about who took over after Davis left office.">
+    <div class="widget-row-prompt">3. The state police is ended and the school system is weakened.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The presidential plan (1865 to 1866)</button><button type="button" data-choice="1">Congress takes over (1867 to 1870)</button><button type="button" data-choice="2">Redemption (1873 and 1874)</button></div>
+    <div class="row-feedback ph" data-ph="Right. The new Democratic government cut spending and undid much of what Davis had built.">Right. The new Democratic government cut spending and undid much of what Davis had built.</div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. This was one of the biggest changes Congress made." data-hint="Which stage let Black men vote for the first time?">
+    <div class="widget-row-prompt">4. Black men vote for the first time, and many Confederate leaders cannot.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The presidential plan (1865 to 1866)</button><button type="button" data-choice="1">Congress takes over (1867 to 1870)</button><button type="button" data-choice="2">Redemption (1873 and 1874)</button></div>
+    <div class="row-feedback ph" data-ph="Right. This was one of the biggest changes Congress made.">Right. This was one of the biggest changes Congress made.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. Democrats called their return to power Redemption." data-hint="Whose return to power came with Coke’s win?">
+    <div class="widget-row-prompt">5. Richard Coke wins the race for governor.</div>
+    <div class="widget-options"><button type="button" data-choice="0">The presidential plan (1865 to 1866)</button><button type="button" data-choice="1">Congress takes over (1867 to 1870)</button><button type="button" data-choice="2">Redemption (1873 and 1874)</button></div>
+    <div class="row-feedback ph" data-ph="Right. Democrats called their return to power Redemption.">Right. Democrats called their return to power Redemption.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
 
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -347,6 +438,130 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = f.dataset.ph || ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { if (f.dataset.ph) { f.className = 'row-feedback ph'; f.textContent = f.dataset.ph; } else { f.remove(); } });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function fit(el, texts) {
+    el.style.minHeight = '';
+    var keep = el.textContent, tallest = 0;
+    texts.forEach(function (t) { el.textContent = t; tallest = Math.max(tallest, el.offsetHeight); });
+    el.textContent = keep;
+    el.style.minHeight = tallest + 'px';
+  }
+  function reserveAll() {
+    document.querySelectorAll('.ow-reflect .widget-feedback[data-ph]').forEach(function (f) {
+      var t = []; f.closest('.ow-reflect').querySelectorAll('.widget-options button').forEach(function (b) { t.push(b.dataset.response || ''); });
+      fit(f, t);
+    });
+    document.querySelectorAll('.ow-select .widget-row').forEach(function (r) {
+      var f = r.querySelector('.row-feedback.ph'); if (f) fit(f, [r.dataset.fb || '', r.dataset.hint || '']);
+    });
+    document.querySelectorAll('.ow-seq .seq-msg').forEach(function (m) {
+      var w = m.closest('.ow-seq'), t = [w.dataset.hint || '', w.dataset.done || ''];
+      w.querySelectorAll('.seq-item').forEach(function (b) { t.push(b.dataset.date + ': ' + b.dataset.text + '. ' + (b.dataset.fb || '')); });
+      fit(m, t);
+    });
+  }
+  reserveAll();
+  window.addEventListener('load', reserveAll);
+  window.addEventListener('resize', reserveAll);
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    var card = w.querySelector('.road-card');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    function reserve() {
+      var tallest = 0;
+      for (var k = 0; k < stops.length; k++) { slider.value = k; render(); tallest = Math.max(tallest, card.offsetHeight); }
+      card.style.minHeight = tallest + 'px';
+      slider.value = 0; render();
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    reserve();
+    window.addEventListener('resize', function () { card.style.minHeight = ''; reserve(); });
+  });
+
+  document.addEventListener('click', function (e) {
+    var it = e.target.closest('.ow-seq .seq-item');
+    if (it && !it.classList.contains('placed')) {
+      var w = it.closest('.ow-seq'), next = parseInt(w.dataset.next, 10), n = parseInt(it.dataset.n, 10);
+      var msg = w.querySelector('.seq-msg');
+      if (n === next) {
+        it.classList.add('placed');
+        it.querySelector('.seq-tag').textContent = (next + 1) + '. ' + it.dataset.date;
+        w.dataset.next = next + 1;
+        msg.className = 'seq-msg good';
+        msg.textContent = it.dataset.date + ': ' + it.dataset.text + '. ' + (it.dataset.fb || '');
+        if (next + 1 === w.querySelectorAll('.seq-item').length) {
+          msg.textContent = w.dataset.done || 'All in order.';
+        }
+      } else {
+        it.classList.add('bad');
+        msg.className = 'seq-msg bad';
+        msg.textContent = w.dataset.hint || 'Not yet. Which of these came earlier?';
+        setTimeout(function () { it.classList.remove('bad'); }, 700);
+      }
+      return;
+    }
+    var rs = e.target.closest('.ow-seq .widget-reset');
+    if (rs) {
+      var q = rs.closest('.ow-seq');
+      q.dataset.next = 0;
+      q.querySelectorAll('.seq-item').forEach(function (b) { b.classList.remove('placed', 'bad'); });
+      var m = q.querySelector('.seq-msg'); m.className = 'seq-msg'; m.textContent = q.dataset.start || '';
+    }
+  });
+})();
 </script>
 </body>
 </html>
