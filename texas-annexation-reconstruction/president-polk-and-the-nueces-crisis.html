@@ -50,6 +50,63 @@
 
     .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 14px; padding: 0 4px; vertical-align: middle; color: #1B6A94; }
     .gloss-audio:hover { color: #0E1C42; }
+
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+
+    .ow-claims .ow-claim-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .ow-claims .ow-claim-btns button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; }
+    .ow-claims .ow-claim-btns button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .ow-claims .ow-claim-btns button.on { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .ow-claims .zone { padding: 14px 16px; font-size: 15px; color: #0E1C42; text-align: center; transition: background 0.3s; }
+    .ow-claims .z-north { background: #EEF1F8; border: 1px solid #D0D9E8; border-radius: 8px 8px 0 0; }
+    .ow-claims .z-south { background: #EEF1F8; border: 1px solid #D0D9E8; border-radius: 0 0 8px 8px; }
+    .ow-claims .z-strip { padding: 26px 16px; line-height: 1.5; border-left: 1px solid #D0D9E8; border-right: 1px solid #D0D9E8; }
+    .ow-claims .line { height: 0; border-top: 4px solid transparent; font-size: 13px; padding: 0; transition: border-color 0.3s; position: relative; }
+    .ow-claims .line span { position: absolute; right: 8px; top: -26px; background: #FFFFFF; padding: 1px 8px; border-radius: 10px; opacity: 0; transition: opacity 0.3s; }
+    .ow-claims[data-view="texas"] .ln-rio, .ow-claims[data-view="both"] .ln-rio { border-top-color: #C7922C; }
+    .ow-claims[data-view="mexico"] .ln-nueces, .ow-claims[data-view="both"] .ln-nueces { border-top-color: #2196D0; }
+    .ow-claims[data-view="texas"] .ln-rio span, .ow-claims[data-view="both"] .ln-rio span { opacity: 1; color: #8a5f12; }
+    .ow-claims[data-view="mexico"] .ln-nueces span, .ow-claims[data-view="both"] .ln-nueces span { opacity: 1; color: #1B6A94; }
+    .ow-claims[data-view="texas"] .z-strip { background: #FDF3E3; }
+    .ow-claims[data-view="mexico"] .z-strip { background: #E8F6FB; }
+    .ow-claims[data-view="both"] .z-strip { background: repeating-linear-gradient(45deg, #FDF3E3, #FDF3E3 12px, #E8F6FB 12px, #E8F6FB 24px); }
+    .ow-claims .ow-claim-say { margin-top: 12px; font-size: 15px; color: #1a2340; line-height: 1.55; }
+    .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
+    .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
+    .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
+    .ow-road .stop { position: absolute; top: 20px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: #FFFFFF; border: 3px solid #D0D9E8; transition: all 0.25s; }
+    .ow-road .stop.seen { border-color: #0E1C42; }
+    .ow-road .stop.here { background: #C7922C; border-color: #C7922C; transform: scale(1.3); }
+    .ow-road .stop-name { position: absolute; top: 44px; width: 90px; margin-left: -45px; text-align: center; font-size: 11px; color: #6b7a99; }
+    .ow-road input[type=range] { width: calc(100% - 20px); margin: 8px 10px 12px 10px; }
+    .ow-road .road-card { background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 16px; }
+    .ow-road .road-date { font-size: 13px; color: #c7922c; margin-bottom: 4px; }
+    .ow-road .road-title { font-size: 18px; color: #0E1C42; margin-bottom: 6px; }
+    .ow-road .road-body { font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 8px; }
+    .ow-road .road-note { font-size: 14px; color: #1B6A94; line-height: 1.5; }
 </style>
 </head>
 <body>
@@ -323,24 +380,42 @@
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TWO RIVERS, ONE BORDER</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">One Country Becomes One State</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">For nine years, Texas was its own country, the Republic of Texas. In 1845 it joined the United States. This is called <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="When one country takes in land or another country and makes it part of itself.">annexation</a>. Texas became the twenty-eighth state.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Yet one question came along with it. Where did Texas end in the southwest? Texas said its <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A line that shows where one place or country ends and another begins.">boundary</a> was the <strong>Big River</strong> (<em>R&iacute;o Grande</em>). In 1836 the Republic&rsquo;s congress had passed a law naming that river as its border. Mexico gave a different answer. Mexico had never accepted that Texas was a separate country. Mexico said the old border of its Texas province was the <strong>Nut River</strong> (<em>R&iacute;o Nueces</em>), farther to the north.</p><div id="foreign" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;"><div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; FOREIGN LANGUAGE VOCABULARY</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>Matamoros</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of Matamoros" onclick="speakGloss(event,'mat uh mor ohs')">&#128266;</button> <span style="color: #6b7a99;">(mat-uh-MOR-ohs)</span>: A Mexican city on the south bank of the Río Grande.</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>Nueces</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of Nueces" onclick="speakGloss(event,'nway ses')">&#128266;</button> <span style="color: #6b7a99;">(NWAY-ses)</span>: Spanish for &quot;nuts.&quot; The name of the Nut River.</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>Río Grande</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of Río Grande" onclick="speakGloss(event,'ree oh gran day')">&#128266;</button> <span style="color: #6b7a99;">(REE-oh GRAN-day)</span>: Spanish for &quot;Big River.&quot;</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Between the two rivers lay a wide strip of dry brush country. People call it the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="NWAY-ses. Spanish for &quot;nuts.&quot; The name of the Nut River."><em>Nueces</em></a> Strip. Both countries said it was theirs, so it was <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Argued over. Each side says it is right.">disputed</a> land.</p>
-<div style="margin: 16px 0;">
-  <div style="background: #EEF1F8; border: 1px solid #D0D9E8; border-radius: 8px 8px 0 0; padding: 12px 16px; font-size: 15px; color: #0E1C42;">Texas settlements to the north</div>
-  <div style="border-top: 4px solid #2196D0; border-bottom: 0; padding: 6px 16px; background: #E8F6FB; font-size: 14px; color: #1B6A94;">The Mexican claim: the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="NWAY-ses. Spanish for &quot;nuts.&quot; The name of the Nut River."><em>Nueces</em></a> River</div>
-  <div style="background: #FDF3E3; border-left: 1px solid #D0D9E8; border-right: 1px solid #D0D9E8; padding: 22px 16px; font-size: 16px; color: #0E1C42; line-height: 1.5; text-align: center;">
-    <strong>The disputed land</strong><br />
-    Dry brush country, thinly settled.<br />
-    Corpus Christi sits near its northern edge.
-  </div>
-  <div style="border-top: 4px solid #C7922C; padding: 6px 16px; background: #FDF3E3; font-size: 14px; color: #8a5f12;">The Texas claim: the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="REE-oh GRAN-day. Spanish for &quot;Big River.&quot;"><em>Río Grande</em></a></div>
-  <div style="background: #EEF1F8; border: 1px solid #D0D9E8; border-radius: 0 0 8px 8px; padding: 12px 16px; font-size: 15px; color: #0E1C42;">Mexican towns and ranches, such as <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="mat-uh-MOR-ohs. A Mexican city on the south bank of the Río Grande."><em>Matamoros</em></a></div>
-  <div style="font-size: 12px; color: #6b7a99; margin-top: 6px;">A simple sketch of the idea. It is not a map and not to scale.</div>
-</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Who Really Held the Land?</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not Texas. Texans had never really governed the strip. A few Americans lived near Corpus Christi, on the coast. But Mexican ranchers and towns stood along the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="REE-oh GRAN-day. Spanish for &quot;Big River.&quot;"><em>Río Grande</em></a>, such as the city of <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="mat-uh-MOR-ohs. A Mexican city on the south bank of the Río Grande."><em>Matamoros</em></a>.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When the United States Congress voted to annex Texas, it did not settle the question. It left the exact border to be worked out with Mexico later. Mexico cut off its ties with the United States over the annexation. The border had become a problem for the whole country.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">That changed Texas&rsquo;s position. As a republic, Texas had faced Mexico alone. As a state, it could count on the United States Army. But it gave up something too. The choice between talking and fighting now belonged to the president and Congress in Washington, not to Texans.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">One Country Becomes One State</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">For nine years, Texas was its own country, the Republic of Texas. In 1845 it joined the United States. This is called <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="When one country takes in land or another country and makes it part of itself.">annexation</a>. Texas became the twenty-eighth state.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Yet one question came along with it. Where did Texas end in the southwest? Texas said its <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A line that shows where one place or country ends and another begins.">boundary</a> was the <strong>Big River</strong> (<em>R&iacute;o Grande</em>). In 1836 the Republic&rsquo;s congress had passed a law naming that river as its border. Mexico gave a different answer. Mexico had never accepted that Texas was a separate country. Mexico said the old border of its Texas province was the <strong>Nut River</strong> (<em>R&iacute;o Nueces</em>), farther to the north.</p><div id="foreign" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;"><div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; FOREIGN LANGUAGE VOCABULARY</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>Matamoros</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of Matamoros" onclick="speakGloss(event,'mat uh mor ohs')">&#128266;</button> <span style="color: #6b7a99;">(mat-uh-MOR-ohs)</span>: A Mexican city on the south bank of the Río Grande.</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>Nueces</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of Nueces" onclick="speakGloss(event,'nway ses')">&#128266;</button> <span style="color: #6b7a99;">(NWAY-ses)</span>: Spanish for &quot;nuts.&quot; The name of the Nut River.</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55; margin-bottom: 6px;"><strong>Río Grande</strong><button type="button" class="gloss-audio" aria-label="Play pronunciation of Río Grande" onclick="speakGloss(event,'ree oh gran day')">&#128266;</button> <span style="color: #6b7a99;">(REE-oh GRAN-day)</span>: Spanish for &quot;Big River.&quot;</div></div><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Between the two rivers lay a wide strip of dry brush country. People call it the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="NWAY-ses. Spanish for &quot;nuts.&quot; The name of the Nut River."><em>Nueces</em></a> Strip. Both countries said it was theirs, so it was <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="Argued over. Each side says it is right.">disputed</a> land.</p><div class="optima-widget ow-claims" data-ra-skip data-view="texas" data-default="texas" data-say-texas="Under Texas’s claim, the border is the Río Grande, so the strip belongs to Texas." data-say-mexico="Under Mexico’s claim, the border is the Nueces, so the strip belongs to Mexico." data-say-both="Put the two claims together and one thing is left in the middle: land that both countries say is theirs. Only the strip is disputed. Everything north of it and south of it is not.">
+  <div class="widget-kicker">&#9889; TRY IT &middot; TWO CLAIMS, ONE STRIP</div>
+  <div class="widget-question">Switch between the two claims. Watch the strip of land in the middle. What changes, and what stays the same?</div>
+  <div class="ow-claim-btns"><button type="button" data-view="texas">Texas&rsquo;s claim</button><button type="button" data-view="mexico">Mexico&rsquo;s claim</button><button type="button" data-view="both">Show both</button></div>
+  <div class="zone z-north">Texas settlements to the north</div>
+  <div class="line ln-nueces"><span>The <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="NWAY-ses. Spanish for &quot;nuts.&quot; The name of the Nut River."><em>Nueces</em></a> River: Mexico&rsquo;s border</span></div>
+  <div class="zone z-strip"><strong>The Nueces Strip</strong></div>
+  <div class="line ln-rio"><span>The <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="REE-oh GRAN-day. Spanish for &quot;Big River.&quot;"><em>Río Grande</em></a>: Texas&rsquo;s border</span></div>
+  <div class="zone z-south">Mexican towns and ranches, such as <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="mat-uh-MOR-ohs. A Mexican city on the south bank of the Río Grande."><em>Matamoros</em></a></div>
+  <div class="ow-claim-say"></div>
+  <button class="widget-reset">Reset</button>
+</div><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Who Really Held the Land?</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not Texas. Texans had never really governed the strip. A few Americans lived near Corpus Christi, on the coast. But Mexican ranchers and towns stood along the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="REE-oh GRAN-day. Spanish for &quot;Big River.&quot;"><em>Río Grande</em></a>, such as the city of <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="mat-uh-MOR-ohs. A Mexican city on the south bank of the Río Grande."><em>Matamoros</em></a>.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When the United States Congress voted to annex Texas, it did not settle the question. It left the exact border to be worked out with Mexico later. Mexico cut off its ties with the United States over the annexation. The border had become a problem for the whole country.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">That changed Texas&rsquo;s position. As a republic, Texas had faced Mexico alone. As a state, it could count on the United States Army. But it gave up something too. The choice between talking and fighting now belonged to the president and Congress in Washington, not to Texans.</p>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; POLK SENDS THE ARMY</div>
-<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A President Who Wanted More</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The new president was James K. Polk of Tennessee. He took office in March 1845. Polk was an <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A person who wants their country to grow larger by gaining more land.">expansionist</a>. He wanted the United States to grow, and he wanted it to happen while he was in office. Many Americans felt the same way. That year a writer named John O&rsquo;Sullivan gave the feeling a name, <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The belief, common in the 1800s, that the United States was meant to spread across North America.">Manifest Destiny</a>.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Polk wanted more than the R&iacute;o Grande. He also wanted California. He sent a diplomat, John Slidell, to Mexico City to offer money for California and to settle the border. Mexico&rsquo;s leaders refused to receive him.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Mexican leaders had their own reasons. To many Mexicans, Texas was a province that had rebelled, and its loss still hurt national pride. Accepting the R&iacute;o Grande as a border would mean giving up even more land. Any Mexican president who seemed ready to deal with Slidell could be attacked as a traitor. In December 1845, President Herrera was overthrown, partly because people thought he was willing to talk. His successors were less willing.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Army Moves South</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Polk also sent soldiers. In the summer of 1845, General Zachary Taylor led an army to Texas. His camp was at Corpus Christi, on the northern edge of the disputed land. The army&rsquo;s job was to protect Texas.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In March 1846, Polk gave a new order. Taylor was to march all the way to the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="REE-oh GRAN-day. Spanish for &quot;Big River.&quot;"><em>Río Grande</em></a>. He built a fort across the river from <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="mat-uh-MOR-ohs. A Mexican city on the south bank of the Río Grande."><em>Matamoros</em></a>. To Americans, this was defending Texas. To Mexico, it was an army marching into Mexico. Mexican officers told Taylor to leave. He stayed.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On April 25, 1846, Mexican soldiers attacked an American patrol north of the river. Several Americans were killed and the rest were captured. On May 11, Polk sent a message to Congress. He said Mexico &ldquo;has invaded our territory and shed American blood upon the American soil.&rdquo; Two days later, Congress declared war.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But whose soil was it? That was the whole question. Some Americans doubted Polk&rsquo;s claim. A new congressman from Illinois, Abraham Lincoln, later asked Polk to name the exact spot where the blood had been shed.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What Might Have Been</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Historians like to ask what would have happened if Taylor had stayed at the Nueces River in 1846. The clash of April 25 happened because two armies were standing face to face along the R&iacute;o Grande. If Taylor had stayed farther north, that clash would not have happened in the same place at the same time. But Mexico still refused to accept Texas, and Polk still wanted California. War might have come anyway, later or from a different spark. Historians cannot be sure, but the question shows how much one order could matter.</p>
+<h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A President Who Wanted More</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The new president was James K. Polk of Tennessee. He took office in March 1845. Polk was an <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="A person who wants their country to grow larger by gaining more land.">expansionist</a>. He wanted the United States to grow, and he wanted it to happen while he was in office. Many Americans felt the same way. That year a writer named John O&rsquo;Sullivan gave the feeling a name, <a href="#glossary" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="The belief, common in the 1800s, that the United States was meant to spread across North America.">Manifest Destiny</a>.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Polk wanted more than the R&iacute;o Grande. He also wanted California. He sent a diplomat, John Slidell, to Mexico City to offer money for California and to settle the border. Mexico&rsquo;s leaders refused to receive him.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Mexican leaders had their own reasons. To many Mexicans, Texas was a province that had rebelled, and its loss still hurt national pride. Accepting the R&iacute;o Grande as a border would mean giving up even more land. Any Mexican president who seemed ready to deal with Slidell could be attacked as a traitor. In December 1845, President Herrera was overthrown, partly because people thought he was willing to talk. His successors were less willing.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Army Moves South</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Polk also sent soldiers. In the summer of 1845, General Zachary Taylor led an army to Texas. His camp was at Corpus Christi, on the northern edge of the disputed land. The army&rsquo;s job was to protect Texas.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In March 1846, Polk gave a new order. Taylor was to march all the way to the <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="REE-oh GRAN-day. Spanish for &quot;Big River.&quot;"><em>Río Grande</em></a>. He built a fort across the river from <a href="#foreign" style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42; text-decoration: none; font-weight: bold;" title="mat-uh-MOR-ohs. A Mexican city on the south bank of the Río Grande."><em>Matamoros</em></a>. To Americans, this was defending Texas. To Mexico, it was an army marching into Mexico. Mexican officers told Taylor to leave. He stayed.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On April 25, 1846, Mexican soldiers attacked an American patrol north of the river. Several Americans were killed and the rest were captured. On May 11, Polk sent a message to Congress. He said Mexico &ldquo;has invaded our territory and shed American blood upon the American soil.&rdquo; Two days later, Congress declared war.</p><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But whose soil was it? That was the whole question. Some Americans doubted Polk&rsquo;s claim. A new congressman from Illinois, Abraham Lincoln, later asked Polk to name the exact spot where the blood had been shed.</p><h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What Might Have Been</h3><p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Historians like to ask what would have happened if Taylor had stayed at the Nueces River in 1846. The clash of April 25 happened because two armies were standing face to face along the R&iacute;o Grande. If Taylor had stayed farther north, that clash would not have happened in the same place at the same time. But Mexico still refused to accept Texas, and Polk still wanted California. War might have come anyway, later or from a different spark. Historians cannot be sure, but the question shows how much one order could matter.</p><div class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; WHO CHOSE WHAT?</div>
+  <div class="widget-question">Each row names a choice from the road to war. Pick the person or group who made it.</div>
+  <div class="widget-row" data-correct="2" data-fb="Right. Mexico’s leaders refused to see him, in part because any leader who seemed ready to deal could be called a traitor." data-hint="Slidell was sent to Mexico City. Think about who lived and governed there.">
+    <div class="widget-row-prompt">1. Refused to receive John Slidell, the diplomat sent to Mexico City.</div>
+    <div class="widget-options"><button type="button" data-choice="0">President Polk</button><button type="button" data-choice="1">General Taylor</button><button type="button" data-choice="2">Mexico’s leaders</button><button type="button" data-choice="3">Congress</button></div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. Polk gave the order from Washington. Taylor carried it out." data-hint="Think about who commands the army from Washington, not who leads it in the field.">
+    <div class="widget-row-prompt">2. Gave the order in March 1846 to march the army all the way to the R&iacute;o Grande.</div>
+    <div class="widget-options"><button type="button" data-choice="0">President Polk</button><button type="button" data-choice="1">General Taylor</button><button type="button" data-choice="2">Mexico’s leaders</button><button type="button" data-choice="3">Congress</button></div>
+  </div>
+  <div class="widget-row" data-correct="3" data-fb="Right. Only Congress can declare war, and it did so on May 13, 1846." data-hint="The president sent a message. Who answered it with a vote?">
+    <div class="widget-row-prompt">3. Voted to declare war two days after the president&rsquo;s message about American blood on American soil.</div>
+    <div class="widget-options"><button type="button" data-choice="0">President Polk</button><button type="button" data-choice="1">General Taylor</button><button type="button" data-choice="2">Mexico’s leaders</button><button type="button" data-choice="3">Congress</button></div>
+  </div>
+  <div class="widget-row" data-correct="1" data-fb="Right. Taylor was the general on the spot, and his army’s position set up the clash of April 25." data-hint="Think about who led the army at the river.">
+    <div class="widget-row-prompt">4. Built a fort across the river from Matamoros, and stayed when Mexican officers told him to leave.</div>
+    <div class="widget-options"><button type="button" data-choice="0">President Polk</button><button type="button" data-choice="1">General Taylor</button><button type="button" data-choice="2">Mexico’s leaders</button><button type="button" data-choice="3">Congress</button></div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
     </div>
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE RANGERS GO TO WAR</div>
@@ -369,6 +444,81 @@ function speakGloss(e, text) {
     window.speechSynthesis.speak(u);
   }
 }
+</script>
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+
+(function () {
+  function setClaim(w, view) {
+    w.dataset.view = view;
+    w.querySelectorAll('.ow-claim-btns button').forEach(function (b) { b.classList.toggle('on', b.dataset.view === view); });
+    var say = w.querySelector('.ow-claim-say');
+    if (say) { say.textContent = w.getAttribute('data-say-' + view); }
+  }
+  document.addEventListener('click', function (e) {
+    var cb = e.target.closest('.ow-claims .ow-claim-btns button');
+    if (cb) { setClaim(cb.closest('.ow-claims'), cb.dataset.view); return; }
+    var rs = e.target.closest('.ow-claims .widget-reset');
+    if (rs) { setClaim(rs.closest('.ow-claims'), rs.closest('.ow-claims').dataset.default); }
+  });
+  document.querySelectorAll('.ow-claims').forEach(function (w) { setClaim(w, w.dataset.default); });
+
+  document.querySelectorAll('.ow-road').forEach(function (w) {
+    var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
+    var slider = w.querySelector('input[type=range]');
+    var dots = w.querySelectorAll('.stop');
+    var done = w.querySelector('.road-done');
+    function render() {
+      var i = parseInt(slider.value, 10), s = stops[i];
+      dots.forEach(function (d, n) { d.classList.toggle('seen', n < i); d.classList.toggle('here', n === i); });
+      done.style.width = (i / (stops.length - 1) * 100) + '%';
+      w.querySelector('.road-date').textContent = s.date;
+      w.querySelector('.road-title').textContent = s.title;
+      w.querySelector('.road-body').textContent = s.body;
+      w.querySelector('.road-note').textContent = s.note;
+    }
+    slider.addEventListener('input', render);
+    w.querySelector('.widget-reset').addEventListener('click', function () { slider.value = 0; render(); });
+    render();
+  });
+})();
 </script>
 </body>
 </html>
