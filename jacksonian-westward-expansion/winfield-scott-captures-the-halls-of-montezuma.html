@@ -68,24 +68,6 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
 
-    .ow-claims .ow-claim-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-    .ow-claims .ow-claim-btns button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; }
-    .ow-claims .ow-claim-btns button:hover { background: #F4F6FA; border-color: #55C8E8; }
-    .ow-claims .ow-claim-btns button.on { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
-    .ow-claims .zone { padding: 14px 16px; font-size: 15px; color: #0E1C42; text-align: center; transition: background 0.3s; }
-    .ow-claims .z-north { background: #EEF1F8; border: 1px solid #D0D9E8; border-radius: 8px 8px 0 0; }
-    .ow-claims .z-south { background: #EEF1F8; border: 1px solid #D0D9E8; border-radius: 0 0 8px 8px; }
-    .ow-claims .z-strip { padding: 26px 16px; line-height: 1.5; border-left: 1px solid #D0D9E8; border-right: 1px solid #D0D9E8; }
-    .ow-claims .line { height: 0; border-top: 4px solid transparent; font-size: 13px; padding: 0; transition: border-color 0.3s; position: relative; }
-    .ow-claims .line span { position: absolute; right: 8px; top: -26px; background: #FFFFFF; padding: 1px 8px; border-radius: 10px; opacity: 0; transition: opacity 0.3s; }
-    .ow-claims[data-view="texas"] .ln-rio, .ow-claims[data-view="both"] .ln-rio { border-top-color: #C7922C; }
-    .ow-claims[data-view="mexico"] .ln-nueces, .ow-claims[data-view="both"] .ln-nueces { border-top-color: #2196D0; }
-    .ow-claims[data-view="texas"] .ln-rio span, .ow-claims[data-view="both"] .ln-rio span { opacity: 1; color: #8a5f12; }
-    .ow-claims[data-view="mexico"] .ln-nueces span, .ow-claims[data-view="both"] .ln-nueces span { opacity: 1; color: #1B6A94; }
-    .ow-claims[data-view="texas"] .z-strip { background: #FDF3E3; }
-    .ow-claims[data-view="mexico"] .z-strip { background: #E8F6FB; }
-    .ow-claims[data-view="both"] .z-strip { background: repeating-linear-gradient(45deg, #FDF3E3, #FDF3E3 12px, #E8F6FB 12px, #E8F6FB 24px); }
-    .ow-claims .ow-claim-say { margin-top: 12px; font-size: 15px; color: #1a2340; line-height: 1.55; }
     .ow-road .road { position: relative; height: 58px; margin: 6px 10px 4px 10px; }
     .ow-road .road-line { position: absolute; left: 0; right: 0; top: 28px; height: 4px; background: #D0D9E8; border-radius: 2px; }
     .ow-road .road-done { position: absolute; left: 0; top: 28px; height: 4px; background: #0E1C42; border-radius: 2px; transition: width 0.25s; }
@@ -482,20 +464,6 @@ function speakGloss(e, text) {
 })();
 
 (function () {
-  function setClaim(w, view) {
-    w.dataset.view = view;
-    w.querySelectorAll('.ow-claim-btns button').forEach(function (b) { b.classList.toggle('on', b.dataset.view === view); });
-    var say = w.querySelector('.ow-claim-say');
-    if (say) { say.textContent = w.getAttribute('data-say-' + view); }
-  }
-  document.addEventListener('click', function (e) {
-    var cb = e.target.closest('.ow-claims .ow-claim-btns button');
-    if (cb) { setClaim(cb.closest('.ow-claims'), cb.dataset.view); return; }
-    var rs = e.target.closest('.ow-claims .widget-reset');
-    if (rs) { setClaim(rs.closest('.ow-claims'), rs.closest('.ow-claims').dataset.default); }
-  });
-  document.querySelectorAll('.ow-claims').forEach(function (w) { setClaim(w, w.dataset.default); });
-
   document.querySelectorAll('.ow-road').forEach(function (w) {
     var stops = JSON.parse(w.querySelector('script[type="application/json"]').textContent);
     var slider = w.querySelector('input[type=range]');
