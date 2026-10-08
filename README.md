@@ -223,7 +223,10 @@ Scope and boundaries: [predynastic-shang-china/README](predynastic-shang-china/R
 </details>
 
 <details>
-<summary><b>spanish-republic-texas</b> — no lessons yet</summary>
+<summary><b>spanish-republic-texas</b> — 2 lessons</summary>
+
+- [La Salle's Fateful Trip to Texas](https://optimaondemand.github.io/optima-history/spanish-republic-texas/la-salles-fateful-trip-to-texas.html)
+- [Spain Reacts to the French in Texas](https://optimaondemand.github.io/optima-history/spanish-republic-texas/spain-reacts-to-the-french-in-texas.html)
 
 Scope and boundaries: [spanish-republic-texas/README](spanish-republic-texas/README.md)
 
