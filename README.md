@@ -191,9 +191,11 @@ Scope and boundaries: [bronze-dark-age-greece/README](bronze-dark-age-greece/REA
 </details>
 
 <details>
-<summary><b>mexican-independence-caudillismo</b> — 1 lesson</summary>
+<summary><b>mexican-independence-caudillismo</b> — 3 lessons</summary>
 
 - [Napoleon and Mexico](https://optimaondemand.github.io/optima-history/mexican-independence-caudillismo/napoleon-and-mexico.html)
+- [The Mexican Constitution Fails; Iturbide Becomes Emperor](https://optimaondemand.github.io/optima-history/mexican-independence-caudillismo/the-mexican-constitution-fails-iturbide-becomes-emperor.html)
+- [The Mexican Republic Collapses](https://optimaondemand.github.io/optima-history/mexican-independence-caudillismo/the-mexican-republic-collapses.html)
 
 Scope and boundaries: [mexican-independence-caudillismo/README](mexican-independence-caudillismo/README.md)
 
@@ -233,14 +235,30 @@ Scope and boundaries: [predynastic-shang-china/README](predynastic-shang-china/R
 </details>
 
 <details>
-<summary><b>spanish-republic-texas</b> — 8 lessons</summary>
+<summary><b>spanish-republic-texas</b> — 24 lessons</summary>
 
+- [1845: Texas Joins the United States](https://optimaondemand.github.io/optima-history/spanish-republic-texas/texas-joins-the-united-states-1845.html)
+- [An American Colony in Mexico: Self-Governance in San Felipe](https://optimaondemand.github.io/optima-history/spanish-republic-texas/an-american-colony-in-mexico-self-governance-in-san-felipe.html)
+- [Austin's Colony and the Old Three Hundred](https://optimaondemand.github.io/optima-history/spanish-republic-texas/austins-colony-and-the-old-three-hundred.html)
+- [Austin's Imprisonment in Mexico City](https://optimaondemand.github.io/optima-history/spanish-republic-texas/austins-imprisonment-in-mexico-city.html)
+- [Battles in the Field: Goliad and Coleto Creek](https://optimaondemand.github.io/optima-history/spanish-republic-texas/battles-in-the-field-goliad-and-coleto-creek.html)
 - [Comanche and Spanish Collide at San Saba](https://optimaondemand.github.io/optima-history/spanish-republic-texas/comanche-and-spanish-collide-at-san-saba.html)
+- [Come and Take It! Gonzales to Béxar](https://optimaondemand.github.io/optima-history/spanish-republic-texas/come-and-take-it-gonzales-to-bexar.html)
 - [Empresarios: Americans Recruited to Settle Texas](https://optimaondemand.github.io/optima-history/spanish-republic-texas/empresarios-americans-recruited-to-settle-texas.html)
+- [Independent Republic or 28th State?](https://optimaondemand.github.io/optima-history/spanish-republic-texas/independent-republic-or-28th-state.html)
 - [La Salle's Fateful Trip to Texas](https://optimaondemand.github.io/optima-history/spanish-republic-texas/la-salles-fateful-trip-to-texas.html)
+- [Lamar's War](https://optimaondemand.github.io/optima-history/spanish-republic-texas/lamars-war.html)
 - [Mexico Inherits the Spanish Claim to Texas](https://optimaondemand.github.io/optima-history/spanish-republic-texas/mexico-inherits-the-spanish-claim-to-texas.html)
+- [Mexico's 1824 Constitution](https://optimaondemand.github.io/optima-history/spanish-republic-texas/mexicos-1824-constitution.html)
+- [Mr. Austin Goes to Mexico City](https://optimaondemand.github.io/optima-history/spanish-republic-texas/mr-austin-goes-to-mexico-city.html)
+- [Remember the Alamo](https://optimaondemand.github.io/optima-history/spanish-republic-texas/remember-the-alamo.html)
+- [Sam Houston and the Battle of San Jacinto](https://optimaondemand.github.io/optima-history/spanish-republic-texas/sam-houston-and-the-battle-of-san-jacinto.html)
+- [Samuel Colt's Revolver and the Texas Rangers](https://optimaondemand.github.io/optima-history/spanish-republic-texas/samuel-colts-revolver-and-the-texas-rangers.html)
 - [Spain Reacts to the French in Texas](https://optimaondemand.github.io/optima-history/spanish-republic-texas/spain-reacts-to-the-french-in-texas.html)
+- [Tension Between Texas and Mexico City](https://optimaondemand.github.io/optima-history/spanish-republic-texas/tension-between-texas-and-mexico-city.html)
+- [Texas: Rich in Land, Poor in Money](https://optimaondemand.github.io/optima-history/spanish-republic-texas/texas-rich-in-land-poor-in-money.html)
 - [The Comanche Come South](https://optimaondemand.github.io/optima-history/spanish-republic-texas/the-comanche-come-south.html)
+- [The Constitution of the Republic of Texas](https://optimaondemand.github.io/optima-history/spanish-republic-texas/the-constitution-of-the-republic-of-texas.html)
 - [The Spanish Try to Settle Texas: Mission, Presidio, Pueblo](https://optimaondemand.github.io/optima-history/spanish-republic-texas/mission-presidio-pueblo.html)
 - [Three Towns After Three Centuries](https://optimaondemand.github.io/optima-history/spanish-republic-texas/three-towns-after-three-centuries.html)
 
