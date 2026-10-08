@@ -191,8 +191,18 @@ Scope and boundaries: [bronze-dark-age-greece/README](bronze-dark-age-greece/REA
 </details>
 
 <details>
-<summary><b>new-spain-hapsburg-bourbon</b> — 1 lesson</summary>
+<summary><b>mexican-independence-caudillismo</b> — 1 lesson</summary>
 
+- [Napoleon and Mexico](https://optimaondemand.github.io/optima-history/mexican-independence-caudillismo/napoleon-and-mexico.html)
+
+Scope and boundaries: [mexican-independence-caudillismo/README](mexican-independence-caudillismo/README.md)
+
+</details>
+
+<details>
+<summary><b>new-spain-hapsburg-bourbon</b> — 2 lessons</summary>
+
+- [The Bourbon Reforms](https://optimaondemand.github.io/optima-history/new-spain-hapsburg-bourbon/the-bourbon-reforms.html)
 - [The Success of the Spanish Model](https://optimaondemand.github.io/optima-history/new-spain-hapsburg-bourbon/the-success-of-the-spanish-model.html)
 
 Scope and boundaries: [new-spain-hapsburg-bourbon/README](new-spain-hapsburg-bourbon/README.md)
@@ -223,17 +233,23 @@ Scope and boundaries: [predynastic-shang-china/README](predynastic-shang-china/R
 </details>
 
 <details>
-<summary><b>spanish-republic-texas</b> — 2 lessons</summary>
+<summary><b>spanish-republic-texas</b> — 8 lessons</summary>
 
+- [Comanche and Spanish Collide at San Saba](https://optimaondemand.github.io/optima-history/spanish-republic-texas/comanche-and-spanish-collide-at-san-saba.html)
+- [Empresarios: Americans Recruited to Settle Texas](https://optimaondemand.github.io/optima-history/spanish-republic-texas/empresarios-americans-recruited-to-settle-texas.html)
 - [La Salle's Fateful Trip to Texas](https://optimaondemand.github.io/optima-history/spanish-republic-texas/la-salles-fateful-trip-to-texas.html)
+- [Mexico Inherits the Spanish Claim to Texas](https://optimaondemand.github.io/optima-history/spanish-republic-texas/mexico-inherits-the-spanish-claim-to-texas.html)
 - [Spain Reacts to the French in Texas](https://optimaondemand.github.io/optima-history/spanish-republic-texas/spain-reacts-to-the-french-in-texas.html)
+- [The Comanche Come South](https://optimaondemand.github.io/optima-history/spanish-republic-texas/the-comanche-come-south.html)
+- [The Spanish Try to Settle Texas: Mission, Presidio, Pueblo](https://optimaondemand.github.io/optima-history/spanish-republic-texas/mission-presidio-pueblo.html)
+- [Three Towns After Three Centuries](https://optimaondemand.github.io/optima-history/spanish-republic-texas/three-towns-after-three-centuries.html)
 
 Scope and boundaries: [spanish-republic-texas/README](spanish-republic-texas/README.md)
 
 </details>
 
 <details>
-<summary><b>Not yet populated</b> — 39 folders with a scope note and no lessons</summary>
+<summary><b>Not yet populated</b> — 38 folders with a scope note and no lessons</summary>
 
 - [america-cold-war-era](america-cold-war-era/README.md)
 - [america-long-1990s](america-long-1990s/README.md)
@@ -256,7 +272,6 @@ Scope and boundaries: [spanish-republic-texas/README](spanish-republic-texas/REA
 - [high-middle-ages](high-middle-ages/README.md)
 - [industrial-revolution](industrial-revolution/README.md)
 - [jacksonian-westward-expansion](jacksonian-westward-expansion/README.md)
-- [mexican-independence-caudillismo](mexican-independence-caudillismo/README.md)
 - [mexican-revolutionary-consolidation](mexican-revolutionary-consolidation/README.md)
 - [mexico-liberal-revolution-porfiriato](mexico-liberal-revolution-porfiriato/README.md)
 - [ottoman-period-north-africa](ottoman-period-north-africa/README.md)
