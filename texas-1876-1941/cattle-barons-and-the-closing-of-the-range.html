@@ -981,6 +981,15 @@ body.reading-open .asktab .at-n{display:none}
 .titlepg .meander{width:60%;margin:0}
 /* the chapter-heading band is a second ornament in the book; it takes the rope too */
 .flow .ch h3::after{width:60%;height:17px;margin:10px 0 14px;opacity:.95;border-radius:0;-webkit-mask:none;mask:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='17' viewBox='0 0 34 17'%3E%3Cdefs%3E%3CclipPath id='k'%3E%3Crect x='0' y='0' width='6' height='17'/%3E%3Crect x='28' y='0' width='6' height='17'/%3E%3C/clipPath%3E%3C/defs%3E%3Cpath d='M0 8.5C8.5 -1 8.5 -1 17 8.5S25.5 18 34 8.5' fill='none' stroke='%23F9F3E7' stroke-width='7'/%3E%3Cpath d='M0 8.5C8.5 -1 8.5 -1 17 8.5S25.5 18 34 8.5' fill='none' stroke='%237E5426' stroke-width='4.2'/%3E%3Cpath d='M0 8.5C8.5 18 8.5 18 17 8.5S25.5 -1 34 8.5' fill='none' stroke='%23F9F3E7' stroke-width='7'/%3E%3Cpath d='M0 8.5C8.5 18 8.5 18 17 8.5S25.5 -1 34 8.5' fill='none' stroke='%23D9A441' stroke-width='4.2'/%3E%3Cg clip-path='url(%23k)'%3E%3Cpath d='M0 8.5C8.5 -1 8.5 -1 17 8.5S25.5 18 34 8.5' fill='none' stroke='%23F9F3E7' stroke-width='7'/%3E%3Cpath d='M0 8.5C8.5 -1 8.5 -1 17 8.5S25.5 18 34 8.5' fill='none' stroke='%237E5426' stroke-width='4.2'/%3E%3C/g%3E%3C/svg%3E") repeat-x}
+/* SKIN: tall-frame mode. A lesson embedded in a tall iframe (Canvas) has a viewport as tall as the whole page, so the
+   fixed overlays (book, picture zoom, drawers, dimming layer, Ask and Vocab tabs) would span the entire frame and float far
+   from the reader. In tall-frame mode they sit in a 900 px window near the reader's last click instead (--fy, set by script). */
+html.tallframe{overflow-x:hidden}
+html.tallframe .reader,html.tallframe .zoomv,html.tallframe .scrim{position:absolute;inset:auto;left:0;right:0;top:var(--fy,0px);height:900px}
+html.tallframe .drawer{position:absolute;top:var(--fy,0px);height:900px}
+html.tallframe .asktab{position:absolute;top:calc(var(--fy,0px) + 300px)}
+html.tallframe .oscoin{position:absolute;top:calc(var(--fy,0px) + 468px)}
+html.tallframe body.reading-open .asktab{position:absolute;top:calc(var(--fy,0px) + 700px);bottom:auto}
 </style>
 </head>
 <body class="novoice">
@@ -2171,6 +2180,22 @@ drawQuiz();
 $$('[data-mini]').forEach(miniLesson);
 go(store.get('step') || 0, false);
 bootReader();
+
+/* tall-frame mode (course layer; see the tall-frame CSS): in a tall iframe, treat the frame as a 900 px window for the reader
+   (so single-page books are not frame-tall) and anchor the overlays near the last click */
+(function () {
+  const de = document.documentElement;
+  const realH = () => de.clientHeight;
+  const embedded = () => { try { return window.self !== window.top; } catch (e) { return true; } };
+  const tall = () => embedded() && realH() > 1100;
+  const apply = () => de.classList.toggle('tallframe', tall());
+  const desc = Object.getOwnPropertyDescriptor(window, 'innerHeight');
+  Object.defineProperty(window, 'innerHeight', { configurable: true, get: () => tall() ? 900 : (desc && desc.get ? desc.get.call(window) : realH()) });
+  const setFy = py => { const max = Math.max(0, realH() - 900); de.style.setProperty('--fy', Math.max(0, Math.min(max, py - 160)) + 'px'); };
+  apply(); setFy(0);
+  addEventListener('resize', apply);
+  document.addEventListener('pointerdown', e => { if (tall() && !e.target.closest('.oscoin, .asktab') && !document.querySelector('#reader.open, .zoomv.open, .drawer.open')) setFy(e.pageY); }, true);
+})();
 </script>
 </body>
 </html>
