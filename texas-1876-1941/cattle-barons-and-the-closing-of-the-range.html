@@ -2196,6 +2196,29 @@ bootReader();
   addEventListener('resize', apply);
   document.addEventListener('pointerdown', e => { if (tall() && !e.target.closest('.oscoin, .asktab') && !document.querySelector('#reader.open, .zoomv.open, .drawer.open')) setFy(e.pageY); }, true);
 })();
+
+/* auto-height (course layer): inside an iframe, tell the host page how tall the lesson is, so the frame can end just below
+   the footer on every step. It never reports less than the bottom of an open overlay (book, zoom, drawer), so those are not
+   clipped. Canvas listens for lti.frameResize. A host that ignores it keeps its fixed height. */
+(function () {
+  if (window.self === window.top) return;
+  const foot = document.querySelector('footer');
+  let last = 0, raf = 0;
+  const send = () => {
+    raf = 0;
+    let h = (foot ? foot.getBoundingClientRect().bottom + window.scrollY : document.body.scrollHeight) + 4;
+    document.querySelectorAll('#reader.open, .zoomv.open, .drawer.open').forEach(e => { h = Math.max(h, e.getBoundingClientRect().bottom + window.scrollY); });
+    h = Math.ceil(h);
+    if (Math.abs(h - last) < 3) return;
+    last = h;
+    try { window.parent.postMessage({ subject: 'lti.frameResize', height: h }, '*'); } catch (e) {}
+  };
+  const queue = () => { if (!raf) raf = requestAnimationFrame(send); };
+  if (window.ResizeObserver) new ResizeObserver(queue).observe(document.body);
+  if (window.MutationObserver) document.querySelectorAll('#reader, .zoomv, .drawer').forEach(e => new MutationObserver(queue).observe(e, { attributes: true, attributeFilter: ['class'] }));
+  addEventListener('load', queue); addEventListener('resize', queue);
+  queue();
+})();
 </script>
 </body>
 </html>
