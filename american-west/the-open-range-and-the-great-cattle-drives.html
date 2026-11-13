@@ -976,7 +976,7 @@ body.reading-open .asktab .at-n{display:none}
 .titlepg .meander{width:60%;margin:0}
 /* the chapter-heading band is a second ornament in the book; it takes the rope too */
 .flow .ch h3::after{width:60%;height:17px;margin:10px 0 14px;opacity:.95;border-radius:0;-webkit-mask:none;mask:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='17' viewBox='0 0 34 17'%3E%3Cdefs%3E%3CclipPath id='k'%3E%3Crect x='0' y='0' width='6' height='17'/%3E%3Crect x='28' y='0' width='6' height='17'/%3E%3C/clipPath%3E%3C/defs%3E%3Cpath d='M0 8.5C8.5 -1 8.5 -1 17 8.5S25.5 18 34 8.5' fill='none' stroke='%23F9F3E7' stroke-width='7'/%3E%3Cpath d='M0 8.5C8.5 -1 8.5 -1 17 8.5S25.5 18 34 8.5' fill='none' stroke='%237E5426' stroke-width='4.2'/%3E%3Cpath d='M0 8.5C8.5 18 8.5 18 17 8.5S25.5 -1 34 8.5' fill='none' stroke='%23F9F3E7' stroke-width='7'/%3E%3Cpath d='M0 8.5C8.5 18 8.5 18 17 8.5S25.5 -1 34 8.5' fill='none' stroke='%23D9A441' stroke-width='4.2'/%3E%3Cg clip-path='url(%23k)'%3E%3Cpath d='M0 8.5C8.5 -1 8.5 -1 17 8.5S25.5 18 34 8.5' fill='none' stroke='%23F9F3E7' stroke-width='7'/%3E%3Cpath d='M0 8.5C8.5 -1 8.5 -1 17 8.5S25.5 18 34 8.5' fill='none' stroke='%237E5426' stroke-width='4.2'/%3E%3C/g%3E%3C/svg%3E") repeat-x}
-/* SKIN: tall-frame mode. A lesson embedded in a tall iframe (Canvas) has a viewport as tall as the whole page, so the
+.ow-flips .flip-grid{gap:6px;flex-direction:column}.ow-flips .ow-flip{min-width:0;min-height:122px;margin-bottom:0;padding:8px 12px}/* SKIN: tall-frame mode. A lesson embedded in a tall iframe (Canvas) has a viewport as tall as the whole page, so the
    fixed overlays (book, picture zoom, drawers, dimming layer, Ask and Vocab tabs) would span the entire frame and float far
    from the reader. In tall-frame mode they sit in a 900 px window near the reader's last click instead (--fy, set by script). */
 html.tallframe{overflow-x:hidden}
@@ -1083,6 +1083,30 @@ html.tallframe body.reading-open .asktab{position:absolute;top:calc(var(--fy,0px
 <div class="magnote" data-book="fig:c2_1"><img src="img/peregrin.jpg" alt=""><div><b>Mr. Peregrin</b><p>This paragraph names the jobs on a trail crew. Count them, and notice what each one did.</p></div></div>
 <div class="magnote" data-book="fig:c3_3"><img src="img/peregrin.jpg" alt=""><div><b>Mr. Peregrin</b><p>Dates matter in this chapter. Find 1872, 1887, and 1902, and say what happened at each.</p></div></div>
 <div class="magnote" data-book="fig:c4_2"><img src="img/peregrin.jpg" alt=""><div><b>Mr. Peregrin</b><p>The page says the county courts could not stop the trouble. Notice who the state sent.</p></div></div>
+<div data-book="fig:c1_6" class="optima-widget ow-flips" data-ra-skip>
+  <div class="widget-kicker">&#9889; TAP TO REMEMBER &middot; WORDS OF THE DRIVES</div>
+  <div class="widget-question">Tap each card to flip it. Try to say what it means before you look.</div>
+  <div class="flip-grid"><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Railhead</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Railhead</div>A town at the end of a rail line, where cattle could be loaded on trains.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Joseph McCoy</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Joseph McCoy</div>Built stockyards at Abilene, Kansas, in 1867 and invited Texas drovers to bring cattle.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Chisholm Trail</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Chisholm Trail</div>The route to Abilene, named for the trader Jesse Chisholm, who marked part of the way.</div></div></div>
+  <button class="widget-reset">Reset</button>
+</div>
+<div data-book="fig:c2_3" class="optima-widget ow-flips" data-ra-skip>
+  <div class="widget-kicker">&#9889; TAP TO REMEMBER &middot; WHO RODE WHERE</div>
+  <div class="widget-question">Tap each card to flip it. Try to say the job before you look.</div>
+  <div class="flip-grid"><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Point riders</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Point riders</div>They rode at the front of the herd and chose the direction.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Drag riders</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Drag riders</div>They rode at the back, in the dust. The worst place often went to the least experienced.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">The wrangler</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">The wrangler</div>A boy or young man who looked after the remuda, the spare horses.</div></div></div>
+  <button class="widget-reset">Reset</button>
+</div>
+<div data-book="fig:c3_4" class="optima-widget ow-flips" data-ra-skip>
+  <div class="widget-kicker">&#9889; TAP TO REMEMBER &middot; PLACES ON THE ROUTE</div>
+  <div class="widget-question">Tap each card to flip it. Try to say what it was before you look.</div>
+  <div class="flip-grid"><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Waco Suspension Bridge</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Waco Suspension Bridge</div>Opened in 1870 over the Brazos River. Drovers paid a toll for each animal.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Denison</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Denison</div>In 1872 the railroad reached this town on the Red River, closer to the ranches.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Fort Worth Stockyards</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Fort Worth Stockyards</div>Opened in 1887, when Fort Worth had grown into &ldquo;Cowtown.&rdquo;</div></div></div>
+  <button class="widget-reset">Reset</button>
+</div>
+<div data-book="fig:c4_3" class="optima-widget ow-flips" data-ra-skip>
+  <div class="widget-kicker">&#9889; TAP TO REMEMBER &middot; WORDS FROM MASON COUNTY</div>
+  <div class="widget-question">Tap each card to flip it. Try to say what it means before you look.</div>
+  <div class="flip-grid"><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Maverick</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Maverick</div>A calf with no brand. The word comes from Samuel Maverick, who did not brand his herds.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Feud</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Feud</div>A long, bitter fight between two groups or families.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Texas Rangers</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Texas Rangers</div>Major John B. Jones and dozens of Rangers came when the courts could not stop the killing.</div></div></div>
+  <button class="widget-reset">Reset</button>
+</div>
 <div data-book="plate:c1" class="optima-widget ow-select" data-ra-skip>
   <div class="widget-kicker">&#9889; TRY IT &middot; WHY THE PRICE GAP?</div>
   <div class="widget-question">A steer was worth a few dollars in Texas and ten times as much in the North. Pick the best answer for each row.</div>
@@ -1100,6 +1124,46 @@ html.tallframe body.reading-open .asktab{position:absolute;top:calc(var(--fy,0px
     <div class="widget-row-prompt">3. Joseph McCoy built stockyards at Abilene, Kansas. What problem was he helping to solve?</div>
     <div class="widget-options"><button type="button" data-choice="0">Too many fences across the open range</button><button type="button" data-choice="1">Getting cattle onto northbound trains</button><button type="button" data-choice="2">Too few cowboys to ride the long trail</button></div>
     <div class="row-feedback ph" data-ph="Right. At a railhead cattle could be loaded on trains, which closed the gap between a cheap steer in Texas and an expensive one in the North.">Right. At a railhead cattle could be loaded on trains, which closed the gap between a cheap steer in Texas and an expensive one in the North.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
+<div data-book="plate:c2" class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; ON THE TRAIL</div>
+  <div class="widget-question">Pick the best answer for each row.</div>
+  <div class="widget-row" data-correct="1" data-fb="Right. A steer that was hurried lost weight, and a thin steer sold for less, so the crew let the herd graze as it walked." data-hint="Think about what happens to a steer’s weight, and its price, when it is hurried.">
+    <div class="widget-row-prompt">1. Why did the crew keep the herd to ten or fifteen miles a day?</div>
+    <div class="widget-options"><button type="button" data-choice="0">The wagon could not go faster</button><button type="button" data-choice="1">A hurried steer lost weight</button><button type="button" data-choice="2">Riders were paid by the mile</button></div>
+    <div class="row-feedback ph" data-ph="Right. A steer that was hurried lost weight, and a thin steer sold for less, so the crew let the herd graze as it walked.">Right. A steer that was hurried lost weight, and a thin steer sold for less, so the crew let the herd graze as it walked.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. They raced through the dark alongside the leaders and turned the herd into a slow circle until the cattle wore themselves out." data-hint="Think about where the riders went, and what they did to the leaders.">
+    <div class="widget-row-prompt">2. During a stampede, what did the riders do?</div>
+    <div class="widget-options"><button type="button" data-choice="0">Fired guns to scare the herd</button><button type="button" data-choice="1">Waited for the cattle to stop</button><button type="button" data-choice="2">Turned the leaders in a circle</button></div>
+    <div class="row-feedback ph" data-ph="Right. They raced through the dark alongside the leaders and turned the herd into a slow circle until the cattle wore themselves out.">Right. They raced through the dark alongside the leaders and turned the herd into a slow circle until the cattle wore themselves out.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. They came from the vaqueros, the Spanish-speaking cattle workers who had worked herds on horseback for generations." data-hint="Think about who worked cattle on horseback in Mexico and South Texas long before the drives.">
+    <div class="widget-row-prompt">3. Chaps, the lariat and &ldquo;rodeo&rdquo; all came from where?</div>
+    <div class="widget-options"><button type="button" data-choice="0">The vaquero tradition</button><button type="button" data-choice="1">The Abilene stockyards</button><button type="button" data-choice="2">The chuck wagon cook</button></div>
+    <div class="row-feedback ph" data-ph="Right. They came from the vaqueros, the Spanish-speaking cattle workers who had worked herds on horseback for generations.">Right. They came from the vaqueros, the Spanish-speaking cattle workers who had worked herds on horseback for generations.</div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
+<div data-book="plate:c3" class="optima-widget ow-select" data-ra-skip>
+  <div class="widget-kicker">&#9889; TRY IT &middot; RIVERS, RAILS, AND STOCKYARDS</div>
+  <div class="widget-question">Pick the best answer for each row.</div>
+  <div class="widget-row" data-correct="1" data-fb="Right. When a railroad reached Fort Worth in 1876, the town changed from a place drovers passed through to a place where cattle were shipped." data-hint="Think about what a town needed before cattle could be shipped from it.">
+    <div class="widget-row-prompt">1. What happened at Fort Worth in 1876?</div>
+    <div class="widget-options"><button type="button" data-choice="0">The stockyards opened there</button><button type="button" data-choice="1">A railroad reached the town</button><button type="button" data-choice="2">The Waco bridge was built</button></div>
+    <div class="row-feedback ph" data-ph="Right. When a railroad reached Fort Worth in 1876, the town changed from a place drovers passed through to a place where cattle were shipped.">Right. When a railroad reached Fort Worth in 1876, the town changed from a place drovers passed through to a place where cattle were shipped.</div>
+  </div>
+  <div class="widget-row" data-correct="0" data-fb="Right. Thousands of Texas cowboys came through between May and October, and the town wanted someone to keep order among them." data-hint="Think about who filled the town each summer after the herds arrived.">
+    <div class="widget-row-prompt">2. Why did Abilene hire Wild Bill Hickok as marshal in 1871?</div>
+    <div class="widget-options"><button type="button" data-choice="0">To keep order among the cowboys</button><button type="button" data-choice="1">To buy cattle for McCoy</button><button type="button" data-choice="2">To guide herds over the Red River</button></div>
+    <div class="row-feedback ph" data-ph="Right. Thousands of Texas cowboys came through between May and October, and the town wanted someone to keep order among them.">Right. Thousands of Texas cowboys came through between May and October, and the town wanted someone to keep order among them.</div>
+  </div>
+  <div class="widget-row" data-correct="2" data-fb="Right. Kansas drew a quarantine line to keep Texas herds, and Texas fever, out of the settled land. As farmers settled, the line moved west, and the trade moved with it." data-hint="Think about the line Kansas drew on its map, and what it was meant to keep out.">
+    <div class="widget-row-prompt">3. Why did the cattle trade move west to Wichita, Ellsworth and Dodge City?</div>
+    <div class="widget-options"><button type="button" data-choice="0">The Waco bridge was closed</button><button type="button" data-choice="1">Cattle prices fell to nothing</button><button type="button" data-choice="2">Kansas kept Texas herds out</button></div>
+    <div class="row-feedback ph" data-ph="Right. Kansas drew a quarantine line to keep Texas herds, and Texas fever, out of the settled land. As farmers settled, the line moved west, and the trade moved with it.">Right. Kansas drew a quarantine line to keep Texas herds, and Texas fever, out of the settled land. As farmers settled, the line moved west, and the trade moved with it.</div>
   </div>
   <button class="widget-reset">Reset</button>
 </div>
