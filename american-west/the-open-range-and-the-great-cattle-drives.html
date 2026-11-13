@@ -1002,16 +1002,19 @@ h1,h2,h3,.cv-t,.focusq,.count,.day b,.nbstats b{font-synthesis:none}
 /* SKIN: faint photo in the page background, behind the cards (same treatment as the banner photo, fainter). */
 body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:url(img/bg-tack-wall.jpg) center/cover no-repeat;opacity:.11;filter:sepia(.6) saturate(.8);-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 28%);mask-image:linear-gradient(180deg,transparent 0,#000 28%)}
 /* SKIN: herd register (ledger) pages of the invented 4 Bar J Ranch. Each is one full page; entries in a handwritten face. */
-.regpg{break-before:column;break-after:column;height:100%;display:flex;flex-direction:column;justify-content:center;gap:6px;text-align:left;overflow:hidden}
-.regpg .rg-k{font:800 11px/1 system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#7E5426;text-align:center}
-.regpg h2{font-family:var(--head);font-weight:400;font-size:26px;line-height:1.1;margin:2px 0 0;color:#5E3C19;text-align:center}
-.regpg .rg-sub{font:italic 600 14px/1.2 Georgia,serif;color:#7E5426;text-align:center;padding-bottom:8px;border-bottom:3px double #7E5426}
+/* The page scales itself to the frame (--u = px per design pixel, 1px at full size) so it always fits one page: by height (the page is about
+   100vh - 184px tall) and by width (the text column is about the page width minus margins). In a short or narrow iframe everything shrinks together. */
+.regpg{--u:clamp(.42px,min(calc((100vh - 200px) / 450),calc((min(560px,(100vw - 150px) / 2) - 168px) / 392)),1px);break-before:column;break-after:column;height:100%;display:flex;flex-direction:column;justify-content:center;justify-content:safe center;gap:calc(6 * var(--u));text-align:left;overflow:hidden}
+@media (max-width:859px){.regpg{--u:clamp(.42px,min(calc((100vh - 232px) / 450),calc((min(620px,100vw - 16px) - 44px) / 392)),1px)}}
+.regpg .rg-k{font:800 calc(11 * var(--u))/1 system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#7E5426;text-align:center}
+.regpg h2{font-family:var(--head);font-weight:400;font-size:calc(26 * var(--u));line-height:1.1;margin:calc(2 * var(--u)) 0 0;color:#5E3C19;text-align:center}
+.regpg .rg-sub{font:italic 600 calc(14 * var(--u))/1.2 Georgia,serif;color:#7E5426;text-align:center;padding-bottom:calc(8 * var(--u));border-bottom:3px double #7E5426}
 .rg-tab{width:100%;border-collapse:collapse;table-layout:fixed;font-family:'Caveat','Segoe Script',cursive;color:#3A2A1A}
-.rg-tab th{font:700 9.5px/1.2 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#7E5426;text-align:left;padding:6px 3px 4px;border-bottom:1.5px solid #7E5426}
-.rg-tab td{font-size:17px;line-height:1.05;padding:5px 3px 3px;border-bottom:1px solid rgba(126,84,38,.38);vertical-align:bottom;overflow-wrap:anywhere}
+.rg-tab th{font:700 calc(9.5 * var(--u))/1.2 system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:#7E5426;text-align:left;padding:calc(6 * var(--u)) calc(3 * var(--u)) calc(4 * var(--u));border-bottom:1.5px solid #7E5426}
+.rg-tab td{font-size:calc(17 * var(--u));line-height:1.05;padding:calc(5 * var(--u)) calc(3 * var(--u)) calc(3 * var(--u));border-bottom:1px solid rgba(126,84,38,.38);vertical-align:bottom;overflow-wrap:anywhere}
 .rg-tab .no{width:8%}.rg-tab .yr{width:9%}.rg-tab .kd{width:11%}.rg-tab .dm{width:18%}.rg-tab .bs{width:14%}.rg-tab .nm{width:auto}
 .rg-tab td.no{border-right:1.5px solid rgba(168,75,0,.5);font-weight:700}
-.regpg .rg-foot{font:italic 12.5px/1.2 Georgia,serif;color:#7E5426;text-align:center;padding-top:8px}
+.regpg .rg-foot{font:italic calc(12.5 * var(--u))/1.2 Georgia,serif;color:#7E5426;text-align:center;padding-top:calc(8 * var(--u))}
 .ow-flips .flip-grid{gap:6px;flex-direction:column}.ow-flips .ow-flip{min-width:0;min-height:122px;margin-bottom:0;padding:8px 12px}/* SKIN: tall-frame mode. A lesson embedded in a tall iframe (Canvas) has a viewport as tall as the whole page, so the
    fixed overlays (book, picture zoom, drawers, dimming layer, Ask and Vocab tabs) would span the entire frame and float far
    from the reader. In tall-frame mode they sit in a 900 px window near the reader's last click instead (--fy, set by script). */
