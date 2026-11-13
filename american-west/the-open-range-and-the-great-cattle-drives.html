@@ -1168,7 +1168,7 @@ html.tallframe body.reading-open .asktab{position:absolute;top:calc(var(--fy,0px
   <div class="flip-grid"><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Maverick</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Maverick</div>A calf with no brand. The word comes from Samuel Maverick, who did not brand his herds.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Feud</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Feud</div>A long, bitter fight between two groups or families.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front" style="font-size:18px;color:#0E1C42;">Texas Rangers</div><div class="ow-flip-back" style="font-size:16px;line-height:1.55;"><div style="font-size:13px;color:#c7922c;margin-bottom:4px;">Texas Rangers</div>Major John B. Jones and dozens of Rangers came when the courts could not stop the killing.</div></div></div>
   <button class="widget-reset">Reset</button>
 </div>
-<div data-book="plate:c1" class="optima-widget ow-select" data-ra-skip>
+<div data-book="plate:c1" class="optima-widget ow-select" data-ra-skip data-enforce>
   <div class="widget-kicker">&#9889; TRY IT &middot; WHY THE PRICE GAP?</div>
   <div class="widget-question">A steer was worth a few dollars in Texas and ten times as much in the North. Pick the best answer for each row.</div>
   <div class="widget-row" data-correct="0" data-fb="Right. Millions of longhorns roamed Texas and almost nobody wanted to buy them. Plentiful and little demand means a low price." data-hint="Think about what happens to the price of something when there is far too much of it.">
@@ -1188,7 +1188,7 @@ html.tallframe body.reading-open .asktab{position:absolute;top:calc(var(--fy,0px
   </div>
   <button class="widget-reset">Reset</button>
 </div>
-<div data-book="plate:c2" class="optima-widget ow-select" data-ra-skip>
+<div data-book="plate:c2" class="optima-widget ow-select" data-ra-skip data-enforce>
   <div class="widget-kicker">&#9889; TRY IT &middot; ON THE TRAIL</div>
   <div class="widget-question">Pick the best answer for each row.</div>
   <div class="widget-row" data-correct="1" data-fb="Right. A steer that was hurried lost weight, and a thin steer sold for less, so the crew let the herd graze as it walked." data-hint="Think about what happens to a steer’s weight, and its price, when it is hurried.">
@@ -1208,7 +1208,7 @@ html.tallframe body.reading-open .asktab{position:absolute;top:calc(var(--fy,0px
   </div>
   <button class="widget-reset">Reset</button>
 </div>
-<div data-book="plate:c3" class="optima-widget ow-select" data-ra-skip>
+<div data-book="plate:c3" class="optima-widget ow-select" data-ra-skip data-enforce>
   <div class="widget-kicker">&#9889; TRY IT &middot; RIVERS, RAILS, AND STOCKYARDS</div>
   <div class="widget-question">Pick the best answer for each row.</div>
   <div class="widget-row" data-correct="1" data-fb="Right. When a railroad reached Fort Worth in 1876, the town changed from a place drovers passed through to a place where cattle were shipped." data-hint="Think about what a town needed before cattle could be shipped from it.">
@@ -2364,5 +2364,6 @@ bootReader();
   queue();
 })();
 </script>
+<script src="../shared/enforce.js" data-widget-enforcer></script>
 </body>
 </html>
